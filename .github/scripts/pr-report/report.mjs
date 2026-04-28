@@ -152,8 +152,25 @@ ${openList || "无"}
   return callAI(prompt);
 }
 
+async function generateRiskAlert(openPRs) {
+  if (openPRs.length === 0) return null;
+
+  const now = new Date();
+  const prList = openPRs.map((p) => {
+    const days = Math.round((now - new Date(p.createdAt)) / 86400000);
+    return `- #${p.number} ${p.title} (@${p.author}) 已开${days}天`;
+  }).join("\n");
+
+  const prompt = `你是项目风险分析助手。以下是目前待合并的 PR 列表：
+
+${prList}
+
+请用1-3句话指出：哪些 PR 可能存在风险（如等待时间过长、涉及重要模块等）。不要使用Markdown格式。直接输出分析，不要寒暄。`;
+
+  return callAI(prompt);
+}
+
 function getAIConfig() {
-  // Support generic AI_* env vars, fallback to OPENAI_* for backward compat
   const apiKey = process.env.AI_API_KEY || process.env.OPENAI_API_KEY;
   const baseUrl = process.env.AI_BASE_URL || process.env.OPENAI_BASE_URL || "";
   const model = process.env.AI_MODEL || process.env.OPENAI_MODEL || "";
@@ -171,12 +188,19 @@ async function callAI(prompt) {
     : "https://api.openai.com/v1/chat/completions";
   const resolvedModel = model || "gpt-4o-mini";
 
-  const body = JSON.stringify({
+  const reqBody = {
     model: resolvedModel,
-    messages: [{ role: "user", content: prompt }],
-    max_tokens: maxTokens,
+    messages: [
+      { role: "system", content: "你是一个简洁专业的项目日报助手。直接输出日报内容，不要使用Markdown格式。" },
+      { role: "user", content: prompt },
+    ],
     temperature: 0.3,
-  });
+  };
+  // NOTE: Do NOT send max_tokens — reasoning models (DeepSeek R1, etc.) consume tokens
+  // on internal thinking and hit the limit before producing visible content.
+  // The prompt already constrains output to ~400 chars.
+
+  const body = JSON.stringify(reqBody);
 
   const maxRetries = 3;
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
@@ -204,12 +228,14 @@ async function callAI(prompt) {
       }
 
       const data = await resp.json();
-      const msg = data.choices?.[0]?.message;
-      const content = msg?.content?.trim();
+      const choice = data.choices?.[0];
+      const msg = choice?.message;
+      // Handle both content and reasoning_content (some providers return reasoning separately)
+      const content = (msg?.content || msg?.text || "").trim();
       if (!content) {
-        console.error("AI returned empty content. finish_reason:", data.choices?.[0]?.finish_reason);
+        console.error("AI returned empty content. finish_reason:", choice?.finish_reason, "usage:", JSON.stringify(data.usage));
       } else {
-        console.log(`AI response: ${content.length} chars, finish_reason: ${data.choices?.[0]?.finish_reason}`);
+        console.log(`AI response: ${content.length} chars, finish_reason: ${choice?.finish_reason}`);
       }
       return content || null;
     } catch (err) {
@@ -253,27 +279,33 @@ async function sendSlackDM(blocks) {
 }
 
 // ── Message formatting ───────────────────────────────────────
-function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDay, generatedAt) {
+function buildSlackBlocks(mergedPRs, openPRs, dailySummary, riskAlert, reportDay, generatedAt) {
   const blocks = [];
 
+  // Header
   blocks.push({
     type: "header",
-    text: { type: "plain_text", text: `PR Report`, emoji: true },
+    text: { type: "plain_text", text: `PR Report — ${reportDay}`, emoji: true },
   });
 
   blocks.push({
-    type: "section",
-    text: { type: "mrkdwn", text: `*Report for:* ${reportDay} | *Generated:* ${generatedAt} | *Merged:* ${mergedPRs.length} | *Pending:* ${openPRs.length}` },
+    type: "context",
+    elements: [
+      { type: "mrkdwn", text: `*Merged:* ${mergedPRs.length} | *Pending:* ${openPRs.length} | ${generatedAt}` },
+    ],
   });
 
-  // AI Summary at top
+  // AI Summary
   if (dailySummary) {
-    for (const chunk of splitSlackText(`*AI Daily Report*\n${escapeMarkdown(dailySummary)}`, 2900)) {
-      blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
-    }
+    blocks.push({ type: "divider" });
+    blocks.push({
+      type: "section",
+      text: { type: "mrkdwn", text: `:sparkles: *AI Daily Report*\n${escapeMarkdown(dailySummary)}` },
+    });
   }
 
   // Code stats per author
+  blocks.push({ type: "divider" });
   const authorStats = {};
   for (const pr of mergedPRs) {
     if (!authorStats[pr.author]) {
@@ -287,23 +319,27 @@ function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDay, generated
 
   const sortedAuthors = Object.entries(authorStats).sort((a, b) => b[1].additions + b[1].deletions - (a[1].additions + a[1].deletions));
   if (sortedAuthors.length > 0) {
-    let statsText = "*Code Stats by Author*";
-    for (const [author, s] of sortedAuthors) {
-      const total = s.additions + s.deletions;
-      statsText += `\n@${author}: ${s.prs} PRs | +${s.additions} -${s.deletions} | ${s.changedFiles} files (${total} lines)`;
-    }
-    for (const chunk of splitSlackText(statsText, 2900)) {
-      blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
+    const fields = sortedAuthors.map(([author, s]) => ({
+      type: "mrkdwn",
+      text: `*@${author}*\n${s.prs} PRs · +${s.additions} / -${s.deletions}`,
+    }));
+    // Slack fields: max 10 per block
+    for (let i = 0; i < fields.length; i += 10) {
+      blocks.push({
+        type: "section",
+        fields: fields.slice(i, i + 10),
+      });
     }
   }
 
-  // Merged PRs grouped by author, sorted by PR number
+  // Merged PRs grouped by author
+  blocks.push({ type: "divider" });
   const byAuthor = {};
   for (const pr of mergedPRs) {
     (byAuthor[pr.author] ||= []).push(pr);
   }
   const authorEntries = Object.entries(byAuthor).sort((a, b) => b[1].length - a[1].length);
-  let mergedText = `*Merged (${mergedPRs.length})*`;
+  let mergedText = `:white_check_mark: *Merged (${mergedPRs.length})*`;
   for (const [author, prs] of authorEntries) {
     prs.sort((a, b) => a.number - b.number);
     mergedText += `\n@${author}:`;
@@ -317,29 +353,56 @@ function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDay, generated
     blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
   }
 
-  // Pending PRs grouped by author, sorted by PR number
+  // Pending PRs — compact summary by author
+  blocks.push({ type: "divider" });
   const openByAuthor = {};
   for (const pr of openPRs) {
     (openByAuthor[pr.author] ||= []).push(pr);
   }
   const openAuthorEntries = Object.entries(openByAuthor).sort((a, b) => b[1].length - a[1].length);
-  let openText = `*Pending (${openPRs.length})*`;
-  for (const [author, prs] of openAuthorEntries) {
-    prs.sort((a, b) => a.number - b.number);
-    openText += `\n@${author}:`;
-    for (const pr of prs) {
-      openText += `\n  ${formatPRLine(pr)}`;
+
+  if (openPRs.length > 10) {
+    // Compact mode: author + count only
+    let openText = `:hourglass_flowing_sand: *Pending (${openPRs.length})*`;
+    for (const [author, prs] of openAuthorEntries) {
+      const prNums = prs.sort((a, b) => a.number - b.number).map((p) => `<${p.url}|#${p.number}>`).join(" ");
+      openText += `\n@${author} (${prs.length}): ${prNums}`;
+    }
+    for (const chunk of splitSlackText(openText, 2900)) {
+      blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
+    }
+  } else {
+    // Full mode: show titles
+    let openText = `:hourglass_flowing_sand: *Pending (${openPRs.length})*`;
+    for (const [author, prs] of openAuthorEntries) {
+      prs.sort((a, b) => a.number - b.number);
+      openText += `\n@${author}:`;
+      for (const pr of prs) {
+        openText += `\n  ${formatPRLine(pr)}`;
+      }
+    }
+    if (openPRs.length === 0) openText += "\nAll clear!";
+    for (const chunk of splitSlackText(openText, 2900)) {
+      blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
     }
   }
-  if (openPRs.length === 0) openText += "\nAll clear!";
 
-  for (const chunk of splitSlackText(openText, 2900)) {
-    blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
+  // AI Risk Alert
+  if (riskAlert) {
+    blocks.push({ type: "divider" });
+    blocks.push({
+      type: "section",
+      text: { type: "mrkdwn", text: `:warning: *Risk Alert*\n${escapeMarkdown(riskAlert)}` },
+    });
   }
 
+  // Footer
+  blocks.push({ type: "divider" });
   blocks.push({
     type: "context",
-    elements: [{ type: "mrkdwn", text: `From <https://github.com/${REPO_OWNER}/${REPO_NAME}|${REPO_NAME}> PR Report` }],
+    elements: [
+      { type: "mrkdwn", text: `<https://github.com/${REPO_OWNER}/${REPO_NAME}/pulls|View all PRs> · ${REPO_NAME}` },
+    ],
   });
 
   return blocks.slice(0, 50);
@@ -488,11 +551,16 @@ async function main() {
   const { apiKey: aiKey } = getAIConfig();
   const hasAI = !!aiKey;
   let dailySummary = null;
+  let riskAlert = null;
 
   if (hasAI) {
     console.log("Generating AI daily summary...");
     dailySummary = await generateDailySummary(mergedPRs, openPRs);
     console.log("AI daily summary generated");
+
+    console.log("Generating AI risk alert...");
+    riskAlert = await generateRiskAlert(openPRs);
+    if (riskAlert) console.log("AI risk alert generated");
   } else {
     console.log("AI_API_KEY not set, skipping AI summaries");
   }
@@ -502,7 +570,7 @@ async function main() {
 
   // Slack (non-fatal)
   try {
-    const blocks = buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDay, generatedAt);
+    const blocks = buildSlackBlocks(mergedPRs, openPRs, dailySummary, riskAlert, reportDay, generatedAt);
     console.log("Sending Slack DM...");
     await sendSlackDM(blocks);
   } catch (err) {
