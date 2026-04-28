@@ -198,111 +198,73 @@ async function sendSlackDM(blocks) {
 function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate) {
   const blocks = [];
 
-  // Header
   blocks.push({
     type: "header",
-    text: {
-      type: "plain_text",
-      text: `📋 Katana Server PR 日报 — ${reportDate}`,
-      emoji: true,
-    },
+    text: { type: "plain_text", text: `Katana Server PR Report — ${reportDate}`, emoji: true },
   });
 
-  blocks.push({ type: "divider" });
+  // Merged PRs — one section with all items as text
+  const mergedLines = mergedPRs.length > 0
+    ? mergedPRs.map((pr) => `• <${pr.url}|#${pr.number} ${escapeMarkdown(pr.title)}> — @${pr.author}`).join("\n")
+    : "No merged PRs in this period.";
+  blocks.push({
+    type: "section",
+    text: { type: "mrkdwn", text: `*Merged (${mergedPRs.length})*\n${mergedLines}` },
+  });
 
-  // Merged PRs
-  if (mergedPRs.length > 0) {
-    blocks.push({
-      type: "section",
-      text: {
-        type: "mrkdwn",
-        text: `✅ *已合并（最近1个工作日）* — 共 ${mergedPRs.length} 个`,
-      },
-    });
+  // Open PRs — one section with all items as text
+  const openLines = openPRs.length > 0
+    ? openPRs.map((pr) => `• <${pr.url}|#${pr.number} ${escapeMarkdown(pr.title)}> — @${pr.author}`).join("\n")
+    : "All clear!";
+  blocks.push({
+    type: "section",
+    text: { type: "mrkdwn", text: `*Pending (${openPRs.length})*\n${openLines}` },
+  });
 
-    for (const pr of mergedPRs) {
-      let text = `• *<${pr.url}|#${pr.number} ${escapeMarkdown(pr.title)}>* — @${pr.author}`;
-      if (pr.labels.length > 0) {
-        text += `  [${pr.labels.map((l) => `\`${l}\``).join(" ")}]`;
-      }
-      if (pr.aiSummary) {
-        text += `\n  _${escapeMarkdown(pr.aiSummary)}_`;
-      }
-      blocks.push({
-        type: "section",
-        text: { type: "mrkdwn", text },
-      });
-    }
-  } else {
-    blocks.push({
-      type: "section",
-      text: {
-        type: "mrkdwn",
-        text: "✅ *已合并（最近1个工作日）* — 无",
-      },
-    });
-  }
-
-  blocks.push({ type: "divider" });
-
-  // Open PRs
-  if (openPRs.length > 0) {
-    blocks.push({
-      type: "section",
-      text: {
-        type: "mrkdwn",
-        text: `⏳ *待合并* — 共 ${openPRs.length} 个`,
-      },
-    });
-
-    for (const pr of openPRs) {
-      let text = `• *<${pr.url}|#${pr.number} ${escapeMarkdown(pr.title)}>* — @${pr.author}`;
-      if (pr.labels.length > 0) {
-        text += `  [${pr.labels.map((l) => `\`${l}\``).join(" ")}]`;
-      }
-      if (pr.aiSummary) {
-        text += `\n  _${escapeMarkdown(pr.aiSummary)}_`;
-      }
-      blocks.push({
-        type: "section",
-        text: { type: "mrkdwn", text },
-      });
-    }
-  } else {
-    blocks.push({
-      type: "section",
-      text: {
-        type: "mrkdwn",
-        text: "⏳ *待合并* — 无 🎉",
-      },
-    });
-  }
-
-  // AI Daily Summary
+  // AI Summary
   if (dailySummary) {
-    blocks.push({ type: "divider" });
     blocks.push({
       type: "section",
-      text: {
-        type: "mrkdwn",
-        text: `🤖 *AI 日报总结*\n\n${escapeMarkdown(dailySummary)}`,
-      },
+      text: { type: "mrkdwn", text: `*AI Summary*\n${escapeMarkdown(dailySummary)}` },
     });
   }
 
-  // Footer
-  blocks.push({ type: "divider" });
   blocks.push({
     type: "context",
-    elements: [
-      {
-        type: "mrkdwn",
-        text: `📡 由 <https://github.com/bosinc/katana-server|katana-server> PR Report 自动生成`,
-      },
-    ],
+    elements: [{ type: "mrkdwn", text: `From <https://github.com/bosinc/katana-server|katana-server> PR Report` }],
   });
 
-  return blocks;
+  // Slack limit: max 50 blocks, max 3000 chars per text field
+  // Each section text must be under 3000 chars — split if needed
+  const result = [];
+  for (const block of blocks) {
+    if (block.text && block.text.text && block.text.text.length > 2900) {
+      const chunks = splitText(block.text.text, 2900);
+      for (const chunk of chunks) {
+        result.push({ ...block, text: { ...block.text, text: chunk } });
+      }
+    } else {
+      result.push(block);
+    }
+  }
+
+  return result.slice(0, 50);
+}
+
+function splitText(text, maxLen) {
+  const lines = text.split("\n");
+  const chunks = [];
+  let current = "";
+  for (const line of lines) {
+    if (current.length + line.length + 1 > maxLen) {
+      if (current) chunks.push(current);
+      current = line;
+    } else {
+      current = current ? current + "\n" + line : line;
+    }
+  }
+  if (current) chunks.push(current);
+  return chunks;
 }
 
 function escapeMarkdown(text) {
