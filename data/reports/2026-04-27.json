@@ -1,11 +1,11 @@
 {
   "date": "2026-04-27",
-  "generatedAt": "2026-04-28T10:58:23.963Z",
+  "generatedAt": "2026-04-28T11:03:15.031Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 13,
-    "open": 33,
-    "total": 46,
+    "open": 31,
+    "total": 44,
     "authors": 10
   },
   "analytics": {
@@ -25,18 +25,18 @@
         "changedFiles": 7
       },
       {
-        "name": "feng-1m",
-        "prs": 6,
-        "additions": 220,
-        "deletions": 1,
-        "changedFiles": 8
-      },
-      {
         "name": "gunx3961",
         "prs": 6,
         "additions": 0,
         "deletions": 0,
         "changedFiles": 0
+      },
+      {
+        "name": "feng-1m",
+        "prs": 4,
+        "additions": 220,
+        "deletions": 1,
+        "changedFiles": 8
       },
       {
         "name": "qbyte2",
@@ -82,7 +82,7 @@
       }
     ],
     "labels": [],
-    "total": 46,
+    "total": 44,
     "totalAdditions": 40547,
     "totalDeletions": 16429,
     "totalChangedFiles": 691
@@ -343,20 +343,6 @@
       "changedFiles": 0
     },
     {
-      "number": 7998,
-      "title": "feat(KAT-11035 No.1b v2): gate Processor+Cron via bootstrap hook",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/7998",
-      "body": "Replaces #7993. Closing that PR.\n\nReplaces inline `shouldRunXxx()` guards in PR #7993 with single-source-of-truth bootstrap service.\n\n## What changed\n\n- **New**: `src/shared/process-role/process-role.bootstrap.service.ts` — `ProcessRoleBootstrap implements OnApplicationBootstrap`:\n  - Non-worker roles: discovers all Bull Queue instances via `DiscoveryService` (duck-type filter on `pause/name/process`), calls `queue.pause(true)` (local pause — stops local consumption, producers and other workers ",
-      "mergedAt": null,
-      "createdAt": "2026-04-28T07:07:20Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
       "number": 7995,
       "title": "fix(posts): preserve ticket-banner order in preview endpoints (KAT-11108)",
       "author": "wang-neo",
@@ -378,20 +364,6 @@
       "body": "## Summary\n\n- **New endpoints**: `GET/PATCH /posts/curator/:originalPostId/co-sellers/:coSellerPostId/commission` — parent post owner can view and set custom commission on a specific co-seller's resale post (field-whitelisted: only `commissionRateForMe` / `wholesalePriceForPromoters`)\n- **Co-sellers list pagination**: `GET /posts/curator/downline/:postId` now accepts `pageSize`/`pageNumber`, returns `commissionCustomized` per co-seller (in-memory diff, no N+1)\n- **`ResalePostVariantConverter` ex",
       "mergedAt": null,
       "createdAt": "2026-04-28T06:24:01Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
-      "number": 7991,
-      "title": "chore(KAT-11028 task #8): tighten pair #2/#4/#6 pathNot to FROM-side",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/7991",
-      "body": "## Summary\n\nConverts 3 pair circular rules in `.dependency-cruiser.cjs` from weak-ratchet (to.pathNot) to strong-ratchet (from.pathNot), as specified by KAT-11028 task #8.\n\n**Why this matters**: `to.pathNot` exempting public barrels (e.g. `products/public/index.ts`) is a weak gate — any new offender file that imports the same barrel is silently let through. `from.pathNot` grandfathering specific offender files is a strong gate — only those exact files are exempt; any new circular import from a d",
-      "mergedAt": null,
-      "createdAt": "2026-04-28T06:11:04Z",
       "labels": [],
       "baseBranch": "release",
       "additions": 0,
@@ -735,5 +707,5 @@
       "changedFiles": 0
     }
   ],
-  "dailySummary": "第一部分：个人贡献\n@wang-neo：修复了 web-scraper 循环 JSON 崩溃问题（#7975），修复了 posts 商品替换数据传递及用户绑定问题（#7964, #7968），修复了 products 封面图覆盖错误（#7965），新增了 user-link 副标题字段（#7960）。\n@ruicaiext-1m：新增了 app-terminal 图片上传接口（#7971），修复了 app-terminal 订单归属校验（#7969），修复了 product-event 财务字段脱敏及协作者权限限制问题（#7966, #7972），发布了 v0.0.59 版本（#7961）。\n@qbyte2：修复了 cart 票务费用计算逻辑（#7967）。\n@feng-1m：规范了 workflows 迁移纪律文档（#7963），引入了 modulith 进程角色机制（#7959）。\n\n===\n\n第二部分：模块变更总览\nweb-scraper：修复了循环 JSON 崩溃问题（#7975）。\nproduct-event：修复了财务字段脱敏及协作者权限限制问题（#7966, #7972）。\napp-terminal：新增了图片上传接口（#7971），修复了订单归属校验逻辑（#7969）。\nposts：修复了商品替换数据传递及特定访问用户绑定问题（#7964, #7968）。\ncart：修复了票务费用计算逻辑（#7967）。\nproducts：修复了封面图错误覆盖问题（#7965）。\nuser-link：新增了可选副标题字段（#7960）。\nworkflows：规范了增量迁移纪律文档（#7963）。\nmodulith：引入了进程角色机制及模块门控功能（#7959）。\nRelease：发布了 v0.0.59 版本（#7961）。"
+  "dailySummary": "第一部分：个人贡献\n@wang-neo：修复了 web-scraper 循环 JSON 崩溃问题（#7975），修复了 posts 商品替换预览数据传递及特定访问用户绑定问题（#7964, #7968），修复了 products 封面图覆盖错误（#7965），为 user-link 新增了副标题字段（#7960）。\n@ruicaiext-1m：发布了 v0.0.59 版本（#7961），为 app-terminal 新增了图片上传接口（#7971）并修复了订单归属校验问题（#7969），修复了 product-event 协作者权限限制及敏感字段脱敏问题（#7966, #7972）。\n@qbyte2：修复了 cart 票务费用计算逻辑（#7967）。\n@feng-1m：为 modulith 引入了 PROCESS_ROLE 机制（#7959），更新了 workflows 迁移规范文档（#7963）。\n\n===\n\n第二部分：模块变更总览\napp-terminal：新增了图片上传接口（#7971），修复了订单归属校验问题（#7969）。\nproduct-event：修复了协作者权限限制及敏感财务字段脱敏问题（#7966, #7972）。\nposts：修复了商品替换预览数据传递及特定访问用户绑定问题（#7964, #7968）。\nproducts：修复了封面图错误覆盖问题（#7965）。\nuser-link：新增了可选副标题字段（#7960）。\ncart：修复了票务费用计算逻辑（#7967）。\nweb-scraper：修复了循环 JSON 解析崩溃问题（#7975）。\nmodulith：引入了 PROCESS_ROLE 机制及模块门控功能（#7959）。\nworkflows：规范化了增量迁移规范文档（#7963）。\nRelease：发布了 v0.0.59 版本（#7961）。"
 }
