@@ -87,16 +87,16 @@ ${openList || "无"}
 
 请按以下格式输出：
 
-## 变更概览
+【变更概览】
 用1-2句话总结今日合并的主要方向。
 
-## 分类归纳
+【分类归纳】
 将已合并的 PR 按类型分组（如新功能、Bug修复、重构优化、性能优化、文档等），每组列出对应的 PR 编号和一句话描述。
 
-## 待关注
+【待关注】
 指出需要优先 review 或有风险的待合并 PR。
 
-要求：简洁专业，不超过300字。`;
+要求：简洁专业，不超过300字。不要使用任何Markdown格式。`;
 
   return callAI(prompt);
 }
@@ -427,10 +427,14 @@ async function main() {
   // Save JSON data
   saveReportJSON(reportDate, mergedPRs, openPRs, dailySummary);
 
-  // Slack
-  const blocks = buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate);
-  console.log("Sending Slack DM...");
-  await sendSlackDM(blocks);
+  // Slack (non-fatal)
+  try {
+    const blocks = buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate);
+    console.log("Sending Slack DM...");
+    await sendSlackDM(blocks);
+  } catch (err) {
+    console.error("Slack failed (non-fatal):", err.message);
+  }
 
   console.log("Done!");
 }
