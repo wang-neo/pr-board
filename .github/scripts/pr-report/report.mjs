@@ -120,52 +120,31 @@ async function fetchOpenPRs(octokit) {
 }
 
 // ── AI (OpenAI compatible) ────────────────────────────────────
-async function generateDailySummary(mergedPRs, openPRs) {
+async function generateDailySummary(mergedPRs) {
+  if (mergedPRs.length === 0) return null;
+
   const mergedList = mergedPRs
     .map((p) => `- #${p.number} ${p.title} (@${p.author}) [${p.labels.join(",") || "无标签"}]`)
     .join("\n");
-  const openList = openPRs
-    .map((p) => `- #${p.number} ${p.title} (@${p.author}) [${p.labels.join(",") || "无标签"}]`)
-    .join("\n");
 
-  const prompt = `你是项目日报助手。基于以下 PR 数据生成一份结构化的中文日报。
+  const prompt = `你是项目日报助手。基于今日已合并的 PR 数据，生成两部分的中文日报。
 
 【已合并 PR】
-${mergedList || "无"}
+${mergedList}
 
-【待合并 PR】
-${openList || "无"}
-
-请严格按以下两部分输出：
+请严格按以下两部分输出，用 === 分隔：
 
 第一部分：个人贡献
-按贡献者分组，每人列出今天合并了什么，一句话概括。格式：
-@某人：做了xxx（#123），修复了yyy（#124）
+按贡献者分组，每人用一句话概括今天合并了什么。
+格式：@某人：做了xxx（#123），修复了yyy（#124）
 
-第二部分：项目变更概览
-1. 用1-2句话总结今日合并的主要方向
-2. 将已合并的 PR 按类型分组（如新功能、Bug修复、重构优化、性能优化、文档等）
-3. 指出需要优先 review 或有风险的待合并 PR
+===
 
-要求：简洁专业，不超过400字。不要使用任何Markdown格式（不要用#、**、-等符号）。`;
+第二部分：模块变更总览
+按项目模块（如 user, post, order, product, app-terminal, payment 等）分组，总结每个模块今天有什么变动。
+格式：模块名：新增了xxx，修复了yyy（#123, #124）
 
-  return callAI(prompt);
-}
-
-async function generateRiskAlert(openPRs) {
-  if (openPRs.length === 0) return null;
-
-  const now = new Date();
-  const prList = openPRs.map((p) => {
-    const days = Math.round((now - new Date(p.createdAt)) / 86400000);
-    return `- #${p.number} ${p.title} (@${p.author}) 已开${days}天`;
-  }).join("\n");
-
-  const prompt = `你是项目风险分析助手。以下是目前待合并的 PR 列表：
-
-${prList}
-
-请用1-3句话指出：哪些 PR 可能存在风险（如等待时间过长、涉及重要模块等）。不要使用Markdown格式。直接输出分析，不要寒暄。`;
+要求：简洁专业，不要使用Markdown格式（不要用#、**、-等符号）。直接输出内容，不要寒暄。`;
 
   return callAI(prompt);
 }
@@ -279,7 +258,7 @@ async function sendSlackDM(blocks) {
 }
 
 // ── Message formatting ───────────────────────────────────────
-function buildSlackBlocks(mergedPRs, openPRs, dailySummary, riskAlert, reportDay, generatedAt) {
+function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDay, generatedAt) {
   const blocks = [];
 
   // Header
@@ -295,13 +274,31 @@ function buildSlackBlocks(mergedPRs, openPRs, dailySummary, riskAlert, reportDay
     ],
   });
 
-  // AI Summary
+  // AI Summary — split into personal contributions + module overview
   if (dailySummary) {
-    blocks.push({ type: "divider" });
-    blocks.push({
-      type: "section",
-      text: { type: "mrkdwn", text: `:sparkles: *AI Daily Report*\n${escapeMarkdown(dailySummary)}` },
-    });
+    const parts = dailySummary.split("===").map((s) => s.trim()).filter(Boolean);
+    if (parts[0]) {
+      blocks.push({ type: "divider" });
+      blocks.push({
+        type: "section",
+        text: { type: "mrkdwn", text: `:bust_in_silhouette: *个人贡献*\n${escapeMarkdown(parts[0])}` },
+      });
+    }
+    if (parts[1]) {
+      blocks.push({ type: "divider" });
+      blocks.push({
+        type: "section",
+        text: { type: "mrkdwn", text: `:package: *模块变更总览*\n${escapeMarkdown(parts[1])}` },
+      });
+    }
+    // Fallback: no === found, show as single block
+    if (parts.length === 0) {
+      blocks.push({ type: "divider" });
+      blocks.push({
+        type: "section",
+        text: { type: "mrkdwn", text: `:sparkles: *AI Daily Report*\n${escapeMarkdown(dailySummary)}` },
+      });
+    }
   }
 
   // Code stats per author
@@ -385,15 +382,6 @@ function buildSlackBlocks(mergedPRs, openPRs, dailySummary, riskAlert, reportDay
     for (const chunk of splitSlackText(openText, 2900)) {
       blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
     }
-  }
-
-  // AI Risk Alert
-  if (riskAlert) {
-    blocks.push({ type: "divider" });
-    blocks.push({
-      type: "section",
-      text: { type: "mrkdwn", text: `:warning: *Risk Alert*\n${escapeMarkdown(riskAlert)}` },
-    });
   }
 
   // Footer
@@ -551,16 +539,11 @@ async function main() {
   const { apiKey: aiKey } = getAIConfig();
   const hasAI = !!aiKey;
   let dailySummary = null;
-  let riskAlert = null;
 
   if (hasAI) {
     console.log("Generating AI daily summary...");
-    dailySummary = await generateDailySummary(mergedPRs, openPRs);
+    dailySummary = await generateDailySummary(mergedPRs);
     console.log("AI daily summary generated");
-
-    console.log("Generating AI risk alert...");
-    riskAlert = await generateRiskAlert(openPRs);
-    if (riskAlert) console.log("AI risk alert generated");
   } else {
     console.log("AI_API_KEY not set, skipping AI summaries");
   }
@@ -570,7 +553,7 @@ async function main() {
 
   // Slack (non-fatal)
   try {
-    const blocks = buildSlackBlocks(mergedPRs, openPRs, dailySummary, riskAlert, reportDay, generatedAt);
+    const blocks = buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDay, generatedAt);
     console.log("Sending Slack DM...");
     await sendSlackDM(blocks);
   } catch (err) {
