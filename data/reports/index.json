@@ -2,9 +2,9 @@
   "reports": [
     {
       "date": "2026-04-27",
-      "merged": 23,
+      "merged": 13,
       "open": 29,
-      "total": 52,
+      "total": 42,
       "authors": 10,
       "hasAI": false
     }

@@ -1,42 +1,35 @@
 {
   "date": "2026-04-27",
-  "generatedAt": "2026-04-28T09:13:55.123Z",
+  "generatedAt": "2026-04-28T09:24:13.277Z",
   "repo": "bosinc/katana-server",
   "stats": {
-    "merged": 23,
+    "merged": 13,
     "open": 29,
-    "total": 52,
+    "total": 42,
     "authors": 10
   },
   "analytics": {
     "authors": [
       {
         "name": "ruicaiext-1m",
-        "prs": 14,
-        "additions": 40600,
-        "deletions": 16473,
-        "changedFiles": 696
+        "prs": 12,
+        "additions": 39955,
+        "deletions": 16169,
+        "changedFiles": 652
       },
       {
         "name": "wang-neo",
-        "prs": 12,
-        "additions": 67,
-        "deletions": 28,
-        "changedFiles": 9
-      },
-      {
-        "name": "qbyte2",
-        "prs": 7,
-        "additions": 558,
-        "deletions": 401,
-        "changedFiles": 53
+        "prs": 10,
+        "additions": 59,
+        "deletions": 8,
+        "changedFiles": 7
       },
       {
         "name": "feng-1m",
-        "prs": 6,
-        "additions": 238,
+        "prs": 5,
+        "additions": 220,
         "deletions": 1,
-        "changedFiles": 10
+        "changedFiles": 8
       },
       {
         "name": "gunx3961",
@@ -44,6 +37,13 @@
         "additions": 0,
         "deletions": 0,
         "changedFiles": 0
+      },
+      {
+        "name": "qbyte2",
+        "prs": 2,
+        "additions": 313,
+        "deletions": 251,
+        "changedFiles": 24
       },
       {
         "name": "vanppo-1m",
@@ -82,152 +82,12 @@
       }
     ],
     "labels": [],
-    "total": 52,
-    "totalAdditions": 41463,
-    "totalDeletions": 16903,
-    "totalChangedFiles": 768
+    "total": 42,
+    "totalAdditions": 40547,
+    "totalDeletions": 16429,
+    "totalChangedFiles": 691
   },
   "mergedPRs": [
-    {
-      "number": 7997,
-      "title": "feat(order): add subtotalTicketFee to cart, checkout, and order line items",
-      "author": "qbyte2",
-      "url": "https://github.com/bosinc/katana-server/pull/7997",
-      "body": "## Summary\n\n- Add `subtotalTicketFee` field to cart, checkout entity, and order line items\n- Add `subtotalTicketFeesAfterRefund` to order calculations\n- Move `getTicketFees` to shared util to break circular dependency between cart and sales modules\n- Update ticket fee calculations to use `variantInfo` directly for accuracy\n\n## Changes\n\n- `src/cart/` — add `subtotalTicketFee` to cart repo and service calculations\n- `src/sales/orders/` — add `subtotalTicketFee` to checkout/line-item entities and o",
-      "mergedAt": "2026-04-28T07:39:47Z",
-      "createdAt": "2026-04-28T07:03:17Z",
-      "labels": [],
-      "baseBranch": "main",
-      "additions": 26,
-      "deletions": 19,
-      "changedFiles": 3
-    },
-    {
-      "number": 7996,
-      "title": "feat(order): add subtotalTicketFee to cart, checkout, and order line items",
-      "author": "qbyte2",
-      "url": "https://github.com/bosinc/katana-server/pull/7996",
-      "body": "## Summary\n\n- Add `subtotalTicketFee` field to cart, checkout entity, and order line items\n- Add `subtotalTicketFeesAfterRefund` to order calculations\n- Move `getTicketFees` to shared util to break circular dependency between cart and sales modules\n- Update ticket fee calculations to use `variantInfo` directly for accuracy\n\n## Changes\n\n- `src/cart/` — add `subtotalTicketFee` to cart repo and service calculations\n- `src/sales/orders/` — add `subtotalTicketFee` to checkout/line-item entities and o",
-      "mergedAt": "2026-04-28T07:02:50Z",
-      "createdAt": "2026-04-28T06:59:55Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 26,
-      "deletions": 19,
-      "changedFiles": 3
-    },
-    {
-      "number": 7994,
-      "title": "fix(ticket): reject save when fees exceed retail price",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/7994",
-      "body": "## Summary\n- Add early reject in `TransactionFeeService.checkTicketVariantPrice` for `ticketPrice < 0` (i.e. `fees > retail price`)\n- Covers all save paths (V1 `MerchantProductsService.checkTicketProduct`, V1 `ProductEventService.checkTicketProduct` used by event duplicate, V2 `TicketProductStrategy`, V2 `AnyDayTicketProductStrategy`) — they all funnel through this validator\n- Add unit test for the negative-ticketPrice case\n\n## Background\nFrontend's calculate endpoint (`merchant-products.control",
-      "mergedAt": "2026-04-28T06:52:34Z",
-      "createdAt": "2026-04-28T06:43:51Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 18,
-      "deletions": 0,
-      "changedFiles": 2
-    },
-    {
-      "number": 7990,
-      "title": "Feat/add subtotal ticket fee to release",
-      "author": "qbyte2",
-      "url": "https://github.com/bosinc/katana-server/pull/7990",
-      "body": "**Description**: \r\n\r\n**Dependent PRs (FE/BE/KTT-Common)**:\r\n\r\n**PRD/Github Issue Link**:\r\n\r\n**Tech Doc Link**:\r\n\r\n**Screenshots** (optional):\r\n",
-      "mergedAt": "2026-04-28T06:03:15Z",
-      "createdAt": "2026-04-28T06:02:36Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 72,
-      "deletions": 31,
-      "changedFiles": 9
-    },
-    {
-      "number": 7989,
-      "title": "Main to release 20260428",
-      "author": "qbyte2",
-      "url": "https://github.com/bosinc/katana-server/pull/7989",
-      "body": "**Description**: \r\n\r\n**Dependent PRs (FE/BE/KTT-Common)**:\r\n\r\n**PRD/Github Issue Link**:\r\n\r\n**Tech Doc Link**:\r\n\r\n**Screenshots** (optional):\r\n",
-      "mergedAt": "2026-04-28T05:59:16Z",
-      "createdAt": "2026-04-28T05:57:21Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 49,
-      "deletions": 50,
-      "changedFiles": 5
-    },
-    {
-      "number": 7985,
-      "title": "feat(sales): add subtotalTicketFee calculated from lineItemSubtotal",
-      "author": "qbyte2",
-      "url": "https://github.com/bosinc/katana-server/pull/7985",
-      "body": "## Summary\n\n- Add `subtotalTicketFee` field to `OrderLineItem` and `CheckoutLineItem` (calculated from `lineItemSubtotal`, i.e., post-discount price)\n- `ticketFee` now uses `lineItemPrice` (pre-discount price) for calculation\n- `totalTicketFee` at order/checkout level is now the sum of `subtotalTicketFee` across line items\n- Expose `subtotalTicketFees` per line item in checkout response\n\n## Changes\n\n- `ticket-fees.util.ts`: `getTicketFees` returns `{ ticketFee, subtotalTicketFee }` via sibling `",
-      "mergedAt": "2026-04-28T06:32:40Z",
-      "createdAt": "2026-04-28T05:31:40Z",
-      "labels": [],
-      "baseBranch": "main",
-      "additions": 72,
-      "deletions": 31,
-      "changedFiles": 9
-    },
-    {
-      "number": 7981,
-      "title": "Hotfix: fix(product): coverImage respects position order instead of preferring VIDEO",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/7981",
-      "body": "## Summary\n\nBackports #7978 for hotfix release.\n\n- `getCoverMedia` previously preferred VIDEO over IMAGE (`firstVideo ?? firstImage`), causing a VIDEO at position 2 to be selected as coverImage even when an IMAGE was at position 1\n- Simplified the algorithm to pick the first media item by `position`, regardless of media type (IMAGE or VIDEO)\n\nCommits cherry-picked:\n- `916cce93` fix(product): coverImage should respect position order, not prefer VIDEO",
-      "mergedAt": "2026-04-28T03:21:27Z",
-      "createdAt": "2026-04-28T03:06:13Z",
-      "labels": [],
-      "baseBranch": "main",
-      "additions": 4,
-      "deletions": 10,
-      "changedFiles": 1
-    },
-    {
-      "number": 7980,
-      "title": "Pick Release 2026-04-27 (cutoff 19:00, excl. KAT-10790)",
-      "author": "ruicaiext-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/7980",
-      "body": "# 🚀 Pick Release — 2026-04-27 (Cutoff 19:00 CST)\n\n## 📋 Release Summary\n\n- **Branch**: `pick-release-20260427` → `main`\n- **Cutoff**: 2026-04-27 19:00 CST\n- **Commits**: 12 cherry-picked (2 excluded)\n- **Excluded**: KAT-10790 Phase 2a & 2b (collaborator report access control)\n- **Base Version**: v0.0.59\n\n---\n\n## ✅ Included Commits (12)\n\n| Area | Change |\n|------|--------|\n| `feat` modulith | Introduce PROCESS_ROLE mechanism + POC module gating — KAT-11035 |\n| `feat` cart | Enhance ticket fee ca",
-      "mergedAt": "2026-04-28T02:24:51Z",
-      "createdAt": "2026-04-28T01:55:23Z",
-      "labels": [],
-      "baseBranch": "main",
-      "additions": 643,
-      "deletions": 303,
-      "changedFiles": 42
-    },
-    {
-      "number": 7979,
-      "title": "fix(product-event): expose totalCommissionPaid to collaborators in metrics/summary (KAT-10790)",
-      "author": "ruicaiext-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/7979",
-      "body": "## Summary\n\n- `totalCommissionPaid` was incorrectly included in the owner-only hidden fields list\n- Removed it so collaborators can see commission paid data in `GET /product-event/:id/metrics/summary`\n\n## Test plan\n\n- [ ] `npm run vitest -- vitest/modules/product-event/event-sales-metrics.service.spec.ts --config vitest.config.unit.ts`\n- [ ] Manual: collaborator calls `GET /product-event/:id/metrics/summary` — `totalCommissionPaid` should return a numeric value (not `null`)\n\n🤖 Generated with [C",
-      "mergedAt": "2026-04-28T01:31:45Z",
-      "createdAt": "2026-04-28T01:22:15Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 2,
-      "deletions": 1,
-      "changedFiles": 2
-    },
-    {
-      "number": 7978,
-      "title": "fix(product): coverImage respects position order instead of preferring VIDEO",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/7978",
-      "body": "## Summary\n- `getCoverMedia` previously preferred VIDEO over IMAGE (`firstVideo ?? firstImage`), causing a VIDEO at position 2 to be selected as coverImage even when an IMAGE was at position 1\n- Simplified the algorithm to pick the first media item by `position`, regardless of media type (IMAGE or VIDEO)\n- Removed unused `MediaType` import\n\n## Test plan\n- [ ] Create a ticket with an IMAGE at position 1 and a VIDEO at position 2 — verify `coverImage` returns the IMAGE\n- [ ] Create a ticket with a",
-      "mergedAt": "2026-04-28T01:24:49Z",
-      "createdAt": "2026-04-28T01:04:08Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 4,
-      "deletions": 10,
-      "changedFiles": 1
-    },
     {
       "number": 7975,
       "title": "KAT-11109: fix circular JSON crash in web-scraper extractPageImages",
