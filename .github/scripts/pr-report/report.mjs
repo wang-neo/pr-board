@@ -187,7 +187,8 @@ async function sendSlackDM(blocks) {
 
   const data = await resp.json();
   if (!data.ok) {
-    throw new Error(`Slack error: ${data.error}`);
+    console.error("Slack full response:", JSON.stringify(data));
+    throw new Error(`Slack error: ${data.error} needed: ${data.needed || "?"} provided: ${data.provided || "?"}`);
   }
 
   console.log("Slack DM sent successfully");
