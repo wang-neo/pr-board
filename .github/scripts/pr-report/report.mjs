@@ -24,18 +24,6 @@ function formatDateCN(d) {
 }
 
 // ── GitHub API ────────────────────────────────────────────────
-async function fetchOpenPRs(octokit) {
-  const prs = [];
-  for await (const resp of octokit.paginate.iterator(octokit.rest.pulls.list, {
-    owner: REPO_OWNER,
-    repo: REPO_NAME,
-    state: "open",
-    per_page: 100,
-  })) {
-    prs.push(...resp.data);
-  }
-  return prs.map(formatPR);
-}
 
 async function fetchMergedPRs(octokit, since) {
   const prs = [];
@@ -48,15 +36,48 @@ async function fetchMergedPRs(octokit, since) {
     for (const pr of resp.data) {
       if (!pr.merged_at) continue;
       if (new Date(pr.merged_at) >= since) {
-        prs.push(formatPR(pr));
+        prs.push(pr);
       }
     }
   }
-  return prs;
+
+  // Fetch code stats for each merged PR
+  const formatted = [];
+  for (const pr of prs) {
+    const detail = await octokit.rest.pulls.get({
+      owner: REPO_OWNER,
+      repo: REPO_NAME,
+      pull_number: pr.number,
+    }).catch(() => null);
+
+    formatted.push({
+      number: pr.number,
+      title: pr.title,
+      author: pr.user?.login || "unknown",
+      url: pr.html_url,
+      body: (pr.body || "").slice(0, 500),
+      mergedAt: pr.merged_at,
+      createdAt: pr.created_at,
+      labels: (pr.labels || []).map((l) => l.name),
+      additions: detail?.data?.additions || 0,
+      deletions: detail?.data?.deletions || 0,
+      changedFiles: detail?.data?.changed_files || 0,
+    });
+  }
+  return formatted;
 }
 
-function formatPR(pr) {
-  return {
+async function fetchOpenPRs(octokit) {
+  const prs = [];
+  for await (const resp of octokit.paginate.iterator(octokit.rest.pulls.list, {
+    owner: REPO_OWNER,
+    repo: REPO_NAME,
+    state: "open",
+    per_page: 100,
+  })) {
+    prs.push(...resp.data);
+  }
+  return prs.map((pr) => ({
     number: pr.number,
     title: pr.title,
     author: pr.user?.login || "unknown",
@@ -65,7 +86,10 @@ function formatPR(pr) {
     mergedAt: pr.merged_at,
     createdAt: pr.created_at,
     labels: (pr.labels || []).map((l) => l.name),
-  };
+    additions: 0,
+    deletions: 0,
+    changedFiles: 0,
+  }));
 }
 
 // ── AI (OpenAI compatible) ────────────────────────────────────
@@ -106,7 +130,7 @@ function getAIConfig() {
   const apiKey = process.env.AI_API_KEY || process.env.OPENAI_API_KEY;
   const baseUrl = process.env.AI_BASE_URL || process.env.OPENAI_BASE_URL || "";
   const model = process.env.AI_MODEL || process.env.OPENAI_MODEL || "";
-  const maxTokens = parseInt(process.env.AI_MAX_TOKENS || "300", 10);
+  const maxTokens = parseInt(process.env.AI_MAX_TOKENS || "800", 10);
 
   return { apiKey, baseUrl, model, maxTokens };
 }
@@ -153,7 +177,13 @@ async function callAI(prompt) {
       }
 
       const data = await resp.json();
-      return data.choices?.[0]?.message?.content?.trim() || null;
+      const content = data.choices?.[0]?.message?.content?.trim();
+      if (!content) {
+        console.error("AI returned empty. Full response:", JSON.stringify(data).slice(0, 500));
+      } else {
+        console.log(`AI response length: ${content.length} chars`);
+      }
+      return content || null;
     } catch (err) {
       if (attempt < maxRetries) {
         await new Promise((r) => setTimeout(r, attempt * 2000));
@@ -195,12 +225,17 @@ async function sendSlackDM(blocks) {
 }
 
 // ── Message formatting ───────────────────────────────────────
-function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate) {
+function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate, sinceDate) {
   const blocks = [];
 
   blocks.push({
     type: "header",
-    text: { type: "plain_text", text: `Katana Server PR Report — ${reportDate}`, emoji: true },
+    text: { type: "plain_text", text: `Katana Server PR Report`, emoji: true },
+  });
+
+  blocks.push({
+    type: "section",
+    text: { type: "mrkdwn", text: `*Date:* ${reportDate} | *Range:* ${sinceDate} ~ ${reportDate} | *Merged:* ${mergedPRs.length} | *Pending:* ${openPRs.length}` },
   });
 
   // AI Summary at top
@@ -210,18 +245,42 @@ function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate) {
     }
   }
 
-  // Merged PRs grouped by author
+  // Code stats per author
+  const authorStats = {};
+  for (const pr of mergedPRs) {
+    if (!authorStats[pr.author]) {
+      authorStats[pr.author] = { prs: 0, additions: 0, deletions: 0, changedFiles: 0 };
+    }
+    authorStats[pr.author].prs += 1;
+    authorStats[pr.author].additions += pr.additions || 0;
+    authorStats[pr.author].deletions += pr.deletions || 0;
+    authorStats[pr.author].changedFiles += pr.changedFiles || 0;
+  }
+
+  const sortedAuthors = Object.entries(authorStats).sort((a, b) => b[1].additions + b[1].deletions - (a[1].additions + a[1].deletions));
+  if (sortedAuthors.length > 0) {
+    let statsText = "*Code Stats by Author*";
+    for (const [author, s] of sortedAuthors) {
+      const total = s.additions + s.deletions;
+      statsText += `\n@${author}: ${s.prs} PRs | +${s.additions} -${s.deletions} | ${s.changedFiles} files (${total} lines)`;
+    }
+    for (const chunk of splitSlackText(statsText, 2900)) {
+      blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
+    }
+  }
+
+  // Merged PRs grouped by author, sorted by PR number
   const byAuthor = {};
   for (const pr of mergedPRs) {
     (byAuthor[pr.author] ||= []).push(pr);
   }
-
   const authorEntries = Object.entries(byAuthor).sort((a, b) => b[1].length - a[1].length);
   let mergedText = `*Merged (${mergedPRs.length})*`;
   for (const [author, prs] of authorEntries) {
+    prs.sort((a, b) => a.number - b.number);
     mergedText += `\n@${author}:`;
     for (const pr of prs) {
-      mergedText += `\n  • <${pr.url}|#${pr.number} ${escapeMarkdown(pr.title)}>`;
+      mergedText += `\n  #${pr.number} <${pr.url}|${escapeMarkdown(pr.title)}>`;
     }
   }
   if (mergedPRs.length === 0) mergedText += "\nNo merged PRs in this period.";
@@ -230,15 +289,21 @@ function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate) {
     blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
   }
 
-  // Open PRs
-  let openText = `*Pending (${openPRs.length})*`;
-  if (openPRs.length > 0) {
-    for (const pr of openPRs) {
-      openText += `\n• <${pr.url}|#${pr.number} ${escapeMarkdown(pr.title)}> — @${pr.author}`;
-    }
-  } else {
-    openText += "\nAll clear!";
+  // Pending PRs grouped by author, sorted by PR number
+  const openByAuthor = {};
+  for (const pr of openPRs) {
+    (openByAuthor[pr.author] ||= []).push(pr);
   }
+  const openAuthorEntries = Object.entries(openByAuthor).sort((a, b) => b[1].length - a[1].length);
+  let openText = `*Pending (${openPRs.length})*`;
+  for (const [author, prs] of openAuthorEntries) {
+    prs.sort((a, b) => a.number - b.number);
+    openText += `\n@${author}:`;
+    for (const pr of prs) {
+      openText += `\n  #${pr.number} <${pr.url}|${escapeMarkdown(pr.title)}>`;
+    }
+  }
+  if (openPRs.length === 0) openText += "\nAll clear!";
 
   for (const chunk of splitSlackText(openText, 2900)) {
     blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
@@ -279,21 +344,31 @@ function computeAnalytics(mergedPRs, openPRs) {
   const authorMap = {};
   const labelMap = {};
   for (const pr of allPRs) {
-    authorMap[pr.author] = (authorMap[pr.author] || 0) + 1;
+    if (!authorMap[pr.author]) {
+      authorMap[pr.author] = { prs: 0, additions: 0, deletions: 0, changedFiles: 0 };
+    }
+    authorMap[pr.author].prs += 1;
+    authorMap[pr.author].additions += pr.additions || 0;
+    authorMap[pr.author].deletions += pr.deletions || 0;
+    authorMap[pr.author].changedFiles += pr.changedFiles || 0;
     for (const label of pr.labels) {
       labelMap[label] = (labelMap[label] || 0) + 1;
     }
   }
 
   const authors = Object.entries(authorMap)
-    .map(([name, count]) => ({ name, count }))
-    .sort((a, b) => b.count - a.count);
+    .map(([name, stats]) => ({ name, ...stats }))
+    .sort((a, b) => b.prs - a.prs);
 
   const labels = Object.entries(labelMap)
     .map(([name, count]) => ({ name, count }))
     .sort((a, b) => b.count - a.count);
 
-  return { authors, labels, total: allPRs.length };
+  const totalAdditions = mergedPRs.reduce((s, p) => s + (p.additions || 0), 0);
+  const totalDeletions = mergedPRs.reduce((s, p) => s + (p.deletions || 0), 0);
+  const totalChangedFiles = mergedPRs.reduce((s, p) => s + (p.changedFiles || 0), 0);
+
+  return { authors, labels, total: allPRs.length, totalAdditions, totalDeletions, totalChangedFiles };
 }
 
 function saveReportJSON(reportDate, mergedPRs, openPRs, dailySummary) {
@@ -392,7 +467,7 @@ async function main() {
 
   // Slack (non-fatal)
   try {
-    const blocks = buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate);
+    const blocks = buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate, formatDate(since));
     console.log("Sending Slack DM...");
     await sendSlackDM(blocks);
   } catch (err) {
