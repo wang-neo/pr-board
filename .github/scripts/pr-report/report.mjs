@@ -135,14 +135,14 @@ ${mergedList}
 请严格按以下两部分输出，用 === 分隔：
 
 第一部分：个人贡献
-按贡献者分组，每人用一句话概括今天合并了什么。
-格式：@某人：做了xxx（#123），修复了yyy（#124）
+按贡献者分组，每人概括今天合并了什么。
+格式要求：每个人单独一行，格式为 "@某人：一句话概括做了什么（#123, #124）"
 
 ===
 
 第二部分：模块变更总览
 按项目模块（如 user, post, order, product, app-terminal, payment 等）分组，总结每个模块今天有什么变动。
-格式：模块名：新增了xxx，修复了yyy（#123, #124）
+格式要求：每个模块单独一行，格式为 "模块名：新增了xxx，修复了yyy（#123, #124）"
 
 要求：简洁专业，不要使用Markdown格式（不要用#、**、-等符号）。直接输出内容，不要寒暄。`;
 
@@ -292,10 +292,18 @@ function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDay, generated
     const parts = dailySummary.split("===").map((s) => s.trim()).filter(Boolean);
     if (parts[0]) {
       blocks.push({ type: "divider" });
-      blocks.push({
-        type: "section",
-        text: { type: "mrkdwn", text: `:bust_in_silhouette: *个人贡献*\n${escapeMarkdown(parts[0])}` },
-      });
+      const lines = parts[0].split("\n").filter((l) => l.trim());
+      const fields = lines.map((line) => ({
+        type: "mrkdwn",
+        text: escapeMarkdown(line),
+      }));
+      // Slack fields: max 10 per block
+      for (let i = 0; i < fields.length; i += 10) {
+        blocks.push({
+          type: "section",
+          fields: fields.slice(i, i + 10),
+        });
+      }
     }
     if (parts[1]) {
       blocks.push({ type: "divider" });
