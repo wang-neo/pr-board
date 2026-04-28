@@ -130,7 +130,7 @@ function getAIConfig() {
   const apiKey = process.env.AI_API_KEY || process.env.OPENAI_API_KEY;
   const baseUrl = process.env.AI_BASE_URL || process.env.OPENAI_BASE_URL || "";
   const model = process.env.AI_MODEL || process.env.OPENAI_MODEL || "";
-  const maxTokens = parseInt(process.env.AI_MAX_TOKENS || "800", 10);
+  const maxTokens = parseInt(process.env.AI_MAX_TOKENS || "2000", 10);
 
   return { apiKey, baseUrl, model, maxTokens };
 }
@@ -177,11 +177,12 @@ async function callAI(prompt) {
       }
 
       const data = await resp.json();
-      const content = data.choices?.[0]?.message?.content?.trim();
+      const msg = data.choices?.[0]?.message;
+      const content = msg?.content?.trim() || msg?.reasoning_content?.trim();
       if (!content) {
-        console.error("AI returned empty. Full response:", JSON.stringify(data).slice(0, 500));
+        console.error("AI returned empty. finish_reason:", data.choices?.[0]?.finish_reason, "response:", JSON.stringify(data).slice(0, 300));
       } else {
-        console.log(`AI response length: ${content.length} chars`);
+        console.log(`AI response: ${content.length} chars, finish_reason: ${data.choices?.[0]?.finish_reason}`);
       }
       return content || null;
     } catch (err) {
