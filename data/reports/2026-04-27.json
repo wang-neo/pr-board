@@ -1,18 +1,18 @@
 {
   "date": "2026-04-27",
-  "generatedAt": "2026-04-28T09:24:13.277Z",
+  "generatedAt": "2026-04-28T10:40:48.038Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 13,
-    "open": 29,
-    "total": 42,
+    "open": 32,
+    "total": 45,
     "authors": 10
   },
   "analytics": {
     "authors": [
       {
         "name": "ruicaiext-1m",
-        "prs": 12,
+        "prs": 13,
         "additions": 39955,
         "deletions": 16169,
         "changedFiles": 652
@@ -25,6 +25,13 @@
         "changedFiles": 7
       },
       {
+        "name": "gunx3961",
+        "prs": 6,
+        "additions": 0,
+        "deletions": 0,
+        "changedFiles": 0
+      },
+      {
         "name": "feng-1m",
         "prs": 5,
         "additions": 220,
@@ -32,15 +39,8 @@
         "changedFiles": 8
       },
       {
-        "name": "gunx3961",
-        "prs": 5,
-        "additions": 0,
-        "deletions": 0,
-        "changedFiles": 0
-      },
-      {
         "name": "qbyte2",
-        "prs": 2,
+        "prs": 3,
         "additions": 313,
         "deletions": 251,
         "changedFiles": 24
@@ -82,7 +82,7 @@
       }
     ],
     "labels": [],
-    "total": 42,
+    "total": 45,
     "totalAdditions": 40547,
     "totalDeletions": 16429,
     "totalChangedFiles": 691
@@ -273,6 +273,48 @@
   ],
   "openPRs": [
     {
+      "number": 8003,
+      "title": "Release v0.0.60 (2026-04-28)",
+      "author": "ruicaiext-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/8003",
+      "body": "# 🚀 Production Release v0.0.60\n\n## 🔍 Pre-Release Checkpoint Results\n\n✅ ALL CHECKPOINTS PASSED\n\n**Summary**: 0 critical issues, 0 warnings detected\n\n### Checkpoint Details\n| # | Checkpoint | Status |\n|---|-----------|--------|\n| 1 | Environment Variable Analysis | ✅ PASSED — No new env vars |\n| 2 | Database Migration Analysis | ✅ PASSED — No migrations |\n| 3 | Prisma Schema Analysis | ✅ PASSED — No schema changes |\n| 4 | Queue System Analysis | ✅ PASSED — No queue type changes |\n| 5 | External ",
+      "mergedAt": null,
+      "createdAt": "2026-04-28T10:07:00Z",
+      "labels": [],
+      "baseBranch": "main",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
+    {
+      "number": 8002,
+      "title": "Feat/kat 11016 1 a b to release",
+      "author": "gunx3961",
+      "url": "https://github.com/bosinc/katana-server/pull/8002",
+      "body": "**Description**: \r\n\r\n**Dependent PRs (FE/BE/KTT-Common)**:\r\n\r\n**PRD/Github Issue Link**:\r\n\r\n**Tech Doc Link**:\r\n\r\n**Screenshots** (optional):\r\n",
+      "mergedAt": null,
+      "createdAt": "2026-04-28T10:01:08Z",
+      "labels": [],
+      "baseBranch": "release",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
+    {
+      "number": 8000,
+      "title": "feat: usage-to-release (KAT-11122 P2) — transaction fee config, subtotal ticket fees, venue app rebate",
+      "author": "qbyte2",
+      "url": "https://github.com/bosinc/katana-server/pull/8000",
+      "body": "## Summary\n\n- **KAT-11122 (P2)**: Update transaction fee configuration types and add E2E tests for venue app rebate\n- Add `subtotalTicketFee` / `subtotalTicketFeesAfterRefund` to cart, checkout line items, and order entities\n- Introduce `TransactionFeeRebateType` enum and extend `transaction-fee` calculator/service\n- Fix `getDefaultConfig` for transaction fee service\n- Add process-role mechanism (`PROCESS_ROLE`) + POC module gating (KAT-11035 Stage 1a)\n- Fix `getTicketFees` import cycle (moved t",
+      "mergedAt": null,
+      "createdAt": "2026-04-28T09:56:22Z",
+      "labels": [],
+      "baseBranch": "release",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
+    {
       "number": 7999,
       "title": "fix(earning-share): expose vanityUrl in ShareUserInfo DTO (KAT-11016)",
       "author": "vanppo-1m",
@@ -305,7 +347,7 @@
       "title": "fix(posts): preserve ticket-banner order in preview endpoints (KAT-11108)",
       "author": "wang-neo",
       "url": "https://github.com/bosinc/katana-server/pull/7995",
-      "body": "## Summary\n- `previewCreatePost` and `previewUpdatePost` both create a temp post via `createPost()`, which calls `generateBodyJsonForEventPost()` for EVENT posts\n- `generateBodyJsonForEventPost()` re-sorts ticket-banners by ascending price — when prices are equal (e.g. both free), it falls back to Prisma's `createdAt: desc` order, overwriting the user's intended layout\n- This restores the request's `bodyJson`/`bodyHtml` after `createPost()` so `previewPost()` → `consumerEntity.value(salesData)` ",
+      "body": "## Summary\n\n`previewUpdatePost` 的流程：\n\n```\n1. 用户请求 → data.bodyJson 里有正确顺序 (B, A)\n       ↓\n2. createPost({ ...data })  ← 把 data 传进去\n       ↓\n   内部对 EVENT 帖子调用 generateBodyJsonForEventPost()\n   → 按价格重新排序 ticket-banners\n   → 价格相同时按 createdAt:desc → A 在前\n   → 覆盖了 data.bodyJson！\n       ↓\n3. tempPost.post.bodyJson = 重新生成的（A, B）← 顺序已经被改了\n       ↓\n4. previewPost(tempPost) → consumerEntity.value(salesData)\n   → 做产品替换，但 bodyJson 里顺序已经是错的\n```\n\n**根本原因**：`createPost()` 对 EVENT 帖子会通过 `generateBodyJsonForEventP",
       "mergedAt": null,
       "createdAt": "2026-04-28T06:49:05Z",
       "labels": [],
