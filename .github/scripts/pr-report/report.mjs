@@ -69,33 +69,34 @@ function formatPR(pr) {
 }
 
 // ── AI (OpenAI compatible) ────────────────────────────────────
-async function generatePRSummary(pr) {
-  const prompt = `用一句话中文总结这个 GitHub PR 的核心变更：
-标题: ${pr.title}
-描述: ${pr.body || "无描述"}
-标签: ${pr.labels.join(", ") || "无"}
-要求: 简洁明了，不超过50字。`;
-
-  return callAI(prompt);
-}
-
 async function generateDailySummary(mergedPRs, openPRs) {
   const mergedList = mergedPRs
-    .map((p) => `- #${p.number} ${p.title} (@${p.author})${p.aiSummary ? " — " + p.aiSummary : ""}`)
+    .map((p) => `- #${p.number} ${p.title} (@${p.author}) [${p.labels.join(",") || "无标签"}]`)
     .join("\n");
   const openList = openPRs
-    .map((p) => `- #${p.number} ${p.title} (@${p.author})${p.aiSummary ? " — " + p.aiSummary : ""}`)
+    .map((p) => `- #${p.number} ${p.title} (@${p.author}) [${p.labels.join(",") || "无标签"}]`)
     .join("\n");
 
-  const prompt = `你是项目日报助手。基于以下 PR 数据生成一份简洁的中文日报总结：
-【已合并】
+  const prompt = `你是项目日报助手。基于以下 PR 数据生成一份结构化的中文日报：
+
+【已合并 PR】
 ${mergedList || "无"}
-【待合并】
+
+【待合并 PR】
 ${openList || "无"}
-要求:
-1. 总结今日合并的主要变更方向（1-2句）
-2. 指出需要关注或优先 review 的 PR
-3. 不超过150字`;
+
+请按以下格式输出：
+
+## 变更概览
+用1-2句话总结今日合并的主要方向。
+
+## 分类归纳
+将已合并的 PR 按类型分组（如新功能、Bug修复、重构优化、性能优化、文档等），每组列出对应的 PR 编号和一句话描述。
+
+## 待关注
+指出需要优先 review 或有风险的待合并 PR。
+
+要求：简洁专业，不超过300字。`;
 
   return callAI(prompt);
 }
@@ -119,35 +120,50 @@ async function callAI(prompt) {
     : "https://api.openai.com/v1/chat/completions";
   const resolvedModel = model || "gpt-4o-mini";
 
-  console.log(`AI request: model=${resolvedModel} url=${url}`);
+  const body = JSON.stringify({
+    model: resolvedModel,
+    messages: [{ role: "user", content: prompt }],
+    max_tokens: maxTokens,
+    temperature: 0.3,
+  });
 
-  try {
-    const resp = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        model: resolvedModel,
-        messages: [{ role: "user", content: prompt }],
-        max_tokens: maxTokens,
-        temperature: 0.3,
-      }),
-    });
+  const maxRetries = 3;
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      const resp = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body,
+      });
 
-    if (!resp.ok) {
-      const text = await resp.text();
-      console.error(`AI API error: ${resp.status} ${text}`);
+      if (resp.status === 429 && attempt < maxRetries) {
+        const delay = attempt * 3000;
+        console.log(`Rate limited, retrying in ${delay}ms (attempt ${attempt}/${maxRetries})`);
+        await new Promise((r) => setTimeout(r, delay));
+        continue;
+      }
+
+      if (!resp.ok) {
+        const text = await resp.text();
+        console.error(`AI API error: ${resp.status} ${text}`);
+        return null;
+      }
+
+      const data = await resp.json();
+      return data.choices?.[0]?.message?.content?.trim() || null;
+    } catch (err) {
+      if (attempt < maxRetries) {
+        await new Promise((r) => setTimeout(r, attempt * 2000));
+        continue;
+      }
+      console.error("AI call failed:", err.message);
       return null;
     }
-
-    const data = await resp.json();
-    return data.choices?.[0]?.message?.content?.trim() || null;
-  } catch (err) {
-    console.error("AI call failed:", err.message);
-    return null;
   }
+  return null;
 }
 
 // ── Slack ─────────────────────────────────────────────────────
@@ -400,17 +416,9 @@ async function main() {
   let dailySummary = null;
 
   if (hasAI) {
-    console.log("Generating AI summaries...");
-    const allPRs = [...mergedPRs, ...openPRs];
-
-    // Batch per-PR summaries (with concurrency limit)
-    const tasks = allPRs.map(async (pr) => {
-      pr.aiSummary = await generatePRSummary(pr);
-    });
-    await Promise.all(tasks);
-
+    console.log("Generating AI daily summary...");
     dailySummary = await generateDailySummary(mergedPRs, openPRs);
-    console.log("AI summaries generated");
+    console.log("AI daily summary generated");
   } else {
     console.log("AI_API_KEY not set, skipping AI summaries");
   }
