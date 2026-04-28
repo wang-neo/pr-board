@@ -1,6 +1,6 @@
 {
   "date": "2026-04-28",
-  "generatedAt": "2026-04-28T08:15:45.283Z",
+  "generatedAt": "2026-04-28T08:52:29.182Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 23,
@@ -97,6 +97,7 @@
       "mergedAt": "2026-04-28T07:39:47Z",
       "createdAt": "2026-04-28T07:03:17Z",
       "labels": [],
+      "baseBranch": "main",
       "additions": 26,
       "deletions": 19,
       "changedFiles": 3
@@ -110,6 +111,7 @@
       "mergedAt": "2026-04-28T07:02:50Z",
       "createdAt": "2026-04-28T06:59:55Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 26,
       "deletions": 19,
       "changedFiles": 3
@@ -123,6 +125,7 @@
       "mergedAt": "2026-04-28T06:52:34Z",
       "createdAt": "2026-04-28T06:43:51Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 18,
       "deletions": 0,
       "changedFiles": 2
@@ -136,6 +139,7 @@
       "mergedAt": "2026-04-28T06:03:15Z",
       "createdAt": "2026-04-28T06:02:36Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 72,
       "deletions": 31,
       "changedFiles": 9
@@ -149,6 +153,7 @@
       "mergedAt": "2026-04-28T05:59:16Z",
       "createdAt": "2026-04-28T05:57:21Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 49,
       "deletions": 50,
       "changedFiles": 5
@@ -162,6 +167,7 @@
       "mergedAt": "2026-04-28T06:32:40Z",
       "createdAt": "2026-04-28T05:31:40Z",
       "labels": [],
+      "baseBranch": "main",
       "additions": 72,
       "deletions": 31,
       "changedFiles": 9
@@ -175,6 +181,7 @@
       "mergedAt": "2026-04-28T03:21:27Z",
       "createdAt": "2026-04-28T03:06:13Z",
       "labels": [],
+      "baseBranch": "main",
       "additions": 4,
       "deletions": 10,
       "changedFiles": 1
@@ -188,6 +195,7 @@
       "mergedAt": "2026-04-28T02:24:51Z",
       "createdAt": "2026-04-28T01:55:23Z",
       "labels": [],
+      "baseBranch": "main",
       "additions": 643,
       "deletions": 303,
       "changedFiles": 42
@@ -201,6 +209,7 @@
       "mergedAt": "2026-04-28T01:31:45Z",
       "createdAt": "2026-04-28T01:22:15Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 2,
       "deletions": 1,
       "changedFiles": 2
@@ -214,6 +223,7 @@
       "mergedAt": "2026-04-28T01:24:49Z",
       "createdAt": "2026-04-28T01:04:08Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 4,
       "deletions": 10,
       "changedFiles": 1
@@ -227,6 +237,7 @@
       "mergedAt": "2026-04-27T10:24:41Z",
       "createdAt": "2026-04-27T09:37:58Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 4,
       "deletions": 1,
       "changedFiles": 1
@@ -240,6 +251,7 @@
       "mergedAt": "2026-04-27T09:56:27Z",
       "createdAt": "2026-04-27T07:59:41Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 177,
       "deletions": 2,
       "changedFiles": 4
@@ -253,6 +265,7 @@
       "mergedAt": "2026-04-27T07:19:39Z",
       "createdAt": "2026-04-27T07:13:36Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 28,
       "deletions": 0,
       "changedFiles": 2
@@ -266,6 +279,7 @@
       "mergedAt": "2026-04-27T06:51:21Z",
       "createdAt": "2026-04-27T06:17:02Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 47,
       "deletions": 70,
       "changedFiles": 2
@@ -279,6 +293,7 @@
       "mergedAt": "2026-04-27T09:42:31Z",
       "createdAt": "2026-04-27T05:41:01Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 11,
       "deletions": 1,
       "changedFiles": 1
@@ -292,6 +307,7 @@
       "mergedAt": "2026-04-27T05:39:20Z",
       "createdAt": "2026-04-27T05:06:57Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 313,
       "deletions": 251,
       "changedFiles": 24
@@ -305,6 +321,7 @@
       "mergedAt": "2026-04-27T06:02:27Z",
       "createdAt": "2026-04-27T04:34:06Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 513,
       "deletions": 333,
       "changedFiles": 17
@@ -318,6 +335,7 @@
       "mergedAt": "2026-04-27T09:38:17Z",
       "createdAt": "2026-04-27T04:23:25Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 5,
       "changedFiles": 1
@@ -331,6 +349,7 @@
       "mergedAt": "2026-04-27T09:46:51Z",
       "createdAt": "2026-04-27T04:23:14Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 33,
       "deletions": 1,
       "changedFiles": 1
@@ -344,6 +363,7 @@
       "mergedAt": "2026-04-27T06:17:09Z",
       "createdAt": "2026-04-27T03:13:07Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 38,
       "deletions": 0,
       "changedFiles": 2
@@ -357,6 +377,7 @@
       "mergedAt": "2026-04-27T02:55:50Z",
       "createdAt": "2026-04-27T02:16:03Z",
       "labels": [],
+      "baseBranch": "main",
       "additions": 39190,
       "deletions": 15764,
       "changedFiles": 627
@@ -370,6 +391,7 @@
       "mergedAt": "2026-04-27T04:30:42Z",
       "createdAt": "2026-04-24T10:01:58Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 11,
       "deletions": 0,
       "changedFiles": 3
@@ -383,6 +405,7 @@
       "mergedAt": "2026-04-27T07:14:21Z",
       "createdAt": "2026-04-24T08:17:31Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 182,
       "deletions": 1,
       "changedFiles": 6
@@ -398,6 +421,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-28T07:13:15Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -411,6 +435,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-28T07:07:20Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -424,6 +449,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-28T06:49:05Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -437,6 +463,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-28T06:24:01Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -450,6 +477,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-28T06:11:04Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -463,6 +491,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-28T05:50:45Z",
       "labels": [],
+      "baseBranch": "main",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -476,6 +505,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-28T03:55:47Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -489,6 +519,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-28T03:06:21Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -502,6 +533,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-27T20:15:39Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -515,6 +547,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-27T18:57:01Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -528,6 +561,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-27T09:25:34Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -541,6 +575,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-27T08:04:00Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -554,6 +589,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-27T07:08:27Z",
       "labels": [],
+      "baseBranch": "main",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -567,6 +603,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-27T02:50:55Z",
       "labels": [],
+      "baseBranch": "main",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -580,6 +617,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-24T05:48:59Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -593,6 +631,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-23T11:39:41Z",
       "labels": [],
+      "baseBranch": "main",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -606,6 +645,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-21T06:24:16Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -619,6 +659,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-20T13:10:54Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -632,6 +673,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-17T09:02:57Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -645,6 +687,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-17T01:27:34Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -658,6 +701,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-15T05:40:11Z",
       "labels": [],
+      "baseBranch": "main",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -671,6 +715,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-14T02:24:52Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -684,6 +729,7 @@
       "mergedAt": null,
       "createdAt": "2026-04-07T09:35:22Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -697,6 +743,7 @@
       "mergedAt": null,
       "createdAt": "2026-03-25T10:57:42Z",
       "labels": [],
+      "baseBranch": "main",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -710,6 +757,7 @@
       "mergedAt": null,
       "createdAt": "2026-03-25T08:56:15Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -723,6 +771,7 @@
       "mergedAt": null,
       "createdAt": "2026-03-06T04:15:45Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -736,6 +785,7 @@
       "mergedAt": null,
       "createdAt": "2026-03-04T11:41:32Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -749,6 +799,7 @@
       "mergedAt": null,
       "createdAt": "2026-03-03T05:56:04Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -762,6 +813,7 @@
       "mergedAt": null,
       "createdAt": "2025-12-16T01:23:51Z",
       "labels": [],
+      "baseBranch": "release",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
