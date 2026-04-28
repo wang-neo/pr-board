@@ -2,8 +2,18 @@ import { Octokit } from "@octokit/rest";
 import { writeFileSync, readFileSync, mkdirSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 
-const REPO_OWNER = "bosinc";
-const REPO_NAME = "katana-server";
+// ── Config (all via env vars) ────────────────────────────────
+const REPO_OWNER = process.env.REPO_OWNER || "bosinc";
+const REPO_NAME = process.env.REPO_NAME || "katana-server";
+
+// Target branches: "main:🚀,release:🛠️" → { main: "🚀", release: "🛠️" }
+const TARGET_BRANCHES = (process.env.TARGET_BRANCHES || "main:🚀,release:🛠️")
+  .split(",")
+  .reduce((map, entry) => {
+    const [branch, icon] = entry.split(":").map((s) => s.trim());
+    if (branch) map[branch] = icon || "";
+    return map;
+  }, {});
 
 // ── Date helpers ──────────────────────────────────────────────
 function getLastWorkday(now) {
@@ -20,6 +30,12 @@ function formatDate(d) {
 }
 
 // ── GitHub API ────────────────────────────────────────────────
+const targetBranchSet = new Set(Object.keys(TARGET_BRANCHES));
+
+function matchTargetBranch(pr) {
+  const base = pr.base?.ref || "";
+  return targetBranchSet.has(base);
+}
 
 async function fetchMergedPRs(octokit, since) {
   const prs = [];
@@ -31,7 +47,7 @@ async function fetchMergedPRs(octokit, since) {
   })) {
     for (const pr of resp.data) {
       if (!pr.merged_at) continue;
-      if (new Date(pr.merged_at) >= since) {
+      if (new Date(pr.merged_at) >= since && matchTargetBranch(pr)) {
         prs.push(pr);
       }
     }
@@ -55,6 +71,7 @@ async function fetchMergedPRs(octokit, since) {
       mergedAt: pr.merged_at,
       createdAt: pr.created_at,
       labels: (pr.labels || []).map((l) => l.name),
+      baseBranch: pr.base?.ref || "",
       additions: detail?.data?.additions || 0,
       deletions: detail?.data?.deletions || 0,
       changedFiles: detail?.data?.changed_files || 0,
@@ -71,7 +88,9 @@ async function fetchOpenPRs(octokit) {
     state: "open",
     per_page: 100,
   })) {
-    prs.push(...resp.data);
+    for (const pr of resp.data) {
+      if (matchTargetBranch(pr)) prs.push(pr);
+    }
   }
   return prs.map((pr) => ({
     number: pr.number,
@@ -82,6 +101,7 @@ async function fetchOpenPRs(octokit) {
     mergedAt: pr.merged_at,
     createdAt: pr.created_at,
     labels: (pr.labels || []).map((l) => l.name),
+    baseBranch: pr.base?.ref || "",
     additions: 0,
     deletions: 0,
     changedFiles: 0,
@@ -277,7 +297,7 @@ function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate, sinceDat
     prs.sort((a, b) => a.number - b.number);
     mergedText += `\n@${author}:`;
     for (const pr of prs) {
-      mergedText += `\n  #${pr.number} <${pr.url}|${escapeMarkdown(pr.title)}>`;
+      mergedText += `\n  ${formatPRLine(pr)}`;
     }
   }
   if (mergedPRs.length === 0) mergedText += "\nNo merged PRs in this period.";
@@ -297,7 +317,7 @@ function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate, sinceDat
     prs.sort((a, b) => a.number - b.number);
     openText += `\n@${author}:`;
     for (const pr of prs) {
-      openText += `\n  #${pr.number} <${pr.url}|${escapeMarkdown(pr.title)}>`;
+      openText += `\n  ${formatPRLine(pr)}`;
     }
   }
   if (openPRs.length === 0) openText += "\nAll clear!";
@@ -308,7 +328,7 @@ function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate, sinceDat
 
   blocks.push({
     type: "context",
-    elements: [{ type: "mrkdwn", text: `From <https://github.com/bosinc/katana-server|katana-server> PR Report` }],
+    elements: [{ type: "mrkdwn", text: `From <https://github.com/${REPO_OWNER}/${REPO_NAME}|${REPO_NAME}> PR Report` }],
   });
 
   return blocks.slice(0, 50);
@@ -332,6 +352,12 @@ function splitSlackText(text, maxLen) {
 
 function escapeMarkdown(text) {
   return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function formatPRLine(pr) {
+  const icon = TARGET_BRANCHES[pr.baseBranch] || "";
+  const branch = pr.baseBranch ? `(${pr.baseBranch}) ` : "";
+  return `${icon} #${pr.number}${branch}<${pr.url}|${escapeMarkdown(pr.title)}>`;
 }
 
 // ── Save JSON data ───────────────────────────────────────────
