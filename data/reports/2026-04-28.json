@@ -1,60 +1,119 @@
 {
   "date": "2026-04-28",
-  "generatedAt": "2026-04-28T06:47:51.896Z",
+  "generatedAt": "2026-04-28T07:13:02.136Z",
   "repo": "bosinc/katana-server",
   "stats": {
-    "merged": 20,
-    "open": 28,
-    "total": 48,
+    "merged": 22,
+    "open": 29,
+    "total": 51,
     "authors": 10
   },
   "analytics": {
     "authors": [
       {
         "name": "ruicaiext-1m",
-        "count": 14
+        "prs": 14,
+        "additions": 40600,
+        "deletions": 16473,
+        "changedFiles": 696
       },
       {
         "name": "wang-neo",
-        "count": 11
-      },
-      {
-        "name": "feng-1m",
-        "count": 6
+        "prs": 12,
+        "additions": 67,
+        "deletions": 28,
+        "changedFiles": 9
       },
       {
         "name": "qbyte2",
-        "count": 5
+        "prs": 7,
+        "additions": 532,
+        "deletions": 382,
+        "changedFiles": 50
+      },
+      {
+        "name": "feng-1m",
+        "prs": 6,
+        "additions": 238,
+        "deletions": 1,
+        "changedFiles": 10
       },
       {
         "name": "gunx3961",
-        "count": 5
+        "prs": 5,
+        "additions": 0,
+        "deletions": 0,
+        "changedFiles": 0
       },
       {
         "name": "chengmarket",
-        "count": 2
+        "prs": 2,
+        "additions": 0,
+        "deletions": 0,
+        "changedFiles": 0
       },
       {
         "name": "invokerxiaext-byte",
-        "count": 2
+        "prs": 2,
+        "additions": 0,
+        "deletions": 0,
+        "changedFiles": 0
       },
       {
         "name": "vanppo-1m",
-        "count": 1
+        "prs": 1,
+        "additions": 0,
+        "deletions": 0,
+        "changedFiles": 0
       },
       {
         "name": "junetengext-a11y",
-        "count": 1
+        "prs": 1,
+        "additions": 0,
+        "deletions": 0,
+        "changedFiles": 0
       },
       {
         "name": "wgcairui",
-        "count": 1
+        "prs": 1,
+        "additions": 0,
+        "deletions": 0,
+        "changedFiles": 0
       }
     ],
     "labels": [],
-    "total": 48
+    "total": 51,
+    "totalAdditions": 41437,
+    "totalDeletions": 16884,
+    "totalChangedFiles": 765
   },
   "mergedPRs": [
+    {
+      "number": 7996,
+      "title": "feat(order): add subtotalTicketFee to cart, checkout, and order line items",
+      "author": "qbyte2",
+      "url": "https://github.com/bosinc/katana-server/pull/7996",
+      "body": "## Summary\n\n- Add `subtotalTicketFee` field to cart, checkout entity, and order line items\n- Add `subtotalTicketFeesAfterRefund` to order calculations\n- Move `getTicketFees` to shared util to break circular dependency between cart and sales modules\n- Update ticket fee calculations to use `variantInfo` directly for accuracy\n\n## Changes\n\n- `src/cart/` — add `subtotalTicketFee` to cart repo and service calculations\n- `src/sales/orders/` — add `subtotalTicketFee` to checkout/line-item entities and o",
+      "mergedAt": "2026-04-28T07:02:50Z",
+      "createdAt": "2026-04-28T06:59:55Z",
+      "labels": [],
+      "additions": 26,
+      "deletions": 19,
+      "changedFiles": 3
+    },
+    {
+      "number": 7994,
+      "title": "fix(ticket): reject save when fees exceed retail price",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/7994",
+      "body": "## Summary\n- Add early reject in `TransactionFeeService.checkTicketVariantPrice` for `ticketPrice < 0` (i.e. `fees > retail price`)\n- Covers all save paths (V1 `MerchantProductsService.checkTicketProduct`, V1 `ProductEventService.checkTicketProduct` used by event duplicate, V2 `TicketProductStrategy`, V2 `AnyDayTicketProductStrategy`) — they all funnel through this validator\n- Add unit test for the negative-ticketPrice case\n\n## Background\nFrontend's calculate endpoint (`merchant-products.control",
+      "mergedAt": "2026-04-28T06:52:34Z",
+      "createdAt": "2026-04-28T06:43:51Z",
+      "labels": [],
+      "additions": 18,
+      "deletions": 0,
+      "changedFiles": 2
+    },
     {
       "number": 7990,
       "title": "Feat/add subtotal ticket fee to release",
@@ -63,7 +122,10 @@
       "body": "**Description**: \r\n\r\n**Dependent PRs (FE/BE/KTT-Common)**:\r\n\r\n**PRD/Github Issue Link**:\r\n\r\n**Tech Doc Link**:\r\n\r\n**Screenshots** (optional):\r\n",
       "mergedAt": "2026-04-28T06:03:15Z",
       "createdAt": "2026-04-28T06:02:36Z",
-      "labels": []
+      "labels": [],
+      "additions": 72,
+      "deletions": 31,
+      "changedFiles": 9
     },
     {
       "number": 7989,
@@ -73,7 +135,10 @@
       "body": "**Description**: \r\n\r\n**Dependent PRs (FE/BE/KTT-Common)**:\r\n\r\n**PRD/Github Issue Link**:\r\n\r\n**Tech Doc Link**:\r\n\r\n**Screenshots** (optional):\r\n",
       "mergedAt": "2026-04-28T05:59:16Z",
       "createdAt": "2026-04-28T05:57:21Z",
-      "labels": []
+      "labels": [],
+      "additions": 49,
+      "deletions": 50,
+      "changedFiles": 5
     },
     {
       "number": 7985,
@@ -83,7 +148,10 @@
       "body": "## Summary\n\n- Add `subtotalTicketFee` field to `OrderLineItem` and `CheckoutLineItem` (calculated from `lineItemSubtotal`, i.e., post-discount price)\n- `ticketFee` now uses `lineItemPrice` (pre-discount price) for calculation\n- `totalTicketFee` at order/checkout level is now the sum of `subtotalTicketFee` across line items\n- Expose `subtotalTicketFees` per line item in checkout response\n\n## Changes\n\n- `ticket-fees.util.ts`: `getTicketFees` returns `{ ticketFee, subtotalTicketFee }` via sibling `",
       "mergedAt": "2026-04-28T06:32:40Z",
       "createdAt": "2026-04-28T05:31:40Z",
-      "labels": []
+      "labels": [],
+      "additions": 72,
+      "deletions": 31,
+      "changedFiles": 9
     },
     {
       "number": 7981,
@@ -93,7 +161,10 @@
       "body": "## Summary\n\nBackports #7978 for hotfix release.\n\n- `getCoverMedia` previously preferred VIDEO over IMAGE (`firstVideo ?? firstImage`), causing a VIDEO at position 2 to be selected as coverImage even when an IMAGE was at position 1\n- Simplified the algorithm to pick the first media item by `position`, regardless of media type (IMAGE or VIDEO)\n\nCommits cherry-picked:\n- `916cce93` fix(product): coverImage should respect position order, not prefer VIDEO",
       "mergedAt": "2026-04-28T03:21:27Z",
       "createdAt": "2026-04-28T03:06:13Z",
-      "labels": []
+      "labels": [],
+      "additions": 4,
+      "deletions": 10,
+      "changedFiles": 1
     },
     {
       "number": 7980,
@@ -103,7 +174,10 @@
       "body": "# 🚀 Pick Release — 2026-04-27 (Cutoff 19:00 CST)\n\n## 📋 Release Summary\n\n- **Branch**: `pick-release-20260427` → `main`\n- **Cutoff**: 2026-04-27 19:00 CST\n- **Commits**: 12 cherry-picked (2 excluded)\n- **Excluded**: KAT-10790 Phase 2a & 2b (collaborator report access control)\n- **Base Version**: v0.0.59\n\n---\n\n## ✅ Included Commits (12)\n\n| Area | Change |\n|------|--------|\n| `feat` modulith | Introduce PROCESS_ROLE mechanism + POC module gating — KAT-11035 |\n| `feat` cart | Enhance ticket fee ca",
       "mergedAt": "2026-04-28T02:24:51Z",
       "createdAt": "2026-04-28T01:55:23Z",
-      "labels": []
+      "labels": [],
+      "additions": 643,
+      "deletions": 303,
+      "changedFiles": 42
     },
     {
       "number": 7979,
@@ -113,7 +187,10 @@
       "body": "## Summary\n\n- `totalCommissionPaid` was incorrectly included in the owner-only hidden fields list\n- Removed it so collaborators can see commission paid data in `GET /product-event/:id/metrics/summary`\n\n## Test plan\n\n- [ ] `npm run vitest -- vitest/modules/product-event/event-sales-metrics.service.spec.ts --config vitest.config.unit.ts`\n- [ ] Manual: collaborator calls `GET /product-event/:id/metrics/summary` — `totalCommissionPaid` should return a numeric value (not `null`)\n\n🤖 Generated with [C",
       "mergedAt": "2026-04-28T01:31:45Z",
       "createdAt": "2026-04-28T01:22:15Z",
-      "labels": []
+      "labels": [],
+      "additions": 2,
+      "deletions": 1,
+      "changedFiles": 2
     },
     {
       "number": 7978,
@@ -123,7 +200,10 @@
       "body": "## Summary\n- `getCoverMedia` previously preferred VIDEO over IMAGE (`firstVideo ?? firstImage`), causing a VIDEO at position 2 to be selected as coverImage even when an IMAGE was at position 1\n- Simplified the algorithm to pick the first media item by `position`, regardless of media type (IMAGE or VIDEO)\n- Removed unused `MediaType` import\n\n## Test plan\n- [ ] Create a ticket with an IMAGE at position 1 and a VIDEO at position 2 — verify `coverImage` returns the IMAGE\n- [ ] Create a ticket with a",
       "mergedAt": "2026-04-28T01:24:49Z",
       "createdAt": "2026-04-28T01:04:08Z",
-      "labels": []
+      "labels": [],
+      "additions": 4,
+      "deletions": 10,
+      "changedFiles": 1
     },
     {
       "number": 7975,
@@ -133,7 +213,10 @@
       "body": "## Summary\n- `POST /web-scraper/images` returns 500 with `Converting circular structure to JSON` when the target URL causes an axios error\n- Root cause: `AxiosError` contains circular references (`ClientRequest.res.req`). The raw error was passed to `LoggingService.error`, which spreads all properties via `_.omit(data, ['message', 'stack'])` — including the circular `request`/`response` objects — then calls `JSON.stringify`\n\n## Fix\nPass only `message` and `stack` from the caught error to `Loggin",
       "mergedAt": "2026-04-27T10:24:41Z",
       "createdAt": "2026-04-27T09:37:58Z",
-      "labels": []
+      "labels": [],
+      "additions": 4,
+      "deletions": 1,
+      "changedFiles": 1
     },
     {
       "number": 7972,
@@ -143,7 +226,10 @@
       "body": "## Summary\n\n- `GET /product-event/:id/metrics/summary` was returning owner-private financial fields (e.g. `totalRebate`, `grossSales`, `netRevenue`) to collaborators\n- Added `OWNER_ONLY_SUMMARY_FIELDS` constant + `CollaboratorEventSummaryData` type to define the 12 restricted fields\n- `getEventSummary` now checks `ctx.type === 'COLLABORATOR'` and nulls out those fields via `redactOwnerOnlyFields()`; operational metrics (order counts, item counts) remain visible\n\n## Fields redacted for collaborat",
       "mergedAt": "2026-04-27T09:56:27Z",
       "createdAt": "2026-04-27T07:59:41Z",
-      "labels": []
+      "labels": [],
+      "additions": 177,
+      "deletions": 2,
+      "changedFiles": 4
     },
     {
       "number": 7971,
@@ -153,7 +239,10 @@
       "body": "## Summary\n\n- Adds `POST /app-terminal/v1/upload/image-url` endpoint for terminal app image uploads\n- Uses `AppTerminalGuard` (terminal JWT) instead of the promoter `JwtAuthGuard`\n- Imports `CloudinaryModule` into `AppTerminalModule` to expose `CloudinaryService`\n- Accepts same params as existing `cloudinary/admin/image-url`: optional `type` (CloudinaryFolder) and `opt`\n\n## Test plan\n\n- [ ] Call `POST /app-terminal/v1/upload/image-url` with a valid terminal JWT — should return `{ uploadUrl }`\n- ",
       "mergedAt": "2026-04-27T07:19:39Z",
       "createdAt": "2026-04-27T07:13:36Z",
-      "labels": []
+      "labels": [],
+      "additions": 28,
+      "deletions": 0,
+      "changedFiles": 2
     },
     {
       "number": 7969,
@@ -163,7 +252,10 @@
       "body": "## Summary\n\n- `GET /app-terminal/v1/orders/:orderId` was returning 403 for orders created by the requesting terminal after a guest-user merge\n- Fixed the ownership check to use `originalConsumerId` instead of `consumerId`, consistent with the existing `sendReceipt` logic (line 405)\n- `consumerId` can be replaced by the real user ID after a guest→registered merge (KAT-9960); `originalConsumerId` always preserves the terminal (`taId`) that created the order\n\n## Root Cause\n\n```typescript\n// Before ",
       "mergedAt": "2026-04-27T06:51:21Z",
       "createdAt": "2026-04-27T06:17:02Z",
-      "labels": []
+      "labels": [],
+      "additions": 47,
+      "deletions": 70,
+      "changedFiles": 2
     },
     {
       "number": 7968,
@@ -173,7 +265,10 @@
       "body": "## Summary\n- **Root cause**: previewPost called consumerEntity.value() without salesData, so shouldReplace() always saw aggregateQuantity=0 and never triggered replacement conditions\n- **Fix**: Fetch sales data via getSalesDataForReplacement() and pass it to consumerEntity.value(salesData), matching the consumer detail/lite-detail endpoints\n- **Impact**: Curator preview now correctly shows replacement products instead of the original\n\n## Test plan\n- [ ] Set ticket B to replace ticket C with tota",
       "mergedAt": "2026-04-27T09:42:31Z",
       "createdAt": "2026-04-27T05:41:01Z",
-      "labels": []
+      "labels": [],
+      "additions": 11,
+      "deletions": 1,
+      "changedFiles": 1
     },
     {
       "number": 7967,
@@ -183,7 +278,10 @@
       "body": "## Summary\n\n- **Refactored `getTicketFees()`** in `ticket-fees.util.ts` to accept full line item data, `customTransactionFeeConfig`, and merchant user's `transactionFeeConfig` instead of raw `fees × quantity`. Fee calculation now delegates to `TransactionFeeCalculator` for accurate per-item fee breakdown (TAX + standard fee).\n- **Cart service** now resolves the merchant user from `variantInfo.merchantUserId` and threads it through `EnrichData`, so ticket fees are computed with the correct user-l",
       "mergedAt": "2026-04-27T05:39:20Z",
       "createdAt": "2026-04-27T05:06:57Z",
-      "labels": []
+      "labels": [],
+      "additions": 313,
+      "deletions": 251,
+      "changedFiles": 24
     },
     {
       "number": 7966,
@@ -193,7 +291,10 @@
       "body": "## Summary\n\n- `GET /product-event/:eventId/metrics/report` (Final Report) was accessible to all collaborator roles with `sales.view` permission\n- Replace `verifyEventAccess('sales.view')` + manual owner check with `findUniqueEventEntityOrThrow(eventId, curatorId)` — Prisma filters by `curatorId`, so non-owners get `ResourceNotFound`\n- Statistic tab (`/metrics/summary`) is unaffected and remains accessible to all collaborator roles including after event completion\n\n## Test plan\n\n- [ ] Owner can s",
       "mergedAt": "2026-04-27T06:02:27Z",
       "createdAt": "2026-04-27T04:34:06Z",
-      "labels": []
+      "labels": [],
+      "additions": 513,
+      "deletions": 333,
+      "changedFiles": 17
     },
     {
       "number": 7965,
@@ -203,7 +304,10 @@
       "body": "## Summary\n- Remove the `if (firstImage)` block in `getCoverMedia()` that unconditionally overwrites `coverImage.src`/`width`/`height` with the first IMAGE's values when a VIDEO is selected as cover\n- Root cause: when a product has both video and image media, `getCoverMedia()` correctly prefers video (`cloneDeep(firstVideo ?? firstImage)`) but then overwrites `src` with the image's URL, producing inconsistent `coverImage` JSON where `mediaType=VIDEO` but `src` points to a picture\n- Fix: the `clo",
       "mergedAt": "2026-04-27T09:38:17Z",
       "createdAt": "2026-04-27T04:23:25Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 5,
+      "changedFiles": 1
     },
     {
       "number": 7964,
@@ -213,7 +317,10 @@
       "body": "## Summary\n- When curator adds a co-seller to `PostSpecificAccess` via email/phone, `consumerId` was left `null` even if that user already existed in the system\n- Promoter explore page query (`listCuratorPosts`) matches `PostSpecificAccess` by `consumerId`, so the co-seller couldn't see the post\n- Now `generatePostAccessSpecificUser` looks up existing users by email/phone at creation time and binds `consumerId` when a match is found\n\n## Test plan\n- [ ] Create a post with `isAccessRestricted: tru",
       "mergedAt": "2026-04-27T09:46:51Z",
       "createdAt": "2026-04-27T04:23:14Z",
-      "labels": []
+      "labels": [],
+      "additions": 33,
+      "deletions": 1,
+      "changedFiles": 1
     },
     {
       "number": 7963,
@@ -223,7 +330,10 @@
       "body": "## Summary\n- New: docs/workflows/MIGRATION-DISCIPLINE.en.md — 3 rules (additive-only, migration-before-code, expand-contract)\n- Updated: CLAUDE.md — pointer to the new doc\n\n## Why now\nKAT-11035 Stage 2 (worker EB env) introduces a 2nd primary deploy target. Additive-only discipline becomes operationally critical when multiple envs deploy on independent schedules.\n\n## Test plan\n- [x] Doc-only — no code/migration changes\n- [x] CLAUDE.md pointer renders correctly",
       "mergedAt": "2026-04-27T06:17:09Z",
       "createdAt": "2026-04-27T03:13:07Z",
-      "labels": []
+      "labels": [],
+      "additions": 38,
+      "deletions": 0,
+      "changedFiles": 2
     },
     {
       "number": 7961,
@@ -233,7 +343,10 @@
       "body": "# 🚀 Production Release v0.0.59\n\n## 🔍 Pre-Release Checkpoint Results\n\n⚠️ **CHECKPOINT REVIEW REQUIRED**\n\n**Summary**: 0 blocking issues, 5 checkpoints require manual review\n\n### Checkpoint Details\n\n| # | Checkpoint | Status | Notes |\n|---|------------|--------|-------|\n| 1 | Environment Variables | ✅ PASSED | No new env vars detected |\n| 2 | Database Migrations | ⚠️ REVIEW | 6 migration files — see Database Changes section |\n| 3 | Prisma Schema | ⚠️ REVIEW | Rename models, enum changes, new ind",
       "mergedAt": "2026-04-27T02:55:50Z",
       "createdAt": "2026-04-27T02:16:03Z",
-      "labels": []
+      "labels": [],
+      "additions": 39190,
+      "deletions": 15764,
+      "changedFiles": 627
     },
     {
       "number": 7960,
@@ -243,7 +356,10 @@
       "body": "## Summary\n- Add optional `subtitle` string field to `UserLink` model in Prisma schema\n- Add `subtitle` to `CreateUserLinkRequest` and `UpdateUserLinkRequest` DTOs (optional, string)\n- Add migration SQL: `ALTER TABLE \"UserLink\" ADD COLUMN \"subtitle\" TEXT`\n- No repo/service changes needed — Prisma generated types handle it automatically\n\n## Test plan\n- [ ] Apply migration and verify `subtitle` column appears on `UserLink` table\n- [ ] Create a UserLink with `subtitle` set — verify it persists and ",
       "mergedAt": "2026-04-27T04:30:42Z",
       "createdAt": "2026-04-24T10:01:58Z",
-      "labels": []
+      "labels": [],
+      "additions": 11,
+      "deletions": 0,
+      "changedFiles": 3
     },
     {
       "number": 7959,
@@ -253,29 +369,51 @@
       "body": "## Summary\n\n- Adds `src/shared/process-role/` with a pure-env utility layer (no NestJS DI, no domain imports — infra-safe per Rule 29)\n- Three predicates gate registration: `shouldRunProcessor()` (MONOLITH|WORKER), `shouldRunCron()` (MONOLITH|CRON), `shouldRunController()` (MONOLITH|API|WEBHOOK)\n- **Backward-compat**: unset or invalid `PROCESS_ROLE` always defaults to `MONOLITH` — all existing EB environments behave identically today\n- POC: `AdEventsModule` conditionally spreads `AdEventsSubscri",
       "mergedAt": "2026-04-27T07:14:21Z",
       "createdAt": "2026-04-24T08:17:31Z",
-      "labels": []
+      "labels": [],
+      "additions": 182,
+      "deletions": 1,
+      "changedFiles": 6
     }
   ],
   "openPRs": [
     {
-      "number": 7994,
-      "title": "fix(ticket): reject save when fees exceed retail price",
+      "number": 7998,
+      "title": "feat(KAT-11035 No.1b v2): gate Processor+Cron via bootstrap hook",
       "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/7994",
-      "body": "## Summary\n- Add early reject in `TransactionFeeService.checkTicketVariantPrice` for `ticketPrice < 0` (i.e. `fees > retail price`)\n- Covers all save paths (V1 `MerchantProductsService.checkTicketProduct`, V1 `ProductEventService.checkTicketProduct` used by event duplicate, V2 `TicketProductStrategy`, V2 `AnyDayTicketProductStrategy`) — they all funnel through this validator\n- Add unit test for the negative-ticketPrice case\n\n## Background\nFrontend's calculate endpoint (`merchant-products.control",
+      "url": "https://github.com/bosinc/katana-server/pull/7998",
+      "body": "Replaces #7993. Closing that PR.\n\nReplaces inline `shouldRunXxx()` guards in PR #7993 with single-source-of-truth bootstrap service.\n\n## What changed\n\n- **New**: `src/shared/process-role/process-role.bootstrap.service.ts` — `ProcessRoleBootstrap implements OnApplicationBootstrap`:\n  - Non-worker roles: discovers all Bull Queue instances via `DiscoveryService` (duck-type filter on `pause/name/process`), calls `queue.pause(true)` (local pause — stops local consumption, producers and other workers ",
       "mergedAt": null,
-      "createdAt": "2026-04-28T06:43:51Z",
-      "labels": []
+      "createdAt": "2026-04-28T07:07:20Z",
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
-      "number": 7993,
-      "title": "feat(KAT-11035 No.1b): gate @Processor and @Cron handlers by PROCESS_ROLE",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/7993",
-      "body": "## Summary\n\n- Inserts `if (!shouldRunProcessor()) return;` as the first line of every `@Process()`-decorated method body across all `@Processor` classes.\n- Inserts `if (!shouldRunCron()) return;` as the first line of every `@Cron`-decorated method body.\n- Import is `shouldRunProcessor` / `shouldRunCron` from `src/shared/process-role`.\n- Heartbeat `healthCheck` in `default.controller.ts` intentionally skipped (always-on semantics).\n- One special case: `ai-post-generation.subscriber.ts` has an exp",
+      "number": 7997,
+      "title": "feat(order): add subtotalTicketFee to cart, checkout, and order line items",
+      "author": "qbyte2",
+      "url": "https://github.com/bosinc/katana-server/pull/7997",
+      "body": "## Summary\n\n- Add `subtotalTicketFee` field to cart, checkout entity, and order line items\n- Add `subtotalTicketFeesAfterRefund` to order calculations\n- Move `getTicketFees` to shared util to break circular dependency between cart and sales modules\n- Update ticket fee calculations to use `variantInfo` directly for accuracy\n\n## Changes\n\n- `src/cart/` — add `subtotalTicketFee` to cart repo and service calculations\n- `src/sales/orders/` — add `subtotalTicketFee` to checkout/line-item entities and o",
       "mergedAt": null,
-      "createdAt": "2026-04-28T06:34:56Z",
-      "labels": []
+      "createdAt": "2026-04-28T07:03:17Z",
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
+    {
+      "number": 7995,
+      "title": "fix(posts): preserve ticket-banner order in preview endpoints (KAT-11108)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/7995",
+      "body": "## Summary\n- `previewCreatePost` and `previewUpdatePost` both create a temp post via `createPost()`, which calls `generateBodyJsonForEventPost()` for EVENT posts\n- `generateBodyJsonForEventPost()` re-sorts ticket-banners by ascending price — when prices are equal (e.g. both free), it falls back to Prisma's `createdAt: desc` order, overwriting the user's intended layout\n- This restores the request's `bodyJson`/`bodyHtml` after `createPost()` so `previewPost()` → `consumerEntity.value(salesData)` ",
+      "mergedAt": null,
+      "createdAt": "2026-04-28T06:49:05Z",
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7992,
@@ -285,7 +423,10 @@
       "body": "## Summary\n\n- **New endpoints**: `GET/PATCH /posts/curator/:originalPostId/co-sellers/:coSellerPostId/commission` — parent post owner can view and set custom commission on a specific co-seller's resale post (field-whitelisted: only `commissionRateForMe` / `wholesalePriceForPromoters`)\n- **Co-sellers list pagination**: `GET /posts/curator/downline/:postId` now accepts `pageSize`/`pageNumber`, returns `commissionCustomized` per co-seller (in-memory diff, no N+1)\n- **`ResalePostVariantConverter` ex",
       "mergedAt": null,
       "createdAt": "2026-04-28T06:24:01Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7991,
@@ -295,7 +436,10 @@
       "body": "## Summary\n\nConverts 3 pair circular rules in `.dependency-cruiser.cjs` from weak-ratchet (to.pathNot) to strong-ratchet (from.pathNot), as specified by KAT-11028 task #8.\n\n**Why this matters**: `to.pathNot` exempting public barrels (e.g. `products/public/index.ts`) is a weak gate — any new offender file that imports the same barrel is silently let through. `from.pathNot` grandfathering specific offender files is a strong gate — only those exact files are exempt; any new circular import from a d",
       "mergedAt": null,
       "createdAt": "2026-04-28T06:11:04Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7988,
@@ -305,7 +449,10 @@
       "body": "**Description**: \r\n\r\n**Dependent PRs (FE/BE/KTT-Common)**:\r\n\r\n**PRD/Github Issue Link**:\r\n\r\n**Tech Doc Link**:\r\n\r\n**Screenshots** (optional):\r\n",
       "mergedAt": null,
       "createdAt": "2026-04-28T05:50:45Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7983,
@@ -315,7 +462,10 @@
       "body": "## Summary\n\n- Adds `pendingPayout` field to `GET /payout/summary` response\n- Aggregates all `PENDING` settlement balances across the user's USER and MERCHANT owner keys\n- Introduces `PendingPayoutRes` DTO and two new repo methods: `getMerchantsByUserId` and `aggregatePendingPayoutByOwnerKey`\n\n## Test plan\n\n- [ ] Call `GET /payout/summary` for a user with pending settlements — verify `pendingPayout.amount` reflects the correct aggregated total\n- [ ] Call for a user with no pending settlements — v",
       "mergedAt": null,
       "createdAt": "2026-04-28T03:55:47Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7982,
@@ -325,7 +475,10 @@
       "body": "## Summary\n- Add `EDU_MULTY_ACCOUNT` and `EDU_SWITCH_ACCOUNT` to `FeatureName` enum\n- Register both features as simple `CompleteOnce` promoter EDU features in `PromoterOnboardingService`\n- Add migration to insert `FeatureSetting` rows with `enable=false` for both features\n\nKAT-10488: Educational tooltips for multi-account management — one informing users they can manage multiple accounts, another guiding them to switch between accounts.\n\n## Test plan\n- [ ] Run migration and verify two `FeatureSe",
       "mergedAt": null,
       "createdAt": "2026-04-28T03:06:21Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7977,
@@ -335,7 +488,10 @@
       "body": "Summary\nThis PR cleans up a deprecated admin endpoint on PromoterProductController:\n\nRemoved deprecated endpoint: Dropped POST /image-url/768c3e3c-333d-47ff-868b-84e52fe26157 — its replacement (POST /cloudinary/admin/image-url on CloudinaryAdminController) is already in use.\nRemoved unused imports: Dropped AdminGuard and UseGuards now that no caller in this controller needs them.\n\nRelated Ticket\nN/A\n\nDependent PRs:\nN/A",
       "mergedAt": null,
       "createdAt": "2026-04-27T20:15:39Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7976,
@@ -345,7 +501,10 @@
       "body": "Summary\nThis PR drops the deprecated `pear_ops_notes` column from the User table:\n\n- Add migration to drop `pear_ops_notes` column from User table\n- Remove `pearOpsNotes` field from the User model in Prisma schema\n- Remove `pearOpsNotes` from test fixtures in `user-e2e-utils` and `user-utils`\n\nData was previously migrated to the `UserOperationNote` table in migration `20260226190721_add_user_operation_note_table`.\n\nRelated Ticket\nN/A\n\nDependent PRs:\nN/A",
       "mergedAt": null,
       "createdAt": "2026-04-27T18:57:01Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7974,
@@ -355,7 +514,10 @@
       "body": "**Description**: \r\n\r\n**Dependent PRs (FE/BE/KTT-Common)**:\r\n\r\n**PRD/Github Issue Link**:\r\n\r\n**Tech Doc Link**:\r\n\r\n**Screenshots** (optional):\r\n",
       "mergedAt": null,
       "createdAt": "2026-04-27T09:25:34Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7973,
@@ -365,7 +527,10 @@
       "body": "## Summary\n- Add `EDU_SHOP_READY` and `EDU_CREATE_FIRST_EVENT` feature toggles for promoter onboarding prompts\n- Add `SCENE_ONBOARDING` scene with both toggles mapped in `FeatureScene`\n- Add migration to insert two FeatureSetting rows (both enabled by default)\n- Register toggles in `PromoterOnboardingService` following standard EDU pattern\n\n## Test plan\n- [ ] Verify migration inserts two FeatureSetting records (`EDU_SHOP_READY`, `EDU_CREATE_FIRST_EVENT`)\n- [ ] Verify `SCENE_ONBOARDING` returns b",
       "mergedAt": null,
       "createdAt": "2026-04-27T08:04:00Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7970,
@@ -375,7 +540,10 @@
       "body": "**Description**: \r\n\r\n**Dependent PRs (FE/BE/KTT-Common)**:\r\n\r\n**PRD/Github Issue Link**:\r\n\r\n**Tech Doc Link**:\r\n\r\n**Screenshots** (optional):\r\n",
       "mergedAt": null,
       "createdAt": "2026-04-27T07:08:27Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7962,
@@ -385,7 +553,10 @@
       "body": "…ductType enum\r\n\r\n**Description**: \r\n\r\n**Dependent PRs (FE/BE/KTT-Common)**:\r\n\r\n**PRD/Github Issue Link**:\r\n\r\n**Tech Doc Link**:\r\n\r\n**Screenshots** (optional):\r\n",
       "mergedAt": null,
       "createdAt": "2026-04-27T02:50:55Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7956,
@@ -395,7 +566,10 @@
       "body": "**Description**: \r\n\r\nImplements a comprehensive Redis-based caching layer for the Katana platform to improve API response times and reduce database load. The module features a multi-level caching strategy with three-tier protection (anti-penetration, anti-avalanche, anti-stampede), unified key management, and active cache invalidation.\r\n\r\n## Key Changes\r\n\r\n### New Cache Module (`src/cache/`)\r\n- **CacheService**: Core caching operations with advanced features (remember, rememberWithJitter, rememb",
       "mergedAt": null,
       "createdAt": "2026-04-24T05:48:59Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7950,
@@ -405,7 +579,10 @@
       "body": "## Summary\r\n\r\nThis PR brings the Invoker-authored AXS v7.0 change stack onto `main`.\r\n\r\nThe source work originally lived on top of `release`, and the final stacked branch was `feat/axs-pricing-hold-fix`, which already contained the earlier AXS branches.  \r\nThis PR replays that AXS stack onto `main` in a controlled way, so we can land the intended AXS functionality without pulling the entire `release` branch history into `main`.\r\n\r\nIncluded branch stack:\r\n\r\n- `feat/axs-session-isolation`\r\n- `feat",
       "mergedAt": null,
       "createdAt": "2026-04-23T11:39:41Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7908,
@@ -415,7 +592,10 @@
       "body": "## Summary\r\n\r\n- Adds `TerminalAccessCodeRole` enum (`OPERATOR` / `ADMIN`) to Prisma schema\r\n- Adds `role` field to `TerminalAccessCode` model with `@default(OPERATOR)`; existing rows backfilled to `STAFF` via migration\r\n- Exposes `role` through Create / Update / GET / List endpoints — backend stores only, no permission gating yet (follow-up PR)\r\n- Migration file created (`20260421000000_add_terminal_access_code_role`) — **not applied**, pending explicit deploy\r\n\r\n## Test plan\r\n\r\n- [ ] Run `npm r",
       "mergedAt": null,
       "createdAt": "2026-04-21T06:24:16Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7904,
@@ -425,7 +605,10 @@
       "body": "Overview\r\nThis change set mainly focuses on the following AXS integration areas:\r\n\r\nAXS checkout / hold / create-order flow improvements\r\nPricing calculation, display semantics, and validation alignment\r\nImport / sync stability improvements\r\nStronger stable remote ID / section data / cached read handling\r\nCompatibility fixes across Post / Product / ticket-platform integration layers\r\nExpanded AXS-related test coverage\r\nMain Changes\r\n1. AXS checkout / hold / create-order flow improvements\r\nThis P",
       "mergedAt": null,
       "createdAt": "2026-04-20T13:10:54Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7889,
@@ -435,7 +618,10 @@
       "body": "## Summary\n- Replace 4-column `IS NOT DISTINCT FROM` JOINs with single-column `user_md5` index lookup for O(1) contact matching (KAT-10096)\n- Add `user_md5 CHAR(32)` column to both `User` and `FollowerImportRecord` tables with indexes; compute via `contact-hash.util.ts`\n- Batch staging inserts (`BATCH_SIZE=2000`) and confirm operations (`CONFIRM_BATCH_SIZE=5000`) to avoid oversized `unnest()` arrays\n- Fix CSV parsing to strip trailing `.0` from numeric strings (Excel stores phone numbers as floa",
       "mergedAt": null,
       "createdAt": "2026-04-17T09:02:57Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7880,
@@ -445,7 +631,10 @@
       "body": "## Summary\n- Implement RFC 8058 one-click unsubscribe for marketing/campaign emails to comply with SES requirements\n- Add `EmailUnsubscribeService` with AES-256-GCM encrypted tokens for secure, stateless unsubscribe flow\n- Add `EmailController` with POST/GET `/email/unsubscribe` and POST `/email/resubscribe` endpoints\n- Inject `List-Unsubscribe` and `List-Unsubscribe-Post` headers into campaign emails (both MIME and SES paths)\n- Add unsubscribe footer to `CampaignEmail.mjml` template with opt-ou",
       "mergedAt": null,
       "createdAt": "2026-04-17T01:27:34Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7838,
@@ -455,7 +644,10 @@
       "body": "## Summary\n\nFollow-up to the 2026-04-15 production incident (vanityUrl ILIKE full-table scan).\nAdds a generic, storage-agnostic caching layer to protect hot endpoints from DB overload.\n\n- **`CacheStore` interface** (`CACHE_STORE` token) — decouples all business code from Redis implementation; swap to Memcached/in-memory with zero callers changed\n- **`RedisCacheStore`** — shares the existing ioredis connection via `@InjectRedis()`; all Redis errors are caught and logged, never rethrow to callers\n",
       "mergedAt": null,
       "createdAt": "2026-04-15T05:40:11Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7803,
@@ -465,7 +657,10 @@
       "body": "## Summary\n\nKAT-11029 Foundation Data Layer Audit — squash 963 migrations + full data layer audit.\n\n### Phase 1: Migration Squash\n- **963 historical migration directories → 1 `0_init` baseline**\n- Generated SQL: 3,782 lines (117 `CREATE TABLE` + 113 `CREATE TYPE`)\n- Validated: `npm run prisma:generate` passes both generators (`prisma-client-js` + `prisma-json-types-generator`)\n- Custom SQL audit: all 11 files with `CREATE FUNCTION/TRIGGER/EXTENSION` confirmed as one-time data helpers, no persist",
       "mergedAt": null,
       "createdAt": "2026-04-14T02:24:52Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7727,
@@ -475,7 +670,10 @@
       "body": "## Summary\n\n- **V2 write endpoints**: Add `verifyEventAccess('event.edit'/'tickets.edit')` before `withEventSync` on `batchCreateMediasAndUpdateEventPoster`, `batchOperateMedias`, `updateEventMediaTextConfig`, `batchCreateLineups`, and `batchCreateTicketsV2Internal`\n- **CO_HOST ticket catalog fix**: Thread `ctx.curatorId` through `ensureExists` and `batchCreateFromEvent` so tickets created by a CO_HOST land in the **event owner's** catalog, not the collaborator's\n- **`getEventConfig` 404 fix**: ",
       "mergedAt": null,
       "createdAt": "2026-04-07T09:35:22Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7647,
@@ -485,7 +683,10 @@
       "body": "…ions\r\n\r\n**Description**: \r\n\r\n**Dependent PRs (FE/BE/KTT-Common)**:\r\n\r\n**PRD/Github Issue Link**:\r\n\r\n**Tech Doc Link**:\r\n\r\n**Screenshots** (optional):\r\n",
       "mergedAt": null,
       "createdAt": "2026-03-25T10:57:42Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7645,
@@ -495,7 +696,10 @@
       "body": "## Summary\n- Fix MongoDB connection not initializing in non-production environments when `MONGODB_URL` is set\n- Store `mongoUrl` in instance variable and use it in `onModuleInit` condition check so MongoDB connects whenever the URL is configured, regardless of `NODE_ENV`\n\n## Changes\n- `src/logging/mongo.service.ts`: Added `mongoUrl` instance variable; updated `onModuleInit` condition to also connect when `this.mongoUrl` is truthy\n\n## Test plan\n- [ ] Verify MongoDB connects when `MONGODB_URL` is ",
       "mergedAt": null,
       "createdAt": "2026-03-25T08:56:15Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7485,
@@ -505,7 +709,10 @@
       "body": "## Summary\n\n- **KAT-10412 Phase 2**: Adds Event ID-based whitelist (`event_list`) and blacklist (`exclude_events`) filtering for ANY_DAY_TICKET products\n- Phase 1 (title text matching + time window) is already on `release`; this PR adds the ID-level filtering layer on top\n\n## Changes\n\n### Core Logic\n- **`at-door-ticket.types.ts`**: New `isEventExcludedById` / `isEventAllowedById` helpers (O(1) `Set.has` lookup); extended `isEventAllowedForTicket` signature with `eventId` as first param; updated ",
       "mergedAt": null,
       "createdAt": "2026-03-06T04:15:45Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7472,
@@ -515,7 +722,10 @@
       "body": "## Summary\n\n- Design doc and three-phase implementation plans for renaming Merchant → Catalog (where Merchant means catalog/shop)\n- Phase A: Schema renames, module consolidation, backward-compatible API layer (12 tasks)\n- Phase B: Cleanup deprecated aliases after FE migration (8 tasks)\n- Phase C: Add merchantId (User ref) to core tables for direct seller queries (8 tasks)\n- FE migration guide covering all phases: 41 route changes, request/response field renames, enum updates, Phase C performance",
       "mergedAt": null,
       "createdAt": "2026-03-04T11:41:32Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 7447,
@@ -525,7 +735,10 @@
       "body": "## Summary\n\n- **New endpoint**: `GET /product-event/v2/list` — paginated event list for the current curator with per-event ticket sales and revenue statistics\n- **Batch SQL statistics**: single raw SQL query (3 CTEs + `unnest`) replaces N+1 pattern; only 4 DB round-trips total regardless of page size\n- **Revenue semantics**: mirrors `MetricsRepo.getSummaryByFilter` — `totalNetEarnings` = curator's merchant payout + promoter payout\n\n## API\n\n```\nGET /product-event/v2/list\n  ?pageSize=10&pageNumber",
       "mergedAt": null,
       "createdAt": "2026-03-03T05:56:04Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     },
     {
       "number": 6787,
@@ -535,7 +748,10 @@
       "body": "## Summary\n- Remove UserActivity Prisma model and migrate to MongoDB-only storage\n- Delete UserActivityRepository class (no longer needed)\n- Add GDPR-compliant PII sanitization for checkout data\n- Preserve enums for backward compatibility\n\n## Changes\n- **Schema**: Removed `UserActivity` model from `schema.prisma`\n- **Repository**: Deleted `UserActivityRepository` (replaced by MongoDB direct writes)\n- **Service**: Updated `UserActivityService` to return plain objects instead of Prisma entities\n- ",
       "mergedAt": null,
       "createdAt": "2025-12-16T01:23:51Z",
-      "labels": []
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
     }
   ],
   "dailySummary": null
