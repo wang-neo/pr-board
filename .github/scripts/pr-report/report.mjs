@@ -155,41 +155,23 @@ async function sendSlackDM(blocks) {
   const token = process.env.SLACK_BOT_TOKEN;
   const userId = process.env.SLACK_USER_ID;
 
-  // Open DM channel
-  const convResp = await fetch("https://slack.com/api/conversations.open", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify({ users: userId }),
-  });
-
-  const convData = await convResp.json();
-  if (!convData.ok) {
-    throw new Error(`Failed to open DM: ${convData.error}`);
-  }
-
-  const channel = convData.channel.id;
-
-  // Post message
-  const msgResp = await fetch("https://slack.com/api/chat.postMessage", {
+  const resp = await fetch("https://slack.com/api/chat.postMessage", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
-      channel,
+      channel: userId,
       blocks,
       unfurl_links: false,
       unfurl_media: false,
     }),
   });
 
-  const msgData = await msgResp.json();
-  if (!msgData.ok) {
-    throw new Error(`Failed to send message: ${msgData.error}`);
+  const data = await resp.json();
+  if (!data.ok) {
+    throw new Error(`Slack error: ${data.error}`);
   }
 
   console.log("Slack DM sent successfully");
