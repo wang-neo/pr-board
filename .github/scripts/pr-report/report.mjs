@@ -126,7 +126,7 @@ function getAIConfig() {
   const apiKey = process.env.AI_API_KEY || process.env.OPENAI_API_KEY;
   const baseUrl = process.env.AI_BASE_URL || process.env.OPENAI_BASE_URL || "";
   const model = process.env.AI_MODEL || process.env.OPENAI_MODEL || "";
-  const maxTokens = parseInt(process.env.AI_MAX_TOKENS || "4000", 10);
+  const maxTokens = parseInt(process.env.AI_MAX_TOKENS || "8000", 10);
 
   return { apiKey, baseUrl, model, maxTokens };
 }
