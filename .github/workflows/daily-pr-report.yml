@@ -46,10 +46,11 @@ jobs:
         run: node report.mjs
 
       - name: Commit report data
+        working-directory: ${{ github.workspace }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add ../../data/reports/ || true
+          git add data/reports/ || true
           if git diff --cached --quiet; then
             echo "No new data to commit"
           else
