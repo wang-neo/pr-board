@@ -3,10 +3,10 @@
     {
       "date": "2026-04-28",
       "merged": 22,
-      "open": 29,
-      "total": 51,
+      "open": 30,
+      "total": 52,
       "authors": 10,
-      "hasAI": false
+      "hasAI": true
     }
   ]
 }

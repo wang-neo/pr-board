@@ -1,11 +1,11 @@
 {
   "date": "2026-04-28",
-  "generatedAt": "2026-04-28T07:13:02.136Z",
+  "generatedAt": "2026-04-28T07:22:02.106Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 22,
-    "open": 29,
-    "total": 51,
+    "open": 30,
+    "total": 52,
     "authors": 10
   },
   "analytics": {
@@ -46,6 +46,13 @@
         "changedFiles": 0
       },
       {
+        "name": "vanppo-1m",
+        "prs": 2,
+        "additions": 0,
+        "deletions": 0,
+        "changedFiles": 0
+      },
+      {
         "name": "chengmarket",
         "prs": 2,
         "additions": 0,
@@ -55,13 +62,6 @@
       {
         "name": "invokerxiaext-byte",
         "prs": 2,
-        "additions": 0,
-        "deletions": 0,
-        "changedFiles": 0
-      },
-      {
-        "name": "vanppo-1m",
-        "prs": 1,
         "additions": 0,
         "deletions": 0,
         "changedFiles": 0
@@ -82,7 +82,7 @@
       }
     ],
     "labels": [],
-    "total": 51,
+    "total": 52,
     "totalAdditions": 41437,
     "totalDeletions": 16884,
     "totalChangedFiles": 765
@@ -376,6 +376,19 @@
     }
   ],
   "openPRs": [
+    {
+      "number": 7999,
+      "title": "fix(earning-share): expose vanityUrl in ShareUserInfo DTO (KAT-11016)",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/7999",
+      "body": "## Summary\n\n- Exposes `vanityUrl` field in `ShareUserInfo` DTO via `@Expose()` decorator\n- Fixes KAT-11016 item 1.d: vanityUrl was missing from the earning share response\n\n## Related\n\nhttps://pearshop.atlassian.net/browse/KAT-11016",
+      "mergedAt": null,
+      "createdAt": "2026-04-28T07:13:15Z",
+      "labels": [],
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
     {
       "number": 7998,
       "title": "feat(KAT-11035 No.1b v2): gate Processor+Cron via bootstrap hook",
@@ -754,5 +767,5 @@
       "changedFiles": 0
     }
   ],
-  "dailySummary": null
+  "dailySummary": "1. **分析请求：**\n*   **角色：** 项目日报助手。\n*   **输入：** 一份 PR（Pull Request）列表，分为“已合并 PR”和“待合并 PR”。\n*   **输出格式：** 两个特定部分（“个人贡献”和“项目变更概览”），无 Markdown，简洁，专业，不超过 400 字。\n*   **语言：** 中文。\n\n2. **分析数据：**\n\n*   **已合并 PR：**\n    *   #7996, #7990, #7985, #7967 (qbyte2): 订单/购物车/票务费用计算 (`subtotalTicketFee`)。\n    *   #7994 (feng-1m): 票务费用验证。\n    *   #7989, #7980 (qbyte2): 发布/合并分支。\n    *   #7981, #7978 (wang-neo): 产品封面图片排序（视频 vs 图片）。\n    *   #7979, #7972, #7966 (ruicaiext-1m): 协作者权限/指标（KAT-10790）。\n    *   #7975 (wang-neo): 网页抓取器 JSON 崩溃修复。\n    *   #7969 (ruicaiext-1m): �"
 }
