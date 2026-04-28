@@ -16,13 +16,19 @@ const TARGET_BRANCHES = (process.env.TARGET_BRANCHES || "main:🚀,release:🛠�
   }, {});
 
 // ── Date helpers ──────────────────────────────────────────────
-function getLastWorkday(now) {
-  const d = new Date(now);
-  const day = d.getDay();
+function getReportRange(now) {
+  const today = new Date(now);
+  const day = today.getDay();
   const diff = day === 1 ? 3 : day === 0 ? 2 : 1;
-  d.setDate(d.getDate() - diff);
-  d.setHours(0, 0, 0, 0);
-  return d;
+
+  const since = new Date(today);
+  since.setDate(today.getDate() - diff);
+  since.setHours(0, 0, 0, 0);
+
+  const until = new Date(since);
+  until.setDate(since.getDate() + 1);
+
+  return { since, until };
 }
 
 function formatDate(d) {
@@ -41,7 +47,7 @@ function matchTargetBranch(pr) {
   return targetBranchSet.has(base);
 }
 
-async function fetchMergedPRs(octokit, since) {
+async function fetchMergedPRs(octokit, since, until) {
   const prs = [];
   for await (const resp of octokit.paginate.iterator(octokit.rest.pulls.list, {
     owner: REPO_OWNER,
@@ -51,7 +57,8 @@ async function fetchMergedPRs(octokit, since) {
   })) {
     for (const pr of resp.data) {
       if (!pr.merged_at) continue;
-      if (new Date(pr.merged_at) >= since && matchTargetBranch(pr)) {
+      const mergedAt = new Date(pr.merged_at);
+      if (mergedAt >= since && mergedAt < until && matchTargetBranch(pr)) {
         prs.push(pr);
       }
     }
@@ -459,11 +466,12 @@ function saveReportJSON(reportDate, mergedPRs, openPRs, dailySummary) {
 // ── Main ──────────────────────────────────────────────────────
 async function main() {
   const now = new Date();
-  const since = getLastWorkday(now);
-  const reportDate = formatDate(now);
+  const { since, until } = getReportRange(now);
+  const reportDay = formatDate(since);
+  const generatedAt = formatDateTime(now) + " CST";
 
-  console.log(`Report date: ${reportDate}`);
-  console.log(`Fetching PRs merged since: ${formatDate(since)}`);
+  console.log(`Report for: ${reportDay} (${formatDate(since)} ~ ${formatDate(until)})`);
+  console.log(`Generated at: ${generatedAt}`);
 
   // GitHub
   const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
@@ -473,8 +481,8 @@ async function main() {
   console.log(`Found ${openPRs.length} open PRs`);
 
   console.log("Fetching merged PRs...");
-  const mergedPRs = await fetchMergedPRs(octokit, since);
-  console.log(`Found ${mergedPRs.length} merged PRs since ${formatDate(since)}`);
+  const mergedPRs = await fetchMergedPRs(octokit, since, until);
+  console.log(`Found ${mergedPRs.length} merged PRs on ${reportDay}`);
 
   // AI summaries (optional)
   const { apiKey: aiKey } = getAIConfig();
@@ -488,9 +496,6 @@ async function main() {
   } else {
     console.log("AI_API_KEY not set, skipping AI summaries");
   }
-
-  const reportDay = formatDate(since);
-  const generatedAt = formatDateTime(now) + " CST";
 
   // Save JSON data (filename = the day being reported)
   saveReportJSON(reportDay, mergedPRs, openPRs, dailySummary);
