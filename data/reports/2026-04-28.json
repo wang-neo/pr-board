@@ -1,11 +1,11 @@
 {
   "date": "2026-04-28",
-  "generatedAt": "2026-04-28T06:35:41.204Z",
+  "generatedAt": "2026-04-28T06:47:51.896Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 20,
-    "open": 26,
-    "total": 46,
+    "open": 28,
+    "total": 48,
     "authors": 10
   },
   "analytics": {
@@ -19,16 +19,16 @@
         "count": 11
       },
       {
+        "name": "feng-1m",
+        "count": 6
+      },
+      {
         "name": "qbyte2",
         "count": 5
       },
       {
         "name": "gunx3961",
         "count": 5
-      },
-      {
-        "name": "feng-1m",
-        "count": 4
       },
       {
         "name": "chengmarket",
@@ -52,7 +52,7 @@
       }
     ],
     "labels": [],
-    "total": 46
+    "total": 48
   },
   "mergedPRs": [
     {
@@ -257,6 +257,26 @@
     }
   ],
   "openPRs": [
+    {
+      "number": 7994,
+      "title": "fix(ticket): reject save when fees exceed retail price",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/7994",
+      "body": "## Summary\n- Add early reject in `TransactionFeeService.checkTicketVariantPrice` for `ticketPrice < 0` (i.e. `fees > retail price`)\n- Covers all save paths (V1 `MerchantProductsService.checkTicketProduct`, V1 `ProductEventService.checkTicketProduct` used by event duplicate, V2 `TicketProductStrategy`, V2 `AnyDayTicketProductStrategy`) — they all funnel through this validator\n- Add unit test for the negative-ticketPrice case\n\n## Background\nFrontend's calculate endpoint (`merchant-products.control",
+      "mergedAt": null,
+      "createdAt": "2026-04-28T06:43:51Z",
+      "labels": []
+    },
+    {
+      "number": 7993,
+      "title": "feat(KAT-11035 No.1b): gate @Processor and @Cron handlers by PROCESS_ROLE",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/7993",
+      "body": "## Summary\n\n- Inserts `if (!shouldRunProcessor()) return;` as the first line of every `@Process()`-decorated method body across all `@Processor` classes.\n- Inserts `if (!shouldRunCron()) return;` as the first line of every `@Cron`-decorated method body.\n- Import is `shouldRunProcessor` / `shouldRunCron` from `src/shared/process-role`.\n- Heartbeat `healthCheck` in `default.controller.ts` intentionally skipped (always-on semantics).\n- One special case: `ai-post-generation.subscriber.ts` has an exp",
+      "mergedAt": null,
+      "createdAt": "2026-04-28T06:34:56Z",
+      "labels": []
+    },
     {
       "number": 7992,
       "title": "feat(posts): custom commission per co-seller [KAT-10553 Phase 2]",
