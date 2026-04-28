@@ -77,7 +77,7 @@ async function generateDailySummary(mergedPRs, openPRs) {
     .map((p) => `- #${p.number} ${p.title} (@${p.author}) [${p.labels.join(",") || "无标签"}]`)
     .join("\n");
 
-  const prompt = `你是项目日报助手。基于以下 PR 数据生成一份结构化的中文日报：
+  const prompt = `你是项目日报助手。基于以下 PR 数据生成一份结构化的中文日报。
 
 【已合并 PR】
 ${mergedList || "无"}
@@ -85,18 +85,18 @@ ${mergedList || "无"}
 【待合并 PR】
 ${openList || "无"}
 
-请按以下格式输出：
+请严格按以下两部分输出：
 
-【变更概览】
-用1-2句话总结今日合并的主要方向。
+第一部分：个人贡献
+按贡献者分组，每人列出今天合并了什么，一句话概括。格式：
+@某人：做了xxx（#123），修复了yyy（#124）
 
-【分类归纳】
-将已合并的 PR 按类型分组（如新功能、Bug修复、重构优化、性能优化、文档等），每组列出对应的 PR 编号和一句话描述。
+第二部分：项目变更概览
+1. 用1-2句话总结今日合并的主要方向
+2. 将已合并的 PR 按类型分组（如新功能、Bug修复、重构优化、性能优化、文档等）
+3. 指出需要优先 review 或有风险的待合并 PR
 
-【待关注】
-指出需要优先 review 或有风险的待合并 PR。
-
-要求：简洁专业，不超过300字。不要使用任何Markdown格式。`;
+要求：简洁专业，不超过400字。不要使用任何Markdown格式（不要用#、**、-等符号）。`;
 
   return callAI(prompt);
 }
@@ -203,30 +203,45 @@ function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate) {
     text: { type: "plain_text", text: `Katana Server PR Report — ${reportDate}`, emoji: true },
   });
 
-  // Merged PRs — one section with all items as text
-  const mergedLines = mergedPRs.length > 0
-    ? mergedPRs.map((pr) => `• <${pr.url}|#${pr.number} ${escapeMarkdown(pr.title)}> — @${pr.author}`).join("\n")
-    : "No merged PRs in this period.";
-  blocks.push({
-    type: "section",
-    text: { type: "mrkdwn", text: `*Merged (${mergedPRs.length})*\n${mergedLines}` },
-  });
-
-  // Open PRs — one section with all items as text
-  const openLines = openPRs.length > 0
-    ? openPRs.map((pr) => `• <${pr.url}|#${pr.number} ${escapeMarkdown(pr.title)}> — @${pr.author}`).join("\n")
-    : "All clear!";
-  blocks.push({
-    type: "section",
-    text: { type: "mrkdwn", text: `*Pending (${openPRs.length})*\n${openLines}` },
-  });
-
-  // AI Summary
+  // AI Summary at top
   if (dailySummary) {
-    blocks.push({
-      type: "section",
-      text: { type: "mrkdwn", text: `*AI Summary*\n${escapeMarkdown(dailySummary)}` },
-    });
+    for (const chunk of splitSlackText(`*AI Daily Report*\n${escapeMarkdown(dailySummary)}`, 2900)) {
+      blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
+    }
+  }
+
+  // Merged PRs grouped by author
+  const byAuthor = {};
+  for (const pr of mergedPRs) {
+    (byAuthor[pr.author] ||= []).push(pr);
+  }
+
+  const authorEntries = Object.entries(byAuthor).sort((a, b) => b[1].length - a[1].length);
+  let mergedText = `*Merged (${mergedPRs.length})*`;
+  for (const [author, prs] of authorEntries) {
+    mergedText += `\n@${author}:`;
+    for (const pr of prs) {
+      mergedText += `\n  • <${pr.url}|#${pr.number} ${escapeMarkdown(pr.title)}>`;
+    }
+  }
+  if (mergedPRs.length === 0) mergedText += "\nNo merged PRs in this period.";
+
+  for (const chunk of splitSlackText(mergedText, 2900)) {
+    blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
+  }
+
+  // Open PRs
+  let openText = `*Pending (${openPRs.length})*`;
+  if (openPRs.length > 0) {
+    for (const pr of openPRs) {
+      openText += `\n• <${pr.url}|#${pr.number} ${escapeMarkdown(pr.title)}> — @${pr.author}`;
+    }
+  } else {
+    openText += "\nAll clear!";
+  }
+
+  for (const chunk of splitSlackText(openText, 2900)) {
+    blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
   }
 
   blocks.push({
@@ -234,24 +249,10 @@ function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate) {
     elements: [{ type: "mrkdwn", text: `From <https://github.com/bosinc/katana-server|katana-server> PR Report` }],
   });
 
-  // Slack limit: max 50 blocks, max 3000 chars per text field
-  // Each section text must be under 3000 chars — split if needed
-  const result = [];
-  for (const block of blocks) {
-    if (block.text && block.text.text && block.text.text.length > 2900) {
-      const chunks = splitText(block.text.text, 2900);
-      for (const chunk of chunks) {
-        result.push({ ...block, text: { ...block.text, text: chunk } });
-      }
-    } else {
-      result.push(block);
-    }
-  }
-
-  return result.slice(0, 50);
+  return blocks.slice(0, 50);
 }
 
-function splitText(text, maxLen) {
+function splitSlackText(text, maxLen) {
   const lines = text.split("\n");
   const chunks = [];
   let current = "";
