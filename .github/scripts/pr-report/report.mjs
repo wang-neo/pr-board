@@ -160,12 +160,17 @@ function getAIConfig() {
 
 async function callAI(prompt) {
   const { apiKey, baseUrl, model, maxTokens } = getAIConfig();
-  if (!apiKey) return null;
+  if (!apiKey) {
+    console.log("[AI] No API key configured, skipping");
+    return null;
+  }
 
   const url = baseUrl
     ? `${baseUrl.replace(/\/+$/, "")}/chat/completions`
     : "https://api.openai.com/v1/chat/completions";
   const resolvedModel = model || "gpt-4o-mini";
+
+  console.log(`[AI] Calling model: ${resolvedModel}, endpoint: ${baseUrl || "openai-default"}, prompt: ${prompt.length} chars`);
 
   const reqBody = {
     model: resolvedModel,
@@ -184,6 +189,7 @@ async function callAI(prompt) {
   const maxRetries = 3;
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
+      console.log(`[AI] Attempt ${attempt}/${maxRetries}...`);
       const resp = await fetch(url, {
         method: "POST",
         headers: {
@@ -193,39 +199,46 @@ async function callAI(prompt) {
         body,
       });
 
+      console.log(`[AI] Response status: ${resp.status}`);
+
       if (resp.status === 429 && attempt < maxRetries) {
         const delay = attempt * 3000;
-        console.log(`Rate limited, retrying in ${delay}ms (attempt ${attempt}/${maxRetries})`);
+        console.log(`[AI] Rate limited, retrying in ${delay}ms`);
         await new Promise((r) => setTimeout(r, delay));
         continue;
       }
 
       if (!resp.ok) {
         const text = await resp.text();
-        console.error(`AI API error: ${resp.status} ${text}`);
+        console.error(`[AI] API error ${resp.status}: ${text.slice(0, 500)}`);
         return null;
       }
 
       const data = await resp.json();
       const choice = data.choices?.[0];
       const msg = choice?.message;
-      // Handle both content and reasoning_content (some providers return reasoning separately)
       const content = (msg?.content || msg?.text || "").trim();
+
+      console.log(`[AI] finish_reason: ${choice?.finish_reason}, usage: prompt=${data.usage?.prompt_tokens}, completion=${data.usage?.completion_tokens}, total=${data.usage?.total_tokens}`);
+
       if (!content) {
-        console.error("AI returned empty content. finish_reason:", choice?.finish_reason, "usage:", JSON.stringify(data.usage));
+        console.error(`[AI] Empty content! finish_reason: ${choice?.finish_reason}, raw response keys: ${Object.keys(data).join(",")}`);
+        console.error(`[AI] Full response: ${JSON.stringify(data).slice(0, 1000)}`);
       } else {
-        console.log(`AI response: ${content.length} chars, finish_reason: ${choice?.finish_reason}`);
+        console.log(`[AI] Success: ${content.length} chars`);
+        console.log(`[AI] Content preview: ${content.slice(0, 200)}`);
       }
       return content || null;
     } catch (err) {
+      console.error(`[AI] Network error (attempt ${attempt}): ${err.message}`);
       if (attempt < maxRetries) {
         await new Promise((r) => setTimeout(r, attempt * 2000));
         continue;
       }
-      console.error("AI call failed:", err.message);
       return null;
     }
   }
+  console.error("[AI] All retries exhausted");
   return null;
 }
 
@@ -541,11 +554,15 @@ async function main() {
   let dailySummary = null;
 
   if (hasAI) {
-    console.log("Generating AI daily summary...");
+    console.log("=== AI Daily Summary ===");
     dailySummary = await generateDailySummary(mergedPRs);
-    console.log("AI daily summary generated");
+    if (dailySummary) {
+      console.log(`[AI] Daily summary OK (${dailySummary.length} chars)`);
+    } else {
+      console.log("[AI] Daily summary FAILED — AI returned null");
+    }
   } else {
-    console.log("AI_API_KEY not set, skipping AI summaries");
+    console.log("[AI] AI_API_KEY not set, skipping");
   }
 
   // Save JSON data (filename = the day being reported)
