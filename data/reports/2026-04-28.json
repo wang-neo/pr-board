@@ -1,10 +1,10 @@
 {
   "date": "2026-04-28",
-  "generatedAt": "2026-04-28T07:22:02.106Z",
+  "generatedAt": "2026-04-28T07:50:54.539Z",
   "repo": "bosinc/katana-server",
   "stats": {
-    "merged": 22,
-    "open": 30,
+    "merged": 23,
+    "open": 29,
     "total": 52,
     "authors": 10
   },
@@ -27,9 +27,9 @@
       {
         "name": "qbyte2",
         "prs": 7,
-        "additions": 532,
-        "deletions": 382,
-        "changedFiles": 50
+        "additions": 558,
+        "deletions": 401,
+        "changedFiles": 53
       },
       {
         "name": "feng-1m",
@@ -83,11 +83,24 @@
     ],
     "labels": [],
     "total": 52,
-    "totalAdditions": 41437,
-    "totalDeletions": 16884,
-    "totalChangedFiles": 765
+    "totalAdditions": 41463,
+    "totalDeletions": 16903,
+    "totalChangedFiles": 768
   },
   "mergedPRs": [
+    {
+      "number": 7997,
+      "title": "feat(order): add subtotalTicketFee to cart, checkout, and order line items",
+      "author": "qbyte2",
+      "url": "https://github.com/bosinc/katana-server/pull/7997",
+      "body": "## Summary\n\n- Add `subtotalTicketFee` field to cart, checkout entity, and order line items\n- Add `subtotalTicketFeesAfterRefund` to order calculations\n- Move `getTicketFees` to shared util to break circular dependency between cart and sales modules\n- Update ticket fee calculations to use `variantInfo` directly for accuracy\n\n## Changes\n\n- `src/cart/` — add `subtotalTicketFee` to cart repo and service calculations\n- `src/sales/orders/` — add `subtotalTicketFee` to checkout/line-item entities and o",
+      "mergedAt": "2026-04-28T07:39:47Z",
+      "createdAt": "2026-04-28T07:03:17Z",
+      "labels": [],
+      "additions": 26,
+      "deletions": 19,
+      "changedFiles": 3
+    },
     {
       "number": 7996,
       "title": "feat(order): add subtotalTicketFee to cart, checkout, and order line items",
@@ -397,19 +410,6 @@
       "body": "Replaces #7993. Closing that PR.\n\nReplaces inline `shouldRunXxx()` guards in PR #7993 with single-source-of-truth bootstrap service.\n\n## What changed\n\n- **New**: `src/shared/process-role/process-role.bootstrap.service.ts` — `ProcessRoleBootstrap implements OnApplicationBootstrap`:\n  - Non-worker roles: discovers all Bull Queue instances via `DiscoveryService` (duck-type filter on `pause/name/process`), calls `queue.pause(true)` (local pause — stops local consumption, producers and other workers ",
       "mergedAt": null,
       "createdAt": "2026-04-28T07:07:20Z",
-      "labels": [],
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
-      "number": 7997,
-      "title": "feat(order): add subtotalTicketFee to cart, checkout, and order line items",
-      "author": "qbyte2",
-      "url": "https://github.com/bosinc/katana-server/pull/7997",
-      "body": "## Summary\n\n- Add `subtotalTicketFee` field to cart, checkout entity, and order line items\n- Add `subtotalTicketFeesAfterRefund` to order calculations\n- Move `getTicketFees` to shared util to break circular dependency between cart and sales modules\n- Update ticket fee calculations to use `variantInfo` directly for accuracy\n\n## Changes\n\n- `src/cart/` — add `subtotalTicketFee` to cart repo and service calculations\n- `src/sales/orders/` — add `subtotalTicketFee` to checkout/line-item entities and o",
-      "mergedAt": null,
-      "createdAt": "2026-04-28T07:03:17Z",
       "labels": [],
       "additions": 0,
       "deletions": 0,
@@ -767,5 +767,5 @@
       "changedFiles": 0
     }
   ],
-  "dailySummary": "1. **分析请求：**\n*   **角色：** 项目日报助手。\n*   **输入：** 一份 PR（Pull Request）列表，分为“已合并 PR”和“待合并 PR”。\n*   **输出格式：** 两个特定部分（“个人贡献”和“项目变更概览”），无 Markdown，简洁，专业，不超过 400 字。\n*   **语言：** 中文。\n\n2. **分析数据：**\n\n*   **已合并 PR：**\n    *   #7996, #7990, #7985, #7967 (qbyte2): 订单/购物车/票务费用计算 (`subtotalTicketFee`)。\n    *   #7994 (feng-1m): 票务费用验证。\n    *   #7989, #7980 (qbyte2): 发布/合并分支。\n    *   #7981, #7978 (wang-neo): 产品封面图片排序（视频 vs 图片）。\n    *   #7979, #7972, #7966 (ruicaiext-1m): 协作者权限/指标（KAT-10790）。\n    *   #7975 (wang-neo): 网页抓取器 JSON 崩溃修复。\n    *   #7969 (ruicaiext-1m): �"
+  "dailySummary": null
 }
