@@ -430,7 +430,7 @@ function saveReportJSON(reportDate, mergedPRs, openPRs, dailySummary) {
 async function main() {
   const now = new Date();
   const since = getLastWorkday(now);
-  const reportDate = formatDateCN(now);
+  const reportDate = formatDate(now);
 
   console.log(`Report date: ${reportDate}`);
   console.log(`Fetching PRs merged since: ${formatDate(since)}`);
