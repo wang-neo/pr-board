@@ -1,11 +1,11 @@
 {
   "date": "2026-04-27",
-  "generatedAt": "2026-04-28T10:40:48.038Z",
+  "generatedAt": "2026-04-28T10:58:23.963Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 13,
-    "open": 32,
-    "total": 45,
+    "open": 33,
+    "total": 46,
     "authors": 10
   },
   "analytics": {
@@ -25,18 +25,18 @@
         "changedFiles": 7
       },
       {
+        "name": "feng-1m",
+        "prs": 6,
+        "additions": 220,
+        "deletions": 1,
+        "changedFiles": 8
+      },
+      {
         "name": "gunx3961",
         "prs": 6,
         "additions": 0,
         "deletions": 0,
         "changedFiles": 0
-      },
-      {
-        "name": "feng-1m",
-        "prs": 5,
-        "additions": 220,
-        "deletions": 1,
-        "changedFiles": 8
       },
       {
         "name": "qbyte2",
@@ -82,7 +82,7 @@
       }
     ],
     "labels": [],
-    "total": 45,
+    "total": 46,
     "totalAdditions": 40547,
     "totalDeletions": 16429,
     "totalChangedFiles": 691
@@ -272,6 +272,20 @@
     }
   ],
   "openPRs": [
+    {
+      "number": 8004,
+      "title": "feat(auth): signup token for promoter SMS/email pre-fill",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/8004",
+      "body": "## Summary\n- New `SignupTokenService` (Redis-backed, 30d TTL, 8-char base64url tokens)\n- `GET /auth/signup-token/:t` (public) → `{ contact, channel }` or 404\n- Wired into the unverified-affiliate path in `orders.subscriber.ts` (SMS) and `order-email-promoter.subscriber.ts` (email)\n- URL changes from `${WEB_URL}/signup` to `${WEB_URL}/signup?t=<8 chars>` for those notifications only\n\n## Frontend handoff (separate katana-web PR)\nOn `/signup` load, parse `?t=`. If present, call `GET /auth/signup-to",
+      "mergedAt": null,
+      "createdAt": "2026-04-28T10:54:46Z",
+      "labels": [],
+      "baseBranch": "release",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
     {
       "number": 8003,
       "title": "Release v0.0.60 (2026-04-28)",
@@ -721,5 +735,5 @@
       "changedFiles": 0
     }
   ],
-  "dailySummary": null
+  "dailySummary": "第一部分：个人贡献\n@wang-neo：修复了 web-scraper 循环 JSON 崩溃问题（#7975），修复了 posts 商品替换数据传递及用户绑定问题（#7964, #7968），修复了 products 封面图覆盖错误（#7965），新增了 user-link 副标题字段（#7960）。\n@ruicaiext-1m：新增了 app-terminal 图片上传接口（#7971），修复了 app-terminal 订单归属校验（#7969），修复了 product-event 财务字段脱敏及协作者权限限制问题（#7966, #7972），发布了 v0.0.59 版本（#7961）。\n@qbyte2：修复了 cart 票务费用计算逻辑（#7967）。\n@feng-1m：规范了 workflows 迁移纪律文档（#7963），引入了 modulith 进程角色机制（#7959）。\n\n===\n\n第二部分：模块变更总览\nweb-scraper：修复了循环 JSON 崩溃问题（#7975）。\nproduct-event：修复了财务字段脱敏及协作者权限限制问题（#7966, #7972）。\napp-terminal：新增了图片上传接口（#7971），修复了订单归属校验逻辑（#7969）。\nposts：修复了商品替换数据传递及特定访问用户绑定问题（#7964, #7968）。\ncart：修复了票务费用计算逻辑（#7967）。\nproducts：修复了封面图错误覆盖问题（#7965）。\nuser-link：新增了可选副标题字段（#7960）。\nworkflows：规范了增量迁移纪律文档（#7963）。\nmodulith：引入了进程角色机制及模块门控功能（#7959）。\nRelease：发布了 v0.0.59 版本（#7961）。"
 }
