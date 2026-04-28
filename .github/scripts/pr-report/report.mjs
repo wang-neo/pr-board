@@ -363,38 +363,25 @@ function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDay, generated
     blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
   }
 
-  // Pending PRs — compact summary by author
+  // Pending PRs — same format as Merged
   blocks.push({ type: "divider" });
   const openByAuthor = {};
   for (const pr of openPRs) {
     (openByAuthor[pr.author] ||= []).push(pr);
   }
   const openAuthorEntries = Object.entries(openByAuthor).sort((a, b) => b[1].length - a[1].length);
+  let openText = `:hourglass_flowing_sand: *Pending (${openPRs.length})*`;
+  for (const [author, prs] of openAuthorEntries) {
+    prs.sort((a, b) => a.number - b.number);
+    openText += `\n@${author}:`;
+    for (const pr of prs) {
+      openText += `\n  ${formatPRLine(pr)}`;
+    }
+  }
+  if (openPRs.length === 0) openText += "\nAll clear!";
 
-  if (openPRs.length > 10) {
-    // Compact mode: author + count only
-    let openText = `:hourglass_flowing_sand: *Pending (${openPRs.length})*`;
-    for (const [author, prs] of openAuthorEntries) {
-      const prNums = prs.sort((a, b) => a.number - b.number).map((p) => `<${p.url}|#${p.number}>`).join(" ");
-      openText += `\n@${author} (${prs.length}): ${prNums}`;
-    }
-    for (const chunk of splitSlackText(openText, 2900)) {
-      blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
-    }
-  } else {
-    // Full mode: show titles
-    let openText = `:hourglass_flowing_sand: *Pending (${openPRs.length})*`;
-    for (const [author, prs] of openAuthorEntries) {
-      prs.sort((a, b) => a.number - b.number);
-      openText += `\n@${author}:`;
-      for (const pr of prs) {
-        openText += `\n  ${formatPRLine(pr)}`;
-      }
-    }
-    if (openPRs.length === 0) openText += "\nAll clear!";
-    for (const chunk of splitSlackText(openText, 2900)) {
-      blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
-    }
+  for (const chunk of splitSlackText(openText, 2900)) {
+    blocks.push({ type: "section", text: { type: "mrkdwn", text: chunk } });
   }
 
   // Footer
