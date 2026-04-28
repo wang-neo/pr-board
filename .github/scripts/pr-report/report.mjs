@@ -3,8 +3,8 @@ import { writeFileSync, readFileSync, mkdirSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 
 // ── Config (all via env vars) ────────────────────────────────
-const REPO_OWNER = process.env.REPO_OWNER || "bosinc";
-const REPO_NAME = process.env.REPO_NAME || "katana-server";
+const REPO_OWNER = process.env.REPO_OWNER || "itisaowner";
+const REPO_NAME = process.env.REPO_NAME || "itisarepo";
 
 // Target branches: "main:🚀,release:🛠️" → { main: "🚀", release: "🛠️" }
 const TARGET_BRANCHES = (process.env.TARGET_BRANCHES || "main:🚀,release:🛠️")
@@ -27,6 +27,10 @@ function getLastWorkday(now) {
 
 function formatDate(d) {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+function formatDateTime(d) {
+  return `${formatDate(d)} ${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
 }
 
 // ── GitHub API ────────────────────────────────────────────────
@@ -242,17 +246,17 @@ async function sendSlackDM(blocks) {
 }
 
 // ── Message formatting ───────────────────────────────────────
-function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate, sinceDate) {
+function buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDay, generatedAt) {
   const blocks = [];
 
   blocks.push({
     type: "header",
-    text: { type: "plain_text", text: `Katana Server PR Report`, emoji: true },
+    text: { type: "plain_text", text: `PR Report`, emoji: true },
   });
 
   blocks.push({
     type: "section",
-    text: { type: "mrkdwn", text: `*Date:* ${reportDate} | *Range:* ${sinceDate} ~ ${reportDate} | *Merged:* ${mergedPRs.length} | *Pending:* ${openPRs.length}` },
+    text: { type: "mrkdwn", text: `*Report for:* ${reportDay} | *Generated:* ${generatedAt} | *Merged:* ${mergedPRs.length} | *Pending:* ${openPRs.length}` },
   });
 
   // AI Summary at top
@@ -485,12 +489,15 @@ async function main() {
     console.log("AI_API_KEY not set, skipping AI summaries");
   }
 
-  // Save JSON data
-  saveReportJSON(reportDate, mergedPRs, openPRs, dailySummary);
+  const reportDay = formatDate(since);
+  const generatedAt = formatDateTime(now) + " CST";
+
+  // Save JSON data (filename = the day being reported)
+  saveReportJSON(reportDay, mergedPRs, openPRs, dailySummary);
 
   // Slack (non-fatal)
   try {
-    const blocks = buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDate, formatDate(since));
+    const blocks = buildSlackBlocks(mergedPRs, openPRs, dailySummary, reportDay, generatedAt);
     console.log("Sending Slack DM...");
     await sendSlackDM(blocks);
   } catch (err) {
