@@ -16,10 +16,6 @@ function getLastWorkday(now) {
 }
 
 function formatDate(d) {
-  return d.toISOString().split("T")[0];
-}
-
-function formatDateCN(d) {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
@@ -130,7 +126,7 @@ function getAIConfig() {
   const apiKey = process.env.AI_API_KEY || process.env.OPENAI_API_KEY;
   const baseUrl = process.env.AI_BASE_URL || process.env.OPENAI_BASE_URL || "";
   const model = process.env.AI_MODEL || process.env.OPENAI_MODEL || "";
-  const maxTokens = parseInt(process.env.AI_MAX_TOKENS || "2000", 10);
+  const maxTokens = parseInt(process.env.AI_MAX_TOKENS || "4000", 10);
 
   return { apiKey, baseUrl, model, maxTokens };
 }
@@ -178,9 +174,9 @@ async function callAI(prompt) {
 
       const data = await resp.json();
       const msg = data.choices?.[0]?.message;
-      const content = msg?.content?.trim() || msg?.reasoning_content?.trim();
+      const content = msg?.content?.trim();
       if (!content) {
-        console.error("AI returned empty. finish_reason:", data.choices?.[0]?.finish_reason, "response:", JSON.stringify(data).slice(0, 300));
+        console.error("AI returned empty content. finish_reason:", data.choices?.[0]?.finish_reason);
       } else {
         console.log(`AI response: ${content.length} chars, finish_reason: ${data.choices?.[0]?.finish_reason}`);
       }
