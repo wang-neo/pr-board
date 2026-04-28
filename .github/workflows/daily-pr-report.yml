@@ -1,0 +1,83 @@
+name: Daily PR Report
+
+on:
+  schedule:
+    # 9:00 AM CST = 1:00 AM UTC, Mon-Fri only
+    - cron: "0 1 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .github/scripts/pr-report
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate and send PR report
+        env:
+          TZ: Asia/Shanghai
+          DATA_DIR: ${{ github.workspace }}/data/reports
+
+          # GitHub — required
+          GITHUB_TOKEN: ${{ secrets.PR_REPORT_GITHUB_TOKEN }}
+
+          # Slack — required
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_USER_ID: ${{ secrets.SLACK_USER_ID }}
+
+          # AI — all optional, skip AI if AI_API_KEY is empty
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_BASE_URL: ${{ secrets.AI_BASE_URL }}
+          AI_MODEL: ${{ secrets.AI_MODEL }}
+          AI_MAX_TOKENS: ${{ secrets.AI_MAX_TOKENS }}
+        run: node report.mjs
+
+      - name: Commit report data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ../../data/reports/ || true
+          if git diff --cached --quiet; then
+            echo "No new data to commit"
+          else
+            git commit -m "chore: add PR report $(date +%Y-%m-%d)"
+            git push
+          fi
+
+  deploy-pages:
+    needs: report
+    runs-on: ubuntu-latest
+    if: always()
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
