@@ -1,6 +1,6 @@
 {
   "date": "2026-04-27",
-  "generatedAt": "2026-04-28T11:03:15.031Z",
+  "generatedAt": "2026-04-28T11:10:20.914Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 13,
@@ -707,5 +707,5 @@
       "changedFiles": 0
     }
   ],
-  "dailySummary": "第一部分：个人贡献\n@wang-neo：修复了 web-scraper 循环 JSON 崩溃问题（#7975），修复了 posts 商品替换预览数据传递及特定访问用户绑定问题（#7964, #7968），修复了 products 封面图覆盖错误（#7965），为 user-link 新增了副标题字段（#7960）。\n@ruicaiext-1m：发布了 v0.0.59 版本（#7961），为 app-terminal 新增了图片上传接口（#7971）并修复了订单归属校验问题（#7969），修复了 product-event 协作者权限限制及敏感字段脱敏问题（#7966, #7972）。\n@qbyte2：修复了 cart 票务费用计算逻辑（#7967）。\n@feng-1m：为 modulith 引入了 PROCESS_ROLE 机制（#7959），更新了 workflows 迁移规范文档（#7963）。\n\n===\n\n第二部分：模块变更总览\napp-terminal：新增了图片上传接口（#7971），修复了订单归属校验问题（#7969）。\nproduct-event：修复了协作者权限限制及敏感财务字段脱敏问题（#7966, #7972）。\nposts：修复了商品替换预览数据传递及特定访问用户绑定问题（#7964, #7968）。\nproducts：修复了封面图错误覆盖问题（#7965）。\nuser-link：新增了可选副标题字段（#7960）。\ncart：修复了票务费用计算逻辑（#7967）。\nweb-scraper：修复了循环 JSON 解析崩溃问题（#7975）。\nmodulith：引入了 PROCESS_ROLE 机制及模块门控功能（#7959）。\nworkflows：规范化了增量迁移规范文档（#7963）。\nRelease：发布了 v0.0.59 版本（#7961）。"
+  "dailySummary": "第一部分：个人贡献\n@wang-neo\n  修复了 web-scraper extractPageImages 中的循环 JSON 崩溃问题（#7975）\n  修复了 posts previewPost 商品替换时未传递 salesData 的问题（#7968）\n  修复了 products getCoverMedia 中 coverImage.src 错误覆盖的问题（#7965）\n  修复了 posts 通过邮箱/手机号添加特定访问用户时未绑定 consumerId 的问题（#7964）\n  新增了 user-link subtitle 可选字段（#7960）\n@ruicaiext-1m\n  修复了 product-event 中协作者在 metrics/summary 看到财务字段的问题（#7972）\n  新增了 app-terminal 图片上传接口（#7971）\n  修复了 app-terminal getTerminalOrderDetail 订单归属校验逻辑（#7969）\n  修复了 product-event 协作者访问活动最终报告的权限问题（#7966）\n  发布了 v0.0.59 版本（#7961）\n@qbyte2\n  修复了 cart 票务费用计算逻辑（#7967）\n@feng-1m\n  规范化了 workflows 迁移纪律文档（#7963）\n  新增了 modulith PROCESS_ROLE 机制及 POC 模块门控（#7959）\n\n===\n\n第二部分：模块变更总览\napp-terminal\n  新增了图片上传接口（#7971）\n  修复了订单归属校验逻辑（#7969）\ncart\n  修复了票务费用计算逻辑（#7967）\nmodulith\n  新增了 PROCESS_ROLE 机制及 POC 模块门控（#7959）\nposts\n  修复了 previewPost 商品替换数据传递问题（#7968）\n  修复了特定访问用户绑定逻辑（#7964）\nproduct-event\n  修复了协作者财务字段脱敏问题（#7972）\n  修复了协作者访问最终报告权限问题（#7966）\nproducts\n  修复了 getCoverMedia 封面图覆盖问题（#7965）\nRelease\n  发布了 v0.0.59 版本（#7961）\nuser-link\n  新增了 subtitle 可选字段（#7960）\nweb-scraper\n  修复了循环 JSON 崩溃问题（#7975）\nworkflows\n  规范化了迁移纪律文档（#7963）"
 }
