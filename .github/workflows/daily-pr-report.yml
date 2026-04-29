@@ -4,6 +4,8 @@ on:
   schedule:
     # 9:00 AM CST = 1:00 AM UTC, Mon-Fri only
     - cron: "0 1 * * 1-5"
+    # Fallback: 9:30 AM CST in case the first run was skipped
+    - cron: "30 1 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -63,28 +65,28 @@ jobs:
             git push
           fi
 
-  deploy-pages:
-    needs: report
-    runs-on: ubuntu-latest
-    if: always()
-
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
-
-      - name: Deploy to GitHub Pages
-        id: deploy
-        uses: actions/deploy-pages@v4
+#  deploy-pages:
+#    needs: report
+#    runs-on: ubuntu-latest
+#    if: always()
+#
+#    permissions:
+#      contents: read
+#      pages: write
+#      id-token: write
+#
+#    environment:
+#      name: github-pages
+#      url: ${{ steps.deploy.outputs.page_url }}
+#
+#    steps:
+#      - uses: actions/checkout@v4
+#
+#      - name: Upload Pages artifact
+#        uses: actions/upload-pages-artifact@v3
+#        with:
+#          path: docs
+#
+#      - name: Deploy to GitHub Pages
+#        id: deploy
+#        uses: actions/deploy-pages@v4
