@@ -1,6 +1,6 @@
 {
   "date": "2026-04-28",
-  "generatedAt": "2026-04-29T03:01:35.727Z",
+  "generatedAt": "2026-04-29T04:25:30.311Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 12,
@@ -12,17 +12,10 @@
     "authors": [
       {
         "name": "ruicaiext-1m",
-        "prs": 9,
+        "prs": 11,
         "additions": 645,
         "deletions": 304,
         "changedFiles": 44
-      },
-      {
-        "name": "qbyte2",
-        "prs": 7,
-        "additions": 245,
-        "deletions": 150,
-        "changedFiles": 29
       },
       {
         "name": "wang-neo",
@@ -32,11 +25,11 @@
         "changedFiles": 2
       },
       {
-        "name": "gunx3961",
-        "prs": 5,
-        "additions": 0,
-        "deletions": 0,
-        "changedFiles": 0
+        "name": "qbyte2",
+        "prs": 6,
+        "additions": 245,
+        "deletions": 150,
+        "changedFiles": 29
       },
       {
         "name": "feng-1m",
@@ -44,6 +37,13 @@
         "additions": 319,
         "deletions": 25,
         "changedFiles": 9
+      },
+      {
+        "name": "gunx3961",
+        "prs": 4,
+        "additions": 0,
+        "deletions": 0,
+        "changedFiles": 0
       },
       {
         "name": "invokerxiaext-byte",
@@ -259,15 +259,29 @@
   ],
   "openPRs": [
     {
-      "number": 8006,
-      "title": "feat: enhance enrichWithRecipientUser to include customRecipientIdentifier logic",
-      "author": "qbyte2",
-      "url": "https://github.com/bosinc/katana-server/pull/8006",
-      "body": "## Summary\n\n- Tightened the generic constraint on `enrichWithRecipientUser` to require both `recipientUserId` and `customRecipientIdentifier` fields (via `Pick<EarningShareConfig, ...>`)\n- After resolving the recipient user, the `customRecipientIdentifier` is now overridden with the user's verified email or phone number (depending on whether the stored value is an email), falling back to the original value if the user has none\n\n## Test plan\n\n- [ ] Verify earning-share configs where `customRecipi",
+      "number": 8008,
+      "title": "fix(terminal): include priceAnchor savings in calculateCheckout totalLineItemDiscount",
+      "author": "ruicaiext-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/8008",
+      "body": "## Summary\n\n- `toTerminalCheckoutDiscountFields` was returning `entity.totalLineItemDiscount` (raw entity getter = coupon + sample + subscription only), which **does not include priceAnchor savings**\n- Web's `calcCheckoutResponse` computes `totalLineItemDiscount = subscriptionDiscount + priceAnchorDiscountSavings` — a different semantic\n- For a product with `priceAnchor=20`, `unitPrice=13.1`, qty=1: web shows `totalLineItemDiscount: 6.9`, terminal showed `0` → now shows `6.9`\n- Fix: call `entity",
       "mergedAt": null,
-      "createdAt": "2026-04-29T02:53:29Z",
+      "createdAt": "2026-04-29T04:04:08Z",
       "labels": [],
       "baseBranch": "release",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
+    {
+      "number": 8007,
+      "title": "fix(events): allow status change after event has started with paid sales (KAT-11113)",
+      "author": "ruicaiext-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/8007",
+      "body": "## Summary\n\n- `validateStartTimeChangeAfterPaidSales` 中 Rule 2 原先对有已售票的事件**无条件**拦截所有状态变更\n- 修复：当 `entity.startDate < now`（事件已开始）时，放行状态变更\n- Partners 现在可以对已开始的事件修改状态（如设为 COMPLETED）\n\n## Root Cause\n\n`product.event.service.ts` 的 Rule 2（源自 KAT-10321）：\n\n```ts\n// Before\nif (isStatusChanging) {\n  throw new BadRequestException(\"After tickets are sold, event status can't be changed...\");\n}\n\n// After\nif (isStatusChanging && entity.startDate >= new Date()) {\n  throw new BadRequestException(\"After tickets are ",
+      "mergedAt": null,
+      "createdAt": "2026-04-29T03:14:11Z",
+      "labels": [],
+      "baseBranch": "main",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -310,20 +324,6 @@
       "createdAt": "2026-04-28T06:24:01Z",
       "labels": [],
       "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
-      "number": 7988,
-      "title": "feat(order): add storeName & vaintyUrl",
-      "author": "gunx3961",
-      "url": "https://github.com/bosinc/katana-server/pull/7988",
-      "body": "**Description**: \r\n\r\n**Dependent PRs (FE/BE/KTT-Common)**:\r\n\r\n**PRD/Github Issue Link**:\r\n\r\n**Tech Doc Link**:\r\n\r\n**Screenshots** (optional):\r\n",
-      "mergedAt": null,
-      "createdAt": "2026-04-28T05:50:45Z",
-      "labels": [],
-      "baseBranch": "main",
       "additions": 0,
       "deletions": 0,
       "changedFiles": 0
@@ -623,5 +623,5 @@
       "changedFiles": 0
     }
   ],
-  "dailySummary": "第一部分：个人贡献\n@feng-1m\n  新增了 Processor+Cron 的 bootstrap hook 门控机制（#7998）\n  修复了费用超过零售价时的保存校验逻辑（#7994）\n  优化了 pathNot 逻辑至 FROM-side（#7991）\n@qbyte2\n  新增了订单模块 subtotalTicketFee 字段支持（#7996, #7997）\n  新增了销售模块 subtotalTicketFee 计算逻辑（#7985）\n  合并了代码至发布分支（#7989, #7990）\n@wang-neo\n  修复了商品封面图优先展示视频的问题，改为遵循位置排序（#7978, #7981）\n@ruicaiext-1m\n  修复了 product-event 模块向协作者暴露 totalCommissionPaid 的问题（#7979）\n  合并了发布版本代码（#7980）\n\n===\n\n第二部分：模块变更总览\norder\n  新增了 subtotalTicketFee 字段至购物车、结账及订单行项目（#7996, #7997）\nsales\n  新增了基于 lineItemSubtotal 的 subtotalTicketFee 计算（#7985）\nticket\n  修复了费用超过零售价时拒绝保存的逻辑（#7994）\nproduct\n  修复了封面图展示逻辑，使其遵循位置排序而非优先展示视频（#7978, #7981）\nproduct-event\n  修复了 metrics/summary 中向协作者暴露 totalCommissionPaid 数据的问题（#7979）\n通用\n  新增了 Processor+Cron 的 bootstrap hook 门控机制（#7998）\n  优化了 pathNot 逻辑（#7991）\n版本发布\n  合并了主分支及发布分支代码（#7980, #7989, #7990）"
+  "dailySummary": "@feng-1m\n  新增了 Processor+Cron 启动控制（#7998）\n  修复了费用超额时的保存校验（#7994）\n  优化了路径逻辑（#7991）\n@qbyte2\n  新增了订单模块 subtotalTicketFee 字段（#7997, #7996）\n  新增了销售模块 subtotalTicketFee 计算逻辑（#7985）\n  合并了代码到发布分支（#7990, #7989）\n@wang-neo\n  修复了商品封面图排序逻辑（#7981, #7978）\n@ruicaiext-1m\n  执行了版本发布代码选取（#7980）\n  修复了商品事件指标字段暴露问题（#7979）\n\n===\n\norder\n  新增了 subtotalTicketFee 字段（#7997, #7996）\nsales\n  新增了 subtotalTicketFee 计算逻辑（#7985）\nticket\n  修复了费用超额时的保存校验（#7994）\nproduct\n  修复了封面图排序逻辑（#7981, #7978）\nproduct-event\n  暴露了 totalCommissionPaid 字段（#7979）\ncore\n  新增了 Processor+Cron 启动控制（#7998）\n  优化了路径逻辑（#7991）\nrelease\n  执行了分支合并与版本发布操作（#7990, #7989, #7980）"
 }
