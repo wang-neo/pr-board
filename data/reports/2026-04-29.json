@@ -1,11 +1,11 @@
 {
   "date": "2026-04-29",
-  "generatedAt": "2026-04-30T04:29:34.817Z",
+  "generatedAt": "2026-04-30T05:01:20.325Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 13,
-    "open": 25,
-    "total": 38,
+    "open": 24,
+    "total": 37,
     "authors": 10
   },
   "analytics": {
@@ -60,18 +60,18 @@
         "changedFiles": 5
       },
       {
-        "name": "junetengext-a11y",
-        "prs": 2,
-        "additions": 9133,
-        "deletions": 95,
-        "changedFiles": 54
-      },
-      {
         "name": "invokerxiaext-byte",
         "prs": 2,
         "additions": 0,
         "deletions": 0,
         "changedFiles": 0
+      },
+      {
+        "name": "junetengext-a11y",
+        "prs": 1,
+        "additions": 9133,
+        "deletions": 95,
+        "changedFiles": 54
       },
       {
         "name": "wgcairui",
@@ -82,7 +82,7 @@
       }
     ],
     "labels": [],
-    "total": 38,
+    "total": 37,
     "totalAdditions": 10862,
     "totalDeletions": 336,
     "totalChangedFiles": 116
@@ -280,20 +280,6 @@
       "body": "## Summary\n\n- **Bug fix**: `totalLineItemCouponDiscount` was double-multiplied by quantity — `couponDiscount` on `OrderLineItem` is stored as the **total for the line** (not per-unit), matching `OrdersEntity.totalLineItemCouponDiscount` getter behavior\n- **New field**: `couponDiscount` per line item added to `TerminalOrderDetail.lineItems` — mirrors web's `ConsumerOrderItem.couponDiscount`\n- **New field**: `promotions` array added to `TerminalOrderDetail` — slim shape with `{ id, title, descript",
       "mergedAt": null,
       "createdAt": "2026-04-30T03:43:09Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
-      "number": 8018,
-      "title": "feat(cache): respect ENABLE_CACHE config to allow disabling cache via env var",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/8018",
-      "body": "## Summary\n- CacheHelper now checks the `ENABLE_CACHE` config (from env var) via injected `ConfigService`\n- When `ENABLE_CACHE=0`, `CacheHelper.remember()` bypasses cache and calls the loader directly\n- Added `ENABLE_CACHE=false` test case in `cache-helper.spec.ts`\n\n## Changes\n- `src/cache/cache-helper.service.ts`: inject `ConfigService`, add early return in `remember()` when cache disabled\n- `vitest/modules/cache/cache-helper.spec.ts`: update constructor calls with mock `ConfigService`, add byp",
-      "mergedAt": null,
-      "createdAt": "2026-04-30T03:31:38Z",
       "labels": [],
       "baseBranch": "release",
       "additions": 0,
@@ -623,5 +609,5 @@
       "changedFiles": 0
     }
   ],
-  "dailySummary": "第一部分：个人贡献\n@wang-neo\n  新增了 consumer post detail relatedProducts 的 isMyCatalog 字段（#8011）\n  修复了 preview 接口中 ticket-banner 排序问题（#7995）\n@ruicaiext-1m\n  修复了 terminal 计算折扣未包含 priceAnchor savings 的问题（#8008）\n  修复了活动开始后有付费销售时无法变更状态的问题（#8007）\n  发布了 v0.0.60 版本（#8003）\n@qbyte2\n  新增了 enrichWithRecipientUser 的 customRecipientIdentifier 逻辑（#8006）\n  新增了交易费配置、小计票务费及场馆应用返利功能（#8000）\n@feng-1m\n  新增了推广者注册短信/邮箱预填写的 token 功能（#8004）\n@gunx3961\n  合并了 KAT-11016 相关功能到发布分支（#8002）\n@vanppo-1m\n  修复了 ShareUserInfo DTO 未暴露 vanityUrl 的问题（#7999）\n@chengmarket\n  移除了废弃的 admin image-url 端点（#7977）\n  删除了 User 表的 pear_ops_notes 列（#7976）\n@junetengext-a11y\n  为 8 个 API 新增了 Redis 缓存（#7956）\n\n===\n\n第二部分：模块变更总览\nposts\n  新增了 consumer post detail relatedProducts 的 isMyCatalog 字段（#8011）\n  修复了 preview 接口中 ticket-banner 排序问题（#7995）\nterminal\n  修复了 calculateCheckout totalLineItemDiscount 未包含 priceAnchor savings 的问题（#8008）\nevents\n  修复了活动开始后有付费销售时无法变更状态的问题（#8007）\n通用功能\n  新增了 enrichWithRecipientUser 的 customRecipientIdentifier 逻辑（#8006）\n  新增了交易费配置、小计票务费及场馆应用返利功能（#8000）\n  合并了 KAT-11016 相关功能到发布分支（#8002）\nauth\n  新增了推广者注册短信/邮箱预填写的 token 功能（#8004）\n发布\n  发布了 v0.0.60 版本（#8003）\nearning-share\n  修复了 ShareUserInfo DTO 未暴露 vanityUrl 的问题（#7999）\npromoter-products\n  移除了废弃的 admin image-url 端点（#7977）\nuser\n  删除了 User 表的 pear_ops_notes 列（#7976）\ncache\n  为 8 个 API 新增了 Redis 缓存（#7956）"
+  "dailySummary": "@wang-neo\n  新增了 isMyCatalog 到 consumer post detail relatedProducts (#8011)\n  修复了 preview endpoints 中 ticket-banner 顺序的问题 (#7995)\n@ruicaiext-1m\n  修复了 calculateCheckout totalLineItemDiscount 未包含 priceAnchor savings 的问题 (#8008)\n  修复了活动开始且有付费销售后允许状态变更的问题 (#8007)\n  发布了 v0.0.60 版本 (#8003)\n@qbyte2\n  增强了 enrichWithRecipientUser 以包含 customRecipientIdentifier 逻辑 (#8006)\n  新增了交易费用配置、小计票务费用、场馆应用返利等功能 (#8000)\n@feng-1m\n  新增了 promoter SMS/email 预填充的 signup token (#8004)\n@gunx3961\n  合并 KAT-11016 相关功能到发布分支 (#8002)\n@vanppo-1m\n  修复了 ShareUserInfo DTO 中暴露 vanityUrl 的问题 (#7999)\n@chengmarket\n  移除了废弃的 admin image-url endpoint (#7977)\n  从 User 表中删除了 pear_ops_notes 列 (#7976)\n@junetengext-a11y\n  为 8 个 API 添加了 Redis 缓存 (#7956)\n\n===\n\nposts\n  新增了 isMyCatalog 到 consumer post detail relatedProducts (#8011)\n  修复了 preview endpoints 中 ticket-banner 顺序的问题 (#7995)\nterminal\n  修复了 calculateCheckout totalLineItemDiscount 未包含 priceAnchor savings 的问题 (#8008)\nevents\n  修复了活动开始且有付费销售后允许状态变更的问题 (#8007)\nauth\n  新增了 promoter SMS/email 预填充的 signup token (#8004)\nearning-share\n  修复了 ShareUserInfo DTO 中暴露 vanityUrl 的问题 (#7999)\npromoter-products\n  移除了废弃的 admin image-url endpoint (#7977)\nuser\n  从 User 表中删除了 pear_ops_notes 列 (#7976)\ncache\n  为 8 个 API 添加了 Redis 缓存 (#7956)\n版本发布\n  发布了 v0.0.60 版本 (#8003)\n  合并 KAT-11016 相关功能到发布分支 (#8002)\n通用功能\n  增强了 enrichWithRecipientUser 以包含 customRecipientIdentifier 逻辑 (#8006)\n  新增了交易费用配置、小计票务费用、场馆应用返利等功能 (#8000)"
 }
