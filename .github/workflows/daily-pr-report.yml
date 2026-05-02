@@ -3,9 +3,9 @@ name: Daily PR Report
 on:
   schedule:
     # 9:00 AM CST = 1:00 AM UTC, Mon-Fri only
-    - cron: "0 1 * * 1-5"
+    - cron: "0 9 * * 0-6"
     # Fallback: 9:30 AM CST in case the first run was skipped
-    - cron: "30 1 * * 1-5"
+    - cron: "30 9 * * 0-6"
   workflow_dispatch:
 
 permissions:
