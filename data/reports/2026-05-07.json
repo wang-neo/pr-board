@@ -1,18 +1,18 @@
 {
   "date": "2026-05-07",
-  "generatedAt": "2026-05-08T02:58:06.803Z",
+  "generatedAt": "2026-05-08T04:00:45.515Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 22,
     "open": 21,
     "total": 43,
-    "authors": 10
+    "authors": 11
   },
   "analytics": {
     "authors": [
       {
         "name": "ruicaiext-1m",
-        "prs": 11,
+        "prs": 10,
         "additions": 3643,
         "deletions": 1480,
         "changedFiles": 87
@@ -69,6 +69,13 @@
       {
         "name": "feng-1m",
         "prs": 2,
+        "additions": 0,
+        "deletions": 0,
+        "changedFiles": 0
+      },
+      {
+        "name": "liuleei",
+        "prs": 1,
         "additions": 0,
         "deletions": 0,
         "changedFiles": 0
@@ -399,6 +406,20 @@
   ],
   "openPRs": [
     {
+      "number": 8083,
+      "title": "fix:notifyOpsNegativeEarnings",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/8083",
+      "body": " Description:                \r\n                                                                                                                                                   \r\n  Fix notifyOpsNegativeEarnings Slack notification logic :\r\n                                                                                                                                                   \r\n  1. Filter internal/test users: Skip notification when merchant's user has pearOpsSupported, testing, or inter",
+      "mergedAt": null,
+      "createdAt": "2026-05-08T03:56:40Z",
+      "labels": [],
+      "baseBranch": "release",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
+    {
       "number": 8082,
       "title": "feat(app-terminal): add skipCoupon flag to checkout price calculation (KAT-11131)",
       "author": "ruicaiext-1m",
@@ -434,20 +455,6 @@
       "body": "## Summary\n- Change `validateCheckoutOfPost()` in `sales/utils.ts` to use OR logic for dependent products validation — at least one dependent product must be present in checkout instead of requiring all\n- Replaces `for...of` loop (AND: all must exist) with `.some()` (OR: at least one must exist)\n- Zero impact on existing data: current `dependentProductIds` arrays only contain 1 element, where OR(1) = AND(1)\n- No data model, DTO, or schema changes required\n\n## Test plan\n- [ ] Create a Post with p",
       "mergedAt": null,
       "createdAt": "2026-05-06T12:34:44Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
-      "number": 8050,
-      "title": "feat: add independent PATCH APIs for post status and media (KAT-11140)",
-      "author": "ruicaiext-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/8050",
-      "body": "## Summary\n\n- Add `PATCH /posts/curator/:postId/status` — dedicated publish/unpublish endpoint; throws 400 if resale posts exist when unpublishing\n- Add `PATCH /posts/curator/:postId/content` — full content edit (title, subtitle, body, links, media, coverImages, urlAlias); respects resale-post lock on status field and KAT-9596 sync guard for `cardCustomizeCoverImages`\n- Add `PATCH /posts/curator/:postId/media` — targeted media/coverImages update only\n- Add `PostsRepo.hasResalePosts()` using `cou",
-      "mergedAt": null,
-      "createdAt": "2026-05-06T07:55:42Z",
       "labels": [],
       "baseBranch": "release",
       "additions": 0,
@@ -693,5 +700,5 @@
       "changedFiles": 0
     }
   ],
-  "dailySummary": "第一部分：个人贡献\n\n@wang-neo\n  调整了 onboarding 功能顺序以支持多账户管理 (#8079)\n  新增了 earning-share GROSS_SALES 基础计算及更新 onboarding 开关 (#8075)\n  新增了 EDU onboarding 开关配置 (#7973)\n@ruicaiext-1m\n  新增了 redeem 响应中 units 的 id 字段 (#8077)\n  合并了 Main 分支至 release 20260507 (#8065)\n  发布了 Release v0.0.63 (#8058)\n@qbyte2\n  新增了 EarningShareBasis 枚举及 GROSS_SALES 支持 (#8073)\n  新增了 EarningShareBasis 枚举及 GROSS_SALES 支持 (#8072)\n@invokerxiaext-byte\n  修复了 axs 错误 (#8071)\n  新增了 axs v8 checkout pricing 功能 (#8052)\n@junetengext-a11y\n  修复了创建/复制转售帖子后的 storefront 缓存失效问题 (#8070)\n  修复了 Redis Cluster 下 scanStream 和 multi-key DEL 的兼容性 (#8067)\n  修复了 Redis Cluster 兼容性问题，使用 scanStream 替代 Lua EVAL (#8060)\n@vanppo-1m\n  修复了 Money.sum 调用并从 pending payout 中排除 voided settlements (#8066)\n  修复了 pending payout 总计中未包含一次性支付的问题 (#8064)\n  新增了 payout summary 响应中的 pendingPayout 字段 (#7983)\n@chengmarket\n  修复了全选产品时未包含 ANY_DAY_TICKET 的问题 (#8062)\n  回滚了 SMS 队列配置中心化的提交 (#8061)\n  重命名了 BusinessCategory 枚举值 (#8031)\n  新增了 event staff sales metrics 的管理端接口 (#8029)\n  重构了 SMS 队列配置至 bull-queue.config (#8028)\n\n===\n\n第二部分：模块变更总览\n\nonboarding\n  调整了功能顺序以支持多账户管理 (#8079)\n  更新了 onboarding toggles (#8075)\nfeature-setting\n  新增了 EDU onboarding toggles (#7973)\nverification\n  新增了 redeem 响应中 units 的 id 字段 (#8077)\nearning-share\n  新增了 GROSS_SALES 基础计算及枚举支持 (#8075, #8073, #8072)\naxs\n  修复了相关错误 (#8071)\n  新增了 v8 checkout pricing 功能 (#8052)\ncache\n  修复了 storefront 缓存失效逻辑 (#8070)\n  修复了 Redis Cluster 兼容性问题 (#8067, #8060)\npayout\n  新增了 pendingPayout 字段 (#7983)\n  修复了 Money.sum 调用及 pending payout 计算逻辑 (#8066, #8064)\nfeature-flag\n  移除了 Pear.Us Venue app 的 Pear Verified 要求 (#8063)\nevent-sales-metrics\n  新增了管理端接口 (#8029)\n  修复了全选产品时的筛选逻辑 (#8062)\nsms\n  重构并回滚了 SMS 队列配置 (#8028, #8061)\nschema\n  重命名了 BusinessCategory 枚举值 (#8031)\nrelease\n  发布了 v0.0.63 版本并合并了分支 (#8058, #8065)"
+  "dailySummary": "@chengmarket\n  修复了全选产品时包含ANY_DAY_TICKET（#8062）\n  回退了SMS队列配置集中化重构（#8061）\n  重命名了BusinessCategory枚举值（#8031）\n  新增了活动员工销售指标管理端点（#8029）\n  重构了SMS队列配置集中化（#8028）\n@invokerxiaext-byte\n  修复了AXS错误（#8071）\n  新增了AXS v8 checkout pricing功能（#8052）\n@junetengext-a11y\n  修复了创建/复制转售帖子后店面缓存失效问题（#8070）\n  修复了scanStream和多键DEL的Redis集群兼容性（#8067）\n  替换了Lua EVAL以兼容Redis集群（#8060）\n@qbyte2\n  新增了EarningShareBasis枚举和GROSS_SALES基准支持（#8073, #8072）\n@ruicaiext-1m\n  新增了id字段到兑换响应单元（#8077）\n  合并了主分支到发布分支20260507（#8065）\n  移除了Pear.Us Venue应用的Pear Verified要求（#8063）\n  发布了v0.0.63版本（#8058）\n@vanppo-1m\n  修复了Money.sum调用并从待处理支付中排除已作废结算（#8066）\n  修复了在待处理支付总额中包含一次性支付（#8064）\n  新增了pendingPayout到支付摘要响应（#7983）\n@wang-neo\n  调整了功能顺序以支持多账户管理（#8079）\n  新增了GROSS_SALES基准并更新引导开关（#8075）\n  新增了EDU引导开关（#7973）\n\n===\n\naxs\n  新增了AXS v8 checkout pricing功能（#8052）\n  修复了AXS错误（#8071）\ncache\n  修复了创建/复制转售帖子后店面缓存失效问题（#8070）\n  修复了scanStream和多键DEL的Redis集群兼容性（#8067）\n  替换了Lua EVAL以兼容Redis集群（#8060）\nearning-share\n  新增了GROSS_SALES基准并更新引导开关（#8075）\n  新增了EarningShareBasis枚举和GROSS_SALES基准支持（#8073, #8072）\nevent-sales-metrics\n  新增了活动员工销售指标管理端点（#8029）\n  修复了全选产品时包含ANY_DAY_TICKET（#8062）\nfeature-flag\n  移除了Pear.Us Venue应用的Pear Verified要求（#8063）\nfeature-setting\n  新增了EDU引导开关（#7973）\nonboarding\n  调整了功能顺序以支持多账户管理（#8079）\npayout\n  新增了pendingPayout到支付摘要响应（#7983）\n  修复了Money.sum调用并从待处理支付中排除已作废结算（#8066）\n  修复了在待处理支付总额中包含一次性支付（#8064）\nrelease\n  发布了v0.0.63版本（#8058）\n  合并了主分支到发布分支20260507（#8065）\nschema\n  重命名了BusinessCategory枚举值（#8031）\nsms\n  重构了SMS队列配置集中化（#8028）\n  回退了SMS队列配置集中化重构（#8061）\nverification\n  新增了id字段到兑换响应单元（#8077）"
 }
