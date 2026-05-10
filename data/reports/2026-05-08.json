@@ -1,21 +1,28 @@
 {
   "date": "2026-05-08",
-  "generatedAt": "2026-05-09T02:51:46.663Z",
+  "generatedAt": "2026-05-10T02:58:30.592Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 15,
-    "open": 24,
-    "total": 39,
+    "open": 18,
+    "total": 33,
     "authors": 10
   },
   "analytics": {
     "authors": [
       {
         "name": "ruicaiext-1m",
-        "prs": 15,
+        "prs": 10,
         "additions": 6234,
         "deletions": 998,
         "changedFiles": 109
+      },
+      {
+        "name": "wang-neo",
+        "prs": 6,
+        "additions": 26,
+        "deletions": 128,
+        "changedFiles": 4
       },
       {
         "name": "gunx3961",
@@ -25,20 +32,6 @@
         "changedFiles": 5
       },
       {
-        "name": "wang-neo",
-        "prs": 5,
-        "additions": 26,
-        "deletions": 128,
-        "changedFiles": 4
-      },
-      {
-        "name": "invokerxiaext-byte",
-        "prs": 4,
-        "additions": 0,
-        "deletions": 0,
-        "changedFiles": 0
-      },
-      {
         "name": "liuleei",
         "prs": 3,
         "additions": 78,
@@ -46,8 +39,8 @@
         "changedFiles": 3
       },
       {
-        "name": "junetengext-a11y",
-        "prs": 2,
+        "name": "invokerxiaext-byte",
+        "prs": 3,
         "additions": 0,
         "deletions": 0,
         "changedFiles": 0
@@ -67,6 +60,13 @@
         "changedFiles": 1
       },
       {
+        "name": "junetengext-a11y",
+        "prs": 1,
+        "additions": 0,
+        "deletions": 0,
+        "changedFiles": 0
+      },
+      {
         "name": "qbyte2",
         "prs": 1,
         "additions": 0,
@@ -82,7 +82,7 @@
       }
     ],
     "labels": [],
-    "total": 39,
+    "total": 33,
     "totalAdditions": 6495,
     "totalDeletions": 1140,
     "totalChangedFiles": 122
@@ -301,69 +301,41 @@
   ],
   "openPRs": [
     {
-      "number": 8103,
-      "title": "fix(redis): add cluster mode support for BullMQ and maxRetriesPerRequest backoff",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/8103",
-      "body": "## Summary\n\n- **BullModule**: Add `REDIS_CLUSTER` env detection. In cluster mode, uses `createClient` callback to create `Redis.Cluster` instances with `dnsLookup` and `maxRetriesPerRequest: null`. Single-node config unchanged.\n- **RedisModule**: Add `maxRetriesPerRequest: null` to cluster `redisOptions` for indefinite retry on transient failures.\n- **SmsModule**: Add missing `prefix` with hash tag (`{${QueueName.SMS}}`) — was the only queue without it, causing cross-slot errors in Redis Cluster",
-      "mergedAt": null,
-      "createdAt": "2026-05-09T02:49:17Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
-      "number": 8102,
-      "title": "feat(app-terminal): add timezone endpoint for terminal app",
-      "author": "ruicaiext-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/8102",
-      "body": "## Summary\n\n- Add `GET /app-terminal/v1/map/timezone` endpoint protected by `AppTerminalGuard`\n- Terminal app can now query timezone by address using its terminal JWT token\n- Proxies directly to the existing `MapService`; no new service layer needed\n- `MapModule` was already imported in `AppTerminalModule` — zero additional wiring\n\n## Test plan\n\n- [ ] Call `GET /app-terminal/v1/map/timezone?address=<address>&placeId=<placeId>&date=<date>` with a valid terminal token — should return timezone info",
-      "mergedAt": null,
-      "createdAt": "2026-05-09T01:58:53Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
-      "number": 8101,
-      "title": "fix(posts): add syncEnabled to PatchPostContentRequest DTO",
-      "author": "ruicaiext-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/8101",
-      "body": "## Summary\n\n- `PATCH /posts/curator/:postId/content` 接口中，`syncEnabled` 字段因未在 `PatchPostContentRequest` DTO 中声明，导致 NestJS whitelist 机制将其剥除，更新无效\n- 在 `PatchPostContentRequest` 补充 `@IsOptional() @IsBoolean() syncEnabled?: boolean;` 字段声明\n\n## Test plan\n\n- [ ] 调用 `PATCH /posts/curator/:postId/content` 传入 `syncEnabled: false`，重新拉取详情确认返回值为 `false`\n- [ ] 确认非 EVENT post 传入 `syncEnabled` 无效（由 `PostPermissionGuard` 过滤）\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
-      "mergedAt": null,
-      "createdAt": "2026-05-09T01:49:55Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
-      "number": 8095,
-      "title": "Feature/axs v8 pr4 remaining",
-      "author": "invokerxiaext-byte",
-      "url": "https://github.com/bosinc/katana-server/pull/8095",
-      "body": "  ## Summary\r\n                                                                                                                                                                                                                                                                                                                    \r\n  Fix AXS ticket platform checkout hold pricing reconstruction and add pack-size (quantity step) support. 8 commits by Invoker.                                                 ",
-      "mergedAt": null,
-      "createdAt": "2026-05-08T10:00:46Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
-      "number": 8093,
-      "title": "fix(redis): add retryStrategy and bootstrap rejection guard",
+      "number": 8123,
+      "title": "fix(posts): skip adding coverImage to media when it matches cardCustomizeCoverImages",
       "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/8093",
-      "body": "## Summary\n- Add `retryStrategy` (200ms linear backoff, 5s cap), `maxRetriesPerRequest: 3`, and `enableReadyCheck: true` to both ioredis (`redis.module.ts`) and Bull (`bull.module.ts`) Redis connections\n- During EB rolling deployments, old process SIGTERM closes Redis TLS connections while new process is initializing — without retryStrategy these become unhandled promise rejections that block NestJS module init, leaving the app stuck before `app.listen()`\n- Add `_APP_READY` guard in `main.ts`: u",
+      "url": "https://github.com/bosinc/katana-server/pull/8123",
+      "body": "## Summary\n- When updating a post's cover image, skip adding it to the media array if its `src` already appears in `cardCustomizeCoverImages`\n- Prevents duplicate media entries that could occur when a cover image is set from a card customization image\n\n## Test plan\n- [ ] Update a post with a coverImage whose src matches one of the cardCustomizeCoverImages — verify no duplicate media entry is created\n- [ ] Update a post with a coverImage whose src does NOT match any cardCustomizeCoverImages — ver",
       "mergedAt": null,
-      "createdAt": "2026-05-08T09:14:26Z",
+      "createdAt": "2026-05-09T12:48:40Z",
+      "labels": [],
+      "baseBranch": "release",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
+    {
+      "number": 8121,
+      "title": "Release v0.0.66 (2026-05-09)",
+      "author": "ruicaiext-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/8121",
+      "body": "...",
+      "mergedAt": null,
+      "createdAt": "2026-05-09T11:26:52Z",
+      "labels": [],
+      "baseBranch": "main",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
+    {
+      "number": 8116,
+      "title": "feat(event): standalone toggle for excludeOnsiteSalesFromReport",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/8116",
+      "body": "## Summary\n- Add `PATCH /product-event/:id/exclude-onsite-sales-from-report` to toggle the flag independently of event status\n- Decoupled from the full `PUT /product-event/:id` update flow, which blocks edits on COMPLETED events (\"Cannot edit lineup for completed events\")\n- Requires `event.edit` collaborator permission (owner or editor role)\n- Minimal scope: new DTO, controller endpoint, service method, and repo method — touches 4 files\n\n## Test plan\n- [ ] Call `PATCH /product-event/:id/exclude-",
+      "mergedAt": null,
+      "createdAt": "2026-05-09T09:12:41Z",
       "labels": [],
       "baseBranch": "release",
       "additions": 0,
@@ -511,34 +483,6 @@
       "changedFiles": 0
     },
     {
-      "number": 7838,
-      "title": "feat: pluggable cache framework with Redis backend (demo: GET /user/vanity-url)",
-      "author": "ruicaiext-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/7838",
-      "body": "## Summary\n\nFollow-up to the 2026-04-15 production incident (vanityUrl ILIKE full-table scan).\nAdds a generic, storage-agnostic caching layer to protect hot endpoints from DB overload.\n\n- **`CacheStore` interface** (`CACHE_STORE` token) — decouples all business code from Redis implementation; swap to Memcached/in-memory with zero callers changed\n- **`RedisCacheStore`** — shares the existing ioredis connection via `@InjectRedis()`; all Redis errors are caught and logged, never rethrow to callers\n",
-      "mergedAt": null,
-      "createdAt": "2026-04-15T05:40:11Z",
-      "labels": [],
-      "baseBranch": "main",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
-      "number": 7803,
-      "title": "chore: KAT-11029 data layer audit — squash 963 migrations + ownership analysis",
-      "author": "ruicaiext-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/7803",
-      "body": "## Summary\n\nKAT-11029 Foundation Data Layer Audit — squash 963 migrations + full data layer audit.\n\n### Phase 1: Migration Squash\n- **963 historical migration directories → 1 `0_init` baseline**\n- Generated SQL: 3,782 lines (117 `CREATE TABLE` + 113 `CREATE TYPE`)\n- Validated: `npm run prisma:generate` passes both generators (`prisma-client-js` + `prisma-json-types-generator`)\n- Custom SQL audit: all 11 files with `CREATE FUNCTION/TRIGGER/EXTENSION` confirmed as one-time data helpers, no persist",
-      "mergedAt": null,
-      "createdAt": "2026-04-14T02:24:52Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
       "number": 7727,
       "title": "feat(collaborators): CO_HOST edit permissions — V2 write endpoints, Lineup CRUD, single-ticket edit (KAT-10790 Phase 3)",
       "author": "ruicaiext-1m",
@@ -581,20 +525,6 @@
       "changedFiles": 0
     },
     {
-      "number": 7485,
-      "title": "feat(KAT-10412): Phase 2 Event ID whitelist/blacklist filtering for ANY_DAY_TICKET",
-      "author": "ruicaiext-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/7485",
-      "body": "## Summary\n\n- **KAT-10412 Phase 2**: Adds Event ID-based whitelist (`event_list`) and blacklist (`exclude_events`) filtering for ANY_DAY_TICKET products\n- Phase 1 (title text matching + time window) is already on `release`; this PR adds the ID-level filtering layer on top\n\n## Changes\n\n### Core Logic\n- **`at-door-ticket.types.ts`**: New `isEventExcludedById` / `isEventAllowedById` helpers (O(1) `Set.has` lookup); extended `isEventAllowedForTicket` signature with `eventId` as first param; updated ",
-      "mergedAt": null,
-      "createdAt": "2026-03-06T04:15:45Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
       "number": 7472,
       "title": "docs(KAT-7716): Merchant → Catalog rename design and implementation plans",
       "author": "feng-1m",
@@ -602,20 +532,6 @@
       "body": "## Summary\n\n- Design doc and three-phase implementation plans for renaming Merchant → Catalog (where Merchant means catalog/shop)\n- Phase A: Schema renames, module consolidation, backward-compatible API layer (12 tasks)\n- Phase B: Cleanup deprecated aliases after FE migration (8 tasks)\n- Phase C: Add merchantId (User ref) to core tables for direct seller queries (8 tasks)\n- FE migration guide covering all phases: 41 route changes, request/response field renames, enum updates, Phase C performance",
       "mergedAt": null,
       "createdAt": "2026-03-04T11:41:32Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
-      "number": 7447,
-      "title": "feat(KAT-10562): V2 Event List API with ticket & revenue statistics",
-      "author": "ruicaiext-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/7447",
-      "body": "## Summary\n\n- **New endpoint**: `GET /product-event/v2/list` — paginated event list for the current curator with per-event ticket sales and revenue statistics\n- **Batch SQL statistics**: single raw SQL query (3 CTEs + `unnest`) replaces N+1 pattern; only 4 DB round-trips total regardless of page size\n- **Revenue semantics**: mirrors `MetricsRepo.getSummaryByFilter` — `totalNetEarnings` = curator's merchant payout + promoter payout\n\n## API\n\n```\nGET /product-event/v2/list\n  ?pageSize=10&pageNumber",
-      "mergedAt": null,
-      "createdAt": "2026-03-03T05:56:04Z",
       "labels": [],
       "baseBranch": "release",
       "additions": 0,
@@ -637,5 +553,5 @@
       "changedFiles": 0
     }
   ],
-  "dailySummary": "第一部分：个人贡献\n\n@gunx3961\n  合并主分支到发布分支（#8096）\n@ruicaiext-1m\n  修复了app-terminal变体更新映射中priceAnchor传递问题（#8094）\n  新增了脚本resendTicketEmails端点（#8090）\n  修复了posts佣金链规则问题（#8088）\n  修复了sales/public重复导出问题（#8086）\n  修复了venue app订单邮件更新（#8084）\n  新增了app-terminal结账价格计算skipCoupon标志（#8082）\n  发布了v0.0.64版本（#8078）\n  新增了posts状态和媒体独立PATCH API（#8050）\n@liuleei\n  修复了负收益过滤用户通知文本（#8092, #8085）\n  修复了notifyOpsNegativeEarnings（#8083）\n@wang-neo\n  新增了EDU入职步骤事件和模块检查（#8091）\n  新增了product-v2已售变体价格更新功能（#8081）\n@chengmarket\n  修复了sales-metrics员工项目摘要范围问题（#8080）\n\n===\n\n第二部分：模块变更总览\n\napp-terminal\n  修复了变体更新映射中priceAnchor传递问题（#8094）\n  新增了结账价格计算skipCoupon标志（#8082）\nnotify\n  修复了负收益过滤用户通知文本（#8092, #8085, #8083）\nfeature-setting\n  新增了EDU入职步骤事件和模块检查（#8091）\nscript\n  新增了resendTicketEmails端点（#8090）\nposts\n  修复了佣金链规则问题（#8088）\n  新增了状态和媒体独立PATCH API（#8050）\nsales\n  修复了重复导出问题（#8086）\nemail\n  修复了venue app订单邮件更新（#8084）\nproduct-v2\n  新增了已售变体价格更新功能（#8081）\nsales-metrics\n  修复了员工项目摘要范围问题（#8080）\nrelease\n  发布了v0.0.64版本（#8078）\n  合并主分支到发布分支（#8096）"
+  "dailySummary": "第一部分：个人贡献\n\n@ruicaiext-1m\n  修复了app-terminal变体更新映射的priceAnchor传递问题（#8094）\n  新增了ops脚本resendTicketEmails端点（#8090）\n  修复了posts佣金链规则问题（#8088）\n  移除了sales/public重复导出（#8086）\n  修复了venue app订单邮件更新（#8084）\n  新增了app-terminal结账价格计算的skipCoupon标志（#8082）\n  发布了v0.0.64版本（#8078）\n  新增了posts状态和媒体的独立PATCH APIs（#8050）\n@liuleei\n  修复了ops负收益过滤用户通知文本（#8092, #8085）\n  修复了notifyOpsNegativeEarnings功能（#8083）\n@wang-neo\n  新增了EDU onboarding步骤的事件和模块检查（#8091）\n  新增了product-v2已售变体的价格更新功能（#8081）\n@chengmarket\n  修复了sales-metrics员工项目汇总范围问题（#8080）\n@gunx3961\n  合并了主分支到发布分支（#8096）\n\n===\n\n第二部分：模块变更总览\n\napp-terminal\n  修复了变体更新映射的priceAnchor传递问题（#8094）\n  新增了结账价格计算的skipCoupon标志（#8082）\nposts\n  修复了佣金链规则问题（#8088）\n  新增了状态和媒体的独立PATCH APIs（#8050）\nops\n  修复了负收益过滤用户通知文本（#8083, #8085, #8092）\n  新增了resendTicketEmails端点（#8090）\nproduct-v2\n  新增了已售变体的价格更新功能（#8081）\nfeature-setting\n  新增了EDU onboarding步骤的事件和模块检查（#8091）\nemail\n  修复了venue app订单邮件更新（#8084）\nsales-metrics\n  修复了员工项目汇总范围问题（#8080）\nsales/public\n  移除了重复导出（#8086）\n发布\n  发布了v0.0.64版本（#8078）\n  合并了主分支到发布分支（#8096）"
 }
