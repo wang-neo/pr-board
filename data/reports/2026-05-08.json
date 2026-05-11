@@ -1,28 +1,21 @@
 {
   "date": "2026-05-08",
-  "generatedAt": "2026-05-10T02:58:30.592Z",
+  "generatedAt": "2026-05-11T03:34:42.626Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 15,
-    "open": 18,
-    "total": 33,
+    "open": 17,
+    "total": 32,
     "authors": 10
   },
   "analytics": {
     "authors": [
       {
         "name": "ruicaiext-1m",
-        "prs": 10,
+        "prs": 9,
         "additions": 6234,
         "deletions": 998,
         "changedFiles": 109
-      },
-      {
-        "name": "wang-neo",
-        "prs": 6,
-        "additions": 26,
-        "deletions": 128,
-        "changedFiles": 4
       },
       {
         "name": "gunx3961",
@@ -30,6 +23,13 @@
         "additions": 156,
         "deletions": 6,
         "changedFiles": 5
+      },
+      {
+        "name": "wang-neo",
+        "prs": 5,
+        "additions": 26,
+        "deletions": 128,
+        "changedFiles": 4
       },
       {
         "name": "liuleei",
@@ -41,6 +41,13 @@
       {
         "name": "invokerxiaext-byte",
         "prs": 3,
+        "additions": 0,
+        "deletions": 0,
+        "changedFiles": 0
+      },
+      {
+        "name": "qbyte2",
+        "prs": 2,
         "additions": 0,
         "deletions": 0,
         "changedFiles": 0
@@ -67,13 +74,6 @@
         "changedFiles": 0
       },
       {
-        "name": "qbyte2",
-        "prs": 1,
-        "additions": 0,
-        "deletions": 0,
-        "changedFiles": 0
-      },
-      {
         "name": "wgcairui",
         "prs": 1,
         "additions": 0,
@@ -82,7 +82,7 @@
       }
     ],
     "labels": [],
-    "total": 33,
+    "total": 32,
     "totalAdditions": 6495,
     "totalDeletions": 1140,
     "totalChangedFiles": 122
@@ -301,13 +301,13 @@
   ],
   "openPRs": [
     {
-      "number": 8123,
-      "title": "fix(posts): skip adding coverImage to media when it matches cardCustomizeCoverImages",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/8123",
-      "body": "## Summary\n- When updating a post's cover image, skip adding it to the media array if its `src` already appears in `cardCustomizeCoverImages`\n- Prevents duplicate media entries that could occur when a cover image is set from a card customization image\n\n## Test plan\n- [ ] Update a post with a coverImage whose src matches one of the cardCustomizeCoverImages — verify no duplicate media entry is created\n- [ ] Update a post with a coverImage whose src does NOT match any cardCustomizeCoverImages — ver",
+      "number": 8128,
+      "title": "feat(KAT-10904): Custom fee breakdown and ticket pricing enhancements",
+      "author": "qbyte2",
+      "url": "https://github.com/bosinc/katana-server/pull/8128",
+      "body": "## Summary\n- Implement custom fee breakdown for ticket orders with detailed fee components\n- Add ticket fee aggregation and calculation utilities\n- Enhance event pricing models with custom fee configuration\n- Add comprehensive e2e tests for custom fee ticket orders\n- Update ticket integration services for better fee handling\n\n## Files changed\n- 57 files with 2276 additions, 619 deletions\n- Key areas: product-event, sales/orders, ticket integrations, fee utilities\n\n## Test plan\n- [x] Added e2e te",
       "mergedAt": null,
-      "createdAt": "2026-05-09T12:48:40Z",
+      "createdAt": "2026-05-11T02:50:25Z",
       "labels": [],
       "baseBranch": "release",
       "additions": 0,
@@ -315,27 +315,13 @@
       "changedFiles": 0
     },
     {
-      "number": 8121,
-      "title": "Release v0.0.66 (2026-05-09)",
-      "author": "ruicaiext-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/8121",
-      "body": "...",
-      "mergedAt": null,
-      "createdAt": "2026-05-09T11:26:52Z",
-      "labels": [],
-      "baseBranch": "main",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
-      "number": 8116,
-      "title": "feat(event): standalone toggle for excludeOnsiteSalesFromReport",
+      "number": 8123,
+      "title": "fix(posts): skip adding coverImage to media when it matches cardCustomizeCoverImages",
       "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/8116",
-      "body": "## Summary\n- Add `PATCH /product-event/:id/exclude-onsite-sales-from-report` to toggle the flag independently of event status\n- Decoupled from the full `PUT /product-event/:id` update flow, which blocks edits on COMPLETED events (\"Cannot edit lineup for completed events\")\n- Requires `event.edit` collaborator permission (owner or editor role)\n- Minimal scope: new DTO, controller endpoint, service method, and repo method — touches 4 files\n\n## Test plan\n- [ ] Call `PATCH /product-event/:id/exclude-",
+      "url": "https://github.com/bosinc/katana-server/pull/8123",
+      "body": "## Summary\n- When updating a post's cover image, skip adding it to the media array if its `src` already appears in `cardCustomizeCoverImages`\n- Prevents duplicate media entries that could occur when a cover image is set from a card customization image\n\n## Test plan\n- [ ] Update a post with a coverImage whose src matches one of the cardCustomizeCoverImages — verify no duplicate media entry is created\n- [ ] Update a post with a coverImage whose src does NOT match any cardCustomizeCoverImages — ver",
       "mergedAt": null,
-      "createdAt": "2026-05-09T09:12:41Z",
+      "createdAt": "2026-05-09T12:48:40Z",
       "labels": [],
       "baseBranch": "release",
       "additions": 0,
@@ -553,5 +539,5 @@
       "changedFiles": 0
     }
   ],
-  "dailySummary": "第一部分：个人贡献\n\n@ruicaiext-1m\n  修复了app-terminal变体更新映射的priceAnchor传递问题（#8094）\n  新增了ops脚本resendTicketEmails端点（#8090）\n  修复了posts佣金链规则问题（#8088）\n  移除了sales/public重复导出（#8086）\n  修复了venue app订单邮件更新（#8084）\n  新增了app-terminal结账价格计算的skipCoupon标志（#8082）\n  发布了v0.0.64版本（#8078）\n  新增了posts状态和媒体的独立PATCH APIs（#8050）\n@liuleei\n  修复了ops负收益过滤用户通知文本（#8092, #8085）\n  修复了notifyOpsNegativeEarnings功能（#8083）\n@wang-neo\n  新增了EDU onboarding步骤的事件和模块检查（#8091）\n  新增了product-v2已售变体的价格更新功能（#8081）\n@chengmarket\n  修复了sales-metrics员工项目汇总范围问题（#8080）\n@gunx3961\n  合并了主分支到发布分支（#8096）\n\n===\n\n第二部分：模块变更总览\n\napp-terminal\n  修复了变体更新映射的priceAnchor传递问题（#8094）\n  新增了结账价格计算的skipCoupon标志（#8082）\nposts\n  修复了佣金链规则问题（#8088）\n  新增了状态和媒体的独立PATCH APIs（#8050）\nops\n  修复了负收益过滤用户通知文本（#8083, #8085, #8092）\n  新增了resendTicketEmails端点（#8090）\nproduct-v2\n  新增了已售变体的价格更新功能（#8081）\nfeature-setting\n  新增了EDU onboarding步骤的事件和模块检查（#8091）\nemail\n  修复了venue app订单邮件更新（#8084）\nsales-metrics\n  修复了员工项目汇总范围问题（#8080）\nsales/public\n  移除了重复导出（#8086）\n发布\n  发布了v0.0.64版本（#8078）\n  合并了主分支到发布分支（#8096）"
+  "dailySummary": "第一部分：个人贡献\n@gunx3961\n  合并了主分支到发布分支 (#8096)\n@ruicaiext-1m\n  修复了变体更新映射中的 priceAnchor 传递问题 (#8094)\n  新增了 resendTicketEmails 端点 (#8090)\n  修复了佣金链规则使用错误字段的问题 (#8088)\n  修复了 sales 模块重复导出问题 (#8086)\n  修复了 venue app 订单邮件更新 (#8084)\n  新增了 checkout 价格计算中的 skipCoupon 标志 (#8082)\n  发布了 v0.0.64 版本 (#8078)\n  新增了 post 状态和媒体的独立 PATCH API (#8050)\n@liuleei\n  修复了运营负收益过滤用户通知文本问题 (#8092, #8085)\n  修复了 notifyOpsNegativeEarnings 功能 (#8083)\n@wang-neo\n  新增了 EDU onboarding 步骤的事件和模块检查 (#8091)\n  新增了已售变体的价格更新功能 (#8081)\n@chengmarket\n  修复了员工项目汇总范围限定问题 (#8080)\n\n===\n\n第二部分：模块变更总览\napp-terminal\n  修复了变体更新映射中的 priceAnchor 传递问题 (#8094)\n  新增了 checkout 价格计算中的 skipCoupon 标志 (#8082)\nfeature-setting\n  新增了 EDU onboarding 步骤的事件和模块检查 (#8091)\nscript\n  新增了 resendTicketEmails 端点 (#8090)\nposts\n  修复了佣金链规则使用错误字段的问题 (#8088)\n  新增了 post 状态和媒体的独立 PATCH API (#8050)\nsales\n  修复了重复导出问题 (#8086)\nemail\n  修复了 venue app 订单邮件更新 (#8084)\nproduct-v2\n  新增了已售变体的价格更新功能 (#8081)\nsales-metrics\n  修复了员工项目汇总范围限定问题 (#8080)\nnotify\n  修复了运营负收益过滤用户通知文本问题 (#8092, #8085)\n  修复了 notifyOpsNegativeEarnings 功能 (#8083)\nRelease\n  合并了主分支到发布分支 (#8096)\n  发布了 v0.0.64 版本 (#8078)"
 }
