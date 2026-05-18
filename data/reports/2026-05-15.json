@@ -1,18 +1,18 @@
 {
   "date": "2026-05-15",
-  "generatedAt": "2026-05-17T03:34:59.778Z",
+  "generatedAt": "2026-05-18T03:43:05.634Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 24,
-    "open": 23,
-    "total": 47,
+    "open": 22,
+    "total": 46,
     "authors": 9
   },
   "analytics": {
     "authors": [
       {
         "name": "feng-1m",
-        "prs": 18,
+        "prs": 17,
         "additions": 1069,
         "deletions": 626,
         "changedFiles": 214
@@ -75,7 +75,7 @@
       }
     ],
     "labels": [],
-    "total": 47,
+    "total": 46,
     "totalAdditions": 7795,
     "totalDeletions": 4874,
     "totalChangedFiles": 492
@@ -420,20 +420,6 @@
   ],
   "openPRs": [
     {
-      "number": 8237,
-      "title": "fix(product-v2): force products-added when excludeFromPostSync flips off",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/8237",
-      "body": "## Summary\n\n- Detects the `excludeFromPostSync: true → false` flip in `TicketProductStrategy.afterUpdate` and `EventProductStrategy.afterUpdate`, and explicitly adds `'products-added'` to the sync categories in that case.\n- Adds 6 unit tests (3 per strategy) — verified RED before the fix, GREEN after.\n\n## Why the previous fix (1aabe6b9) wasn't enough\n\n`1aabe6b9` made `EventChangeDetector.detectNewProducts` and `SyncOrchestrator.extractNewProducts` use filtered IDs (`relatedProductIdsForPostSync(",
-      "mergedAt": null,
-      "createdAt": "2026-05-15T11:59:50Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
       "number": 8236,
       "title": "Release v0.0.71 (2026-05-15)",
       "author": "wang-neo",
@@ -742,5 +728,5 @@
       "changedFiles": 0
     }
   ],
-  "dailySummary": "第一部分：个人贡献\n\n@feng-1m\n  重构了多个模块以添加 public/ barrel (#8234, #8233, #8232, #8229, #8228, #8227, #8226, #8225, #8219, #8218, #8217, #8214, #8212)\n  重构了 terminal-address 路径逻辑 (#8213)\n  重构了 posts 模块的 rte 文件位置 (#8211)\n@ruicaiext-1m\n  修复了 post-sync 模块的触发逻辑 (#8231)\n  发布了版本 v0.0.70 (#8203)\n@junetengext-a11y\n  修复了 cache 模块的缓存失效问题 (#8230, #8209)\n  修复了 TicketProductStrategy 的 TS 错误 (#8216)\n  新增了 ticketType 字段并重构 any-day ticket (#8087)\n@gunx3961\n  修复了 event-custom-fee 模块的布尔转换问题 (#8224, #8223)\n@wang-neo\n  修复了 auth 模块的注册流程步骤 (#8215)\n\n===\n\n第二部分：模块变更总览\n\nsubscription-plan\n  重构了模块结构，添加 public/ barrel (#8234)\nmerchant-promoter-association\n  重构了模块结构，添加 public/ barrel (#8233)\nfeature-flag\n  重构了模块结构，添加 public/ barrel (#8232)\npost-sync\n  修复了 excludeFromPostSync 变更时的触发问题 (#8231)\ncache\n  修复了 vanity-url 缓存失效问题 (#8230)\n  修复了跨多个缓存域的缓存失效问题 (#8209)\npromoter-association\n  重构了模块结构，添加 public/ barrel (#8229)\nproduct-form\n  重构了模块结构，添加 public/ barrel (#8228)\nmap\n  重构了模块结构，添加 public/ barrel (#8227)\nemail\n  重构了模块结构，添加 public/ barrel (#8226)\nticket-platform-integration\n  重构了模块结构，添加 public/ barrel (#8225)\nevent-custom-fee\n  修复了 isEnabled 字段的布尔转换问题 (#8224, #8223)\npromotion\n  重构了模块结构，添加 public/ barrel (#8219)\nnotification-settings\n  重构了模块结构，添加 public/ barrel (#8218)\nsms\n  重构了模块结构，添加 public/ barrel (#8217)\nTicketProductStrategy\n  修复了 nullable context.event 的 TS 错误 (#8216)\nauth\n  修复了 promoter 注册时的步骤设置问题 (#8215)\nearning-share\n  重构了模块结构，添加 public/ barrel (#8214)\nterminal-address\n  重构了路径逻辑 (#8213)\nmarketplace\n  重构了模块结构，添加 public/ barrel (#8212)\nposts\n  重构了 rte 文件位置 (#8211)\nticket\n  新增了 ticketType 字段并重构 any-day ticket (#8087)\nRelease\n  发布了 v0.0.70 版本 (#8203)"
+  "dailySummary": "第一部分：个人贡献\n\n@feng-1m\n  重构了 subscription-plan 模块，添加 public/ barrel 导出 (#8234)\n  重构了 merchant-promoter-association 模块，添加 public/ barrel 导出 (#8233)\n  重构了 feture-flag 模块，添加 public/ barrel 导出 (#8232)\n  重构了 promoter-association 模块，添加 public/ barrel 导出 (#8229)\n  重构了 product-form 模块，添加 public/ barrel 导出 (#8228)\n  重构了 map 模块，添加 public/ barrel 导出 (#8227)\n  重构了 email 模块，添加 public/ barrel 导出 (#8226)\n  重构了 ticket-platform-integration 模块，添加 public/ barrel 导出 (#8225)\n  重构了 promotion 模块，添加 public/ barrel 导出 (#8219)\n  重构了 notification-settings 模块，添加 public/ barrel 导出 (#8218)\n  重构了 sms 模块，添加 public/ barrel 导出 (#8217)\n  重构了 earning-share 模块，添加 public/ barrel 导出 (#8214)\n  重构了 terminal-address 路径逻辑 (#8213)\n  重构了 marketplace 模块，添加 public/ barrel 导出 (#8212)\n  重构了 posts 模块，迁移 rte/* 文件 (#8211)\n\n@ruicaiext-1m\n  修复了 post-sync 模块，当 excludeFromPostSync 关闭时触发 products-added (#8231)\n  发布了 v0.0.70 版本 (#8203)\n\n@junetengext-a11y\n  修复了 cache 模块，在用户变更时清除 vanity-url 缓存 (#8230)\n  修复了 TicketProductStrategy 中 context.event 可空的 TS 错误 (#8216)\n  修复了缓存失效问题，覆盖 7 个缓存域 (#8209)\n  新增了 ticketType 字段并重构 any-day ticket 功能 (#8087)\n\n@gunx3961\n  修复了 event-custom-fee 模块，为 isEnabled 添加 Transform 装饰器 (#8223, #8224)\n\n@wang-neo\n  修复了 auth 模块，在推广者注册时设置 creationStep 为 COMPLETED (#8215)\n\n===\n\n第二部分：模块变更总览\n\nsubscription-plan\n  重构了模块导出结构，添加 public/ barrel (#8234)\nmerchant-promoter-association\n  重构了模块导出结构，添加 public/ barrel (#8233)\nfeture-flag\n  重构了模块导出结构，添加 public/ barrel (#8232)\npost-sync\n  修复了同步逻辑，当 excludeFromPostSync 关闭时触发 products-added (#8231)\ncache\n  修复了缓存逻辑，在用户变更时清除 vanity-url 缓存 (#8230)\npromoter-association\n  重构了模块导出结构，添加 public/ barrel (#8229)\nproduct-form\n  重构了模块导出结构，添加 public/ barrel (#8228)\nmap\n  重构了模块导出结构，添加 public/ barrel (#8227)\nemail\n  重构了模块导出结构，添加 public/ barrel (#8226)\nticket-platform-integration\n  重构了模块导出结构，添加 public/ barrel (#8225)\nevent-custom-fee\n  修复了 isEnabled 布尔值转换问题，添加 Transform 装饰器 (#8223, #8224)\npromotion\n  重构了模块导出结构，添加 public/ barrel (#8219)\nnotification-settings\n  重构了模块导出结构，添加 public/ barrel (#8218)\nsms\n  重构了模块导出结构，添加 public/ barrel (#8217)\nauth\n  修复了推广者注册流程，设置 creationStep 为 COMPLETED (#8215)\nearning-share\n  重构了模块导出结构，添加 public/ barrel (#8214)\nmarketplace\n  重构了模块导出结构，添加 public/ barrel (#8212)\nposts\n  重构了文件结构，迁移 rte/* 文件 (#8211)\n全局\n  重构了 terminal-address 路径逻辑 (#8213)\n  修复了 TicketProductStrategy 中 context.event 可空的 TS 错误 (#8216)\n  修复了缓存失效问题，覆盖 7 个缓存域 (#8209)\n  新增了 ticketType 字段并重构 any-day ticket 功能 (#8087)\n发布\n  发布了 v0.0.70 版本 (#8203)"
 }
