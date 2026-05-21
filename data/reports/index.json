@@ -1,6 +1,14 @@
 {
   "reports": [
     {
+      "date": "2026-05-20",
+      "merged": 14,
+      "open": 22,
+      "total": 36,
+      "authors": 10,
+      "hasAI": true
+    },
+    {
       "date": "2026-05-19",
       "merged": 19,
       "open": 20,
