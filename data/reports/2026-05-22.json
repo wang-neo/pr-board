@@ -1,6 +1,6 @@
 {
   "date": "2026-05-22",
-  "generatedAt": "2026-05-23T02:58:00.983Z",
+  "generatedAt": "2026-05-24T03:37:38.679Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 12,
@@ -553,5 +553,5 @@
       "changedFiles": 0
     }
   ],
-  "dailySummary": "第一部分：个人贡献\n@feng-1m\n  修复了生产构建恢复及软删除推广变体问题（#8361）\n  修复了products模块中软删除推广变体的恢复问题（#8360）\n@invokerxiaext-byte\n  新增了axs价格类型变更功能（#8359）\n  新增了axs价格类型变更功能（#8357）\n  新增了axs价格类型变更功能（#8328）\n@wang-neo\n  修复了migration模块移除begin的问题（#8335）\n  发布了v0.0.73版本（#8327）\n@vanppo-1m\n  修复了平台费退款上限限制问题（#8332）\n  新增了交易手续费分摊功能（#8321）\n@chengmarket\n  新增了KAT-11061相关功能（#8331）\n  修复了AWS S3生产环境桶配置问题（#8330）\n  优化了store-front用户实体查询性能（#8303）\n\n===\n\n第二部分：模块变更总览\nproducts\n  修复了软删除推广变体恢复问题（#8360）\naxs\n  新增了价格类型变更功能（#8328, #8357, #8359）\nmigration\n  修复了移除begin的问题（#8335）\nrefund\n  修复了平台费退款上限限制问题（#8332）\naws\n  新增了KAT-11061相关功能（#8331）\n  修复了S3生产环境桶配置问题（#8330）\ntransaction\n  新增了交易手续费分摊功能（#8321）\nstore-front\n  优化了用户实体查询性能（#8303）\nbuild\n  发布了v0.0.73版本（#8327）\n  修复了生产构建恢复问题（#8361）"
+  "dailySummary": "@feng-1m\n  恢复生产构建及取消删除软删除的推广者变体（#8361）\n  修复取消删除软删除的推广者变体（#8360）\n@invokerxiaext-byte\n  变更 AXS 价格类型（#8359, #8357, #8328）\n@wang-neo\n  修复移除迁移中的 begin（#8335）\n  发布版本 v0.0.73（#8327）\n@vanppo-1m\n  修复限制平台费用退款上限（#8332）\n  新增交易手续费分发功能（#8321）\n@chengmarket\n  开发 KAT-11061 功能（#8331）\n  修复添加生产桶到 S3AdminBucket 枚举（#8330）\n  优化 userEntity 查找性能（#8303）\n\n===\n\nproducts\n  修复推广者变体软删除问题（#8360）\n构建\n  恢复生产构建（#8361）\naxs\n  变更价格类型（#8359, #8357, #8328）\nmigration\n  移除 begin（#8335）\nrefund\n  限制平台费用退款上限（#8332）\naws\n  添加生产桶到 S3AdminBucket 枚举（#8330）\nkat\n  开发 KAT-11061 功能（#8331）\nrelease\n  发布 v0.0.73 版本（#8327）\ntransaction fee\n  新增分发功能（#8321）\nstore-front\n  优化 userEntity 查找性能（#8303）"
 }
