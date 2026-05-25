@@ -1,28 +1,28 @@
 {
   "date": "2026-05-22",
-  "generatedAt": "2026-05-24T03:37:38.679Z",
+  "generatedAt": "2026-05-25T03:52:26.592Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 12,
-    "open": 21,
-    "total": 33,
+    "open": 23,
+    "total": 35,
     "authors": 10
   },
   "analytics": {
     "authors": [
+      {
+        "name": "wang-neo",
+        "prs": 9,
+        "additions": 9250,
+        "deletions": 4630,
+        "changedFiles": 268
+      },
       {
         "name": "invokerxiaext-byte",
         "prs": 7,
         "additions": 4837,
         "deletions": 333,
         "changedFiles": 35
-      },
-      {
-        "name": "wang-neo",
-        "prs": 7,
-        "additions": 9250,
-        "deletions": 4630,
-        "changedFiles": 268
       },
       {
         "name": "feng-1m",
@@ -82,7 +82,7 @@
       }
     ],
     "labels": [],
-    "total": 33,
+    "total": 35,
     "totalAdditions": 14554,
     "totalDeletions": 5053,
     "totalChangedFiles": 316
@@ -258,6 +258,34 @@
     }
   ],
   "openPRs": [
+    {
+      "number": 8366,
+      "title": "fix(test): wrap query-by-postType test in $transaction to fix CI flake",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/8366",
+      "body": "根因总结\r\n\r\n  TransactionManager.begin()\r\n    → prisma.$executeRawUnsafe('BEGIN')  // 只锁住连接 A\r\n    → 连接 A 归还连接池\r\n\r\n  prisma.post.create(...)\r\n    → 连接池分配连接 B  // 不在事务中，自动 commit\r\n\r\n  prisma.post.findMany(...)\r\n    → 连接池可能分配连接 A（带着过期的 BEGIN 快照）\r\n    → 或者分配连接 C（能看到 B 的数据）\r\n\r\n  → 概率性：取决于连接池路由，20-30% 失败\r\n\r\n  本质矛盾：TransactionManager 用 raw SQL BEGIN 管理事务，但 Prisma 的连接池不保证复用同一个连接。之前 connection_limit=1 时恰好能工作（只有一条连接），移除后这个假设被打破。\r\n\r\n\r\n\r\n## Summary\r\n- Fix intermittent CI failure in `post-type-schema.spec.ts` c",
+      "mergedAt": null,
+      "createdAt": "2026-05-25T03:13:47Z",
+      "labels": [],
+      "baseBranch": "release",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
+    {
+      "number": 8365,
+      "title": "docs: KAT-11154 batch guest import technical design",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/8365",
+      "body": "## Summary\n- Technical design document for batch event guest import (CSV upload + JSON batch)\n- Follows existing Follower CSV Import pattern: two-step upload → confirm flow with DB staging tables\n- CTE atomic write for bulk insert performance up to 50K rows, with two-layer dedup strategy\n- Three new endpoints: `POST /event/guests/csv/upload`, `POST /event/guests/csv/confirm`, `POST /event/guests/batch`\n\n## Test plan\n- [ ] Review design doc for API correctness and alignment with existing `createG",
+      "mergedAt": null,
+      "createdAt": "2026-05-25T02:58:39Z",
+      "labels": [],
+      "baseBranch": "release",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
     {
       "number": 8363,
       "title": "fix: resolve TypeScript compilation errors for main branch compatibility",
@@ -553,5 +581,5 @@
       "changedFiles": 0
     }
   ],
-  "dailySummary": "@feng-1m\n  恢复生产构建及取消删除软删除的推广者变体（#8361）\n  修复取消删除软删除的推广者变体（#8360）\n@invokerxiaext-byte\n  变更 AXS 价格类型（#8359, #8357, #8328）\n@wang-neo\n  修复移除迁移中的 begin（#8335）\n  发布版本 v0.0.73（#8327）\n@vanppo-1m\n  修复限制平台费用退款上限（#8332）\n  新增交易手续费分发功能（#8321）\n@chengmarket\n  开发 KAT-11061 功能（#8331）\n  修复添加生产桶到 S3AdminBucket 枚举（#8330）\n  优化 userEntity 查找性能（#8303）\n\n===\n\nproducts\n  修复推广者变体软删除问题（#8360）\n构建\n  恢复生产构建（#8361）\naxs\n  变更价格类型（#8359, #8357, #8328）\nmigration\n  移除 begin（#8335）\nrefund\n  限制平台费用退款上限（#8332）\naws\n  添加生产桶到 S3AdminBucket 枚举（#8330）\nkat\n  开发 KAT-11061 功能（#8331）\nrelease\n  发布 v0.0.73 版本（#8327）\ntransaction fee\n  新增分发功能（#8321）\nstore-front\n  优化 userEntity 查找性能（#8303）"
+  "dailySummary": "@feng-1m\n  恢复了生产构建及推广者变体状态（#8361）\n  修复了产品模块中推广者变体的恢复逻辑（#8360）\n@invokerxiaext-byte\n  变更了 AXS 价格类型（#8359, #8357, #8328）\n@wang-neo\n  移除了迁移脚本中的 begin 语句（#8335）\n  发布了 v0.0.73 版本（#8327）\n@vanppo-1m\n  修复了平台费用退款上限逻辑（#8332）\n  新增了交易费用分摊功能（#8321）\n@chengmarket\n  完成了 KAT-11061 相关功能（#8331）\n  添加了生产环境桶到 S3AdminBucket 枚举（#8330）\n  优化了店铺前台 userEntity 查询性能（#8303）\n\n===\n\n产品\n  修复了推广者变体的恢复逻辑（#8360）\n构建\n  恢复了生产构建（#8361）\nAXS\n  变更了价格类型（#8359, #8357, #8328）\n迁移\n  移除了 begin 语句（#8335）\n退款\n  修复了平台费用退款上限逻辑（#8332）\nKAT\n  完成了 KAT-11061 相关功能（#8331）\nAWS\n  添加了生产环境桶到 S3AdminBucket 枚举（#8330）\n交易\n  新增了交易费用分摊功能（#8321）\n店铺前台\n  优化了 userEntity 查询性能（#8303）\n版本发布\n  发布了 v0.0.73 版本（#8327）"
 }
