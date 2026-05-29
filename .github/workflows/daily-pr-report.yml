@@ -1,11 +1,12 @@
 # name: Daily PR Report
 
+
+
 on:
-  schedule:
-    # 9:00 AM CST = 1:00 AM UTC, Mon-Fri only
-    - cron: "0 0 * * 1-5"
-    # Fallback: 9:30 AM CST in case the first run was skipped
-    # - cron: "30 0 * * 0-6"
+  # 我先关闭，其他工作流触发
+  # schedule:
+  #   # 9:00 AM CST = 1:00 AM UTC, Mon-Fri only
+  #   - cron: "0 0 * * 1-5"
   workflow_dispatch:
 
 permissions:
