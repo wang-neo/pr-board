@@ -1,11 +1,11 @@
 {
   "date": "2026-05-28",
-  "generatedAt": "2026-05-29T03:36:59.710Z",
+  "generatedAt": "2026-05-29T12:50:52.043Z",
   "repo": "bosinc/katana-server",
   "stats": {
     "merged": 0,
-    "open": 26,
-    "total": 26,
+    "open": 29,
+    "total": 29,
     "authors": 9
   },
   "analytics": {
@@ -18,22 +18,22 @@
         "changedFiles": 0
       },
       {
-        "name": "feng-1m",
-        "prs": 4,
-        "additions": 0,
-        "deletions": 0,
-        "changedFiles": 0
-      },
-      {
         "name": "wang-neo",
-        "prs": 4,
+        "prs": 5,
         "additions": 0,
         "deletions": 0,
         "changedFiles": 0
       },
       {
         "name": "invokerxiaext-byte",
-        "prs": 4,
+        "prs": 5,
+        "additions": 0,
+        "deletions": 0,
+        "changedFiles": 0
+      },
+      {
+        "name": "feng-1m",
+        "prs": 5,
         "additions": 0,
         "deletions": 0,
         "changedFiles": 0
@@ -75,13 +75,69 @@
       }
     ],
     "labels": [],
-    "total": 26,
+    "total": 29,
     "totalAdditions": 0,
     "totalDeletions": 0,
     "totalChangedFiles": 0
   },
   "mergedPRs": [],
   "openPRs": [
+    {
+      "number": 8425,
+      "title": "Release v0.0.77 (2026-05-29)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/8425",
+      "body": "# 🚀 Production Release v0.0.77\n\n## 🔍 Pre-Release Checkpoint Results\n✅ CHECKPOINT PASSED: Environment Variable Analysis\n   - No matched files\n\n✅ CHECKPOINT PASSED: Database Migration Analysis\n   - No matched files\n\n✅ CHECKPOINT PASSED: Prisma Schema Analysis\n   - No matched files\n\n✅ CHECKPOINT PASSED: Queue System Analysis\n   - No matched files\n\n✅ CHECKPOINT PASSED: External Service Analysis\n   - No matched files\n\n✅ CHECKPOINT PASSED: Security & Authentication Analysis\n   - No matched files\n\n✅ ",
+      "mergedAt": null,
+      "createdAt": "2026-05-29T11:25:05Z",
+      "labels": [],
+      "baseBranch": "main",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
+    {
+      "number": 8424,
+      "title": "Feature/axs cart",
+      "author": "invokerxiaext-byte",
+      "url": "https://github.com/bosinc/katana-server/pull/8424",
+      "body": "\r\n  ## Summary\r\n\r\n  - Remove AXS hold sync from the update-promotions endpoint, deferring hold creation/refresh to the payment flow to avoid frequent AXS 429 rate-limit errors\r\n  - Surface offerFailures in the section-options response with `?? []` boundary normalization, guaranteeing downstream consumers always receive an array\r\n\r\n  ## Changes\r\n\r\n  ### Defer AXS hold sync to payment flow (`checkout.service.ts`)\r\n  - Remove `syncAxsHoldAfterLineItemQuantityChange` and `getTouchedAxsLineItemIds` m",
+      "mergedAt": null,
+      "createdAt": "2026-05-29T11:15:49Z",
+      "labels": [],
+      "baseBranch": "release",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
+    {
+      "number": 8421,
+      "title": "feat(axs): Ops Slack notification on AXS ticketPrice change during sync",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/8421",
+      "body": "## Summary\n\nSends an Ops Slack notification (mirroring the order-placed Ops notification) whenever an AXS event sync changes one or more tickets' net `ticketPrice`.\n\n- Detects price changes by comparing the existing variant's stored `ticketPrice` against the newly-repriced AXS value (`collectTicketPriceChanges`).\n- Sends **one aggregated** message per event sync via `SlackUtil.sendSlackNotificationToOps` — event title/id, each ticket's `old → new` price, and a \"View event in Admin\" deep link (`$",
+      "mergedAt": null,
+      "createdAt": "2026-05-29T09:38:29Z",
+      "labels": [],
+      "baseBranch": "release",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
+    {
+      "number": 8416,
+      "title": "fix(web-scraper): add styleTheme support and apply admin theme after scraping",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/8416",
+      "body": "## Summary\n- Add `styleTheme` field to `ImportPartnerRequest` and `ImportPromoterRequest` DTOs, previously sent by admin UI but silently dropped\n- Apply admin-specified theme overrides (`styleTheme` → `themeName`, `defaultTheme.colors`, `defaultTheme.fonts`) **after** the scraping step, so admin config takes precedence over scraped values\n- If admin doesn't provide theme fields, scraped values from Komi/Linktree/Instagram are preserved as-is\n\n## Test plan\n- [ ] Import partner via admin with `sty",
+      "mergedAt": null,
+      "createdAt": "2026-05-29T08:45:13Z",
+      "labels": [],
+      "baseBranch": "release",
+      "additions": 0,
+      "deletions": 0,
+      "changedFiles": 0
+    },
     {
       "number": 8412,
       "title": "Feat/kat 11305 3 floor value to release",
@@ -160,20 +216,6 @@
       "body": "## Problem\n\nThe Event→Post sync had **3 accreted publish paths** with inconsistent freshness guarantees:\n\n1. **`withEventSync`** — used a closure-captured entity (stale after `batchOperate` lineup changes) → caused the #8376 lineup bug\n2. **product-v2 strategy hooks** — called `triggerEventPostSync` directly, bypassing the unified path\n3. **`update()` service method** — applied snapshot masking that hid tax-recalc price changes and missed products-added-to-sync-disabled events; duplicate-service",
       "mergedAt": null,
       "createdAt": "2026-05-26T13:30:49Z",
-      "labels": [],
-      "baseBranch": "release",
-      "additions": 0,
-      "deletions": 0,
-      "changedFiles": 0
-    },
-    {
-      "number": 8385,
-      "title": "feat(user-link): add linkCardLayout field to UserLink (KAT-11129)",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/8385",
-      "body": "## Summary\n- Add `linkCardLayout` (Large/Compact) as a per-link field on `UserLink` model, previously only available as a storefront-wide setting\n- Update Prisma schema with new `linkCardLayout String?` column on `UserLink`\n- Add `linkCardLayout` to Create/Update UserLink DTOs with `LinkCardLayoutType` enum validation\n- Include `linkCardLayout` in storefront `ShopModuleItemMetaData` and `LinkModuleQueryStrategy` response\n\n## Test plan\n- [ ] Create a UserLink with `linkCardLayout: \"Large\"` — veri",
-      "mergedAt": null,
-      "createdAt": "2026-05-26T09:18:59Z",
       "labels": [],
       "baseBranch": "release",
       "additions": 0,
