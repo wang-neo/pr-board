@@ -3,7 +3,7 @@
 on:
   schedule:
     # 9:00 AM CST = 1:00 AM UTC, Mon-Fri only
-    - cron: "0 0 * * 0-6"
+    - cron: "0 0 * * 1-5"
     # Fallback: 9:30 AM CST in case the first run was skipped
     # - cron: "30 0 * * 0-6"
   workflow_dispatch:
