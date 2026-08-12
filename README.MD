@@ -1,85 +1,39 @@
-# Katana Server PR Board
+# Katana Server PR Board (展示层)
 
-Daily PR report for [bosinc/katana-server](https://github.com/bosinc/katana-server), sends to Slack and deploys a dashboard to GitHub Pages.
+PR 看板的**展示层** —— 只放生成的静态文件,通过 GitHub Pages 展示。
 
-## GitHub Repo Secrets 配置
+逻辑层(抓取 PR、Slack 日报、组装站点)在 [`katana-task/scripts/pr-board`](https://github.com/wang-neo/katana-task/tree/main/scripts/pr-board)。本仓库**不放任何脚本逻辑**。
 
-在 repo 的 **Settings → Secrets and variables → Actions** 中配置：
-
-### 必填
-
-| Secret | 说明 |
-|--------|------|
-| `PR_REPORT_GITHUB_TOKEN` | GitHub Personal Access Token，需要 `repo` 权限读取 katana-server 的 PR |
-| `SLACK_BOT_TOKEN` | Slack Bot Token (`xoxb-...`)，需要 `chat:write`、`conversations:write` scope |
-| `SLACK_USER_ID` | 你接收 DM 的 Slack Member ID（右键头像 → Copy Member ID） |
-
-### 可选（AI 摘要）
-
-不配置 `AI_API_KEY` 则自动跳过 AI 功能，降级为纯 PR 列表。
-
-| Secret | 默认值 | 说明 |
-|--------|--------|------|
-| `AI_API_KEY` | — | AI 服务的 API Key |
-| `AI_BASE_URL` | OpenAI 官方 | 自定义 API 地址，支持任何 OpenAI 兼容接口 |
-| `AI_MODEL` | `gpt-4o-mini` | 模型名称 |
-| `AI_MAX_TOKENS` | `300` | 最大 token 数 |
-
-**AI 服务配置示例：**
+## 数据怎么来的
 
 ```
-# OpenAI
-AI_API_KEY=sk-xxx
+katana-task Action ② (pr-board-publish)          pr-board
+  抓取 30d 所有 PR → prs.json            ──push──▶  docs/
+  组装 site/ → docs/                                ↓ 触发
+                                            pages.yml (本仓库)
+                                                  ↓
+                                            GitHub Pages 上线
+```
 
-# DeepSeek
-AI_BASE_URL=https://api.deepseek.com/v1
-AI_MODEL=deepseek-chat
+每天 katana-task 推送 `docs/`(覆盖),本次 push 触发本仓库 `pages.yml` → 部署。
 
-# 通义千问
-AI_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
-AI_MODEL=qwen-plus
+## 目录
 
-# 本地 Ollama
-AI_BASE_URL=http://localhost:11434/v1
-AI_MODEL=llama3
+```
+docs/                          # ⚠️ 全部由 katana-task 生成,勿手动改
+├── index.html
+├── app.js
+├── style.css
+└── data/prs.json              # 最近 30 天所有 PR 快照
+.github/workflows/pages.yml    # docs/ 变动 → 部署 Pages
 ```
 
 ## GitHub Pages 配置
 
-在 repo 的 **Settings → Pages**：
-1. Source 选择 **GitHub Actions**
-2. 部署会随 workflow 自动完成
+repo **Settings → Pages → Source** 选 **GitHub Actions**。线上地址:
 
-## Slack App 创建步骤
+> https://wang-neo.github.io/pr-board/
 
-1. 前往 [api.slack.com/apps](https://api.slack.com/apps) → Create New App
-2. **OAuth & Permissions** 添加 Bot Token Scopes：
-   - `chat:write`
-   - `conversations:write`
-3. Install App to Workspace，获取 `xoxb-...` token
-4. 在你的 Slack 个人资料中复制 Member ID
+## 想改看板 / 逻辑?
 
-## 手动触发
-
-除了每天北京时间 9:00 自动运行，也可以手动触发：
-
-```bash
-gh workflow run daily-pr-report.yml
-```
-
-## 项目结构
-
-```
-.github/
-├── workflows/daily-pr-report.yml   # 定时任务 + Pages 部署
-└── scripts/pr-report/
-    ├── package.json
-    └── report.mjs                  # 核心脚本
-docs/
-├── index.html                      # 前端页面
-├── style.css
-└── app.js                          # Tailwind + Lucide + Bento Grid
-data/reports/                        # 运行后自动生成
-├── index.json                      # 报告索引
-└── YYYY-MM-DD.json                 # 每日报告数据
-```
+去 [`katana-task/scripts/pr-board`](https://github.com/wang-neo/katana-task/tree/main/scripts/pr-board) 改 `site/` 或脚本,本仓库只是它的产出。
