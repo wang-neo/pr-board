@@ -88,6 +88,8 @@ function render() {
 
   renderPRList("#merged-list", merged, "merged");
   renderPRList("#pending-list", pending, "open");
+  renderActivity(merged);
+  renderContributors(merged);
 
   lucide.createIcons();
 }
@@ -104,7 +106,7 @@ function fmtMd(ms) {
 function statCard(icon, label, value, color, bg) {
   return `
     <div class="bento-card flex items-center gap-4">
-      <div class="w-10 h-10 rounded-xl ${bg} flex items-center justify-center flex-shrink-0">
+      <div class="w-10 h-10 rounded-xl ${bg} ${color} stat-icon flex items-center justify-center flex-shrink-0">
         <i data-lucide="${icon}" class="w-5 h-5 ${color}"></i>
       </div>
       <div>
@@ -116,7 +118,7 @@ function statCard(icon, label, value, color, bg) {
 function statCardText(icon, label, value, color, bg) {
   return `
     <div class="bento-card flex items-center gap-4">
-      <div class="w-10 h-10 rounded-xl ${bg} flex items-center justify-center flex-shrink-0">
+      <div class="w-10 h-10 rounded-xl ${bg} ${color} stat-icon flex items-center justify-center flex-shrink-0">
         <i data-lucide="${icon}" class="w-5 h-5 ${color}"></i>
       </div>
       <div>
@@ -154,7 +156,7 @@ function prCard(pr, type) {
   const when = type === "merged"
     ? `merged ${fmtDate(pr.mergedAt)}`
     : `opened ${fmtDate(pr.createdAt)} · ${age(pr.createdAt)}`;
-  const branch = pr.baseBranch ? `<span class="text-gray-600">→${esc(pr.baseBranch)}</span>` : "";
+  const branch = pr.baseBranch ? `<span class="branch-chip">${esc(pr.baseBranch)}</span>` : "";
 
   return `
     <a href="${esc(pr.url)}" target="_blank" rel="noopener" class="pr-card ${type} block no-underline">
@@ -165,7 +167,7 @@ function prCard(pr, type) {
             <span class="text-xs text-accent font-medium">@${esc(pr.author)}</span>
             <span class="text-xs text-gray-600">#${pr.number}</span>
             ${branch}
-            <span class="text-xs text-gray-600">${when}</span>
+            <span class="text-xs text-gray-400">${when}</span>
             ${labels}
           </div>
         </div>
@@ -249,6 +251,127 @@ function wireEvents() {
     render();
   });
 }
+
+// ── Activity chart (merges per day in range) ────────────────
+function renderActivity(merged) {
+  const canvas = $("#activity-canvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  const dpr = window.devicePixelRatio || 1;
+  const rect = canvas.getBoundingClientRect();
+  const w = Math.max(rect.width, 240);
+  const h = 140;
+  canvas.width = w * dpr;
+  canvas.height = h * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.clearRect(0, 0, w, h);
+
+  const map = {};
+  for (const p of merged) {
+    const d = cstDayStartMs(cstWall(new Date(p.mergedAt)));
+    map[d] = (map[d] || 0) + 1;
+  }
+  const first = cstDayStartMs(cstWall(new Date(state.start)));
+  const last = cstDayStartMs(cstWall(new Date(state.end)));
+  const days = [];
+  for (let d = first; d <= last; d += DAY) days.push({ d, n: map[d] || 0 });
+
+  const total = days.reduce((s, x) => s + x.n, 0);
+  $("#activity-total").textContent = `${total} merged`;
+
+  if (days.length === 0 || total === 0) {
+    ctx.fillStyle = "#6e7681";
+    ctx.font = "13px Inter, system-ui";
+    ctx.textAlign = "center";
+    ctx.fillText("该范围无合并记录", w / 2, h / 2);
+    return;
+  }
+
+  const max = Math.max(...days.map((x) => x.n), 1);
+  const pad = { top: 14, right: 6, bottom: 22, left: 6 };
+  const chartW = w - pad.left - pad.right;
+  const chartH = h - pad.top - pad.bottom;
+  const gap = days.length > 20 ? 1 : 3;
+  const bw = Math.max(chartW / days.length - gap, 1);
+
+  ctx.strokeStyle = "#21262d";
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(pad.left, pad.top + chartH + 0.5);
+  ctx.lineTo(w - pad.right, pad.top + chartH + 0.5);
+  ctx.stroke();
+
+  days.forEach((x, i) => {
+    const bh = (x.n / max) * chartH;
+    const bx = pad.left + i * (bw + gap);
+    const by = pad.top + chartH - bh;
+    if (x.n === 0) {
+      ctx.fillStyle = "rgba(48,54,61,0.6)";
+    } else {
+      const g = ctx.createLinearGradient(0, by, 0, by + bh);
+      g.addColorStop(0, "rgba(63,185,80,0.95)");
+      g.addColorStop(1, "rgba(63,185,80,0.3)");
+      ctx.fillStyle = g;
+    }
+    roundRect(ctx, bx, by, bw, Math.max(bh, x.n ? 2 : 1), Math.min(2.5, bw / 2));
+    ctx.fill();
+  });
+
+  ctx.fillStyle = "#7d8590";
+  ctx.font = "10px Inter, system-ui";
+  ctx.textAlign = "center";
+  const step = Math.max(1, Math.ceil(days.length / 7));
+  days.forEach((x, i) => {
+    if (i % step !== 0 && i !== days.length - 1) return;
+    const bx = pad.left + i * (bw + gap) + bw / 2;
+    ctx.fillText(fmtMd(x.d), bx, h - 6);
+  });
+}
+
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+
+// ── Contributors (top authors in range) ─────────────────────
+function renderContributors(merged) {
+  const wrap = $("#contributors-bar");
+  const counts = {};
+  for (const p of merged) counts[p.author] = (counts[p.author] || 0) + 1;
+  const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 6);
+  if (top.length === 0) {
+    wrap.innerHTML = `<div class="flex items-center justify-center py-8 text-gray-600 text-sm">无贡献者</div>`;
+    return;
+  }
+  const max = top[0][1];
+  const colors = ["#3fb950", "#58a6ff", "#d29922", "#bc8cff", "#f78166", "#79c0ff"];
+  wrap.innerHTML = top
+    .map(([name, n], i) => {
+      const pct = Math.round((n / max) * 100);
+      const color = colors[i % colors.length];
+      return `
+        <div class="flex items-center gap-3">
+          <div class="w-24 text-xs text-gray-300 font-medium truncate text-right">@${esc(name)}</div>
+          <div class="bar-track flex-1"><div class="bar-fill" style="width:${pct}%; background:${color}"></div></div>
+          <div class="text-xs text-gray-400 w-8 text-right" style="font-variant-numeric:tabular-nums">${n}</div>
+        </div>`;
+    })
+    .join("");
+}
+
+// Redraw chart on resize
+let rzTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(rzTimer);
+  rzTimer = setTimeout(() => {
+    if (PRS.length) render();
+  }, 200);
+});
 
 // ── Init ─────────────────────────────────────────────────────
 async function init() {

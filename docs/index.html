@@ -65,7 +65,7 @@
     <!-- App -->
     <div id="app" class="hidden space-y-6">
       <!-- Filter bar -->
-      <div class="bento-card !p-4">
+      <div class="bento-card filter-bar !p-4 sticky top-[4.75rem] z-30">
         <div class="flex flex-wrap items-end gap-4">
           <div class="flex flex-col gap-1.5">
             <label class="text-[11px] font-medium text-gray-500 uppercase tracking-wider">人</label>
@@ -109,6 +109,27 @@
 
       <!-- Stats -->
       <div id="stats-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-3"></div>
+
+      <!-- Activity + Contributors -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+        <div class="bento-card lg:col-span-2">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <i data-lucide="bar-chart-3" class="w-4 h-4 text-merged"></i>
+              <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">合并活跃度(范围内每天)</span>
+            </div>
+            <span id="activity-total" class="range-pill">0 merged</span>
+          </div>
+          <canvas id="activity-canvas" class="w-full" style="height:140px"></canvas>
+        </div>
+        <div class="bento-card">
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="users" class="w-4 h-4 text-accent"></i>
+            <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">贡献者(范围内)</span>
+          </div>
+          <div id="contributors-bar" class="space-y-2.5"></div>
+        </div>
+      </div>
 
       <!-- Columns -->
       <div id="columns" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
