@@ -11,6 +11,37 @@ let WINDOW_DAYS = 30;
 // Filter state
 const state = { author: "all", range: "this_week", status: "all", start: null, end: null };
 
+// ── Icons (inlined lucide-static v1.31.0 markup — no CDN) ────
+const ICONS = {
+  "git-pull-request": `<circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" x2="6" y1="9" y2="21"/>`,
+  "git-merge": `<circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/>`,
+  "git-branch": `<path d="M15 6a9 9 0 0 0-9 9V3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>`,
+  "clock": `<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>`,
+  "users": `<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/>`,
+  "calendar": `<path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/>`,
+  "external-link": `<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>`,
+  "bar-chart-3": `<path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>`,
+  "alert-triangle": `<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/>`,
+  "check-circle": `<path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/>`,
+};
+
+function iconSvg(name, cls = "") {
+  const inner = ICONS[name];
+  if (!inner) return "";
+  return `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${inner}</svg>`;
+}
+
+// Replace declarative <i data-lucide="name" class="..."> nodes with inline SVG.
+function renderIcons(root = document) {
+  root.querySelectorAll("[data-lucide]").forEach((el) => {
+    const name = el.getAttribute("data-lucide");
+    const cls = el.getAttribute("class") || "";
+    const svg = iconSvg(name, cls);
+    if (svg) el.replaceWith(document.createRange().createContextualFragment(svg));
+    else el.remove();
+  });
+}
+
 // ── Date helpers (CST = UTC+8) ───────────────────────────────
 function cstWall(date = new Date()) {
   return new Date(date.getTime() + CST); // its UTC fields == CST wall clock
@@ -91,7 +122,7 @@ function render() {
   renderActivity(merged);
   renderContributors(merged);
 
-  lucide.createIcons();
+  renderIcons();
 }
 
 function rangeLabel() {
@@ -148,6 +179,12 @@ function renderPRList(sel, prs, type) {
   container.innerHTML = sorted.map((pr) => prCard(pr, type)).join("");
 }
 
+function branchClass(b) {
+  if (b === "main") return "branch-main";
+  if (b === "release") return "branch-release";
+  return "branch-other";
+}
+
 function prCard(pr, type) {
   const labels = pr.labels
     .slice(0, 3)
@@ -156,7 +193,9 @@ function prCard(pr, type) {
   const when = type === "merged"
     ? `merged ${fmtDate(pr.mergedAt)}`
     : `opened ${fmtDate(pr.createdAt)} · ${age(pr.createdAt)}`;
-  const branch = pr.baseBranch ? `<span class="branch-chip">${esc(pr.baseBranch)}</span>` : "";
+  const branch = pr.baseBranch
+    ? `<span class="branch-chip ${branchClass(pr.baseBranch)}"><i data-lucide="git-branch"></i>${esc(pr.baseBranch)}</span>`
+    : "";
 
   return `
     <a href="${esc(pr.url)}" target="_blank" rel="noopener" class="pr-card ${type} block no-underline">
@@ -252,19 +291,10 @@ function wireEvents() {
   });
 }
 
-// ── Activity chart (merges per day in range) ────────────────
+// ── Activity chart (merges per day in range, interactive) ────
 function renderActivity(merged) {
-  const canvas = $("#activity-canvas");
-  if (!canvas) return;
-  const ctx = canvas.getContext("2d");
-  const dpr = window.devicePixelRatio || 1;
-  const rect = canvas.getBoundingClientRect();
-  const w = Math.max(rect.width, 240);
-  const h = 140;
-  canvas.width = w * dpr;
-  canvas.height = h * dpr;
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  ctx.clearRect(0, 0, w, h);
+  const wrap = $("#activity-chart");
+  if (!wrap) return;
 
   const map = {};
   for (const p of merged) {
@@ -274,68 +304,41 @@ function renderActivity(merged) {
   const first = cstDayStartMs(cstWall(new Date(state.start)));
   const last = cstDayStartMs(cstWall(new Date(state.end)));
   const days = [];
-  for (let d = first; d <= last; d += DAY) days.push({ d, n: map[d] || 0 });
+  for (let d = first; d <= last; d += DAY) {
+    const dow = cstWall(new Date(d)).getUTCDay(); // 0=Sun … 6=Sat
+    days.push({ d, n: map[d] || 0, weekend: dow === 0 || dow === 6 });
+  }
 
   const total = days.reduce((s, x) => s + x.n, 0);
   $("#activity-total").textContent = `${total} merged`;
 
   if (days.length === 0 || total === 0) {
-    ctx.fillStyle = "#6e7681";
-    ctx.font = "13px Inter, system-ui";
-    ctx.textAlign = "center";
-    ctx.fillText("该范围无合并记录", w / 2, h / 2);
+    wrap.innerHTML = `<div class="act-empty">该范围无合并记录</div>`;
     return;
   }
 
   const max = Math.max(...days.map((x) => x.n), 1);
-  const pad = { top: 14, right: 6, bottom: 22, left: 6 };
-  const chartW = w - pad.left - pad.right;
-  const chartH = h - pad.top - pad.bottom;
-  const gap = days.length > 20 ? 1 : 3;
-  const bw = Math.max(chartW / days.length - gap, 1);
-
-  ctx.strokeStyle = "#21262d";
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  ctx.moveTo(pad.left, pad.top + chartH + 0.5);
-  ctx.lineTo(w - pad.right, pad.top + chartH + 0.5);
-  ctx.stroke();
-
-  days.forEach((x, i) => {
-    const bh = (x.n / max) * chartH;
-    const bx = pad.left + i * (bw + gap);
-    const by = pad.top + chartH - bh;
-    if (x.n === 0) {
-      ctx.fillStyle = "rgba(48,54,61,0.6)";
-    } else {
-      const g = ctx.createLinearGradient(0, by, 0, by + bh);
-      g.addColorStop(0, "rgba(63,185,80,0.95)");
-      g.addColorStop(1, "rgba(63,185,80,0.3)");
-      ctx.fillStyle = g;
-    }
-    roundRect(ctx, bx, by, bw, Math.max(bh, x.n ? 2 : 1), Math.min(2.5, bw / 2));
-    ctx.fill();
-  });
-
-  ctx.fillStyle = "#7d8590";
-  ctx.font = "10px Inter, system-ui";
-  ctx.textAlign = "center";
+  const showCount = days.length <= 14;          // counts only when bars are wide enough
   const step = Math.max(1, Math.ceil(days.length / 7));
-  days.forEach((x, i) => {
-    if (i % step !== 0 && i !== days.length - 1) return;
-    const bx = pad.left + i * (bw + gap) + bw / 2;
-    ctx.fillText(fmtMd(x.d), bx, h - 6);
-  });
-}
 
-function roundRect(ctx, x, y, w, h, r) {
-  ctx.beginPath();
-  ctx.moveTo(x + r, y);
-  ctx.arcTo(x + w, y, x + w, y + h, r);
-  ctx.arcTo(x + w, y + h, x, y + h, r);
-  ctx.arcTo(x, y + h, x, y, r);
-  ctx.arcTo(x, y, x + w, y, r);
-  ctx.closePath();
+  wrap.innerHTML =
+    `<div class="act-bars">` +
+    days
+      .map((x, i) => {
+        const h = Math.round((x.n / max) * 100);
+        const lbl = i % step === 0 || i === days.length - 1
+          ? `<span class="act-x">${fmtMd(x.d)}</span>`
+          : `<span class="act-x"></span>`;
+        const count = x.n && showCount ? `<span class="act-count">${x.n}</span>` : "";
+        return `<div class="act-col${x.weekend ? " weekend" : ""}">
+            <div class="act-track" data-tip="${fmtMd(x.d)} · ${x.n} merged">
+              <div class="act-bar" style="height:${Math.max(h, x.n ? 6 : 0)}%">${count}</div>
+            </div>
+            ${lbl}
+          </div>`;
+      })
+      .join("") +
+    `</div>`;
 }
 
 // ── Contributors (top authors in range) ─────────────────────
@@ -375,6 +378,8 @@ window.addEventListener("resize", () => {
 
 // ── Init ─────────────────────────────────────────────────────
 async function init() {
+  renderIcons(); // render static icons (navbar etc.) right away
+
   try {
     const resp = await fetch(DATA_URL);
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
@@ -393,13 +398,13 @@ async function init() {
 
     $("#loading").style.display = "none";
     $("#app").classList.remove("hidden");
-    lucide.createIcons();
+    renderIcons();
   } catch (err) {
     console.error(err);
     $("#loading").style.display = "none";
     $("#error").classList.remove("hidden");
     $("#error").classList.add("flex");
-    lucide.createIcons();
+    renderIcons();
   }
 }
 

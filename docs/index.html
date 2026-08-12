@@ -7,7 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -120,7 +119,7 @@
             </div>
             <span id="activity-total" class="range-pill">0 merged</span>
           </div>
-          <canvas id="activity-canvas" class="w-full" style="height:140px"></canvas>
+          <div id="activity-chart" class="activity-chart"></div>
         </div>
         <div class="bento-card">
           <div class="flex items-center gap-2 mb-4">
