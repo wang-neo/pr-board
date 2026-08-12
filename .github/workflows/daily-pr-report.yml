@@ -53,12 +53,21 @@ jobs:
           AI_MAX_TOKENS: ${{ secrets.AI_MAX_TOKENS }}
         run: node report.mjs
 
+      - name: Capture all current PRs (30d rolling)
+        env:
+          DATA_DIR: ${{ github.workspace }}/data
+          REPO_OWNER: ${{ secrets.REPO_OWNER }}
+          REPO_NAME: ${{ secrets.REPO_NAME }}
+          TARGET_BRANCHES: ${{ secrets.TARGET_BRANCHES }}
+          GITHUB_TOKEN: ${{ secrets.PR_REPORT_GITHUB_TOKEN }}
+        run: node capture-prs.mjs
+
       - name: Commit report data
         working-directory: ${{ github.workspace }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/reports/ || true
+          git add data/ || true
           if git diff --cached --quiet; then
             echo "No new data to commit"
           else
@@ -66,28 +75,33 @@ jobs:
             git push
           fi
 
-#  deploy-pages:
-#    needs: report
-#    runs-on: ubuntu-latest
-#    if: always()
-#
-#    permissions:
-#      contents: read
-#      pages: write
-#      id-token: write
-#
-#    environment:
-#      name: github-pages
-#      url: ${{ steps.deploy.outputs.page_url }}
-#
-#    steps:
-#      - uses: actions/checkout@v4
-#
-#      - name: Upload Pages artifact
-#        uses: actions/upload-pages-artifact@v3
-#        with:
-#          path: docs
-#
-#      - name: Deploy to GitHub Pages
-#        id: deploy
-#        uses: actions/deploy-pages@v4
+  deploy-pages:
+    needs: report
+    runs-on: ubuntu-latest
+    if: always()
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage report data into site
+        run: |
+          mkdir -p docs/data
+          cp -r data/. docs/data/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
