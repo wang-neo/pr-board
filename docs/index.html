@@ -19,7 +19,6 @@
             accent: { DEFAULT: '#58a6ff', dark: '#1f6feb' },
             merged: { DEFAULT: '#3fb950', bg: 'rgba(63,185,80,0.1)', border: 'rgba(63,185,80,0.3)' },
             pending: { DEFAULT: '#d29922', bg: 'rgba(210,153,34,0.1)', border: 'rgba(210,153,34,0.3)' },
-            ai: { DEFAULT: '#bc8cff', bg: 'rgba(188,140,255,0.08)', border: 'rgba(188,140,255,0.25)' },
           },
         },
       },
@@ -44,109 +43,103 @@
           <span class="text-xs text-gray-500 ml-2">PR Board</span>
         </div>
       </div>
-
-      <div class="flex items-center gap-2">
-        <button id="prev-btn"
-                class="p-2 rounded-lg border border-border hover:bg-surface-lighter transition-colors duration-200 cursor-pointer disabled:opacity-30 disabled:cursor-default"
-                title="前一天">
-          <i data-lucide="chevron-left" class="w-4 h-4"></i>
-        </button>
-        <select id="date-select"
-                class="bg-surface-light border border-border rounded-lg px-3 py-1.5 text-sm text-gray-300 cursor-pointer focus:outline-none focus:border-accent transition-colors duration-200">
-        </select>
-        <button id="next-btn"
-                class="p-2 rounded-lg border border-border hover:bg-surface-lighter transition-colors duration-200 cursor-pointer disabled:opacity-30 disabled:cursor-default"
-                title="后一天">
-          <i data-lucide="chevron-right" class="w-4 h-4"></i>
-        </button>
-      </div>
+      <div id="capture-meta" class="text-xs text-gray-500"></div>
     </div>
   </nav>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <!-- Loading -->
     <div id="loading" class="flex flex-col items-center justify-center py-32">
       <div class="spinner w-8 h-8 border-[3px] border-border border-t-accent rounded-full mb-4"></div>
-      <p class="text-gray-500 text-sm">Loading report...</p>
+      <p class="text-gray-500 text-sm">Loading…</p>
     </div>
 
-    <!-- Empty -->
-    <div id="empty" class="hidden flex-col items-center justify-center py-32">
-      <i data-lucide="inbox" class="w-12 h-12 text-gray-600 mb-4"></i>
-      <p class="text-gray-500 text-sm">No reports yet</p>
+    <!-- Error -->
+    <div id="error" class="hidden flex-col items-center justify-center py-32">
+      <i data-lucide="alert-triangle" class="w-12 h-12 text-pending mb-4"></i>
+      <p class="text-gray-400 text-sm">无法加载 <code class="text-gray-300">data/prs.json</code></p>
+      <p class="text-gray-600 text-xs mt-1">请确认 capture 任务已运行</p>
     </div>
 
-    <!-- Report -->
-    <div id="report" class="hidden space-y-6">
-      <!-- Bento Stats Grid -->
+    <!-- App -->
+    <div id="app" class="hidden space-y-6">
+      <!-- Filter bar -->
+      <div class="bento-card !p-4">
+        <div class="flex flex-wrap items-end gap-4">
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[11px] font-medium text-gray-500 uppercase tracking-wider">人</label>
+            <select id="f-author" class="bg-surface-light border border-border rounded-lg px-3 py-2 text-sm text-gray-300 focus:outline-none focus:border-accent transition-colors min-w-[10rem]"></select>
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[11px] font-medium text-gray-500 uppercase tracking-wider">时间范围</label>
+            <select id="f-range" class="bg-surface-light border border-border rounded-lg px-3 py-2 text-sm text-gray-300 focus:outline-none focus:border-accent transition-colors">
+              <option value="this_week">本周(周一起)</option>
+              <option value="last_week">上周</option>
+              <option value="7d">最近 7 天</option>
+              <option value="30d">最近 30 天</option>
+              <option value="custom">自定义…</option>
+            </select>
+          </div>
+
+          <div id="custom-range" class="hidden flex-wrap items-end gap-4">
+            <div class="flex flex-col gap-1.5">
+              <label class="text-[11px] font-medium text-gray-500 uppercase tracking-wider">起</label>
+              <input type="date" id="f-start" class="bg-surface-light border border-border rounded-lg px-3 py-2 text-sm text-gray-300 focus:outline-none focus:border-accent transition-colors [color-scheme:dark]">
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label class="text-[11px] font-medium text-gray-500 uppercase tracking-wider">止</label>
+              <input type="date" id="f-end" class="bg-surface-light border border-border rounded-lg px-3 py-2 text-sm text-gray-300 focus:outline-none focus:border-accent transition-colors [color-scheme:dark]">
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[11px] font-medium text-gray-500 uppercase tracking-wider">状态</label>
+            <select id="f-status" class="bg-surface-light border border-border rounded-lg px-3 py-2 text-sm text-gray-300 focus:outline-none focus:border-accent transition-colors">
+              <option value="all">全部</option>
+              <option value="merged">已合并</option>
+              <option value="pending">进行中</option>
+            </select>
+          </div>
+
+          <button id="f-reset" class="ml-auto px-3 py-2 text-xs text-gray-400 border border-border rounded-lg hover:bg-surface-lighter hover:text-gray-200 transition-colors">重置</button>
+        </div>
+      </div>
+
+      <!-- Stats -->
       <div id="stats-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-3"></div>
 
-      <!-- Trend Sparkline + AI Summary Row -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
-        <!-- Trend Chart -->
-        <div id="trend-card" class="lg:col-span-2 bento-card">
-          <div class="flex items-center gap-2 mb-4">
-            <i data-lucide="trending-up" class="w-4 h-4 text-accent"></i>
-            <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">Trend (30 days)</span>
-          </div>
-          <canvas id="trend-canvas" class="w-full" height="120"></canvas>
-        </div>
-        <!-- AI Summary -->
-        <div id="ai-card" class="hidden bento-card border-ai-border bg-ai-bg">
-          <div class="flex items-center gap-2 mb-3">
-            <i data-lucide="sparkles" class="w-4 h-4 text-ai"></i>
-            <span class="text-xs font-medium text-ai uppercase tracking-wider">AI Summary</span>
-          </div>
-          <p id="ai-text" class="text-sm text-gray-300 leading-relaxed"></p>
-        </div>
-      </div>
-
-      <!-- Authors Bar -->
-      <div id="authors-section" class="hidden bento-card">
-        <div class="flex items-center gap-2 mb-4">
-          <i data-lucide="users" class="w-4 h-4 text-accent"></i>
-          <span class="text-xs font-medium text-gray-400 uppercase tracking-wider">Contributors</span>
-        </div>
-        <div id="authors-bar" class="space-y-2"></div>
-      </div>
-
-      <!-- PR Columns -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <!-- Merged -->
-        <section>
+      <!-- Columns -->
+      <div id="columns" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <section id="merged-section">
           <div class="flex items-center gap-2 mb-3">
             <div class="w-5 h-5 rounded-full bg-merged-bg border border-merged-border flex items-center justify-center">
               <i data-lucide="git-merge" class="w-3 h-3 text-merged"></i>
             </div>
-            <h2 class="text-sm font-semibold text-gray-300">Merged</h2>
+            <h2 class="text-sm font-semibold text-gray-300">做了什么 · Merged</h2>
             <span id="merged-count" class="text-xs text-gray-500 bg-surface-lighter px-2 py-0.5 rounded-full">0</span>
           </div>
           <div id="merged-list" class="space-y-2"></div>
         </section>
 
-        <!-- Open -->
-        <section>
+        <section id="pending-section">
           <div class="flex items-center gap-2 mb-3">
             <div class="w-5 h-5 rounded-full bg-pending-bg border border-pending-border flex items-center justify-center">
               <i data-lucide="clock" class="w-3 h-3 text-pending"></i>
             </div>
-            <h2 class="text-sm font-semibold text-gray-300">Pending</h2>
-            <span id="open-count" class="text-xs text-gray-500 bg-surface-lighter px-2 py-0.5 rounded-full">0</span>
+            <h2 class="text-sm font-semibold text-gray-300">还在做什么 · Pending</h2>
+            <span id="pending-count" class="text-xs text-gray-500 bg-surface-lighter px-2 py-0.5 rounded-full">0</span>
           </div>
-          <div id="open-list" class="space-y-2"></div>
+          <div id="pending-list" class="space-y-2"></div>
         </section>
       </div>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="border-t border-border mt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
-      <p class="text-xs text-gray-600">
-        Powered by <a href="https://github.com/bosinc/katana-server" target="_blank" class="text-gray-500 hover:text-accent transition-colors">katana-server</a> PR Report
-      </p>
-      <p class="text-xs text-gray-600">Auto-generated daily</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <p class="text-xs text-gray-600">数据为最近 <span id="window-label">30</span> 天快照,每天自动刷新</p>
     </div>
   </footer>
 
