@@ -1,8 +1,52 @@
 {
-  "capturedAt": "2026-08-13T03:05:10.577Z",
+  "capturedAt": "2026-08-13T04:25:36.008Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 9444,
+      "title": "chore: remove old-hub residue after tickets-platforms-integration sunset",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9444",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-13T03:13:08Z",
+      "mergedAt": "2026-08-13T04:02:48Z",
+      "labels": []
+    },
+    {
+      "number": 9424,
+      "title": "fix(email): restore AXS/TDC ticket access block in order confirmation",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9424",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-11T11:51:55Z",
+      "mergedAt": "2026-08-13T04:00:22Z",
+      "labels": []
+    },
+    {
+      "number": 9422,
+      "title": "fix(ticket-hub): re-project Product.extraInfo on hub metadata sync",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9422",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-11T11:25:32Z",
+      "mergedAt": "2026-08-13T03:58:21Z",
+      "labels": []
+    },
+    {
+      "number": 9416,
+      "title": "feat(product-event): allow empty productIds in INSERT ticket-visibility query (KAT-11696)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9416",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-11T10:03:10Z",
+      "mergedAt": "2026-08-13T03:15:43Z",
+      "labels": []
+    },
     {
       "number": 9442,
       "title": "change implement style",
@@ -2732,17 +2776,6 @@
       "labels": []
     },
     {
-      "number": 9029,
-      "title": "feat: update report mjml",
-      "author": "Yetway",
-      "url": "https://github.com/bosinc/katana-server/pull/9029",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-14T02:15:24Z",
-      "mergedAt": "2026-07-14T03:22:01Z",
-      "labels": []
-    },
-    {
       "number": 9043,
       "title": "feat(app-terminal): dedicated message for redeem wrong-event error",
       "author": "feng-1m",
@@ -2831,6 +2864,28 @@
       "labels": []
     },
     {
+      "number": 9447,
+      "title": "fix(product-event): dedupe promo codes in order_promotions CTE",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9447",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-08-13T04:14:44Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9445,
+      "title": "fix: compatible with hide fees",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9445",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-08-13T03:51:22Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
       "number": 9443,
       "title": "fix(venue-app): partial PATCH zeroed product money; base-info description, lineup-payout flag, media batch-create removal",
       "author": "feng-1m",
@@ -2860,39 +2915,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-08-12T05:04:00Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9424,
-      "title": "fix(email): restore AXS/TDC ticket access block in order confirmation",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9424",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-11T11:51:55Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9422,
-      "title": "fix(ticket-hub): re-project Product.extraInfo on hub metadata sync",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9422",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-11T11:25:32Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9416,
-      "title": "feat(product-event): allow empty productIds in INSERT ticket-visibility query (KAT-11696)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9416",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-11T10:03:10Z",
       "mergedAt": null,
       "labels": []
     },
