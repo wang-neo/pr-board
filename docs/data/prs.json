@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-13T02:34:33.855Z",
+  "capturedAt": "2026-08-13T03:05:10.577Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
@@ -2832,7 +2832,7 @@
     },
     {
       "number": 9443,
-      "title": "feat(venue-app): accept description fields on base-info; drop redundant media batch-create",
+      "title": "fix(venue-app): partial PATCH zeroed product money; base-info description, lineup-payout flag, media batch-create removal",
       "author": "feng-1m",
       "url": "https://github.com/bosinc/katana-server/pull/9443",
       "state": "open",

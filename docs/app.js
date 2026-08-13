@@ -11,6 +11,14 @@ let WINDOW_DAYS = 30;
 // Filter state
 const state = { author: "all", range: "this_week", status: "all", start: null, end: null };
 
+// Stable per-author color — same person gets the same color everywhere
+const AUTHOR_COLORS = ["#3fb950", "#58a6ff", "#d29922", "#bc8cff", "#f78166", "#79c0ff", "#56d4dd", "#ffa657"];
+function authorColor(name) {
+  let h = 0;
+  for (let i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) >>> 0;
+  return AUTHOR_COLORS[h % AUTHOR_COLORS.length];
+}
+
 // ── Icons (inlined lucide-static v1.31.0 markup — no CDN) ────
 const ICONS = {
   "git-pull-request": `<circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" x2="6" y1="9" y2="21"/>`,
@@ -65,6 +73,10 @@ function thisWeekRange() {
   return { start, end: start + 7 * DAY - 1 };
 }
 function computeRange(preset) {
+  const todayStart = () => cstDayStartMs(cstWall());
+  if (preset === "today") { const t = todayStart(); return { start: t, end: t + DAY - 1 }; }
+  if (preset === "yesterday") { const t = todayStart() - DAY; return { start: t, end: t + DAY - 1 }; }
+  if (preset === "day_before") { const t = todayStart() - 2 * DAY; return { start: t, end: t + DAY - 1 }; }
   if (preset === "this_week") return thisWeekRange();
   if (preset === "last_week") {
     const tw = thisWeekRange();
@@ -203,7 +215,10 @@ function prCard(pr, type) {
         <div class="min-w-0 flex-1">
           <h3 class="text-sm font-medium text-gray-200 leading-snug truncate">${esc(pr.title)}</h3>
           <div class="flex items-center gap-2 mt-1.5 flex-wrap">
-            <span class="text-xs text-accent font-medium">@${esc(pr.author)}</span>
+            <span class="flex items-center gap-1.5">
+              <span style="display:inline-block;width:9px;height:9px;border-radius:3px;background:${authorColor(pr.author)}"></span>
+              <span class="text-xs font-medium" style="color:${authorColor(pr.author)}">@${esc(pr.author)}</span>
+            </span>
             <span class="text-xs text-gray-600">#${pr.number}</span>
             ${branch}
             <span class="text-xs text-gray-400">${when}</span>
@@ -352,14 +367,13 @@ function renderContributors(merged) {
     return;
   }
   const max = top[0][1];
-  const colors = ["#3fb950", "#58a6ff", "#d29922", "#bc8cff", "#f78166", "#79c0ff"];
   wrap.innerHTML = top
-    .map(([name, n], i) => {
+    .map(([name, n]) => {
       const pct = Math.round((n / max) * 100);
-      const color = colors[i % colors.length];
+      const color = authorColor(name);
       return `
         <div class="flex items-center gap-3">
-          <div class="w-24 text-xs text-gray-300 font-medium truncate text-right">@${esc(name)}</div>
+          <div class="w-24 text-xs font-medium truncate text-right" style="color:${color}">@${esc(name)}</div>
           <div class="bar-track flex-1"><div class="bar-fill" style="width:${pct}%; background:${color}"></div></div>
           <div class="text-xs text-gray-400 w-8 text-right" style="font-variant-numeric:tabular-nums">${n}</div>
         </div>`;
