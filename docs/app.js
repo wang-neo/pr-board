@@ -402,8 +402,11 @@ async function init() {
     WINDOW_DAYS = data.windowDays || 30;
 
     $("#window-label").textContent = WINDOW_DAYS;
+    const ct = cstWall(new Date(data.capturedAt));
+    const pad = (n) => String(n).padStart(2, "0");
+    const ctStr = `${ct.getUTCFullYear()}-${pad(ct.getUTCMonth() + 1)}-${pad(ct.getUTCDate())} ${pad(ct.getUTCHours())}:${pad(ct.getUTCMinutes())}:${pad(ct.getUTCSeconds())}`;
     $("#capture-meta").textContent =
-      `最近 ${WINDOW_DAYS}d · ${PRS.length} PRs · ${new Date(data.capturedAt).toISOString().slice(0, 10)} 抓取`;
+      `最近 ${WINDOW_DAYS}d · ${PRS.length} PRs · ${ctStr} CST 抓取`;
 
     populateAuthors();
     syncCustomInputs();
