@@ -1,8 +1,52 @@
 {
-  "capturedAt": "2026-08-12T14:05:45.585Z",
+  "capturedAt": "2026-08-13T02:34:33.855Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 9442,
+      "title": "change implement style",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9442",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-13T01:34:08Z",
+      "mergedAt": "2026-08-13T02:05:06Z",
+      "labels": []
+    },
+    {
+      "number": 9438,
+      "title": "Feat/kat 11528 show fees breakdown",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9438",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-12T12:12:35Z",
+      "mergedAt": "2026-08-13T01:28:19Z",
+      "labels": []
+    },
+    {
+      "number": 9395,
+      "title": "feat(product-event): online customer report (KAT-11452 phase 2)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9395",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-10T07:24:27Z",
+      "mergedAt": "2026-08-13T01:12:21Z",
+      "labels": []
+    },
+    {
+      "number": 9441,
+      "title": "fix(ticket-hub): section-option prices fee-inclusive in dollars (re-apply #9414 to release)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9441",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-13T00:22:21Z",
+      "mergedAt": "2026-08-13T00:51:34Z",
+      "labels": []
+    },
     {
       "number": 9436,
       "title": "fix(email): restore missing 'is Here' suffix in merged event-ticket email subject",
@@ -2787,46 +2831,24 @@
       "labels": []
     },
     {
-      "number": 9005,
-      "title": "refactor(venue-unit): rename TicketSeat concept to VenueUnit (behavior-preserving, backward-compatible)",
+      "number": 9443,
+      "title": "feat(venue-app): accept description fields on base-info; drop redundant media batch-create",
       "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9005",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-13T04:16:19Z",
-      "mergedAt": "2026-07-14T02:30:29Z",
-      "labels": []
-    },
-    {
-      "number": 9027,
-      "title": "fix(posts): flag resale descendants needRefreshHTML on curator edits",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9027",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-13T13:51:21Z",
-      "mergedAt": "2026-07-14T01:28:56Z",
-      "labels": []
-    },
-    {
-      "number": 9014,
-      "title": "fix(posts): filter all creators by visible storefront module",
-      "author": "pengfei-wu-1mapp",
-      "url": "https://github.com/bosinc/katana-server/pull/9014",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-13T07:11:28Z",
-      "mergedAt": "2026-07-14T01:14:48Z",
-      "labels": []
-    },
-    {
-      "number": 9438,
-      "title": "Feat/kat 11528 show fees breakdown",
-      "author": "liuleei",
-      "url": "https://github.com/bosinc/katana-server/pull/9438",
+      "url": "https://github.com/bosinc/katana-server/pull/9443",
       "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-08-12T12:12:35Z",
+      "createdAt": "2026-08-13T01:48:33Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9439,
+      "title": "feat(user): add business sub-category to User schema (KAT-11903)",
+      "author": "chengmarket",
+      "url": "https://github.com/bosinc/katana-server/pull/9439",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-08-12T23:03:43Z",
       "mergedAt": null,
       "labels": []
     },
@@ -2882,17 +2904,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-08-10T10:09:53Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9395,
-      "title": "feat(product-event): online customer report (KAT-11452 phase 2)",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/9395",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-10T07:24:27Z",
       "mergedAt": null,
       "labels": []
     },
