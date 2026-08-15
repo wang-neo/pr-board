@@ -1,8 +1,129 @@
 {
-  "capturedAt": "2026-08-14T00:00:40.351Z",
+  "capturedAt": "2026-08-15T00:00:45.538Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 9487,
+      "title": "feat(event-report): adjust fonts and update revenue share section",
+      "author": "chengmarket",
+      "url": "https://github.com/bosinc/katana-server/pull/9487",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-14T17:11:09Z",
+      "mergedAt": "2026-08-14T17:19:56Z",
+      "labels": []
+    },
+    {
+      "number": 9483,
+      "title": "feat(campaigns): support passing carrier distribution to optimize quo…",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9483",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-14T09:21:53Z",
+      "mergedAt": "2026-08-14T09:31:11Z",
+      "labels": []
+    },
+    {
+      "number": 9480,
+      "title": "feat(app-terminal): keyword search + ticketsSold on GET /events/search",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9480",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-14T04:42:26Z",
+      "mergedAt": "2026-08-14T08:04:53Z",
+      "labels": []
+    },
+    {
+      "number": 9458,
+      "title": "docs(claude): fix fabricated symbols in agent docs and rebalance rule loading",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9458",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-13T09:35:06Z",
+      "mergedAt": "2026-08-14T07:18:19Z",
+      "labels": []
+    },
+    {
+      "number": 9481,
+      "title": "fix(venue-map): let a buyer-info edit echo a sold seat's own status back",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9481",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-14T06:35:26Z",
+      "mergedAt": "2026-08-14T06:54:26Z",
+      "labels": []
+    },
+    {
+      "number": 9478,
+      "title": "fix(ticket-hub): serve the AXS venue map image without a PUBLISHED gate",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9478",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-14T03:26:51Z",
+      "mergedAt": "2026-08-14T04:17:26Z",
+      "labels": []
+    },
+    {
+      "number": 9477,
+      "title": "feat(venue-map): add an unpublish endpoint to revert a map to DRAFT",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9477",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-14T03:12:42Z",
+      "mergedAt": "2026-08-14T03:24:16Z",
+      "labels": []
+    },
+    {
+      "number": 9476,
+      "title": "Optimize Slack notification logging and improve message visibility",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9476",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-14T02:33:47Z",
+      "mergedAt": "2026-08-14T02:34:51Z",
+      "labels": []
+    },
+    {
+      "number": 9462,
+      "title": "refactor(product-event): serve venue/section reads from product-event, keyed on eventId",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9462",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-13T10:52:43Z",
+      "mergedAt": "2026-08-14T02:24:43Z",
+      "labels": []
+    },
+    {
+      "number": 9474,
+      "title": "remove promoter store front showFeesBreakdown / faceValue",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9474",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-14T01:46:05Z",
+      "mergedAt": "2026-08-14T01:46:51Z",
+      "labels": []
+    },
+    {
+      "number": 9457,
+      "title": "Add Slack notification alerts and tests for platform quota thresholds",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9457",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-13T09:33:58Z",
+      "mergedAt": "2026-08-14T01:31:23Z",
+      "labels": []
+    },
     {
       "number": 9472,
       "title": "feat(event-report): show net earning before revenue share for correct revenue-sharing math",
@@ -2787,124 +2908,14 @@
       "labels": []
     },
     {
-      "number": 9070,
-      "title": "fix(sales-metrics): exclude venue app (terminal) sales from event discount-orders when configured (KAT-11702)",
-      "author": "chengmarket",
-      "url": "https://github.com/bosinc/katana-server/pull/9070",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-15T19:59:39Z",
-      "mergedAt": "2026-07-15T20:09:30Z",
-      "labels": []
-    },
-    {
-      "number": 9059,
-      "title": "feat(event-report): add card/page split layout flags to fix event report PDF layout",
-      "author": "chengmarket",
-      "url": "https://github.com/bosinc/katana-server/pull/9059",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-14T22:29:01Z",
-      "mergedAt": "2026-07-15T18:16:54Z",
-      "labels": []
-    },
-    {
-      "number": 9028,
-      "title": "feat(product-event): allow ops to revert a completed no-sales event to upcoming (KAT-11681)",
-      "author": "chengmarket",
-      "url": "https://github.com/bosinc/katana-server/pull/9028",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-13T23:43:57Z",
-      "mergedAt": "2026-07-15T18:16:03Z",
-      "labels": []
-    },
-    {
-      "number": 9068,
-      "title": "feat(verification): unify wrong-event error across web + terminal with event titles",
+      "number": 9482,
+      "title": "fix(events): count tickets sold from orders, not the Product.soldQuantity counter",
       "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9068",
-      "state": "merged",
+      "url": "https://github.com/bosinc/katana-server/pull/9482",
+      "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-07-15T11:05:31Z",
-      "mergedAt": "2026-07-15T11:55:54Z",
-      "labels": []
-    },
-    {
-      "number": 9062,
-      "title": "Curator multi-slot config (reserved-seating time-slots)",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9062",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-15T05:41:38Z",
-      "mergedAt": "2026-07-15T11:47:38Z",
-      "labels": []
-    },
-    {
-      "number": 9067,
-      "title": "Main",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9067",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-15T09:58:33Z",
-      "mergedAt": "2026-07-15T10:10:43Z",
-      "labels": []
-    },
-    {
-      "number": 9064,
-      "title": "refactor(store-front): remove linkType and videoType from storefront modules",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9064",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-15T07:44:48Z",
-      "mergedAt": "2026-07-15T07:46:21Z",
-      "labels": []
-    },
-    {
-      "number": 9061,
-      "title": "fix(venue-unit): cart unitId 500 + product-detail additive aliases",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9061",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-15T04:32:09Z",
-      "mergedAt": "2026-07-15T07:53:49Z",
-      "labels": []
-    },
-    {
-      "number": 9063,
-      "title": "fix(product-event): improve order data rendering and sorting in export",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/9063",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-15T06:36:46Z",
-      "mergedAt": "2026-07-15T07:18:08Z",
-      "labels": []
-    },
-    {
-      "number": 9058,
-      "title": "venue-unit additive alias backfill",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9058",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-14T16:58:32Z",
-      "mergedAt": "2026-07-15T01:42:42Z",
-      "labels": []
-    },
-    {
-      "number": 9060,
-      "title": "feat: update report mjml",
-      "author": "Yetway",
-      "url": "https://github.com/bosinc/katana-server/pull/9060",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-15T02:59:15Z",
-      "mergedAt": "2026-07-15T03:08:01Z",
+      "createdAt": "2026-08-14T07:33:25Z",
+      "mergedAt": null,
       "labels": []
     },
     {
@@ -2919,17 +2930,6 @@
       "labels": []
     },
     {
-      "number": 9462,
-      "title": "refactor(product-event): serve venue/section reads from product-event, keyed on eventId",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9462",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-13T10:52:43Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 9461,
       "title": "feat(ticket-hub): preserve manual edits across re-imports via customizedFields (KAT-11599)",
       "author": "pengfei-wu-1mapp",
@@ -2937,28 +2937,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-08-13T10:50:05Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9458,
-      "title": "docs(claude): fix fabricated symbols in agent docs and rebalance rule loading",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9458",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-13T09:35:06Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9457,
-      "title": "Add Slack notification alerts and tests for platform quota thresholds",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9457",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-13T09:33:58Z",
       "mergedAt": null,
       "labels": []
     },
