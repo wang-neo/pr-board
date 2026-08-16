@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-15T00:00:45.538Z",
+  "capturedAt": "2026-08-16T00:00:38.846Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
@@ -2743,17 +2743,6 @@
       "labels": []
     },
     {
-      "number": 9083,
-      "title": "Fix",
-      "author": "lory-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9083",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T10:27:57Z",
-      "mergedAt": "2026-07-16T10:28:17Z",
-      "labels": []
-    },
-    {
       "number": 9081,
       "title": "feat(slot-window): all-or-nothing across reserved variants + space-separated & date-only whole-day datetime",
       "author": "feng-1m",
@@ -2773,138 +2762,6 @@
       "baseBranch": "release",
       "createdAt": "2026-07-16T08:41:51Z",
       "mergedAt": "2026-07-17T01:40:22Z",
-      "labels": []
-    },
-    {
-      "number": 9089,
-      "title": "fix(event-metrics): scope downline_promoter_id backfill to fixture event",
-      "author": "chengmarket",
-      "url": "https://github.com/bosinc/katana-server/pull/9089",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T16:49:01Z",
-      "mergedAt": "2026-07-16T17:04:24Z",
-      "labels": []
-    },
-    {
-      "number": 9087,
-      "title": "Revert \"fix(shipping): checkDelete used wrong JSON field, allowing deletion of in-use shipping options\"",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9087",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T11:00:34Z",
-      "mergedAt": "2026-07-16T11:03:02Z",
-      "labels": []
-    },
-    {
-      "number": 9086,
-      "title": "Revert \"fix: address PR #9078 review feedback — revert to Excel export, fix falsy-value bugs, add checkDelete tests\"",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9086",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T10:54:01Z",
-      "mergedAt": "2026-07-16T10:56:52Z",
-      "labels": []
-    },
-    {
-      "number": 9082,
-      "title": "fix: address PR #9078 review feedback — revert to Excel export, fix falsy-value bugs, add checkDelete tests",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9082",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T09:28:13Z",
-      "mergedAt": "2026-07-16T09:53:11Z",
-      "labels": []
-    },
-    {
-      "number": 9073,
-      "title": "fix(venue-unit): PATCH /venue-units/:id should only update the specified variant's slot",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9073",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T04:35:43Z",
-      "mergedAt": "2026-07-16T08:36:39Z",
-      "labels": []
-    },
-    {
-      "number": 9077,
-      "title": "fix(slot-window): responses expose local-only slotWindow for symmetric GET→PUT",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9077",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T08:02:53Z",
-      "mergedAt": "2026-07-16T08:35:52Z",
-      "labels": []
-    },
-    {
-      "number": 9078,
-      "title": "fix(shipping): checkDelete used wrong JSON field, allowing deletion of in-use shipping options",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9078",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T08:17:05Z",
-      "mergedAt": "2026-07-16T08:30:24Z",
-      "labels": []
-    },
-    {
-      "number": 9079,
-      "title": "Fix",
-      "author": "lory-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9079",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T08:25:53Z",
-      "mergedAt": "2026-07-16T08:26:12Z",
-      "labels": []
-    },
-    {
-      "number": 9075,
-      "title": "Feat/kat 11698 main",
-      "author": "lory-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9075",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T05:28:07Z",
-      "mergedAt": "2026-07-16T07:53:58Z",
-      "labels": []
-    },
-    {
-      "number": 9074,
-      "title": "fix(slot-window): decouple validation from endDate; accept date-only (midnight default); share event-local→UTC helper with multiday",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9074",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T04:48:17Z",
-      "mergedAt": "2026-07-16T06:42:22Z",
-      "labels": []
-    },
-    {
-      "number": 9072,
-      "title": "feat(storefront): update module alias format from 'Section N' to 'Untitled (Section N)'",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9072",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T02:49:19Z",
-      "mergedAt": "2026-07-16T04:08:02Z",
-      "labels": []
-    },
-    {
-      "number": 9071,
-      "title": "Feat/kat 11653 avoid repeated SMS to phone numbers that always fail",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9071",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T02:40:54Z",
-      "mergedAt": "2026-07-16T04:30:23Z",
       "labels": []
     },
     {
