@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-16T00:00:38.846Z",
+  "capturedAt": "2026-08-17T00:00:38.957Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
@@ -2674,94 +2674,6 @@
       "baseBranch": "release",
       "createdAt": "2026-07-20T02:58:56Z",
       "mergedAt": "2026-07-20T03:15:08Z",
-      "labels": []
-    },
-    {
-      "number": 9099,
-      "title": "fix(store-front): update postId in incrementalUpdateModuleItems and include postId in related-products query",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9099",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-17T12:20:26Z",
-      "mergedAt": "2026-07-17T12:26:35Z",
-      "labels": []
-    },
-    {
-      "number": 9094,
-      "title": "feat(store-front): add postId to module items, restructure addItemsToModules, enhance createStoreFrontModule",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9094",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-17T07:58:52Z",
-      "mergedAt": "2026-07-17T11:04:10Z",
-      "labels": []
-    },
-    {
-      "number": 9093,
-      "title": "feat: add error monitoringto dashboards by jayce",
-      "author": "jaycechenex",
-      "url": "https://github.com/bosinc/katana-server/pull/9093",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-17T07:52:10Z",
-      "mergedAt": "2026-07-17T08:03:29Z",
-      "labels": []
-    },
-    {
-      "number": 9091,
-      "title": "feat(cart): surface slotWindowDisplay on cart line items",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9091",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-17T06:56:01Z",
-      "mergedAt": "2026-07-17T07:10:16Z",
-      "labels": []
-    },
-    {
-      "number": 9090,
-      "title": "feat(store-front): add moduleId param and isAddedToModule to post-related-products endpoint",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9090",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-17T06:42:52Z",
-      "mergedAt": "2026-07-17T06:50:39Z",
-      "labels": []
-    },
-    {
-      "number": 9084,
-      "title": "fix email QR redeem time display",
-      "author": "tiancheng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9084",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T10:28:41Z",
-      "mergedAt": "2026-07-17T05:58:11Z",
-      "labels": []
-    },
-    {
-      "number": 9081,
-      "title": "feat(slot-window): all-or-nothing across reserved variants + space-separated & date-only whole-day datetime",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9081",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T09:27:34Z",
-      "mergedAt": "2026-07-17T01:48:26Z",
-      "labels": []
-    },
-    {
-      "number": 9080,
-      "title": "fix(slot-window): global no-UTC sweep — every variant response exit emits local-only slotWindow",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9080",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-16T08:41:51Z",
-      "mergedAt": "2026-07-17T01:40:22Z",
       "labels": []
     },
     {
