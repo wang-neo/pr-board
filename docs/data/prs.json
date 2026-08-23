@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-22T00:00:40.245Z",
+  "capturedAt": "2026-08-23T00:00:41.198Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
@@ -3026,116 +3026,6 @@
       "baseBranch": "release",
       "createdAt": "2026-07-23T09:40:39Z",
       "mergedAt": "2026-07-24T01:18:12Z",
-      "labels": []
-    },
-    {
-      "number": 9145,
-      "title": "feat(cronjob): pre-event OPS Slack notification digest (KAT-11352)",
-      "author": "chengmarket",
-      "url": "https://github.com/bosinc/katana-server/pull/9145",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-22T18:42:52Z",
-      "mergedAt": "2026-07-23T17:22:16Z",
-      "labels": []
-    },
-    {
-      "number": 9158,
-      "title": "fix(products): decouple useEventPosterAsCover from product update aggregation",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9158",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-23T12:36:52Z",
-      "mergedAt": "2026-07-23T12:44:56Z",
-      "labels": []
-    },
-    {
-      "number": 9157,
-      "title": "fix(product-v2): add useEventPosterAsCover to CreateProductDto",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9157",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-23T12:23:17Z",
-      "mergedAt": "2026-07-23T12:43:33Z",
-      "labels": []
-    },
-    {
-      "number": 9155,
-      "title": "Main",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9155",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-23T10:39:56Z",
-      "mergedAt": "2026-07-23T11:26:48Z",
-      "labels": []
-    },
-    {
-      "number": 9130,
-      "title": "feat: add My Tickets API — consumer endpoints for purchased tickets by event",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9130",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-21T14:09:35Z",
-      "mergedAt": "2026-07-23T08:15:27Z",
-      "labels": []
-    },
-    {
-      "number": 9149,
-      "title": "fix formula",
-      "author": "liuleei",
-      "url": "https://github.com/bosinc/katana-server/pull/9149",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-23T02:05:52Z",
-      "mergedAt": "2026-07-23T02:07:13Z",
-      "labels": []
-    },
-    {
-      "number": 9148,
-      "title": "🚨 fix(posts): skip promotion call for high-traffic post (emergency)",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9148",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-23T01:50:32Z",
-      "mergedAt": "2026-07-23T01:54:27Z",
-      "labels": []
-    },
-    {
-      "number": 9147,
-      "title": "Main",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9147",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-23T01:46:35Z",
-      "mergedAt": "2026-07-23T01:48:04Z",
-      "labels": []
-    },
-    {
-      "number": 9146,
-      "title": "fix time zone",
-      "author": "liuleei",
-      "url": "https://github.com/bosinc/katana-server/pull/9146",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-23T01:38:56Z",
-      "mergedAt": "2026-07-23T01:41:42Z",
-      "labels": []
-    },
-    {
-      "number": 9139,
-      "title": "Feat/kat 11601 report",
-      "author": "liuleei",
-      "url": "https://github.com/bosinc/katana-server/pull/9139",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-22T10:56:14Z",
-      "mergedAt": "2026-07-23T01:08:27Z",
       "labels": []
     },
     {
