@@ -1,8 +1,162 @@
 {
-  "capturedAt": "2026-08-24T00:00:38.461Z",
+  "capturedAt": "2026-08-25T00:00:40.851Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 9612,
+      "title": "feat(posts): forbid co-selling reference products in WHOLESALE posts (KAT-11655)",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9612",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T11:00:21Z",
+      "mergedAt": "2026-08-24T13:07:55Z",
+      "labels": []
+    },
+    {
+      "number": 9601,
+      "title": "feat(ticket-hub): charge TDC's per-order fee to the buyer",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9601",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T04:36:33Z",
+      "mergedAt": "2026-08-24T11:06:25Z",
+      "labels": []
+    },
+    {
+      "number": 9609,
+      "title": "fix(email): tighten gap above order-level View event address CTA (KAT-11322)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9609",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T10:31:05Z",
+      "mergedAt": "2026-08-24T10:39:10Z",
+      "labels": []
+    },
+    {
+      "number": 9605,
+      "title": "Revert \"feat(events): All attendees tab APIs + audience messaging (KAT-11400)\"",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9605",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T10:03:25Z",
+      "mergedAt": "2026-08-24T10:10:38Z",
+      "labels": []
+    },
+    {
+      "number": 9604,
+      "title": "fix(venue-unit): recognize Business Name/Business Logo as buyer info field titles",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9604",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T09:59:21Z",
+      "mergedAt": "2026-08-24T10:05:21Z",
+      "labels": []
+    },
+    {
+      "number": 9600,
+      "title": "feat(venue-map): replace publish/unpublish status with a draft column",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9600",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T04:27:12Z",
+      "mergedAt": "2026-08-24T10:03:24Z",
+      "labels": []
+    },
+    {
+      "number": 9512,
+      "title": "feat(events): All attendees tab APIs + audience messaging (KAT-11400)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9512",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-18T08:14:08Z",
+      "mergedAt": "2026-08-24T07:23:31Z",
+      "labels": []
+    },
+    {
+      "number": 9599,
+      "title": "feat(order-email): add order-level event address reveal button",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9599",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T03:23:15Z",
+      "mergedAt": "2026-08-24T04:20:00Z",
+      "labels": []
+    },
+    {
+      "number": 9597,
+      "title": "feat(product-v2): admin endpoint to set ticket custom fee/tax config with auto price recalc (KAT-11527)",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9597",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T02:48:32Z",
+      "mergedAt": "2026-08-24T03:49:19Z",
+      "labels": []
+    },
+    {
+      "number": 9598,
+      "title": "fix(sms): return TwiML XML to fix Twilio 12300 Invalid Content-Type error",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9598",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T03:06:15Z",
+      "mergedAt": "2026-08-24T03:22:32Z",
+      "labels": []
+    },
+    {
+      "number": 9596,
+      "title": "fix(email): update event address message and button padding",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9596",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T02:24:09Z",
+      "mergedAt": "2026-08-24T02:30:20Z",
+      "labels": []
+    },
+    {
+      "number": 9591,
+      "title": "Feat/kat 11599",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/9591",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-21T10:30:33Z",
+      "mergedAt": "2026-08-24T01:28:28Z",
+      "labels": []
+    },
+    {
+      "number": 9593,
+      "title": "Revert \"Chore/revert 11655\"",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9593",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T01:13:28Z",
+      "mergedAt": "2026-08-24T01:27:17Z",
+      "labels": []
+    },
+    {
+      "number": 9582,
+      "title": "feat(product-event): remove MANUAL reveal, add email CTA (KAT-11322)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9582",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-21T08:12:05Z",
+      "mergedAt": "2026-08-24T01:12:14Z",
+      "labels": []
+    },
     {
       "number": 9564,
       "title": "fix(sales-metrics): keep fully-refunded promoters in the co-seller list (KAT-11753 #5)",
@@ -2798,13 +2952,35 @@
       "labels": []
     },
     {
-      "number": 9591,
-      "title": "Feat/kat 11599",
-      "author": "pengfei-wu-1mapp",
-      "url": "https://github.com/bosinc/katana-server/pull/9591",
+      "number": 9610,
+      "title": "feat: KAT-11876 cross-location form list for Copy-from picker",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9610",
       "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-08-21T10:30:33Z",
+      "createdAt": "2026-08-24T10:32:52Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9607,
+      "title": "feat(posts): add unified collaborators endpoint (KAT-11697)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9607",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T10:20:14Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9602,
+      "title": "feat: add rsvp column for Order and OrderLineItem table; filter rsvp …",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9602",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T05:39:13Z",
       "mergedAt": null,
       "labels": []
     },
@@ -2816,17 +2992,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-08-21T08:37:35Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9582,
-      "title": "feat(product-event): remove MANUAL reveal, add email CTA (KAT-11322)",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/9582",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-21T08:12:05Z",
       "mergedAt": null,
       "labels": []
     },
@@ -2871,17 +3036,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-08-19T12:28:02Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9512,
-      "title": "feat(events): All attendees tab APIs + audience messaging (KAT-11400)",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/9512",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-18T08:14:08Z",
       "mergedAt": null,
       "labels": []
     },
