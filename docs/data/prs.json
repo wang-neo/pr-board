@@ -1,8 +1,129 @@
 {
-  "capturedAt": "2026-08-25T00:00:40.851Z",
+  "capturedAt": "2026-08-26T00:00:43.172Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 9607,
+      "title": "feat(posts): add unified collaborators endpoint (KAT-11697)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9607",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T10:20:14Z",
+      "mergedAt": "2026-08-25T11:05:43Z",
+      "labels": []
+    },
+    {
+      "number": 9627,
+      "title": "fix(multi-day-pass): keep checkout variant snapshot storage-canonical (KAT-11964)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9627",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T09:35:53Z",
+      "mergedAt": "2026-08-25T09:45:27Z",
+      "labels": []
+    },
+    {
+      "number": 9621,
+      "title": "feat(events): contactChannel filter on attendees/list (KAT-11400)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9621",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T07:20:50Z",
+      "mergedAt": "2026-08-25T09:23:10Z",
+      "labels": []
+    },
+    {
+      "number": 9625,
+      "title": "Hotfix/mixed product post sync content",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9625",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T08:52:37Z",
+      "mergedAt": "2026-08-25T09:15:45Z",
+      "labels": []
+    },
+    {
+      "number": 9618,
+      "title": "feat(app-terminal): verification permission link + daily sales metrics",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9618",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T03:23:26Z",
+      "mergedAt": "2026-08-25T04:41:24Z",
+      "labels": []
+    },
+    {
+      "number": 9617,
+      "title": "metrics/promoters endpoint filter rsvp",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9617",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T03:12:46Z",
+      "mergedAt": "2026-08-25T03:19:11Z",
+      "labels": []
+    },
+    {
+      "number": 9615,
+      "title": "refactor(posts): anchor reference-product ban to financeModeForPromoters (KAT-11655)",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9615",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T02:15:46Z",
+      "mergedAt": "2026-08-25T02:56:53Z",
+      "labels": []
+    },
+    {
+      "number": 9613,
+      "title": "（Reaply）Revert \"Revert \"feat(events): All attendees tab APIs + audience messaging (KAT-11400)\"\"",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9613",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T01:38:36Z",
+      "mergedAt": "2026-08-25T02:11:16Z",
+      "labels": []
+    },
+    {
+      "number": 9541,
+      "title": "feat: multi-day pass per-day entry windows (KAT-11017)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9541",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-19T12:28:02Z",
+      "mergedAt": "2026-08-25T02:09:27Z",
+      "labels": []
+    },
+    {
+      "number": 9602,
+      "title": "feat: add rsvp column for Order and OrderLineItem table; filter rsvp …",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9602",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T05:39:13Z",
+      "mergedAt": "2026-08-25T01:23:10Z",
+      "labels": []
+    },
+    {
+      "number": 9578,
+      "title": "chore(database): drop dead tables, add hot-path indexes, drop prefix-redundant indexes (KAT-11820)",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/9578",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-21T05:47:55Z",
+      "mergedAt": "2026-08-25T01:17:17Z",
+      "labels": []
+    },
     {
       "number": 9612,
       "title": "feat(posts): forbid co-selling reference products in WHOLESALE posts (KAT-11655)",
@@ -2952,6 +3073,61 @@
       "labels": []
     },
     {
+      "number": 9628,
+      "title": "fix:mixed products post aff purchase failed",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9628",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T11:11:27Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9626,
+      "title": "feat(purchase-approval): request approval to purchase (waitlist + purchase link)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9626",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T09:12:03Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9624,
+      "title": "Implement partner email sending quota management and APIs",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9624",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T08:33:43Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9623,
+      "title": "feat(posts): validate replacement product ticket-type and event compa…",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/9623",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T08:14:10Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9622,
+      "title": "refactor(sms): replace sendSms with sendGuardedSms and clean up SMS blocking logic",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9622",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T08:01:59Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
       "number": 9610,
       "title": "feat: KAT-11876 cross-location form list for Copy-from picker",
       "author": "junetengext-a11y",
@@ -2963,24 +3139,13 @@
       "labels": []
     },
     {
-      "number": 9607,
-      "title": "feat(posts): add unified collaborators endpoint (KAT-11697)",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/9607",
+      "number": 9603,
+      "title": "refactor(user-message): rename InBox table to UserMessage",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/9603",
       "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-08-24T10:20:14Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9602,
-      "title": "feat: add rsvp column for Order and OrderLineItem table; filter rsvp …",
-      "author": "liuleei",
-      "url": "https://github.com/bosinc/katana-server/pull/9602",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-24T05:39:13Z",
+      "createdAt": "2026-08-24T09:16:32Z",
       "mergedAt": null,
       "labels": []
     },
@@ -3007,17 +3172,6 @@
       "labels": []
     },
     {
-      "number": 9578,
-      "title": "chore(database): drop dead tables, add hot-path indexes, drop prefix-redundant indexes (KAT-11820)",
-      "author": "pengfei-wu-1mapp",
-      "url": "https://github.com/bosinc/katana-server/pull/9578",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-21T05:47:55Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 9567,
       "title": "feat(posts): auto-rank available tickets (KAT-11932)",
       "author": "wang-neo",
@@ -3025,17 +3179,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-08-21T02:09:18Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9541,
-      "title": "feat: multi-day pass per-day entry windows (KAT-11017)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9541",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-19T12:28:02Z",
       "mergedAt": null,
       "labels": []
     },
