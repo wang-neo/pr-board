@@ -1,8 +1,140 @@
 {
-  "capturedAt": "2026-08-26T00:00:43.172Z",
+  "capturedAt": "2026-08-27T00:00:39.840Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 9643,
+      "title": "fix(orders): return 403 Forbidden for unauthorized guest order access",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9643",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-26T09:12:16Z",
+      "mergedAt": "2026-08-26T09:21:47Z",
+      "labels": []
+    },
+    {
+      "number": 9642,
+      "title": "feat:add totalNonRsvpUnitsSold for financial report",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9642",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-26T08:44:28Z",
+      "mergedAt": "2026-08-26T08:54:23Z",
+      "labels": []
+    },
+    {
+      "number": 9639,
+      "title": "revert(sms): restore SMS backoff initial delay to 24h after release testing",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9639",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-26T08:14:22Z",
+      "mergedAt": "2026-08-26T08:39:49Z",
+      "labels": []
+    },
+    {
+      "number": 9637,
+      "title": "fix(multi-day-pass): add expired flag to verification redemptions (KAT-11017)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9637",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-26T07:24:43Z",
+      "mergedAt": "2026-08-26T07:48:30Z",
+      "labels": []
+    },
+    {
+      "number": 9636,
+      "title": "Fix order success item alignment",
+      "author": "1m-binmax",
+      "url": "https://github.com/bosinc/katana-server/pull/9636",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-26T07:09:31Z",
+      "mergedAt": "2026-08-26T07:26:22Z",
+      "labels": []
+    },
+    {
+      "number": 9635,
+      "title": "fix(sms): temporarily change SMS backoff initial delay to 2 minutes f…",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9635",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-26T06:46:04Z",
+      "mergedAt": "2026-08-26T06:51:47Z",
+      "labels": []
+    },
+    {
+      "number": 9624,
+      "title": "Implement partner email sending quota management and APIs",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9624",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T08:33:43Z",
+      "mergedAt": "2026-08-26T06:44:41Z",
+      "labels": []
+    },
+    {
+      "number": 9634,
+      "title": "fix(multi-day-pass): expose order-side validity data FE can render (KAT-11017)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9634",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-26T06:38:15Z",
+      "mergedAt": "2026-08-26T06:44:18Z",
+      "labels": []
+    },
+    {
+      "number": 9578,
+      "title": "chore(database): drop dead tables, add hot-path indexes, drop prefix-redundant indexes (KAT-11820)",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/9578",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-21T05:47:55Z",
+      "mergedAt": "2026-08-25T01:17:17Z",
+      "labels": []
+    },
+    {
+      "number": 9630,
+      "title": "fix: backoff TTL correction + follower SMS label filtering",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9630",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-26T03:23:52Z",
+      "mergedAt": "2026-08-26T04:13:53Z",
+      "labels": []
+    },
+    {
+      "number": 9631,
+      "title": "Feat/kat 11580#2",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9631",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-26T03:52:46Z",
+      "mergedAt": "2026-08-26T04:08:46Z",
+      "labels": []
+    },
+    {
+      "number": 9628,
+      "title": "fix:mixed products post aff purchase failed",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9628",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-25T11:11:27Z",
+      "mergedAt": "2026-08-26T02:05:05Z",
+      "labels": []
+    },
     {
       "number": 9607,
       "title": "feat(posts): add unified collaborators endpoint (KAT-11697)",
@@ -111,17 +243,6 @@
       "baseBranch": "release",
       "createdAt": "2026-08-24T05:39:13Z",
       "mergedAt": "2026-08-25T01:23:10Z",
-      "labels": []
-    },
-    {
-      "number": 9578,
-      "title": "chore(database): drop dead tables, add hot-path indexes, drop prefix-redundant indexes (KAT-11820)",
-      "author": "pengfei-wu-1mapp",
-      "url": "https://github.com/bosinc/katana-server/pull/9578",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-21T05:47:55Z",
-      "mergedAt": "2026-08-25T01:17:17Z",
       "labels": []
     },
     {
@@ -2908,178 +3029,35 @@
       "labels": []
     },
     {
-      "number": 9160,
-      "title": "feat(merchant-products): support fees field on product variant info (KAT-11527)",
-      "author": "chengmarket",
-      "url": "https://github.com/bosinc/katana-server/pull/9160",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-23T20:47:23Z",
-      "mergedAt": "2026-07-27T23:29:59Z",
-      "labels": []
-    },
-    {
-      "number": 9213,
-      "title": "feat(sales): add marketingConsent to checkout + Follower unique constraint",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9213",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-27T11:03:32Z",
-      "mergedAt": "2026-07-27T12:23:32Z",
-      "labels": []
-    },
-    {
-      "number": 9207,
-      "title": "feat(sales): add marketingConsent flag to CreateOrderRequest",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9207",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-27T10:00:20Z",
-      "mergedAt": "2026-07-27T10:03:22Z",
-      "labels": []
-    },
-    {
-      "number": 9202,
-      "title": "fix(promoter-subscription): address guest-subscribe review comments (PR #9198)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9202",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-27T06:36:24Z",
-      "mergedAt": "2026-07-27T08:36:58Z",
-      "labels": []
-    },
-    {
-      "number": 9201,
-      "title": "fix(interceptor): address X-DB-Query-Count review comments (PR #9196)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9201",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-27T06:34:54Z",
-      "mergedAt": "2026-07-27T08:16:33Z",
-      "labels": []
-    },
-    {
-      "number": 9206,
-      "title": "feat(KAT-10452): include OrderInclusion QR codes in my-tickets API",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9206",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-27T07:37:09Z",
-      "mergedAt": "2026-07-27T07:54:30Z",
-      "labels": []
-    },
-    {
-      "number": 9204,
-      "title": "Fix app terminal order-level partial refund calculation",
-      "author": "lory-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9204",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-27T06:49:57Z",
-      "mergedAt": "2026-07-27T07:38:32Z",
-      "labels": []
-    },
-    {
-      "number": 9205,
-      "title": "fix: remove unused variantConfigs from BaseUpdateRequest interface",
-      "author": "lory-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9205",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-27T07:12:23Z",
-      "mergedAt": "2026-07-27T07:12:34Z",
-      "labels": []
-    },
-    {
-      "number": 9200,
-      "title": "Allow terminal staff to view tipped orders",
-      "author": "lory-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9200",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-27T06:04:09Z",
-      "mergedAt": "2026-07-27T06:47:27Z",
-      "labels": []
-    },
-    {
-      "number": 9198,
-      "title": "feat: add guest-subscribe endpoint (KAT-11781)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9198",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-27T05:33:22Z",
-      "mergedAt": "2026-07-27T05:52:34Z",
-      "labels": []
-    },
-    {
-      "number": 9196,
-      "title": "feat: add X-DB-Query-Count response header for cache regression detection",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9196",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-27T04:19:32Z",
-      "mergedAt": "2026-07-27T05:48:16Z",
-      "labels": []
-    },
-    {
-      "number": 9197,
-      "title": "fix(posts): allow duplicate verify posts with unavailable products",
-      "author": "pengfei-wu-1mapp",
-      "url": "https://github.com/bosinc/katana-server/pull/9197",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-27T04:20:37Z",
-      "mergedAt": "2026-07-27T04:28:30Z",
-      "labels": []
-    },
-    {
-      "number": 9195,
-      "title": "Merge/main to release",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9195",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-27T03:45:20Z",
-      "mergedAt": "2026-07-27T03:51:42Z",
-      "labels": []
-    },
-    {
-      "number": 9192,
-      "title": "Optimize default value handling and logging for block codes",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9192",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-27T02:39:02Z",
-      "mergedAt": "2026-07-27T02:46:48Z",
-      "labels": []
-    },
-    {
-      "number": 9188,
-      "title": "fix(promoter-subscription): show <Unnamed customer> vs <Unnamed follower> per tab",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9188",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-25T16:08:47Z",
-      "mergedAt": "2026-07-27T01:16:31Z",
-      "labels": []
-    },
-    {
-      "number": 9628,
-      "title": "fix:mixed products post aff purchase failed",
+      "number": 9641,
+      "title": "Feat/kat 11884 add revenue share config status",
       "author": "liuleei",
-      "url": "https://github.com/bosinc/katana-server/pull/9628",
+      "url": "https://github.com/bosinc/katana-server/pull/9641",
       "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-08-25T11:11:27Z",
+      "createdAt": "2026-08-26T08:39:11Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9638,
+      "title": "Add SMS mock toggle feature with customizable disable duration",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9638",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-08-26T07:46:47Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9632,
+      "title": "Add auto/manual ticket ordering modes (KAT-11932)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9632",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-08-26T04:10:32Z",
       "mergedAt": null,
       "labels": []
     },
@@ -3091,17 +3069,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-08-25T09:12:03Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9624,
-      "title": "Implement partner email sending quota management and APIs",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9624",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-25T08:33:43Z",
       "mergedAt": null,
       "labels": []
     },
@@ -3139,17 +3106,6 @@
       "labels": []
     },
     {
-      "number": 9603,
-      "title": "refactor(user-message): rename InBox table to UserMessage",
-      "author": "pengfei-wu-1mapp",
-      "url": "https://github.com/bosinc/katana-server/pull/9603",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-24T09:16:32Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 9584,
       "title": "feat(KAT-11861): allow editing submitted form info per line item at checkout",
       "author": "junetengext-a11y",
@@ -3157,17 +3113,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-08-21T08:37:35Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9579,
-      "title": "fix: backoff key TTL should use exponential delay instead of fixed 7-day TTL",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9579",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-21T05:57:45Z",
       "mergedAt": null,
       "labels": []
     },
