@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-29T00:00:36.613Z",
+  "capturedAt": "2026-08-30T00:00:37.452Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
@@ -2798,69 +2798,25 @@
       "labels": []
     },
     {
-      "number": 9276,
-      "title": "fix: count DB queries inside Prisma cache extension",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9276",
-      "state": "merged",
+      "number": 9679,
+      "title": "chore(sync): merge main → release (tickets-sold O(N²) hotfix #9677)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9679",
+      "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-07-30T08:11:30Z",
-      "mergedAt": "2026-07-30T10:44:33Z",
+      "createdAt": "2026-08-29T03:50:37Z",
+      "mergedAt": null,
       "labels": []
     },
     {
-      "number": 9272,
-      "title": "refactor(kat-11822): swap axios for undici in posh-vip scraper",
-      "author": "pengfei-wu-1mapp",
-      "url": "https://github.com/bosinc/katana-server/pull/9272",
-      "state": "merged",
+      "number": 9678,
+      "title": "hardening: statement_timeout + listingType statistics (follow-ups to the /product-event/list 504s)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9678",
+      "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-07-30T07:59:58Z",
-      "mergedAt": "2026-07-30T10:01:45Z",
-      "labels": []
-    },
-    {
-      "number": 9277,
-      "title": "Feat/kat 11744",
-      "author": "pengfei-wu-1mapp",
-      "url": "https://github.com/bosinc/katana-server/pull/9277",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-30T08:18:36Z",
-      "mergedAt": "2026-07-30T09:25:48Z",
-      "labels": []
-    },
-    {
-      "number": 9275,
-      "title": "Revert \"fix: register $on query listeners on extended Prisma client\"",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9275",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-30T08:10:06Z",
-      "mergedAt": "2026-07-30T08:11:05Z",
-      "labels": []
-    },
-    {
-      "number": 9273,
-      "title": "Refactor/kat 8972 to release",
-      "author": "lory-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9273",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-30T08:01:59Z",
-      "mergedAt": "2026-07-30T08:04:02Z",
-      "labels": []
-    },
-    {
-      "number": 9270,
-      "title": "fix: register $on query listeners on extended Prisma client",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9270",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-30T06:22:00Z",
-      "mergedAt": "2026-07-30T06:25:38Z",
+      "createdAt": "2026-08-29T00:24:56Z",
+      "mergedAt": null,
       "labels": []
     },
     {
