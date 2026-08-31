@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-30T00:00:37.452Z",
+  "capturedAt": "2026-08-31T00:00:38.261Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
@@ -2762,39 +2762,6 @@
       "baseBranch": "release",
       "createdAt": "2026-08-03T01:09:24Z",
       "mergedAt": "2026-08-03T01:10:14Z",
-      "labels": []
-    },
-    {
-      "number": 9281,
-      "title": "Refactor/kat 8972 to release",
-      "author": "liuleei",
-      "url": "https://github.com/bosinc/katana-server/pull/9281",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-31T02:10:34Z",
-      "mergedAt": "2026-07-31T02:12:59Z",
-      "labels": []
-    },
-    {
-      "number": 9282,
-      "title": "Implement campaign quota limits and enhance platform capacity management",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9282",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-31T02:21:17Z",
-      "mergedAt": "2026-07-31T08:04:48Z",
-      "labels": []
-    },
-    {
-      "number": 9279,
-      "title": "Refactor/kat 8972 to release",
-      "author": "liuleei",
-      "url": "https://github.com/bosinc/katana-server/pull/9279",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-30T10:30:10Z",
-      "mergedAt": "2026-07-31T01:03:21Z",
       "labels": []
     },
     {
