@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-06T00:00:37.058Z",
+  "capturedAt": "2026-09-07T00:00:35.235Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
@@ -2751,83 +2751,6 @@
       "baseBranch": "release",
       "createdAt": "2026-08-08T07:30:21Z",
       "mergedAt": "2026-08-09T12:33:50Z",
-      "labels": []
-    },
-    {
-      "number": 9384,
-      "title": "feat(app-terminal): add hasMerch/hasMedia/hasLineup filters to GET /events/search",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9384",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-07T06:35:13Z",
-      "mergedAt": "2026-08-07T07:31:54Z",
-      "labels": []
-    },
-    {
-      "number": 9101,
-      "title": "refactor: Phase 2.1 — AXS/ProVenue deplatforming (hard cut)",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9101",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-19T00:37:33Z",
-      "mergedAt": "2026-08-07T06:43:23Z",
-      "labels": []
-    },
-    {
-      "number": 9380,
-      "title": "fix(sms): simplify password reset SMS content",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9380",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-07T06:02:32Z",
-      "mergedAt": "2026-08-07T06:04:27Z",
-      "labels": []
-    },
-    {
-      "number": 9119,
-      "title": "feat(form): add ADDRESS field type, form icon, and field extension enrichments (KAT-10939)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9119",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-07-21T04:13:12Z",
-      "mergedAt": "2026-08-07T05:46:15Z",
-      "labels": []
-    },
-    {
-      "number": 9335,
-      "title": "feat(venue-unit): split venue map saving from ticket-category association",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9335",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-04T11:30:38Z",
-      "mergedAt": "2026-08-07T03:27:53Z",
-      "labels": []
-    },
-    {
-      "number": 9371,
-      "title": "feat(fulfillment): update order fulfillment tracking number",
-      "author": "pengfei-wu-1mapp",
-      "url": "https://github.com/bosinc/katana-server/pull/9371",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-06T10:18:15Z",
-      "mergedAt": "2026-08-07T02:49:01Z",
-      "labels": []
-    },
-    {
-      "number": 9373,
-      "title": "refactor(app-terminal): restore GET /events contract, move filters to GET /events/list",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9373",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-06T11:10:10Z",
-      "mergedAt": "2026-08-07T01:29:59Z",
       "labels": []
     },
     {
