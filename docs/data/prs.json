@@ -1,8 +1,107 @@
 {
-  "capturedAt": "2026-09-07T00:00:35.235Z",
+  "capturedAt": "2026-09-08T00:00:40.517Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 9781,
+      "title": "test(vitest): make the suite deterministic instead of retrying past its races",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9781",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-07T06:35:45Z",
+      "mergedAt": "2026-09-07T12:30:14Z",
+      "labels": []
+    },
+    {
+      "number": 9782,
+      "title": "feat(app-terminal): add guest contact book and group endpoints",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9782",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-07T08:12:57Z",
+      "mergedAt": "2026-09-07T11:06:45Z",
+      "labels": []
+    },
+    {
+      "number": 9780,
+      "title": "fix(web-scraper): read Komi sections from the published profile endpoint",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9780",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-07T06:33:17Z",
+      "mergedAt": "2026-09-07T10:58:13Z",
+      "labels": []
+    },
+    {
+      "number": 9784,
+      "title": "fix(merchant-products): tolerate object-shaped ids in association/images query",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9784",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-07T09:38:43Z",
+      "mergedAt": "2026-09-07T10:00:34Z",
+      "labels": []
+    },
+    {
+      "number": 9779,
+      "title": "fix(posts): match headline in post list keyword search",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9779",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-07T06:11:42Z",
+      "mergedAt": "2026-09-07T09:07:38Z",
+      "labels": []
+    },
+    {
+      "number": 9778,
+      "title": "fix(post-sync): drop DRAFT tickets from synced event posts (KAT-11926-7)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9778",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-07T04:26:00Z",
+      "mergedAt": "2026-09-07T09:07:18Z",
+      "labels": []
+    },
+    {
+      "number": 9777,
+      "title": "fix(checkout): reject non-uuid paymentMethodId and non-positive quantity at checkout",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9777",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-07T03:44:23Z",
+      "mergedAt": "2026-09-07T04:05:08Z",
+      "labels": []
+    },
+    {
+      "number": 9776,
+      "title": "fix(cloudinary): stop the reference preflight scaling with batch size",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9776",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-04T10:45:52Z",
+      "mergedAt": "2026-09-07T02:43:42Z",
+      "labels": []
+    },
+    {
+      "number": 9762,
+      "title": "feat: replace follow welcome email/SMS with configurable confirmation message (KAT-11930)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9762",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-04T05:58:34Z",
+      "mergedAt": "2026-09-07T01:44:56Z",
+      "labels": []
+    },
     {
       "number": 9767,
       "title": "fix(purchase-approval): stop revalidating product forms on approval checkouts",
@@ -2754,13 +2853,35 @@
       "labels": []
     },
     {
-      "number": 9776,
-      "title": "fix(cloudinary): stop the reference preflight scaling with batch size",
+      "number": 9788,
+      "title": "feat(app-terminal): venue app attendees, messaging, waitlist and guests",
       "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9776",
+      "url": "https://github.com/bosinc/katana-server/pull/9788",
       "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-09-04T10:45:52Z",
+      "createdAt": "2026-09-07T11:01:51Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9785,
+      "title": "feat(checkout): flag expired items and structure checkout errors",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9785",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-07T10:28:34Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9783,
+      "title": "fix(redemption): keep redeemed count after refunding redeemed units (KAT-11926-11)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9783",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-07T09:17:04Z",
       "mergedAt": null,
       "labels": []
     },
@@ -2783,17 +2904,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-09-04T09:20:43Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9762,
-      "title": "feat: replace follow welcome email/SMS with configurable confirmation message (KAT-11930)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9762",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-09-04T05:58:34Z",
       "mergedAt": null,
       "labels": []
     },
