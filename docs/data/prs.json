@@ -1,8 +1,129 @@
 {
-  "capturedAt": "2026-09-11T00:00:38.350Z",
+  "capturedAt": "2026-09-12T00:00:42.452Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 9885,
+      "title": "style(event-report): round Net Earnings highlight corners on split cards",
+      "author": "chengmarket",
+      "url": "https://github.com/bosinc/katana-server/pull/9885",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-11T18:09:46Z",
+      "mergedAt": "2026-09-11T18:15:39Z",
+      "labels": []
+    },
+    {
+      "number": 9877,
+      "title": "fix(financial-report)Optimize SQL to fix slow query performance",
+      "author": "menzies9527",
+      "url": "https://github.com/bosinc/katana-server/pull/9877",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-11T06:52:37Z",
+      "mergedAt": "2026-09-11T12:38:20Z",
+      "labels": []
+    },
+    {
+      "number": 9879,
+      "title": "feat(app-terminal): accept taxEnable and taxJarCategory on product create/update",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9879",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-11T07:11:39Z",
+      "mergedAt": "2026-09-11T07:20:41Z",
+      "labels": []
+    },
+    {
+      "number": 9876,
+      "title": "fix(logging): restore the fields the Mongo cutover dropped, and serve them without an AWS account",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9876",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-11T05:38:56Z",
+      "mergedAt": "2026-09-11T07:02:32Z",
+      "labels": []
+    },
+    {
+      "number": 9390,
+      "title": "feat(inclusions): snapshot OrderInclusion name at purchase + inclusion-level delete guard (KAT-10452, KAT-11885)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9390",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-10T01:36:27Z",
+      "mergedAt": "2026-09-11T06:34:42Z",
+      "labels": []
+    },
+    {
+      "number": 9610,
+      "title": "feat: KAT-11876 cross-location form list for Copy-from picker",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9610",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-08-24T10:32:52Z",
+      "mergedAt": "2026-09-11T06:28:27Z",
+      "labels": []
+    },
+    {
+      "number": 9874,
+      "title": "chore(sync): backport main to release — drop reverted SMS 21610 refactor",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9874",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-11T02:24:47Z",
+      "mergedAt": "2026-09-11T02:53:07Z",
+      "labels": []
+    },
+    {
+      "number": 9873,
+      "title": "Release v0.0.132 and revert SMS refactor changes",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9873",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-11T02:23:19Z",
+      "mergedAt": "2026-09-11T02:53:05Z",
+      "labels": []
+    },
+    {
+      "number": 9871,
+      "title": "adjust datePaid format",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9871",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-11T01:36:14Z",
+      "mergedAt": "2026-09-11T01:42:40Z",
+      "labels": []
+    },
+    {
+      "number": 9866,
+      "title": "feat: add shareUser in earning share",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9866",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-10T10:02:09Z",
+      "mergedAt": "2026-09-11T01:18:59Z",
+      "labels": []
+    },
+    {
+      "number": 9858,
+      "title": "feat(payout): sort pending earnings by created_at within same effective_time",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9858",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-10T05:16:20Z",
+      "mergedAt": "2026-09-11T01:17:54Z",
+      "labels": []
+    },
     {
       "number": 9868,
       "title": "style(event-report): extend Net Earnings highlight flush to the card edges",
@@ -3051,17 +3172,6 @@
       "labels": []
     },
     {
-      "number": 9419,
-      "title": "feat(sales): KAT-11671 — skip confirmation email for RSVP-only orders + show Free for zero-priced line items",
-      "author": "vanppo-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9419",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-11T10:24:47Z",
-      "mergedAt": "2026-08-12T01:23:46Z",
-      "labels": []
-    },
-    {
       "number": 9450,
       "title": "fix(sales): skip order confirmation email for RSVP-only orders (KAT-11671)",
       "author": "vanppo-1m",
@@ -3194,90 +3304,79 @@
       "labels": []
     },
     {
-      "number": 9436,
-      "title": "fix(email): restore missing 'is Here' suffix in merged event-ticket email subject",
+      "number": 9884,
+      "title": "feat(guests): paginate available-guests endpoint with excludeAdded and added-first ordering",
       "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9436",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-12T09:55:33Z",
-      "mergedAt": "2026-08-12T10:01:43Z",
-      "labels": []
-    },
-    {
-      "number": 9433,
-      "title": "fix(sales): distribute processing fees by commission net",
-      "author": "vanppo-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9433",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-12T07:46:46Z",
-      "mergedAt": "2026-08-12T08:24:34Z",
-      "labels": []
-    },
-    {
-      "number": 9432,
-      "title": "Enhance email resend functionality with jobName parameter",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9432",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-12T07:42:34Z",
-      "mergedAt": "2026-08-12T07:56:23Z",
-      "labels": []
-    },
-    {
-      "number": 9429,
-      "title": "Refactor event-summary interface to remove unused tip fields",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9429",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-12T04:09:28Z",
-      "mergedAt": "2026-08-12T04:18:42Z",
-      "labels": []
-    },
-    {
-      "number": 9427,
-      "title": "Revert \"Merge main to release (2026-08-11)\"",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9427",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-12T03:14:30Z",
-      "mergedAt": "2026-08-12T03:18:31Z",
-      "labels": []
-    },
-    {
-      "number": 9426,
-      "title": "fix(posts-admin): correct `links` DTO type from `IsObject` to `IsArray`",
-      "author": "chengmarket",
-      "url": "https://github.com/bosinc/katana-server/pull/9426",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-11T22:35:38Z",
-      "mergedAt": "2026-08-12T00:01:32Z",
-      "labels": []
-    },
-    {
-      "number": 9866,
-      "title": "feat: add shareUser in earning share",
-      "author": "liuleei",
-      "url": "https://github.com/bosinc/katana-server/pull/9866",
+      "url": "https://github.com/bosinc/katana-server/pull/9884",
       "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-09-10T10:02:09Z",
+      "createdAt": "2026-09-11T10:59:41Z",
       "mergedAt": null,
       "labels": []
     },
     {
-      "number": 9858,
-      "title": "feat(payout): sort pending earnings by created_at within same effective_time",
-      "author": "vanppo-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9858",
+      "number": 9882,
+      "title": "fix(guests): stabilize list pagination with unique id tiebreaker",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9882",
       "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-09-10T05:16:20Z",
+      "createdAt": "2026-09-11T09:35:19Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9881,
+      "title": "feat: customizable approve email header (KAT-12057. -9)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9881",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-11T08:53:33Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9880,
+      "title": "modify email tracking logic",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/9880",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-11T07:19:44Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9875,
+      "title": "feat(email): add View submitted info button to customer order confirmation",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9875",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-11T03:26:05Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9872,
+      "title": "fix(KAT-12010): add ORDER BY id to multi-row FOR UPDATE locks",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9872",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-11T01:55:00Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9870,
+      "title": "feat(export): add export module",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9870",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-11T01:34:19Z",
       "mergedAt": null,
       "labels": []
     },
@@ -3326,17 +3425,6 @@
       "labels": []
     },
     {
-      "number": 9610,
-      "title": "feat: KAT-11876 cross-location form list for Copy-from picker",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9610",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-24T10:32:52Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 9584,
       "title": "feat(KAT-11861): allow editing submitted form info per line item at checkout",
       "author": "junetengext-a11y",
@@ -3355,17 +3443,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-08-10T10:09:53Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9390,
-      "title": "feat(inclusions): snapshot OrderInclusion name at purchase + inclusion-level delete guard (KAT-10452, KAT-11885)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9390",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-08-10T01:36:27Z",
       "mergedAt": null,
       "labels": []
     },
