@@ -1,8 +1,74 @@
 {
-  "capturedAt": "2026-09-21T00:00:37.861Z",
+  "capturedAt": "2026-09-22T00:00:42.483Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 9989,
+      "title": "fix(event-report): hide zero-value rebate rows in the event report PDF",
+      "author": "chengmarket",
+      "url": "https://github.com/bosinc/katana-server/pull/9989",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-21T20:16:29Z",
+      "mergedAt": "2026-09-21T20:23:58Z",
+      "labels": []
+    },
+    {
+      "number": 9985,
+      "title": "Cap form-level title/subtitle/description/recipientEmail lengths",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/9985",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-21T09:04:24Z",
+      "mergedAt": "2026-09-21T09:27:22Z",
+      "labels": []
+    },
+    {
+      "number": 9981,
+      "title": "docs: fold .claude/rules into the CLAUDE.md files",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9981",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-21T07:57:01Z",
+      "mergedAt": "2026-09-21T09:20:12Z",
+      "labels": []
+    },
+    {
+      "number": 9984,
+      "title": "feat(store-front): sort module items in two sections by event date",
+      "author": "zhengchunzhou",
+      "url": "https://github.com/bosinc/katana-server/pull/9984",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-21T08:26:20Z",
+      "mergedAt": "2026-09-21T08:42:33Z",
+      "labels": []
+    },
+    {
+      "number": 9983,
+      "title": "Main",
+      "author": "lory-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9983",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-21T08:17:53Z",
+      "mergedAt": "2026-09-21T08:18:05Z",
+      "labels": []
+    },
+    {
+      "number": 9976,
+      "title": "fix(product-event): a half-created Event must not be publicly sellable",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9976",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-20T10:38:47Z",
+      "mergedAt": "2026-09-21T01:16:02Z",
+      "labels": []
+    },
     {
       "number": 9967,
       "title": "refactor(posts): one type chain for the post-detail responses (incl. one wire change)",
@@ -2919,6 +2985,50 @@
       "labels": []
     },
     {
+      "number": 9988,
+      "title": "chore(database): drop ShopStats and ShopStatsRefresh tables",
+      "author": "chengmarket",
+      "url": "https://github.com/bosinc/katana-server/pull/9988",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-21T18:47:39Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9987,
+      "title": "perf(nginx): per-client request rate limit, keyed on the real client IP",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/9987",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-21T11:19:14Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9982,
+      "title": "12090-P1-check",
+      "author": "Elin-Li-hub",
+      "url": "https://github.com/bosinc/katana-server/pull/9982",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-21T08:11:40Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 9980,
+      "title": "feat(product-event): venue-units export refinements + list search/map filters",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/9980",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-21T06:45:13Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
       "number": 9977,
       "title": "feat(product): product-level aggregated purchase limit (KAT-12041)",
       "author": "junetengext-a11y",
@@ -2926,17 +3036,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-09-20T11:19:21Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9976,
-      "title": "fix(product-event): a half-created Event must not be publicly sellable",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9976",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-09-20T10:38:47Z",
       "mergedAt": null,
       "labels": []
     },
