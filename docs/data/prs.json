@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-25T00:00:41.054Z",
+  "capturedAt": "2026-09-26T00:00:37.483Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
@@ -3007,127 +3007,6 @@
       "labels": []
     },
     {
-      "number": 9643,
-      "title": "fix(orders): return 403 Forbidden for unauthorized guest order access",
-      "author": "vanppo-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9643",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-26T09:12:16Z",
-      "mergedAt": "2026-08-26T09:21:47Z",
-      "labels": []
-    },
-    {
-      "number": 9642,
-      "title": "feat:add totalNonRsvpUnitsSold for financial report",
-      "author": "liuleei",
-      "url": "https://github.com/bosinc/katana-server/pull/9642",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-26T08:44:28Z",
-      "mergedAt": "2026-08-26T08:54:23Z",
-      "labels": []
-    },
-    {
-      "number": 9639,
-      "title": "revert(sms): restore SMS backoff initial delay to 24h after release testing",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9639",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-26T08:14:22Z",
-      "mergedAt": "2026-08-26T08:39:49Z",
-      "labels": []
-    },
-    {
-      "number": 9637,
-      "title": "fix(multi-day-pass): add expired flag to verification redemptions (KAT-11017)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9637",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-26T07:24:43Z",
-      "mergedAt": "2026-08-26T07:48:30Z",
-      "labels": []
-    },
-    {
-      "number": 9636,
-      "title": "Fix order success item alignment",
-      "author": "1m-binmax",
-      "url": "https://github.com/bosinc/katana-server/pull/9636",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-26T07:09:31Z",
-      "mergedAt": "2026-08-26T07:26:22Z",
-      "labels": []
-    },
-    {
-      "number": 9635,
-      "title": "fix(sms): temporarily change SMS backoff initial delay to 2 minutes f…",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9635",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-26T06:46:04Z",
-      "mergedAt": "2026-08-26T06:51:47Z",
-      "labels": []
-    },
-    {
-      "number": 9624,
-      "title": "Implement partner email sending quota management and APIs",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9624",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-25T08:33:43Z",
-      "mergedAt": "2026-08-26T06:44:41Z",
-      "labels": []
-    },
-    {
-      "number": 9634,
-      "title": "fix(multi-day-pass): expose order-side validity data FE can render (KAT-11017)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/9634",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-26T06:38:15Z",
-      "mergedAt": "2026-08-26T06:44:18Z",
-      "labels": []
-    },
-    {
-      "number": 9630,
-      "title": "fix: backoff TTL correction + follower SMS label filtering",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9630",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-26T03:23:52Z",
-      "mergedAt": "2026-08-26T04:13:53Z",
-      "labels": []
-    },
-    {
-      "number": 9631,
-      "title": "Feat/kat 11580#2",
-      "author": "liuleei",
-      "url": "https://github.com/bosinc/katana-server/pull/9631",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-26T03:52:46Z",
-      "mergedAt": "2026-08-26T04:08:46Z",
-      "labels": []
-    },
-    {
-      "number": 9628,
-      "title": "fix:mixed products post aff purchase failed",
-      "author": "liuleei",
-      "url": "https://github.com/bosinc/katana-server/pull/9628",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-08-25T11:11:27Z",
-      "mergedAt": "2026-08-26T02:05:05Z",
-      "labels": []
-    },
-    {
       "number": 10032,
       "title": "Feat/kat 11764 tax included in price",
       "author": "Elin-Li-hub",
@@ -3173,7 +3052,7 @@
     },
     {
       "number": 10006,
-      "title": "feat(platform-stats): detect a nightly rollup that logged success but never committed",
+      "title": "feat(platform-stats): detect failed nightly commits and reconcile the table weekly",
       "author": "chengmarket",
       "url": "https://github.com/bosinc/katana-server/pull/10006",
       "state": "open",
