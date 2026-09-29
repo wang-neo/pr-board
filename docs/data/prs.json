@@ -1,8 +1,129 @@
 {
-  "capturedAt": "2026-09-28T00:00:37.467Z",
+  "capturedAt": "2026-09-29T00:00:39.361Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 10054,
+      "title": "feat(venue-unit): AXS section association — hub-section list and venue-section binding",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/10054",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T10:36:16Z",
+      "mergedAt": "2026-09-28T10:56:23Z",
+      "labels": []
+    },
+    {
+      "number": 10052,
+      "title": "fix(purchase-approval): validate operator approvals through checkout",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10052",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T10:06:44Z",
+      "mergedAt": "2026-09-28T10:13:51Z",
+      "labels": []
+    },
+    {
+      "number": 10049,
+      "title": "feat(purchase-approval): shop-name sign-off in approval emails; test email from real event data",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10049",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T09:10:34Z",
+      "mergedAt": "2026-09-28T10:03:02Z",
+      "labels": []
+    },
+    {
+      "number": 10051,
+      "title": "fix(purchase-approval): set review timestamp for operator approvals",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10051",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T09:40:39Z",
+      "mergedAt": "2026-09-28T09:47:08Z",
+      "labels": []
+    },
+    {
+      "number": 10023,
+      "title": "feat(venue-unit): AXS section buying on a bound in-house venue map",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/10023",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-23T10:05:13Z",
+      "mergedAt": "2026-09-28T09:01:36Z",
+      "labels": []
+    },
+    {
+      "number": 10047,
+      "title": "Main 20260928",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10047",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T07:30:52Z",
+      "mergedAt": "2026-09-28T08:13:00Z",
+      "labels": []
+    },
+    {
+      "number": 10040,
+      "title": "test: stop shared-app mocks leaking between spec files in a fork",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10040",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T02:33:13Z",
+      "mergedAt": "2026-09-28T07:24:25Z",
+      "labels": []
+    },
+    {
+      "number": 10044,
+      "title": "feat(purchase-approval): operator-created approvals and admin venue units (KAT-12059)",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10044",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T05:37:13Z",
+      "mergedAt": "2026-09-28T06:53:01Z",
+      "labels": []
+    },
+    {
+      "number": 10043,
+      "title": "fix(product-event): reassign display fields + lockRows uuid casts",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10043",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T03:42:22Z",
+      "mergedAt": "2026-09-28T06:01:41Z",
+      "labels": []
+    },
+    {
+      "number": 10041,
+      "title": "feat(ticket-hub): alert ops when AXS shares a new offer with Pear",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10041",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T02:33:59Z",
+      "mergedAt": "2026-09-28T04:10:21Z",
+      "labels": []
+    },
+    {
+      "number": 10042,
+      "title": "fix(venue-unit): search matches combined first+last buyer name",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10042",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T02:43:21Z",
+      "mergedAt": "2026-09-28T02:51:05Z",
+      "labels": []
+    },
     {
       "number": 10026,
       "title": "feat(product-event): reassign units tool — backend (KAT-12070)",
@@ -2787,6 +2908,61 @@
       "labels": []
     },
     {
+      "number": 10057,
+      "title": "fix(logging): keep link tokens out of Meta CAPI and unmatched-route logs",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10057",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T14:10:58Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10056,
+      "title": "fix(auth): key the 15-minute sign-in lock on account and IP",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10056",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T14:00:27Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10055,
+      "title": "feat(venue-unit): hub binding info on consumer venue-map sections",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/10055",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T13:22:44Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10048,
+      "title": "feat(venue-unit): search box on reassign history (query param)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10048",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T08:54:15Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10045,
+      "title": "chore: format schema.prisma on pre-commit via lint-staged",
+      "author": "lory-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10045",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-09-28T06:44:25Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
       "number": 10032,
       "title": "Feat/kat 11764 tax included in price",
       "author": "Elin-Li-hub",
@@ -2798,19 +2974,8 @@
       "labels": []
     },
     {
-      "number": 10023,
-      "title": "feat(venue-unit): AXS section buying on a bound in-house venue map",
-      "author": "pengfei-wu-1mapp",
-      "url": "https://github.com/bosinc/katana-server/pull/10023",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-09-23T10:05:13Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 10016,
-      "title": "feat(posts): accept announcements on PATCH /posts/curator/:id/advanced",
+      "title": "feat(posts): accept announcements on PATCH /posts/curator/:id/advanced KAT-12127-No3",
       "author": "wang-neo",
       "url": "https://github.com/bosinc/katana-server/pull/10016",
       "state": "open",
