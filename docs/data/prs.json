@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-05T00:00:40.007Z",
+  "capturedAt": "2026-10-06T00:00:44.546Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
@@ -2476,6 +2476,28 @@
       "baseBranch": "release",
       "createdAt": "2026-09-04T05:58:34Z",
       "mergedAt": "2026-09-07T01:44:56Z",
+      "labels": []
+    },
+    {
+      "number": 10093,
+      "title": "perf(order-metrics): filter EarningShare before joining MerchantLineItem in earnings summary",
+      "author": "chengmarket",
+      "url": "https://github.com/bosinc/katana-server/pull/10093",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-10-05T20:20:23Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10092,
+      "title": "perf(orders): scope merchant order product-title search to the caller's merchants",
+      "author": "chengmarket",
+      "url": "https://github.com/bosinc/katana-server/pull/10092",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-10-05T18:43:52Z",
+      "mergedAt": null,
       "labels": []
     },
     {
