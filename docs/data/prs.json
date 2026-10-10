@@ -1,8 +1,107 @@
 {
-  "capturedAt": "2026-10-09T00:00:43.333Z",
+  "capturedAt": "2026-10-10T00:00:43.559Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 10093,
+      "title": "perf(order-metrics): filter EarningShare before joining MerchantLineItem in earnings summary",
+      "author": "chengmarket",
+      "url": "https://github.com/bosinc/katana-server/pull/10093",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-05T20:20:23Z",
+      "mergedAt": "2026-10-09T16:48:07Z",
+      "labels": []
+    },
+    {
+      "number": 10116,
+      "title": "fix(ticket-hub): skip catalog change alerts for test curators' events",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10116",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-09T07:41:32Z",
+      "mergedAt": "2026-10-09T09:06:53Z",
+      "labels": []
+    },
+    {
+      "number": 10117,
+      "title": "feat(venue-unit): sort reassign history assigns newest-first",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10117",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-09T08:22:21Z",
+      "mergedAt": "2026-10-09T08:33:08Z",
+      "labels": []
+    },
+    {
+      "number": 10114,
+      "title": "fix(venue-unit): stop stamping venue sections onto Product.ticketHubInfo",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10114",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-09T05:57:48Z",
+      "mergedAt": "2026-10-09T08:05:18Z",
+      "labels": []
+    },
+    {
+      "number": 10112,
+      "title": "fix(ticket-hub): say what a failing offer check announces later only when that is true",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10112",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-09T05:10:42Z",
+      "mergedAt": "2026-10-09T07:37:16Z",
+      "labels": []
+    },
+    {
+      "number": 10083,
+      "title": "fix(prometheus): stop active_http_requests gauge drifting negative",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10083",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-30T08:40:50Z",
+      "mergedAt": "2026-10-09T06:31:10Z",
+      "labels": []
+    },
+    {
+      "number": 10113,
+      "title": "删除无效配置",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10113",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-09T05:56:31Z",
+      "mergedAt": "2026-10-09T06:04:56Z",
+      "labels": []
+    },
+    {
+      "number": 10106,
+      "title": "feat(product-event): KAT-12070 reassign priceDelta becomes per-move to − from",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10106",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-08T10:20:58Z",
+      "mergedAt": "2026-10-09T02:07:35Z",
+      "labels": []
+    },
+    {
+      "number": 10062,
+      "title": "Feat/kat 11739 distribute order rebate",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10062",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-09-29T07:06:21Z",
+      "mergedAt": "2026-10-09T01:31:22Z",
+      "labels": []
+    },
     {
       "number": 10092,
       "title": "perf(orders): scope merchant order product-title search to the caller's merchants",
@@ -2017,222 +2116,24 @@
       "labels": []
     },
     {
-      "number": 9840,
-      "title": "feat(purchase-approval): show applicant's table unit in waitlist review and emails KAT-12020 No.12",
+      "number": 10120,
+      "title": "fix(product-event): keep ticket galleries in sync with event flyer",
       "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/9840",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-09T07:54:09Z",
-      "mergedAt": "2026-09-09T10:22:23Z",
-      "labels": []
-    },
-    {
-      "number": 9814,
-      "title": "refactor(posts): bind EVENT_POSTS_PORT in a @Global EventPostsPortModule so ProductEventModule stops importing PostsModule",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9814",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T09:47:26Z",
-      "mergedAt": "2026-09-09T09:55:42Z",
-      "labels": []
-    },
-    {
-      "number": 9807,
-      "title": "refactor(product-event): remove the deprecated POST /product-event/v2/preview-post",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9807",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T08:08:55Z",
-      "mergedAt": "2026-09-09T09:48:48Z",
-      "labels": []
-    },
-    {
-      "number": 9837,
-      "title": "refactor(logging): delivery and attribution records go to stdout too",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9837",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-09T04:10:48Z",
-      "mergedAt": "2026-09-09T09:11:19Z",
-      "labels": []
-    },
-    {
-      "number": 9832,
-      "title": "refactor(logging): logs go to stdout, not Mongo",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9832",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T16:49:14Z",
-      "mergedAt": "2026-09-09T09:04:15Z",
-      "labels": []
-    },
-    {
-      "number": 9802,
-      "title": "fix(shipping): add the one-default-per-catalog index (hold until #9792 is deployed)",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9802",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T04:00:26Z",
-      "mergedAt": "2026-09-09T08:59:23Z",
-      "labels": []
-    },
-    {
-      "number": 9842,
-      "title": "ci: run the AppModule DI spec in its own vitest invocation",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9842",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-09T08:36:28Z",
-      "mergedAt": "2026-09-09T08:52:37Z",
-      "labels": []
-    },
-    {
-      "number": 9772,
-      "title": "Reapply code fomatter",
-      "author": "lory-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9772",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-04T09:20:43Z",
-      "mergedAt": "2026-09-09T06:50:05Z",
-      "labels": []
-    },
-    {
-      "number": 9821,
-      "title": "Lint the whole codebase",
-      "author": "lory-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9821",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T10:57:21Z",
-      "mergedAt": "2026-09-09T06:50:03Z",
-      "labels": []
-    },
-    {
-      "number": 9823,
-      "title": "test: run order associations inline in the two e2e specs that were missing it",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9823",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T11:21:35Z",
-      "mergedAt": "2026-09-09T04:49:49Z",
-      "labels": []
-    },
-    {
-      "number": 9829,
-      "title": "ci: ratchet the warn-level cycle count and compile the real AppModule in CI",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9829",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T15:33:40Z",
-      "mergedAt": "2026-09-09T03:22:34Z",
-      "labels": []
-    },
-    {
-      "number": 9828,
-      "title": "refactor: close pair posts ↔ product-event; no grandfather list",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9828",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T15:02:26Z",
-      "mergedAt": "2026-09-09T03:15:38Z",
-      "labels": []
-    },
-    {
-      "number": 9827,
-      "title": "refactor: drop the 14 forwardRef() wrappers whose target module can no longer reach back",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9827",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T14:37:46Z",
-      "mergedAt": "2026-09-09T03:08:19Z",
-      "labels": []
-    },
-    {
-      "number": 9826,
-      "title": "refactor: close pairs #4 and #6 (product-event/posts ↔ products); no grandfather lists",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9826",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T13:33:46Z",
-      "mergedAt": "2026-09-09T03:01:44Z",
-      "labels": []
-    },
-    {
-      "number": 9825,
-      "title": "refactor(user): remove the last five user → domain edges; user-no-import-domain has no exemptions",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9825",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T12:32:52Z",
-      "mergedAt": "2026-09-09T02:47:50Z",
-      "labels": []
-    },
-    {
-      "number": 9822,
-      "title": "refactor(user): route UserController's domain services through user-owned ports so UsersModule imports nothing",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9822",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T11:10:45Z",
-      "mergedAt": "2026-09-09T02:39:16Z",
-      "labels": []
-    },
-    {
-      "number": 9818,
-      "title": "refactor(user): stop importing domain modules from user.interface",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9818",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T10:24:20Z",
-      "mergedAt": "2026-09-09T02:32:38Z",
-      "labels": []
-    },
-    {
-      "number": 9798,
-      "title": "Feat/kat 11832 list balance transactions",
-      "author": "liuleei",
-      "url": "https://github.com/bosinc/katana-server/pull/9798",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T03:21:46Z",
-      "mergedAt": "2026-09-09T01:23:24Z",
-      "labels": []
-    },
-    {
-      "number": 9834,
-      "title": "chore(web-scraper): remove the shotgun importer and Browserless",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9834",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-08T18:52:15Z",
-      "mergedAt": "2026-09-09T01:10:20Z",
-      "labels": []
-    },
-    {
-      "number": 10106,
-      "title": "feat(product-event): KAT-12070 reassign priceDelta becomes per-move to − from",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10106",
+      "url": "https://github.com/bosinc/katana-server/pull/10120",
       "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-10-08T10:20:58Z",
+      "createdAt": "2026-10-09T11:09:28Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10119,
+      "title": "feat(venue-unit): add form-field columns to units list (KAT-12512)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10119",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-10-09T11:01:57Z",
       "mergedAt": null,
       "labels": []
     },
@@ -2248,17 +2149,6 @@
       "labels": []
     },
     {
-      "number": 10093,
-      "title": "perf(order-metrics): filter EarningShare before joining MerchantLineItem in earnings summary",
-      "author": "chengmarket",
-      "url": "https://github.com/bosinc/katana-server/pull/10093",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-05T20:20:23Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 10086,
       "title": "Feat/kat 11764 tax combined",
       "author": "Elin-Li-hub",
@@ -2266,17 +2156,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-09-30T09:18:58Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10083,
-      "title": "fix(prometheus): stop active_http_requests gauge drifting negative",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10083",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-09-30T08:40:50Z",
       "mergedAt": null,
       "labels": []
     },
@@ -2292,17 +2171,6 @@
       "labels": []
     },
     {
-      "number": 10062,
-      "title": "Feat/kat 11739 distribute order rebate",
-      "author": "vanppo-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10062",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-09-29T07:06:21Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 10045,
       "title": "chore: format schema.prisma on pre-commit via lint-staged",
       "author": "lory-1m",
@@ -2310,17 +2178,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-09-28T06:44:25Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 9992,
-      "title": "docs(product-event): review follow-ups for venue-units filters (comments + totalCount assertions)",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/9992",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-09-22T04:03:40Z",
       "mergedAt": null,
       "labels": []
     },
@@ -2420,17 +2277,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-07-13T04:31:44Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 8927,
-      "title": "fix(product-event): exclude empty-string descriptions in hasDescripti…",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/8927",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-07-06T01:09:50Z",
       "mergedAt": null,
       "labels": []
     },
