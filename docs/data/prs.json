@@ -1,8 +1,129 @@
 {
-  "capturedAt": "2026-10-13T00:00:43.532Z",
+  "capturedAt": "2026-10-14T00:00:44.822Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 10165,
+      "title": "ci: fail a PR that raises a ratchet baseline",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10165",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-13T09:14:29Z",
+      "mergedAt": "2026-10-13T09:33:20Z",
+      "labels": []
+    },
+    {
+      "number": 10162,
+      "title": "fix(venue-unit): dedupe units-page form columns by fieldId after title edits",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10162",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-13T08:26:59Z",
+      "mergedAt": "2026-10-13T09:11:41Z",
+      "labels": []
+    },
+    {
+      "number": 10158,
+      "title": "feat: add post content editor education guide (KAT-10793)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/10158",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-13T07:42:47Z",
+      "mergedAt": "2026-10-13T08:49:53Z",
+      "labels": []
+    },
+    {
+      "number": 10157,
+      "title": "chore: drop no-op email normalisation on stored User.email and dead code",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10157",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-13T07:17:31Z",
+      "mergedAt": "2026-10-13T08:35:52Z",
+      "labels": []
+    },
+    {
+      "number": 10156,
+      "title": "fix(purchase-approval): hold the checkout-rebuild lock on the base client",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10156",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-13T07:17:24Z",
+      "mergedAt": "2026-10-13T08:35:47Z",
+      "labels": []
+    },
+    {
+      "number": 10160,
+      "title": "Hotfix/custom price allow retail price",
+      "author": "menzies9527",
+      "url": "https://github.com/bosinc/katana-server/pull/10160",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-13T07:57:46Z",
+      "mergedAt": "2026-10-13T08:19:38Z",
+      "labels": []
+    },
+    {
+      "number": 10154,
+      "title": "fix: stop orphaning orders on guest checkout and guest-order claims",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10154",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-13T05:03:39Z",
+      "mergedAt": "2026-10-13T06:35:03Z",
+      "labels": []
+    },
+    {
+      "number": 10146,
+      "title": "feat：custom price support app terminal",
+      "author": "menzies9527",
+      "url": "https://github.com/bosinc/katana-server/pull/10146",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-12T08:47:35Z",
+      "mergedAt": "2026-10-13T06:20:07Z",
+      "labels": []
+    },
+    {
+      "number": 10150,
+      "title": "feat(products): add terminal post visibility and fix shared Web/App boolean validation",
+      "author": "1m-binmax",
+      "url": "https://github.com/bosinc/katana-server/pull/10150",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-13T02:36:46Z",
+      "mergedAt": "2026-10-13T05:58:10Z",
+      "labels": []
+    },
+    {
+      "number": 10139,
+      "title": "refactor(feature-setting): remove deprecated EDU flows and unused signup enums",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10139",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-12T04:32:49Z",
+      "mergedAt": "2026-10-13T05:55:29Z",
+      "labels": []
+    },
+    {
+      "number": 10147,
+      "title": "fix(feature-setting): make ConsumerSetting inserts race-safe and unique",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10147",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-12T09:56:10Z",
+      "mergedAt": "2026-10-13T01:39:55Z",
+      "labels": []
+    },
     {
       "number": 10142,
       "title": "Feat/kat 12080 custom price 4 app",
@@ -2017,6 +2138,50 @@
       "labels": []
     },
     {
+      "number": 10167,
+      "title": "fix(venue-unit): same-titled form fields split into one column per fieldId",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10167",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-10-13T10:30:24Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10159,
+      "title": "feat(auth): add one-time App to Web Post handoff",
+      "author": "1m-binmax",
+      "url": "https://github.com/bosinc/katana-server/pull/10159",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-10-13T07:43:34Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10155,
+      "title": "feat(ticket-hub): AXS pick-a-seat plumbing — seat capability, seat-li…",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/10155",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-10-13T07:02:08Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10153,
+      "title": "feat(KAT-11764): support tax-inclusive pricing and custom tax fees",
+      "author": "lory-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10153",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-10-13T04:38:48Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
       "number": 10149,
       "title": "fix(follower-import): dedup against existing accounts + Follower unique index (KAT-11789)",
       "author": "junetengext-a11y",
@@ -2028,28 +2193,6 @@
       "labels": []
     },
     {
-      "number": 10147,
-      "title": "fix(feature-setting): make ConsumerSetting inserts race-safe and unique",
-      "author": "zhiwenzhuext",
-      "url": "https://github.com/bosinc/katana-server/pull/10147",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-12T09:56:10Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10146,
-      "title": "Revert \"customePrice:exclude wholesale price\"",
-      "author": "menzies9527",
-      "url": "https://github.com/bosinc/katana-server/pull/10146",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-12T08:47:35Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 10143,
       "title": "fix(auth): distinguish refresh failures with error codes",
       "author": "jaycechenex",
@@ -2057,17 +2200,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-10-12T07:59:39Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10139,
-      "title": "refactor(feature-setting): remove deprecated EDU flows and unused signup enums",
-      "author": "zhiwenzhuext",
-      "url": "https://github.com/bosinc/katana-server/pull/10139",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-12T04:32:49Z",
       "mergedAt": null,
       "labels": []
     },
