@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-18T00:00:43.588Z",
+  "capturedAt": "2026-10-19T00:00:42.766Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
@@ -2039,135 +2039,14 @@
       "labels": []
     },
     {
-      "number": 9960,
-      "title": "feat(venue-unit): price variant slots at retail (KAT-11818)",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/9960",
-      "state": "merged",
+      "number": 10227,
+      "title": "Feat/axs by seat",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/10227",
+      "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-09-18T10:47:41Z",
-      "mergedAt": "2026-09-18T10:57:11Z",
-      "labels": []
-    },
-    {
-      "number": 9957,
-      "title": "feat(purchase-approval): expose buyer email/phone in purchaseInfo",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/9957",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-18T09:22:45Z",
-      "mergedAt": "2026-09-18T09:32:43Z",
-      "labels": []
-    },
-    {
-      "number": 9956,
-      "title": "fix(posts): resolve contactEmail on the curator preview response",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9956",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-18T09:13:35Z",
-      "mergedAt": "2026-09-18T09:17:11Z",
-      "labels": []
-    },
-    {
-      "number": 9952,
-      "title": "fix(posts): return contactEmail from every post-detail surface",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9952",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-18T08:35:29Z",
-      "mergedAt": "2026-09-18T08:48:18Z",
-      "labels": []
-    },
-    {
-      "number": 9950,
-      "title": "feat(venue-unit): add unit-level buyerName/buyerLogo to event venue-units API",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/9950",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-18T07:32:32Z",
-      "mergedAt": "2026-09-18T08:40:29Z",
-      "labels": []
-    },
-    {
-      "number": 9948,
-      "title": "fix(cart): surface rowless PEAR seat numbers on GET /cart.  KAT-12121",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/9948",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-18T06:26:49Z",
-      "mergedAt": "2026-09-18T08:39:51Z",
-      "labels": []
-    },
-    {
-      "number": 9949,
-      "title": "feat(promotions): expose the sold seat per ticket unit on the promotion order list",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9949",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-18T07:25:39Z",
-      "mergedAt": "2026-09-18T08:14:31Z",
-      "labels": []
-    },
-    {
-      "number": 9946,
-      "title": "feat(posts): let a post customize the contact email at its footer",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9946",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-18T03:23:35Z",
-      "mergedAt": "2026-09-18T05:03:09Z",
-      "labels": []
-    },
-    {
-      "number": 9945,
-      "title": "feat(venue-map): force-show buyer info via showBuyerInfo query param",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/9945",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-18T02:46:06Z",
-      "mergedAt": "2026-09-18T03:14:57Z",
-      "labels": []
-    },
-    {
-      "number": 9934,
-      "title": "fix(app-terminal): allow co-host to create guest with eventId",
-      "author": "1m-binmax",
-      "url": "https://github.com/bosinc/katana-server/pull/9934",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-17T09:09:29Z",
-      "mergedAt": "2026-09-18T02:08:10Z",
-      "labels": []
-    },
-    {
-      "number": 9921,
-      "title": "feat(sms): add shadow mode and Hub routing infrastructure for SMS migration",
-      "author": "zhengchunzhou",
-      "url": "https://github.com/bosinc/katana-server/pull/9921",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-16T10:25:42Z",
-      "mergedAt": "2026-09-18T01:30:27Z",
-      "labels": []
-    },
-    {
-      "number": 9943,
-      "title": "feat: remove processing fees (KAT-12103)",
-      "author": "vanppo-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/9943",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-17T10:43:02Z",
-      "mergedAt": "2026-09-18T01:14:37Z",
+      "createdAt": "2026-10-18T14:16:44Z",
+      "mergedAt": null,
       "labels": []
     },
     {
