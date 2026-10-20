@@ -1,8 +1,184 @@
 {
-  "capturedAt": "2026-10-19T00:00:42.766Z",
+  "capturedAt": "2026-10-20T00:00:42.419Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 10225,
+      "title": "perf(app-terminal): replace on-site sales product filter with raw SQL",
+      "author": "chengmarket",
+      "url": "https://github.com/bosinc/katana-server/pull/10225",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-16T18:54:51Z",
+      "mergedAt": "2026-10-19T18:03:43Z",
+      "labels": []
+    },
+    {
+      "number": 10244,
+      "title": "fix(auth): an order-login claim moves every guest order the caller could claim",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10244",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T09:56:57Z",
+      "mergedAt": "2026-10-19T11:03:24Z",
+      "labels": []
+    },
+    {
+      "number": 10243,
+      "title": "feat:check amount off coupons conflict with products owned by another…",
+      "author": "Elin-Li-hub",
+      "url": "https://github.com/bosinc/katana-server/pull/10243",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T09:31:58Z",
+      "mergedAt": "2026-10-19T09:51:39Z",
+      "labels": []
+    },
+    {
+      "number": 10239,
+      "title": "refactor: remove MongoDB from katana-server",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10239",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T06:45:24Z",
+      "mergedAt": "2026-10-19T09:50:56Z",
+      "labels": []
+    },
+    {
+      "number": 10240,
+      "title": "feat(sms): add controlled Hub routing and fix unit test isolation",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10240",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T07:13:00Z",
+      "mergedAt": "2026-10-19T07:27:41Z",
+      "labels": []
+    },
+    {
+      "number": 10232,
+      "title": "feat(app-terminal): add shopConfig to merchant settings",
+      "author": "1m-binmax",
+      "url": "https://github.com/bosinc/katana-server/pull/10232",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T02:28:59Z",
+      "mergedAt": "2026-10-19T05:32:04Z",
+      "labels": []
+    },
+    {
+      "number": 10235,
+      "title": "chore(sync): backport main → release (release→main conflicts in 1 files)",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/bosinc/katana-server/pull/10235",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T03:44:42Z",
+      "mergedAt": "2026-10-19T03:56:19Z",
+      "labels": []
+    },
+    {
+      "number": 10221,
+      "title": "feat(app-terminal): support Post media, Customize, Settings and Tools",
+      "author": "1m-binmax",
+      "url": "https://github.com/bosinc/katana-server/pull/10221",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-16T08:29:29Z",
+      "mergedAt": "2026-10-19T03:46:38Z",
+      "labels": []
+    },
+    {
+      "number": 10217,
+      "title": "feat(app-terminal): add Co-selling downstream management APIs",
+      "author": "1m-binmax",
+      "url": "https://github.com/bosinc/katana-server/pull/10217",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-16T06:13:16Z",
+      "mergedAt": "2026-10-19T03:25:21Z",
+      "labels": []
+    },
+    {
+      "number": 10233,
+      "title": "Feat/kat 12058 release",
+      "author": "menzies9527",
+      "url": "https://github.com/bosinc/katana-server/pull/10233",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T02:33:59Z",
+      "mergedAt": "2026-10-19T03:00:08Z",
+      "labels": []
+    },
+    {
+      "number": 10222,
+      "title": "perf(ci): remove redundant setup and dependency analysis",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10222",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-16T08:31:05Z",
+      "mergedAt": "2026-10-19T02:49:14Z",
+      "labels": []
+    },
+    {
+      "number": 10231,
+      "title": "Revert \"fix(email): update third-party order confirmation copy (KAT-12193)\"",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/10231",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T02:12:04Z",
+      "mergedAt": "2026-10-19T02:20:13Z",
+      "labels": []
+    },
+    {
+      "number": 10229,
+      "title": "Revert \"fix(email): use dynamic third-party delivery notes (KAT-12193)\"",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/10229",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T01:26:21Z",
+      "mergedAt": "2026-10-19T01:58:39Z",
+      "labels": []
+    },
+    {
+      "number": 10213,
+      "title": "fix(email): update third-party order confirmation copy (KAT-12193)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/10213",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-16T03:55:53Z",
+      "mergedAt": "2026-10-16T04:04:52Z",
+      "labels": []
+    },
+    {
+      "number": 10163,
+      "title": "Cache TaxJar tax rates",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10163",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-13T08:27:53Z",
+      "mergedAt": "2026-10-19T01:22:06Z",
+      "labels": []
+    },
+    {
+      "number": 10201,
+      "title": "Feat/kat 12116 threshold discount",
+      "author": "Elin-Li-hub",
+      "url": "https://github.com/bosinc/katana-server/pull/10201",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-15T09:32:29Z",
+      "mergedAt": "2026-10-19T01:10:05Z",
+      "labels": []
+    },
     {
       "number": 10224,
       "title": "fix(email): use dynamic third-party delivery notes (KAT-12193)",
@@ -89,17 +265,6 @@
       "baseBranch": "release",
       "createdAt": "2026-10-10T02:07:23Z",
       "mergedAt": "2026-10-16T05:07:06Z",
-      "labels": []
-    },
-    {
-      "number": 10213,
-      "title": "fix(email): update third-party order confirmation copy (KAT-12193)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/10213",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-16T03:55:53Z",
-      "mergedAt": "2026-10-16T04:04:52Z",
       "labels": []
     },
     {
@@ -2039,6 +2204,61 @@
       "labels": []
     },
     {
+      "number": 10245,
+      "title": "feat: define pending balance ledger P1 design",
+      "author": "menzies9527",
+      "url": "https://github.com/bosinc/katana-server/pull/10245",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T10:10:54Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10238,
+      "title": "Feat/kat 12211 main",
+      "author": "liuleei",
+      "url": "https://github.com/bosinc/katana-server/pull/10238",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T05:58:23Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10237,
+      "title": "feat(purchase-approval): reserve inventory for approved links",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10237",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T05:46:25Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10236,
+      "title": "feat(posts): hide html-only version-history snapshots (KAT-11811)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10236",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T05:38:37Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10230,
+      "title": "Revert \"fix(email): use dynamic third-party delivery notes (KAT-12193)\"",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/10230",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-10-19T02:08:02Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
       "number": 10227,
       "title": "Feat/axs by seat",
       "author": "pengfei-wu-1mapp",
@@ -2050,39 +2270,6 @@
       "labels": []
     },
     {
-      "number": 10225,
-      "title": "perf(app-terminal): replace on-site sales product filter with raw SQL",
-      "author": "chengmarket",
-      "url": "https://github.com/bosinc/katana-server/pull/10225",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-16T18:54:51Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10222,
-      "title": "perf(ci): remove redundant setup and dependency analysis",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10222",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-16T08:31:05Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10221,
-      "title": "feat(app-terminal): support Post media, Customize, Settings and Tools",
-      "author": "1m-binmax",
-      "url": "https://github.com/bosinc/katana-server/pull/10221",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-16T08:29:29Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 10220,
       "title": "fix(posts): preserve downstream Reset media and text consistency",
       "author": "1m-binmax",
@@ -2090,28 +2277,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-10-16T07:58:26Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10217,
-      "title": "feat(app-terminal): add Co-selling downstream management APIs",
-      "author": "1m-binmax",
-      "url": "https://github.com/bosinc/katana-server/pull/10217",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-16T06:13:16Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10201,
-      "title": "Feat/kat 12116 threshold discount",
-      "author": "Elin-Li-hub",
-      "url": "https://github.com/bosinc/katana-server/pull/10201",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-15T09:32:29Z",
       "mergedAt": null,
       "labels": []
     },
@@ -2134,17 +2299,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-10-14T22:06:14Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10163,
-      "title": "Cache TaxJar tax rates",
-      "author": "vanppo-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10163",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-13T08:27:53Z",
       "mergedAt": null,
       "labels": []
     },
