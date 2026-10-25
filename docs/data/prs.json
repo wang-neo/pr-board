@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-24T00:00:44.108Z",
+  "capturedAt": "2026-10-25T00:00:43.108Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
@@ -2193,135 +2193,14 @@
       "labels": []
     },
     {
-      "number": 10026,
-      "title": "feat(product-event): reassign units tool — backend (KAT-12070)",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10026",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-23T15:22:11Z",
-      "mergedAt": "2026-09-24T10:33:03Z",
-      "labels": []
-    },
-    {
-      "number": 10037,
-      "title": "Main - to -release",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10037",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-24T10:19:46Z",
-      "mergedAt": "2026-09-24T10:31:16Z",
-      "labels": []
-    },
-    {
-      "number": 10036,
+      "number": 10334,
       "title": "chore(sync): backport main → release (release→main conflicts in 1 files)",
       "author": "github-actions[bot]",
-      "url": "https://github.com/bosinc/katana-server/pull/10036",
-      "state": "merged",
+      "url": "https://github.com/bosinc/katana-server/pull/10334",
+      "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-09-24T09:25:34Z",
-      "mergedAt": "2026-09-24T10:31:17Z",
-      "labels": []
-    },
-    {
-      "number": 10035,
-      "title": "fix(ticket-hub): move poster-flagged ticket covers along on Re-sync",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10035",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-24T09:21:43Z",
-      "mergedAt": "2026-09-24T10:11:01Z",
-      "labels": []
-    },
-    {
-      "number": 10034,
-      "title": "fix(products): keep a ticket's cover on updates that do not touch images",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10034",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-24T09:06:38Z",
-      "mergedAt": "2026-09-24T10:10:55Z",
-      "labels": []
-    },
-    {
-      "number": 10029,
-      "title": "fix(ticket-hub): follow re-issued hub tickets and alert on catalog changes",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10029",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-24T02:52:54Z",
-      "mergedAt": "2026-09-24T08:07:21Z",
-      "labels": []
-    },
-    {
-      "number": 10018,
-      "title": "feat(product-event): event editor round-trips purchaseRequirementMode (KAT-12041)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/10018",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-23T09:20:06Z",
-      "mergedAt": "2026-09-24T07:07:59Z",
-      "labels": []
-    },
-    {
-      "number": 10030,
-      "title": "fix(purchase-approval): consumer detail settings + decline email post-title fallback",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10030",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-24T05:05:38Z",
-      "mergedAt": "2026-09-24T06:33:30Z",
-      "labels": []
-    },
-    {
-      "number": 10031,
-      "title": "fix(transaction-group): merge rows within 5s during backfill grouping",
-      "author": "vanppo-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10031",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-24T05:29:58Z",
-      "mergedAt": "2026-09-24T06:27:02Z",
-      "labels": []
-    },
-    {
-      "number": 10028,
-      "title": "refactor(sales): drop processing fee columns (KAT-12103)",
-      "author": "vanppo-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10028",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-24T02:39:01Z",
-      "mergedAt": "2026-09-24T02:54:37Z",
-      "labels": []
-    },
-    {
-      "number": 10021,
-      "title": "Add App Terminal waitlist approval detail endpoint",
-      "author": "1m-binmax",
-      "url": "https://github.com/bosinc/katana-server/pull/10021",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-23T09:47:15Z",
-      "mergedAt": "2026-09-24T02:45:03Z",
-      "labels": []
-    },
-    {
-      "number": 10019,
-      "title": "fix(auth): rate-limit verification codes, reset SMS and failed sign-ins; trust only the LB-appended client IP",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10019",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-23T09:24:15Z",
-      "mergedAt": "2026-09-24T01:40:04Z",
+      "createdAt": "2026-10-24T02:47:06Z",
+      "mergedAt": null,
       "labels": []
     },
     {
