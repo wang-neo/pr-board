@@ -1,8 +1,30 @@
 {
-  "capturedAt": "2026-10-31T00:00:38.858Z",
+  "capturedAt": "2026-11-01T00:00:40.832Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 10252,
+      "title": "feat(posts): add self-contained v2 read views (KAT-11986)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/10252",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-20T08:39:39Z",
+      "mergedAt": "2026-10-31T17:46:42Z",
+      "labels": []
+    },
+    {
+      "number": 10261,
+      "title": "feat(isr): wire durable invalidation and build prerendering (KAT-11881)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/10261",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-21T01:15:23Z",
+      "mergedAt": "2026-10-31T17:20:33Z",
+      "labels": []
+    },
     {
       "number": 10399,
       "title": "feat(payout): admin payout-accounts summary and positive/negative lists (KAT-12326)",
@@ -3179,28 +3201,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-10-23T02:41:32Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10261,
-      "title": "feat(isr): wire durable invalidation and build prerendering (KAT-11881)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/10261",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-21T01:15:23Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10252,
-      "title": "feat(posts): add self-contained v2 read views (KAT-11986)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/10252",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-20T08:39:39Z",
       "mergedAt": null,
       "labels": []
     },
