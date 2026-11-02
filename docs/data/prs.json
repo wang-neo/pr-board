@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-01T00:00:40.832Z",
+  "capturedAt": "2026-11-02T00:00:41.539Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
@@ -3114,6 +3114,17 @@
       "baseBranch": "release",
       "createdAt": "2026-09-29T09:22:06Z",
       "mergedAt": "2026-10-08T02:04:13Z",
+      "labels": []
+    },
+    {
+      "number": 10482,
+      "title": "fix(checkout): reuse matching drafts on cart reentry",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10482",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-01T12:00:28Z",
+      "mergedAt": null,
       "labels": []
     },
     {
