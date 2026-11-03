@@ -1,8 +1,74 @@
 {
-  "capturedAt": "2026-11-02T00:00:41.539Z",
+  "capturedAt": "2026-11-03T00:00:43.979Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 10501,
+      "title": "fix(release): restore changes removed by main sync #10493",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10501",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-02T11:27:06Z",
+      "mergedAt": "2026-11-02T11:41:01Z",
+      "labels": []
+    },
+    {
+      "number": 10500,
+      "title": "feat(email): send purchase-link and ticket emails from the shop's sender email (KAT-12461)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10500",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-02T11:14:48Z",
+      "mergedAt": "2026-11-02T11:33:53Z",
+      "labels": []
+    },
+    {
+      "number": 10493,
+      "title": "Main",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10493",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-02T06:24:06Z",
+      "mergedAt": "2026-11-02T10:34:43Z",
+      "labels": []
+    },
+    {
+      "number": 10491,
+      "title": "chore: remove review tooling artifacts and relocate process docs",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/10491",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-02T04:22:41Z",
+      "mergedAt": "2026-11-02T07:28:43Z",
+      "labels": []
+    },
+    {
+      "number": 10471,
+      "title": "fix(metrics): expose Post payment status and restocked refund/cancel counts",
+      "author": "1m-binmax",
+      "url": "https://github.com/bosinc/katana-server/pull/10471",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-30T09:15:26Z",
+      "mergedAt": "2026-11-02T02:02:15Z",
+      "labels": []
+    },
+    {
+      "number": 10481,
+      "title": "chore(sync): backport main → release (release→main conflicts in 13 files)",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/bosinc/katana-server/pull/10481",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-30T13:59:25Z",
+      "mergedAt": "2026-11-02T01:25:06Z",
+      "labels": []
+    },
     {
       "number": 10252,
       "title": "feat(posts): add self-contained v2 read views (KAT-11986)",
@@ -3117,6 +3183,61 @@
       "labels": []
     },
     {
+      "number": 10497,
+      "title": "fix: stop applying sample purchase discounts",
+      "author": "menzies9527",
+      "url": "https://github.com/bosinc/katana-server/pull/10497",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-02T09:32:54Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10496,
+      "title": "chore(sync): realign release to post-revert main (ISR re-lands follow)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/10496",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-02T09:06:02Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10495,
+      "title": "feat(KAT-12409):add order data check job",
+      "author": "zephyr-zhaotianyu",
+      "url": "https://github.com/bosinc/katana-server/pull/10495",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-02T08:44:26Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10492,
+      "title": "feat(purchase-approval): add expiry filters and atomic batch actions",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10492",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-02T04:29:26Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10485,
+      "title": "fix(purchase-approval): keep DRAFT event tickets in product scopes on post edits",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/10485",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-02T02:50:55Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
       "number": 10482,
       "title": "fix(checkout): reuse matching drafts on cart reentry",
       "author": "wang-neo",
@@ -3128,17 +3249,6 @@
       "labels": []
     },
     {
-      "number": 10481,
-      "title": "chore(sync): backport main → release (release→main conflicts in 13 files)",
-      "author": "github-actions[bot]",
-      "url": "https://github.com/bosinc/katana-server/pull/10481",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-30T13:59:25Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 10474,
       "title": "fix(venue-map): preserve own checkout seat availability",
       "author": "wang-neo",
@@ -3146,17 +3256,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-10-30T10:02:17Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10471,
-      "title": "fix(metrics): expose Post payment status and restocked refund/cancel counts",
-      "author": "1m-binmax",
-      "url": "https://github.com/bosinc/katana-server/pull/10471",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-30T09:15:26Z",
       "mergedAt": null,
       "labels": []
     },
