@@ -1,0 +1,7 @@
+🚀 *Release ready for review (For 2026.11.09 release)*
+Code freeze: 2026-11-06 18:53 (UTC+8)
+Please confirm your code is included in the release PR(s):
+• katana-server v0.0.160 — https://github.com/bosinc/katana-server/pull/10630 (wang-neo, Neo, 1m-binmax, wenbinmaext-create, wenbin.ma, feng-1m, Menzies-Xiang, Menzies, chengmarket, Elin-Li-hub, Elin, liuleei, pengfei-wu-1mapp)
+• katana-admin-server v0.0.105 — https://github.com/bosinc/katana-admin-server/pull/2242 (wang-neo, pengfei-wu-1mapp, wenbinmaext-create, wenbin.ma, feng-1m)
+If your change is missing, cherry-pick it onto the release branch.
+<@U09V7PB93QE> <@U0CC3NLEXKK> <@U032U20S77F> <@U0BUR2NV01J> <@U04LGTGQT33> <@U0BRJBZPKC4> <@U0B1ERGM8RM> <@U0B5TRGAKK7>
