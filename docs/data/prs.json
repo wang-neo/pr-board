@@ -1,8 +1,129 @@
 {
-  "capturedAt": "2026-11-06T00:00:43.474Z",
+  "capturedAt": "2026-11-07T00:00:43.022Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 10628,
+      "title": "chore(release): resolve merge conflicts (2026-11-06)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10628",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-06T10:29:17Z",
+      "mergedAt": "2026-11-06T10:47:20Z",
+      "labels": []
+    },
+    {
+      "number": 10629,
+      "title": "chore(sync): backport main → release (release→main conflicts in 1 files)",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/bosinc/katana-server/pull/10629",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-06T10:43:17Z",
+      "mergedAt": "2026-11-06T10:47:17Z",
+      "labels": []
+    },
+    {
+      "number": 10602,
+      "title": "feat(venue-map): support root-level Area inventory",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10602",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-05T08:47:59Z",
+      "mergedAt": "2026-11-06T08:19:59Z",
+      "labels": []
+    },
+    {
+      "number": 10627,
+      "title": "fix(app-terminal): narrow promoter post ids for Prisma",
+      "author": "1m-binmax",
+      "url": "https://github.com/bosinc/katana-server/pull/10627",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-06T07:17:17Z",
+      "mergedAt": "2026-11-06T07:28:03Z",
+      "labels": []
+    },
+    {
+      "number": 10625,
+      "title": "feat(purchase-approval): add batch invoice template download",
+      "author": "wenbinmaext-create",
+      "url": "https://github.com/bosinc/katana-server/pull/10625",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-06T03:48:59Z",
+      "mergedAt": "2026-11-06T05:49:14Z",
+      "labels": []
+    },
+    {
+      "number": 10622,
+      "title": "feat(app-terminal): add brand, collaboration, and sale detail APIs",
+      "author": "1m-binmax",
+      "url": "https://github.com/bosinc/katana-server/pull/10622",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-06T02:03:00Z",
+      "mergedAt": "2026-11-06T05:40:14Z",
+      "labels": []
+    },
+    {
+      "number": 10624,
+      "title": "fix(store-front): PUT /store-front refuses a blank vanity url",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10624",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-06T03:10:15Z",
+      "mergedAt": "2026-11-06T03:29:30Z",
+      "labels": []
+    },
+    {
+      "number": 10621,
+      "title": "feat(app-terminal): expose configured post A/B variants",
+      "author": "1m-binmax",
+      "url": "https://github.com/bosinc/katana-server/pull/10621",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-06T01:01:58Z",
+      "mergedAt": "2026-11-06T02:56:51Z",
+      "labels": []
+    },
+    {
+      "number": 10611,
+      "title": "refactor(payout,earnings): remove zero-traffic payout/earning history and merchant suggest-refund routes (KAT-12393)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10611",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-05T10:13:17Z",
+      "mergedAt": "2026-11-06T02:42:21Z",
+      "labels": []
+    },
+    {
+      "number": 10623,
+      "title": "test: remove obsolete checkout discount mock",
+      "author": "menzies9527",
+      "url": "https://github.com/bosinc/katana-server/pull/10623",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-06T02:21:19Z",
+      "mergedAt": "2026-11-06T02:31:20Z",
+      "labels": []
+    },
+    {
+      "number": 10584,
+      "title": "fix: remove sample purchase discounts and retain commissions",
+      "author": "menzies9527",
+      "url": "https://github.com/bosinc/katana-server/pull/10584",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-05T02:08:43Z",
+      "mergedAt": "2026-11-06T01:03:25Z",
+      "labels": []
+    },
     {
       "number": 10582,
       "title": "perf(orders): scope the on-site-sales event exclusion to the caller's orders",
@@ -4140,6 +4261,17 @@
       "labels": []
     },
     {
+      "number": 10631,
+      "title": "feat(email): handle Notification Hub delivery callbacks",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10631",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-06T11:06:00Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
       "number": 10616,
       "title": "feat(product-event): null VenueUnit rowLabel for rows with rowLabelDisabled",
       "author": "pengfei-wu-1mapp",
@@ -4147,28 +4279,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-11-05T11:11:33Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10611,
-      "title": "refactor(payout,earnings): remove zero-traffic payout/earning history and merchant suggest-refund routes (KAT-12393)",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10611",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-05T10:13:17Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10602,
-      "title": "feat(venue-map): support root-level Area inventory",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10602",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-05T08:47:59Z",
       "mergedAt": null,
       "labels": []
     },
@@ -4191,17 +4301,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-11-05T07:34:17Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10584,
-      "title": "fix: remove sample purchase discounts and retain commissions",
-      "author": "menzies9527",
-      "url": "https://github.com/bosinc/katana-server/pull/10584",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-05T02:08:43Z",
       "mergedAt": null,
       "labels": []
     },
