@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-08T00:00:41.653Z",
+  "capturedAt": "2026-11-09T00:00:43.175Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
@@ -4027,105 +4027,6 @@
       "baseBranch": "release",
       "createdAt": "2026-10-08T03:01:12Z",
       "mergedAt": "2026-10-10T01:38:35Z",
-      "labels": []
-    },
-    {
-      "number": 10093,
-      "title": "perf(order-metrics): filter EarningShare before joining MerchantLineItem in earnings summary",
-      "author": "chengmarket",
-      "url": "https://github.com/bosinc/katana-server/pull/10093",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-05T20:20:23Z",
-      "mergedAt": "2026-10-09T16:48:07Z",
-      "labels": []
-    },
-    {
-      "number": 10116,
-      "title": "fix(ticket-hub): skip catalog change alerts for test curators' events",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10116",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-09T07:41:32Z",
-      "mergedAt": "2026-10-09T09:06:53Z",
-      "labels": []
-    },
-    {
-      "number": 10117,
-      "title": "feat(venue-unit): sort reassign history assigns newest-first",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10117",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-09T08:22:21Z",
-      "mergedAt": "2026-10-09T08:33:08Z",
-      "labels": []
-    },
-    {
-      "number": 10114,
-      "title": "fix(venue-unit): stop stamping venue sections onto Product.ticketHubInfo",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10114",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-09T05:57:48Z",
-      "mergedAt": "2026-10-09T08:05:18Z",
-      "labels": []
-    },
-    {
-      "number": 10112,
-      "title": "fix(ticket-hub): say what a failing offer check announces later only when that is true",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10112",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-09T05:10:42Z",
-      "mergedAt": "2026-10-09T07:37:16Z",
-      "labels": []
-    },
-    {
-      "number": 10083,
-      "title": "fix(prometheus): stop active_http_requests gauge drifting negative",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10083",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-30T08:40:50Z",
-      "mergedAt": "2026-10-09T06:31:10Z",
-      "labels": []
-    },
-    {
-      "number": 10113,
-      "title": "删除无效配置",
-      "author": "zhiwenzhuext",
-      "url": "https://github.com/bosinc/katana-server/pull/10113",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-09T05:56:31Z",
-      "mergedAt": "2026-10-09T06:04:56Z",
-      "labels": []
-    },
-    {
-      "number": 10106,
-      "title": "feat(product-event): KAT-12070 reassign priceDelta becomes per-move to − from",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10106",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-08T10:20:58Z",
-      "mergedAt": "2026-10-09T02:07:35Z",
-      "labels": []
-    },
-    {
-      "number": 10062,
-      "title": "Feat/kat 11739 distribute order rebate",
-      "author": "vanppo-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10062",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-09-29T07:06:21Z",
-      "mergedAt": "2026-10-09T01:31:22Z",
       "labels": []
     },
     {
