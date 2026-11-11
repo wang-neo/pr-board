@@ -1,8 +1,228 @@
 {
-  "capturedAt": "2026-11-10T00:00:43.739Z",
+  "capturedAt": "2026-11-11T00:00:41.018Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 10651,
+      "title": "fix(venue-map): preserve buyer info on held slots",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10651",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T04:07:34Z",
+      "mergedAt": "2026-11-10T11:03:14Z",
+      "labels": []
+    },
+    {
+      "number": 10470,
+      "title": "fix(orders): a guest token reaches only the orders it placed",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10470",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-10-30T09:02:34Z",
+      "mergedAt": "2026-11-10T10:36:08Z",
+      "labels": []
+    },
+    {
+      "number": 10663,
+      "title": "fix(promoter-subscription): unproven contacts never override a follower's consent",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10663",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T08:02:56Z",
+      "mergedAt": "2026-11-10T10:36:00Z",
+      "labels": []
+    },
+    {
+      "number": 10662,
+      "title": "chore(auth): log expired tokens on public routes and guest-logins that resume a row",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10662",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T07:56:19Z",
+      "mergedAt": "2026-11-10T10:35:52Z",
+      "labels": []
+    },
+    {
+      "number": 10645,
+      "title": "fix(auth): clear email_block when a delivered code proves the mailbox alive",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10645",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-09T10:16:44Z",
+      "mergedAt": "2026-11-10T09:38:55Z",
+      "labels": []
+    },
+    {
+      "number": 10665,
+      "title": "fix(shipping): clear order fees when an item is unavailable",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10665",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T09:15:22Z",
+      "mergedAt": "2026-11-10T09:22:41Z",
+      "labels": []
+    },
+    {
+      "number": 10661,
+      "title": "fix(shipping): skip partial fees without address",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10661",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T07:39:22Z",
+      "mergedAt": "2026-11-10T07:51:48Z",
+      "labels": []
+    },
+    {
+      "number": 10654,
+      "title": "feat(app-terminal): expose post version history",
+      "author": "1m-binmax",
+      "url": "https://github.com/bosinc/katana-server/pull/10654",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T06:20:55Z",
+      "mergedAt": "2026-11-10T07:40:20Z",
+      "labels": []
+    },
+    {
+      "number": 10659,
+      "title": "fix(orders): ticket emails leave out refunded and cancelled units",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10659",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T06:45:27Z",
+      "mergedAt": "2026-11-10T07:29:50Z",
+      "labels": []
+    },
+    {
+      "number": 10660,
+      "title": "test(cron): stamp the late refund from the database clock in the reconciliation lag test",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10660",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T06:52:28Z",
+      "mergedAt": "2026-11-10T07:02:41Z",
+      "labels": []
+    },
+    {
+      "number": 10658,
+      "title": "fix(posts): store restricted-post email grants lowercase",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10658",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T06:45:19Z",
+      "mergedAt": "2026-11-10T06:57:27Z",
+      "labels": []
+    },
+    {
+      "number": 10657,
+      "title": "fix(orders): QR redemption status change refuses an order that never completed",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10657",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T06:45:12Z",
+      "mergedAt": "2026-11-10T06:57:20Z",
+      "labels": []
+    },
+    {
+      "number": 10656,
+      "title": "refactor(subdomain): fix Vantity typo in the edge-config sync method name",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10656",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T06:31:23Z",
+      "mergedAt": "2026-11-10T06:53:28Z",
+      "labels": []
+    },
+    {
+      "number": 10655,
+      "title": "feat(KAT-12356): add archive filter and threshold to events list",
+      "author": "wenbinmaext-create",
+      "url": "https://github.com/bosinc/katana-server/pull/10655",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T06:29:32Z",
+      "mergedAt": "2026-11-10T06:50:34Z",
+      "labels": []
+    },
+    {
+      "number": 10634,
+      "title": "feat: model",
+      "author": "Elin-Li-hub",
+      "url": "https://github.com/bosinc/katana-server/pull/10634",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-09T03:01:46Z",
+      "mergedAt": "2026-11-10T05:51:18Z",
+      "labels": []
+    },
+    {
+      "number": 10649,
+      "title": "feat(app-terminal): add merchant coupon management",
+      "author": "1m-binmax",
+      "url": "https://github.com/bosinc/katana-server/pull/10649",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T01:59:24Z",
+      "mergedAt": "2026-11-10T02:44:22Z",
+      "labels": []
+    },
+    {
+      "number": 10650,
+      "title": "feat(app-terminal): add saved post themes and recent colors",
+      "author": "1m-binmax",
+      "url": "https://github.com/bosinc/katana-server/pull/10650",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T02:04:13Z",
+      "mergedAt": "2026-11-10T02:44:06Z",
+      "labels": []
+    },
+    {
+      "number": 10517,
+      "title": "feat(shipping): restrict shipping options by destination state",
+      "author": "vanppo-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10517",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-03T07:42:48Z",
+      "mergedAt": "2026-11-10T02:14:10Z",
+      "labels": []
+    },
+    {
+      "number": 10647,
+      "title": "Main",
+      "author": "Elin-Li-hub",
+      "url": "https://github.com/bosinc/katana-server/pull/10647",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T01:12:55Z",
+      "mergedAt": "2026-11-10T01:18:01Z",
+      "labels": []
+    },
+    {
+      "number": 10642,
+      "title": "perf(venue-unit): materialize ga_rank in units list CTEs",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10642",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-09T09:41:12Z",
+      "mergedAt": "2026-11-10T01:02:22Z",
+      "labels": []
+    },
     {
       "number": 10641,
       "title": "refactor(product-event): remove GET /product-event/default-catalog",
@@ -4019,6 +4239,39 @@
       "labels": []
     },
     {
+      "number": 10664,
+      "title": "feat(venue-unit): rename slot statuses to unit-status enum (KAT-12527)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10664",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T08:04:41Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10653,
+      "title": "fix(sales): mirror AXS checkout seat holds locally",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/10653",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T06:11:58Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10652,
+      "title": "[KAT-12404] P1: prepare refund dispute checks and Ops alerts",
+      "author": "menzies9527",
+      "url": "https://github.com/bosinc/katana-server/pull/10652",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T04:11:26Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
       "number": 10646,
       "title": "fix: prevent duplicate admin invoice approvals",
       "author": "menzies9527",
@@ -4026,17 +4279,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-11-09T10:41:40Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10645,
-      "title": "fix(auth): clear email_block when a delivered code proves the mailbox alive",
-      "author": "zhiwenzhuext",
-      "url": "https://github.com/bosinc/katana-server/pull/10645",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-09T10:16:44Z",
       "mergedAt": null,
       "labels": []
     },
@@ -4052,39 +4294,6 @@
       "labels": []
     },
     {
-      "number": 10642,
-      "title": "perf(venue-unit): materialize ga_rank in units list CTEs",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10642",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-09T09:41:12Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10635,
-      "title": "fix(venue-units): expose application holder contact",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10635",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-09T04:19:50Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10634,
-      "title": "feat: model",
-      "author": "Elin-Li-hub",
-      "url": "https://github.com/bosinc/katana-server/pull/10634",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-09T03:01:46Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 10599,
       "title": "fix(promoter-subscription): merge follower import contacts",
       "author": "wang-neo",
@@ -4096,17 +4305,6 @@
       "labels": []
     },
     {
-      "number": 10598,
-      "title": "feat(venue-map): support root-level Area inventory",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10598",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-05T07:34:17Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 10521,
       "title": "feat(sms): require internal API key on /sms/status",
       "author": "zhiwenzhuext",
@@ -4114,17 +4312,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-11-03T08:35:54Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10517,
-      "title": "feat(shipping): restrict shipping options by destination state",
-      "author": "vanppo-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10517",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-03T07:42:48Z",
       "mergedAt": null,
       "labels": []
     },
@@ -4147,28 +4334,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-11-01T12:00:28Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10474,
-      "title": "fix(venue-map): preserve own checkout seat availability",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10474",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-30T10:02:17Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10470,
-      "title": "fix(orders): a guest token reaches only the orders it placed",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10470",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-10-30T09:02:34Z",
       "mergedAt": null,
       "labels": []
     },
