@@ -1,8 +1,107 @@
 {
-  "capturedAt": "2026-11-12T00:00:40.047Z",
+  "capturedAt": "2026-11-13T00:00:45.309Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 10687,
+      "title": "fix(inventory): align management and post stock with live holds",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10687",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-12T07:38:28Z",
+      "mergedAt": "2026-11-12T12:36:46Z",
+      "labels": []
+    },
+    {
+      "number": 10688,
+      "title": "refactor(products): drop the uniform-window multi-day pass shape (KAT-12398)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10688",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-12T08:16:30Z",
+      "mergedAt": "2026-11-12T09:06:35Z",
+      "labels": []
+    },
+    {
+      "number": 10676,
+      "title": "feat(sms): add opt-out footer to marketing SMS",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10676",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-11T08:36:45Z",
+      "mergedAt": "2026-11-12T07:32:55Z",
+      "labels": []
+    },
+    {
+      "number": 10677,
+      "title": "fix(orders): a guest token reaches the orders its session placed, wherever they are filed",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10677",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-11T08:45:26Z",
+      "mergedAt": "2026-11-12T07:23:27Z",
+      "labels": []
+    },
+    {
+      "number": 10685,
+      "title": "feat(KAT-12442): filter targeted storefront announcements on the read path",
+      "author": "wenbinmaext-create",
+      "url": "https://github.com/bosinc/katana-server/pull/10685",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-12T05:14:41Z",
+      "mergedAt": "2026-11-12T06:28:01Z",
+      "labels": []
+    },
+    {
+      "number": 10674,
+      "title": "feat(auth): mint guest session ids on the server",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10674",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-11T07:20:58Z",
+      "mergedAt": "2026-11-12T06:21:22Z",
+      "labels": []
+    },
+    {
+      "number": 10664,
+      "title": "feat(venue-unit): rename slot statuses to unit-status enum (KAT-12527)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10664",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T08:04:41Z",
+      "mergedAt": "2026-11-12T02:12:11Z",
+      "labels": []
+    },
+    {
+      "number": 10684,
+      "title": "feat(store-front): make form confirmation popup optional (KAT-12416)",
+      "author": "liuao-123456",
+      "url": "https://github.com/bosinc/katana-server/pull/10684",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-12T01:03:41Z",
+      "mergedAt": "2026-11-12T02:00:32Z",
+      "labels": []
+    },
+    {
+      "number": 10679,
+      "title": "fix(KAT-12529): subtract approve-link reservations from post detail stock",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/10679",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-11T09:18:45Z",
+      "mergedAt": "2026-11-12T01:37:56Z",
+      "labels": []
+    },
     {
       "number": 10668,
       "title": "feat(product-event): opt in to attendee and report email aggregation (KAT-12446)",
@@ -4096,138 +4195,6 @@
       "labels": []
     },
     {
-      "number": 10165,
-      "title": "ci: fail a PR that raises a ratchet baseline",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10165",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-13T09:14:29Z",
-      "mergedAt": "2026-10-13T09:33:20Z",
-      "labels": []
-    },
-    {
-      "number": 10162,
-      "title": "fix(venue-unit): dedupe units-page form columns by fieldId after title edits",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10162",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-13T08:26:59Z",
-      "mergedAt": "2026-10-13T09:11:41Z",
-      "labels": []
-    },
-    {
-      "number": 10158,
-      "title": "feat: add post content editor education guide (KAT-10793)",
-      "author": "junetengext-a11y",
-      "url": "https://github.com/bosinc/katana-server/pull/10158",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-13T07:42:47Z",
-      "mergedAt": "2026-10-13T08:49:53Z",
-      "labels": []
-    },
-    {
-      "number": 10157,
-      "title": "chore: drop no-op email normalisation on stored User.email and dead code",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10157",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-13T07:17:31Z",
-      "mergedAt": "2026-10-13T08:35:52Z",
-      "labels": []
-    },
-    {
-      "number": 10156,
-      "title": "fix(purchase-approval): hold the checkout-rebuild lock on the base client",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10156",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-13T07:17:24Z",
-      "mergedAt": "2026-10-13T08:35:47Z",
-      "labels": []
-    },
-    {
-      "number": 10160,
-      "title": "Hotfix/custom price allow retail price",
-      "author": "menzies9527",
-      "url": "https://github.com/bosinc/katana-server/pull/10160",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-13T07:57:46Z",
-      "mergedAt": "2026-10-13T08:19:38Z",
-      "labels": []
-    },
-    {
-      "number": 10154,
-      "title": "fix: stop orphaning orders on guest checkout and guest-order claims",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10154",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-13T05:03:39Z",
-      "mergedAt": "2026-10-13T06:35:03Z",
-      "labels": []
-    },
-    {
-      "number": 10146,
-      "title": "feat：custom price support app terminal",
-      "author": "menzies9527",
-      "url": "https://github.com/bosinc/katana-server/pull/10146",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-12T08:47:35Z",
-      "mergedAt": "2026-10-13T06:20:07Z",
-      "labels": []
-    },
-    {
-      "number": 10150,
-      "title": "feat(products): add terminal post visibility and fix shared Web/App boolean validation",
-      "author": "1m-binmax",
-      "url": "https://github.com/bosinc/katana-server/pull/10150",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-13T02:36:46Z",
-      "mergedAt": "2026-10-13T05:58:10Z",
-      "labels": []
-    },
-    {
-      "number": 10139,
-      "title": "refactor(feature-setting): remove deprecated EDU flows and unused signup enums",
-      "author": "zhiwenzhuext",
-      "url": "https://github.com/bosinc/katana-server/pull/10139",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-12T04:32:49Z",
-      "mergedAt": "2026-10-13T05:55:29Z",
-      "labels": []
-    },
-    {
-      "number": 10147,
-      "title": "fix(feature-setting): make ConsumerSetting inserts race-safe and unique",
-      "author": "zhiwenzhuext",
-      "url": "https://github.com/bosinc/katana-server/pull/10147",
-      "state": "merged",
-      "baseBranch": "release",
-      "createdAt": "2026-10-12T09:56:10Z",
-      "mergedAt": "2026-10-13T01:39:55Z",
-      "labels": []
-    },
-    {
-      "number": 10679,
-      "title": "fix(KAT-12529): subtract approve-link reservations from post detail stock",
-      "author": "pengfei-wu-1mapp",
-      "url": "https://github.com/bosinc/katana-server/pull/10679",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-11T09:18:45Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 10678,
       "title": "feat(purchase-approval): links buy for an account, not for whoever holds the URL",
       "author": "feng-1m",
@@ -4235,39 +4202,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-11-11T08:45:34Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10676,
-      "title": "feat(sms): add opt-out footer to marketing SMS",
-      "author": "zhiwenzhuext",
-      "url": "https://github.com/bosinc/katana-server/pull/10676",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-11T08:36:45Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10674,
-      "title": "feat(auth): mint guest session ids on the server",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10674",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-11T07:20:58Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10664,
-      "title": "feat(venue-unit): rename slot statuses to unit-status enum (KAT-12527)",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10664",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-10T08:04:41Z",
       "mergedAt": null,
       "labels": []
     },
