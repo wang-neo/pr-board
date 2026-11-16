@@ -1,7 +1,7 @@
-🚀 *Release ready for review (For 2026.11.16 release)*
-Code freeze: 2026-11-13 18:01 (UTC+8)
+🚀 *Release ready for review (For 2026.11.17 release)*
+Code freeze: 2026-11-16 09:48 (UTC+8)
 Please confirm your code is included in the release PR(s):
-• katana-server v0.0.165 — https://github.com/bosinc/katana-server/pull/10701 (wang-neo, Neo, junetengext-a11y, feng-1m, Menzies-Xiang, Elin-Li-hub, Menzies)
-• katana-admin-server v0.0.109 — https://github.com/bosinc/katana-admin-server/pull/2255 (wang-neo, wenbinmaext-create, wenbin.ma)
+• katana-server v0.0.165 — https://github.com/bosinc/katana-server/pull/10711 (wang-neo, Neo, Menzies-Xiang, Menzies, junetengext-a11y, feng-1m, Elin-Li-hub)
+• katana-admin-server v0.0.109 — https://github.com/bosinc/katana-admin-server/pull/2257 (wang-neo, wenbinmaext-create, wenbin.ma)
 If your change is missing, cherry-pick it onto the release branch.
-<@U09V7PB93QE> <@U0AT2EQTPHA> <@U032U20S77F> <@U0BUR2NV01J> <@U0BRJBZPKC4> <@U0CC3NLEXKK>
+<@U09V7PB93QE> <@U0BUR2NV01J> <@U0AT2EQTPHA> <@U032U20S77F> <@U0BRJBZPKC4> <@U0CC3NLEXKK>
