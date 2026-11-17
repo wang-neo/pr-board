@@ -1,8 +1,41 @@
 {
-  "capturedAt": "2026-11-16T00:00:43.703Z",
+  "capturedAt": "2026-11-17T00:00:43.761Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 10723,
+      "title": "feat(purchase-approval): allow multiple recommended product variants",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/10723",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-16T14:00:06Z",
+      "mergedAt": "2026-11-16T14:35:42Z",
+      "labels": []
+    },
+    {
+      "number": 10715,
+      "title": "fix: preserve signed Venue App fee rebates",
+      "author": "lory-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10715",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-16T08:08:09Z",
+      "mergedAt": "2026-11-16T09:38:52Z",
+      "labels": []
+    },
+    {
+      "number": 10713,
+      "title": "feat(posts): expose product source storefront (KAT-12444)",
+      "author": "liuao-123456",
+      "url": "https://github.com/bosinc/katana-server/pull/10713",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-16T04:18:15Z",
+      "mergedAt": "2026-11-16T05:58:38Z",
+      "labels": []
+    },
     {
       "number": 10703,
       "title": "chore(sync): backport main → release (release→main conflicts in 4 files)",
@@ -3876,24 +3909,57 @@
       "labels": []
     },
     {
-      "number": 10709,
-      "title": "feat(purchase-approval): add buyer announcements and active link list",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10709",
+      "number": 10722,
+      "title": "feat(posts): co-seller post auto-sync from parent post (KAT-12549)",
+      "author": "wenbinmaext-create",
+      "url": "https://github.com/bosinc/katana-server/pull/10722",
       "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-11-15T15:49:43Z",
+      "createdAt": "2026-11-16T10:34:34Z",
       "mergedAt": null,
       "labels": []
     },
     {
-      "number": 10708,
-      "title": "feat(purchase-approval): unify buyer ownership and secure links",
+      "number": 10718,
+      "title": "feat(venue-unit): persist slot groups and buyer contacts",
       "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10708",
+      "url": "https://github.com/bosinc/katana-server/pull/10718",
       "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-11-15T15:31:47Z",
+      "createdAt": "2026-11-16T08:49:57Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10717,
+      "title": "fix(purchase-approval): unify consumer identity resolution",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10717",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-16T08:43:54Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10716,
+      "title": "feat: client metrics",
+      "author": "Elin-Li-hub",
+      "url": "https://github.com/bosinc/katana-server/pull/10716",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-16T08:32:36Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10712,
+      "title": "fix(email): add account login notice to purchase approval email",
+      "author": "zhengzhu-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10712",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-16T03:57:19Z",
       "mergedAt": null,
       "labels": []
     },
