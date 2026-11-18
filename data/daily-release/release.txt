@@ -1,9 +1,9 @@
-🚀 *Release ready for review (For 2026.11.18 release)*
-Code freeze: 2026-11-17 18:01 (UTC+8)
+🚀 *Release ready for review (For 2026.11.19 release)*
+Code freeze: 2026-11-18 18:01 (UTC+8)
 Please confirm your code is included in the release PR(s):
-• katana-server v0.0.167 — https://github.com/bosinc/katana-server/pull/10740 (wang-neo, lory-1m, Lory, Menzies-Xiang, Menzies, junetengext-a11y)
+• katana-server v0.0.168 — https://github.com/bosinc/katana-server/pull/10768 (wang-neo, junetengext-a11y, Neo, zhiwenzhuext, pengfei-wu-1mapp, 1m-binmax, Elin-Li-hub, Elin, liuleei, lory-1m)
 If your change is missing, cherry-pick it onto the release branch.
 
 Skipped (no new changes):
 • katana-admin-server: No new commits
-<@U09V7PB93QE> <@U05EC231T2A> <@U0BUR2NV01J> <@U0AT2EQTPHA>
+<@U09V7PB93QE> <@U0AT2EQTPHA> <@U0C7F2V6L4B> <@U0B5TRGAKK7> <@U0BRJBZPKC4> <@U0B1ERGM8RM> <@U05EC231T2A>
