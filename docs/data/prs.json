@@ -1,8 +1,85 @@
 {
-  "capturedAt": "2026-11-17T00:00:43.761Z",
+  "capturedAt": "2026-11-18T00:00:45.255Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 10743,
+      "title": "fix(shopify): use custom exception for permission failures",
+      "author": "menzies9527",
+      "url": "https://github.com/bosinc/katana-server/pull/10743",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-17T10:44:53Z",
+      "mergedAt": "2026-11-17T10:56:38Z",
+      "labels": []
+    },
+    {
+      "number": 10736,
+      "title": "chore(sync): backport main → release (release→main conflicts in 1 files)",
+      "author": "github-actions[bot]",
+      "url": "https://github.com/bosinc/katana-server/pull/10736",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-17T09:46:24Z",
+      "mergedAt": "2026-11-17T09:58:02Z",
+      "labels": []
+    },
+    {
+      "number": 10739,
+      "title": "Codex/shopify permission preflight to rrr",
+      "author": "lory-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10739",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-17T09:55:50Z",
+      "mergedAt": "2026-11-17T09:58:00Z",
+      "labels": []
+    },
+    {
+      "number": 10734,
+      "title": "fix(shopify): check webhook permissions before saving merchant",
+      "author": "lory-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10734",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-17T09:10:52Z",
+      "mergedAt": "2026-11-17T09:20:29Z",
+      "labels": []
+    },
+    {
+      "number": 10730,
+      "title": "fix(cart): reuse dependent post per calculation",
+      "author": "menzies9527",
+      "url": "https://github.com/bosinc/katana-server/pull/10730",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-17T06:02:53Z",
+      "mergedAt": "2026-11-17T07:06:20Z",
+      "labels": []
+    },
+    {
+      "number": 10725,
+      "title": "fix(cart): scope variant enrichment to requested post items",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/10725",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-17T01:27:11Z",
+      "mergedAt": "2026-11-17T02:53:32Z",
+      "labels": []
+    },
+    {
+      "number": 10727,
+      "title": "fix(shopify): minimize required access scopes",
+      "author": "lory-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10727",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-17T01:59:50Z",
+      "mergedAt": "2026-11-17T02:16:33Z",
+      "labels": []
+    },
     {
       "number": 10723,
       "title": "feat(purchase-approval): allow multiple recommended product variants",
@@ -3906,6 +3983,50 @@
       "baseBranch": "release",
       "createdAt": "2026-10-15T09:32:29Z",
       "mergedAt": "2026-10-19T01:10:05Z",
+      "labels": []
+    },
+    {
+      "number": 10746,
+      "title": "feat(venue-unit): batch sold-off-pear marking + buyer info (KAT-12588)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10746",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-17T11:29:07Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10745,
+      "title": "feat(posts): support rich-text order confirmation notes",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10745",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-17T10:48:15Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10733,
+      "title": "feat(orders): add my events and owned approval checkout",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10733",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-17T08:23:47Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10728,
+      "title": "test: run release checks",
+      "author": "lory-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10728",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-17T02:26:25Z",
+      "mergedAt": null,
       "labels": []
     },
     {
