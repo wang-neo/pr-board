@@ -1,8 +1,63 @@
 {
-  "capturedAt": "2026-11-23T00:00:44.703Z",
+  "capturedAt": "2026-11-24T00:00:42.050Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 10814,
+      "title": "docs(agents): configure Matt Pocock engineering skills",
+      "author": "chengmarket",
+      "url": "https://github.com/bosinc/katana-server/pull/10814",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-23T19:50:25Z",
+      "mergedAt": "2026-11-23T19:56:05Z",
+      "labels": []
+    },
+    {
+      "number": 10812,
+      "title": "Main",
+      "author": "Elin-Li-hub",
+      "url": "https://github.com/bosinc/katana-server/pull/10812",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-23T10:06:07Z",
+      "mergedAt": "2026-11-23T10:07:35Z",
+      "labels": []
+    },
+    {
+      "number": 10808,
+      "title": "feat(email): show venue unit first in ticket email",
+      "author": "zhiyong-eng",
+      "url": "https://github.com/bosinc/katana-server/pull/10808",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-23T08:00:43Z",
+      "mergedAt": "2026-11-23T08:13:18Z",
+      "labels": []
+    },
+    {
+      "number": 10792,
+      "title": "feat(auth): add explicit consumer signup with OTP verification",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10792",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-20T01:19:09Z",
+      "mergedAt": "2026-11-23T03:03:13Z",
+      "labels": []
+    },
+    {
+      "number": 10653,
+      "title": "fix(sales): mirror AXS checkout seat holds locally",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/10653",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-10T06:11:58Z",
+      "mergedAt": "2026-11-23T01:07:55Z",
+      "labels": []
+    },
     {
       "number": 10800,
       "title": "chore(sync): backport main → release (release→main conflicts in 1 files)",
@@ -3601,6 +3656,72 @@
       "labels": []
     },
     {
+      "number": 10813,
+      "title": "feat: allow record 0 dispute",
+      "author": "Elin-Li-hub",
+      "url": "https://github.com/bosinc/katana-server/pull/10813",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-23T10:08:19Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10811,
+      "title": "fix(KAT-12590): return slots for fully redeemed pass rescans",
+      "author": "jaycechenex",
+      "url": "https://github.com/bosinc/katana-server/pull/10811",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-23T10:06:05Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10809,
+      "title": "fix(auth): preserve existing identities and filter signup carts",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10809",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-23T09:29:43Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10806,
+      "title": "feat(KAT-12513): add event post console APIs",
+      "author": "wenbinmaext-create",
+      "url": "https://github.com/bosinc/katana-server/pull/10806",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-23T07:05:43Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10805,
+      "title": "fix(KAT-12125): clarify venue map publish validation errors",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/10805",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-23T06:50:53Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10804,
+      "title": "feat(venue-unit): slot-grain sold-off-pear groups with authoritative lists and groups echo",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10804",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-23T04:02:34Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
       "number": 10797,
       "title": "fix(verification): search by latest contact-group attendee note",
       "author": "wang-neo",
@@ -3619,39 +3740,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-11-20T02:33:06Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10792,
-      "title": "feat(auth): add explicit consumer signup with OTP verification",
-      "author": "zhiwenzhuext",
-      "url": "https://github.com/bosinc/katana-server/pull/10792",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-20T01:19:09Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10779,
-      "title": "feat(venue-unit): sold-off-pear groups move to slot grain (KAT-12588)",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10779",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-19T04:18:09Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10758,
-      "title": "feat(event-post): event post overview console API (KAT-12513)",
-      "author": "wenbinmaext-create",
-      "url": "https://github.com/bosinc/katana-server/pull/10758",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-18T07:25:35Z",
       "mergedAt": null,
       "labels": []
     },
@@ -3729,17 +3817,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-11-11T08:45:34Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10653,
-      "title": "fix(sales): mirror AXS checkout seat holds locally",
-      "author": "pengfei-wu-1mapp",
-      "url": "https://github.com/bosinc/katana-server/pull/10653",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-10T06:11:58Z",
       "mergedAt": null,
       "labels": []
     },
