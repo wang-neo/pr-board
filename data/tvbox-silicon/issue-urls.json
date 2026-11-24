@@ -1,448 +1,1780 @@
 {
   "urls": [
-    "http://10.0.0.139:5678/tvbox/my_ext_jar.json",
-    "http://124.223.214.31:16/8888",
-    "http://124.223.214.31:55316/9981",
-    "http://124.71.19.220/c/1",
-    "http://124.71.19.220/c/vip",
-    "http://127.0.0.1",
-    "http://127.0.0.1:19981/chunk?",
-    "http://140.210.14.201:666/0309.json",
-    "http://176868.cloud/4fb8f96c8b3cc31bd0dc0ae23512a75c/bfbfc9a8ae67c6d0617ec5d120c6d2cc/4a310d51536fea1afd0fb5eb377eb630/playlist.m3u",
-    "http://192.168.1.10:5005",
-    "http://192.168.1.10:5666",
-    "http://192.168.10.1:5432/playlist.m3u",
-    "http://192.168.31.71:8899/live.m3u",
-    "http://192.168.31.71:8899/yingxia.json",
-    "http://192.168.5.55:8081/jxydiptv.txt",
-    "http://192.168.50.125:8767/all.m3u",
-    "http://192.168.8.155",
-    "http://192.168.8.155/data",
-    "http://192.168.8.1:",
-    "http://20250508.xyz/link/abc.json",
-    "http://38.134.40.167:9100/sub/xzpsOpfumRG6/playlist.m3u",
-    "http://47.120.41.246:8025/vip/jar/zb.php",
-    "http://47.96.82.41:5188/rose/18/xgg.json",
-    "http://9280.kstore.vip/newwex.json",
-    "http://box.ufuzi.com/tv/qq/%E7%9F%AD%E5%89%A7%E9%A2%91%E9%81%93/api.json",
-    "http://fish.y456y.com",
-    "http://fty.888484.xyz/tv",
-    "http://hb.xn--yet24tmq1a.site:25252/%E4%BB%85%E4%BE%9B%E6%B5%8B%E8%AF%95",
-    "http://home.jundie.top:81/top98.json",
-    "http://ip:5678/tvbox/my_ext.json",
-    "http://jackyronin.vip:2233/t4/config.json",
-    "http://nas:8096",
-    "http://new.xn--4kq62z5rby2qupq9ub.top",
-    "http://tv.nxog.top/m",
-    "http://tv.xn--yhqu5zs87a.top",
-    "http://tvbox.xn--4kq62z5rby2qupq9ub.top",
-    "http://www.cttv.vip/ys/json/ctys.json",
-    "http://www.xn--nsr30bl8nb2kyt7a8vs.top/tv",
-    "http://www.xn--sss604efuw.art/tv",
-    "http://www.xn--sss604efuw.cc/tv",
-    "http://www.xn--sss604efuw.net/tv",
-    "http://www.y456y.com",
-    "http://xhztv.top/4k.json",
-    "http://xhztv.top/xhz",
-    "http://xn--5mqx81b535a.com/",
-    "http://xn--6orr3pi6g9uu.top",
-    "http://xn--ihqu10cn4c.xn--v4q818bf34b.cc",
-    "http://xn--ihqu10cn4c.xn--v4q818bf34b.top",
-    "http://xn--ihqu10cn4c.xn--z7x900a.live/%E6%8E%A5%E5%8F%A3%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
-    "http://xn--oev29b.top/tv",
-    "http://xn--z7x900a.net",
-    "http://xn--z7x900a.net/tv",
-    "http://zhouyu713.gicp.net:53666/api/tvbox/config?format=json",
-    "https://0.12yue.de5.net/0/666",
-    "https://0.12yue.de5.net/5/x4pro.json",
-    "https://0.wudaozhe.net/5/x4all.json",
-    "https://0.wudaozhe.net/tvbox/%E6%91%B8%E9%B1%BC.json",
-    "https://0.wudaozhe.net/tvbox/%E7%8E%8B%E4%BA%8C%E5%B0%8F.json",
-    "https://0.wudaozhe.net/tvbox/%E8%82%A5%E7%8C%AB.json",
-    "https://1.wudaozhe.net/tvbox/%E9%A5%AD%E5%A4%AA%E7%A1%AC.json",
-    "https://115.com/scan/dg-…",
-    "https://13413.kstore.space/tv/changqing.json",
-    "https://15487.kstore.space/%E9%9F%B3%E4%B9%902.txt",
-    "https://15889.kstore.space/yi.json",
-    "https://192.168.8.1:6008/disk1_part1/Movies",
-    "https://445569.pages.dev/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg",
-    "https://445569.pages.dev/https://raw.githubusercontent.com/apaodh/apaodh/refs/heads/main/dc",
-    "https://445569.pages.dev/https://raw.githubusercontent.com/apaodh/apaodh/refs/h…",
-    "https://6800.kstore.vip/fish.json",
-    "https://700sjro44343.vicp.fun/eggp/0211/tv.json",
-    "https://700sjro44343.vicp.fun/eggp/0415/tv.php",
-    "https://8815.kstore.vip/tvbox/wmz",
-    "https://9280.kstore.space/aiwex.json",
-    "https://9280.kstore.space/cat/index.js.md5",
-    "https://9280.kstore.space/newwex.json",
-    "https://9280.kstore.vip/aiwex.json",
-    "https://9280.kstore.vip/cat/index.js.md5",
-    "https://9280.kstore.vip/newwex.json",
-    "https://9280.kstore.vip/wex.json",
-    "https://9763.kstore.space/aowu.json",
-    "https://9763.kstore.vip/aowu.json",
-    "https://9877.kstore.space/sun.json",
-    "https://9to5mac.com/2026/02/09/carplay-video-ios-26/",
-    "https://aka.doubaocdn.com/s/G70GLtSm99",
-    "https://aly2.tuchuangyun.top/autoupload/3wmba/other/tv/tigers/tvbox.json",
-    "https://api.bgm.tv/calendar",
-    "https://api.bilibili.com/pgc/web/timeline?types=4&before=N&after=N",
-    "https://api.niuniuzy.me/api.php/provide/vod",
-    "https://apify.com/abotapi/dramabox-com-scraper",
-    "https://apify.com/abotapi/shortmax-scraper",
-    "https://apify.com/spider_studio/hongguo-search",
-    "https://appleinsider.com/articles/25/07/21/apple-quietly-adding-video-playback-to-carplay-in-ios-26",
-    "https://apps.apple.com/app/id6806369955",
-    "https://apps.apple.com/cn/app/senplayer-%E6%99%BA%E8%83%BD%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8-8%E5%80%8D%E9%80%9F/id6443975850",
-    "https://bit.ly/iptv-aptv",
-    "https://bitbucket.org/xduo/duoapi/raw/master/xpg.json",
-    "https://box.iqinu.com",
-    "https://bright-harbor.pages.dev/v1/tvbox.json",
-    "https://cat.shayin.cc.cd/vip/index.js.md5",
-    "https://cat.shayin.cc.cd/wex.json",
-    "https://cdn.jsdelivr.net/gh/Lightconer/tvbox-ysc-config@​main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json",
-    "https://cdn.jsdelivr.net/gh/TVboxorg/TVbox@​main/dist/official.json",
-    "https://cdn.jsdelivr.net/gh/liu673cn/box@​main/m.json",
-    "https://cdn.jsdelivr.net/gh/zxsla/pyjuhe@​main/tvbox.json",
-    "https://cdn.jsdmirror.com/gh/25175/tvyuan@​master/tvbox_full.json",
-    "https://cdn.qd.je/live.m3u",
-    "https://cf.ghproxy.cc/https://raw.githubusercontent.com/Dong-learn9/TVBox-zyjk/main/tvbox2.json",
-    "https://claude.com/claude-code",
-    "https://clun.top/box.json",
-    "https://clun.top/fun.json",
-    "https://community.firecore.com/t/does-complete-uhd-blu-ray-isos-playback-work/16951",
-    "https://community.firecore.com/t/why-no-iso-menu-support/15812",
-    "https://danmu.zxz.ee/",
-    "https://datatracker.ietf.org/doc/html/rfc8216#section-3.5",
-    "https://developer.apple.com/documentation/carplay/requesting-carplay-entitlements",
-    "https://dm.bady.top/d1mx",
-    "https://dmku.hls.one/",
-    "https://docker.jlbk.de5.net/tvboox/other.json",
-    "https://docs.python.org/3.14/using/ios.html",
-    "https://douyu.445569.xyz/live.m3u",
-    "https://download.getmegaportal.com/yingxia/1.2.2/Yingxia-1.2.2-ios.ipa",
-    "https://download.getmegaportal.com/yingxia/test/ios17/Yingxia-1.7.3-ios17-test-b39208e.ipa",
-    "https://eastscreen.tv/iptvlist.php?token=***",
-    "https://example.com/iptv.m3u",
-    "https://fastlink.cokey.xyz/f/KoMkhW/xm.json",
-    "https://fastly.jsdelivr.net/gh/liu673cn/box@​main/m.json",
-    "https://files.yingxia.invalid/%5B%E5%BD%B1%5D%E8%85%BE%E8%AE%AF.py",
-    "https://files.yingxia.invalid/%5B%E5%BD%B1%5D%E9%BA%A6%E7%94%B0%E5%BD%B1%E9%99%A2.py",
-    "https://files.yingxia.invalid/%5B%E7%91%9F%5D%E6%80%A6%E7%84%B6%E5%BF%83%E5%8A%A8.py",
-    "https://files.yingxia.invalid/%5B%E7%91%9F%5D%E7%A5%9E%E7%A7%98%E7%94%B5%E5%BD%B1.py",
-    "https://files.yingxia.invalid/%5B%E7%91%9F%5D%E9%BB%84%E8%B1%86%E7%9F%AD%E5%89%A7.py",
-    "https://files.yingxia.invalid/%5B4K%5D%E4%BA%91%E6%92%AD.py",
-    "https://files.yingxia.invalid/%5B4K%5D%E5%BD%B1%E6%8E%A2%EF%BC%884k%E6%8E%A5%E5%8F%A3%E4%BF%AE%E5%A4%8D%E7%89%88%EF%BC%89.py",
-    "https://files.yingxia.invalid/%5B4K%5D%E6%B2%B3%E8%B1%9A.py",
-    "https://files.yingxia.invalid/%5B4K%5D%E7%89%87%E5%B8%9D.py",
-    "https://files.yingxia.invalid/%E4%B8%89%E7%BD%91%E5%A4%AE%E5%8D%AB%E8%A7%86gslb.m3u",
-    "https://files.yingxia.invalid/%E4%BA%94%E5%B9%B3%E5%8F%B0%E8%A7%A3%E6%9E%90%E7%89%88.py",
-    "https://files.yingxia.invalid/%E4%BC%98%E8%B4%A8.txt",
-    "https://files.yingxia.invalid/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json",
-    "https://files.yingxia.invalid/%E5%90%83%E7%93%9C%E7%BD%91.py",
-    "https://files.yingxia.invalid/%E5%90%AC%E5%8F%8B%E5%90%AC%E4%B9%A6.py",
-    "https://files.yingxia.invalid/%E5%92%95%E5%99%9C%E5%92%95%E5%99%9C.json",
-    "https://files.yingxia.invalid/%E5%92%95%E5%99%9C%E5%92%95%E5%99%9C4K%E4%BF%AE%E5%A4%8D%E7%89%88.py",
-    "https://files.yingxia.invalid/%E5%AE%8C%E7%BE%8E%E5%BD%B1%E9%99%A2.py",
-    "https://files.yingxia.invalid/%E5%B0%8F%E9%BB%84%E4%B9%A6-xchina-lat.py",
-    "https://files.yingxia.invalid/%E5%B0%A4%E7%89%A9%E7%99%BE%E7%A7%91.py",
-    "https://files.yingxia.invalid/%E5%BD%B1%E6%8E%A2%E8%81%9A%E5%90%88%E5%A2%9E%E5%8A%A0%E7%89%87%E5%B8%9D%E6%B2%B3%E8%B1%9A.py",
-    "https://files.yingxia.invalid/%E5%BD%B1%E6%8E%A2%E8%81%9A%E5%90%88.py",
-    "https://files.yingxia.invalid/%E5%BD%B1%E6%8E%A22026.10.31%E5%B7%B2%E4%BF%AE%E5%A4%8D.py",
-    "https://files.yingxia.invalid/%E5%BD%B1%E6%8E%A24K.py",
-    "https://files.yingxia.invalid/%E6%90%9C%E5%89%A7AI.py",
-    "https://files.yingxia.invalid/%E6%90%9C%E5%89%A7Ai.py",
-    "https://files.yingxia.invalid/%E6%9E%AB%E5%8F%B64k%E5%BD%B1%E9%99%A2.py",
-    "https://files.yingxia.invalid/%E6%9F%9A%E5%AD%90%E7%9F%AD%E5%89%A7%20(1).py",
-    "https://files.yingxia.invalid/%E6%A9%98%E6%B1%81%E8%A7%86%E9%A2%91.py",
-    "https://files.yingxia.invalid/%E6%A9%98%E6%B1%81%E8%A7%86%E9%A2%914K.py",
-    "https://files.yingxia.invalid/%E6%A9%99%E5%AD%90%E7%9F%AD%E5%89%A7.py",
-    "https://files.yingxia.invalid/%E6%A9%99%E6%9E%9C%E7%9F%AD%E5%89%A7%F0%9F%94%9E.py",
-    "https://files.yingxia.invalid/%E6%B5%B7%E9%87%8F%E7%9B%B4%E6%92%AD%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.json",
-    "https://files.yingxia.invalid/%E6%B5%B7%E9%87%8F%E9%87%87%E9%9B%86%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.json",
-    "https://files.yingxia.invalid/%E6%B5%B7%E9%87%8Fpy%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.json",
-    "https://files.yingxia.invalid/%E6%BC%94%E5%94%B1%E4%BC%9A.js",
-    "https://files.yingxia.invalid/%E7%89%87%E5%B8%9D4K.py",
-    "https://files.yingxia.invalid/%E7%8C%AB%E6%BA%90%E7%BB%BC%E5%90%88-%E6%98%A0%E5%8C%A3.json",
-    "https://files.yingxia.invalid/%E7%99%BD%E6%B4%8B%E5%BD%B1%E9%99%A2.py",
-    "https://files.yingxia.invalid/%E7%9B%B4%E6%92%AD%E7%94%B5%E8%A7%86.py",
-    "https://files.yingxia.invalid/%E7%9B%B4%E6%92%AD.txt",
-    "https://files.yingxia.invalid/%E7%9C%9F%E6%9E%9C%E9%89%B4%E5%8F%AF%E8%83%BD%E8%A6%81%E9%AD%94%E6%B3%95.py",
-    "https://files.yingxia.invalid/%E7%9C%9F%E6%9E%9C%E9%89%B4.py",
-    "https://files.yingxia.invalid/%E7%A6%81%E6%9E%9C%E7%9F%AD%E5%89%A7.py",
-    "https://files.yingxia.invalid/%E7%BA%A2%E6%9E%9C%E7%9F%AD%E5%89%A7%E4%BF%AE%E5%A4%8D%E7%89%88.py",
-    "https://files.yingxia.invalid/%E7%BA%A2%E6%9E%9C%E7%9F%AD%E5%89%A7%E8%AE%A2%E9%98%85-%E6%AD%A3%E7%BB%8F%E5%85%A8%E9%87%8F-%E5%B7%B2%E5%A1%AB.json",
-    "https://files.yingxia.invalid/%E7%BA%A2%E6%9E%9C%E7%9F%AD%E5%89%A7(%E5%BC%B9%E5%B9%95%E6%98%BE%E5%AD%A3)%E6%96%B0_%E4%BF%AE%E5%A4%8D%E7%89%88.py",
-    "https://files.yingxia.invalid/%E7%BA%A2%E6%9E%9C%E7%9F%AD%E5%89%A7(%E5%BC%B9%E5%B9%95+%E6%98%BE%E5%AD%A3%E7%89%88).py",
-    "https://files.yingxia.invalid/%E7%BA%A2%E6%9E%9C%E7%9F%AD%E5%89%A7(%E5%BC%B9%E5%B9%95+%E6%98%BE%E5%AD%A3).py",
-    "https://files.yingxia.invalid/%E7%BA%A2%E6%9E%9C.py",
-    "https://files.yingxia.invalid/%E8%81%9A%E5%90%88%E7%9F%AD%E5%89%A7%E6%88%90%E4%BA%BA%E7%89%88.py",
-    "https://files.yingxia.invalid/%E8%81%9A%E5%90%88%E7%9F%AD%E5%89%A7%E6%AD%A3%E7%BB%8F%E7%89%88.py",
-    "https://files.yingxia.invalid/%E8%90%9D%E8%8E%89%E5%B2%9B.py",
-    "https://files.yingxia.invalid/%E8%93%9D%E5%85%89%E8%B5%84%E6%BA%90.py",
-    "https://files.yingxia.invalid/%E8%98%91%E8%8F%87%E5%BD%B1%E9%99%A2.py",
-    "https://files.yingxia.invalid/%E9%87%8E%E6%9E%9C%E7%9F%AD%E5%89%A7.py",
-    "https://files.yingxia.invalid/%E9%BA%A6%E7%94%B0%E5%BD%B1%E9%99%A2.py",
-    "https://files.yingxia.invalid/%E9%BA%BB%E8%B1%86%E7%A4%BE.py",
-    "https://files.yingxia.invalid/%E9%BB%84%E6%9E%9C%E5%89%A7%E5%9C%BA.py",
-    "https://files.yingxia.invalid/%E9%BB%84%E6%9E%9C%E7%9F%AD%E5%89%A7%202.py",
-    "https://files.yingxia.invalid/%E9%BB%84%E6%9E%9C.js",
-    "https://files.yingxia.invalid/%E9%BB%84%E8%B1%86.py",
-    "https://files.yingxia.invalid/19.json.txt",
-    "https://files.yingxia.invalid/4k%E8%81%9A%E5%90%88%EF%BC%88%E7%BA%A7%E6%95%B0%E4%BC%98%E5%8C%96%EF%BC%89.py",
-    "https://files.yingxia.invalid/51%E5%90%83%E7%93%9C%E6%BD%87%E6%B4%92.py",
-    "https://files.yingxia.invalid/56%E4%B8%AA%E5%8F%AF%E7%94%A88%E6%9C%8820%E6%97%A5%E6%BA%90.json",
-    "https://files.yingxia.invalid/5x5x.py",
-    "https://files.yingxia.invalid/718%E5%90%83%E7%93%9C.py",
-    "https://files.yingxia.invalid/91%20%E7%9F%AD%E5%89%A7.py",
-    "https://files.yingxia.invalid/91%E5%90%83%E7%93%9C%E4%B8%AD%E5%BF%83%E7%BB%88%E6%9E%81%E5%AE%8C%E7%BE%8E%E7%89%88.py",
-    "https://files.yingxia.invalid/91%E5%90%83%E7%93%9C%E5%BD%B1%E8%A7%86-%E4%B8%89%E7%AB%AF%E7%88%AC%E8%99%AB.py",
-    "https://files.yingxia.invalid/Adult.m3u",
-    "https://files.yingxia.invalid/CMS%E9%9B%86%E5%90%88%E4%B8%8D%E6%AD%A3%E7%BB%8F.json",
-    "https://files.yingxia.invalid/GetAV(%E5%BC%80%E6%A2%AF)%5BVPN%5D.py",
-    "https://files.yingxia.invalid/Hanime1(%E7%A2%8E%E7%89%87%E5%8C%96%E5%AD%98%E5%82%A8v18).py",
-    "https://files.yingxia.invalid/Kishuto.py",
-    "https://files.yingxia.invalid/MissAV.py",
-    "https://files.yingxia.invalid/TMDB%E5%A4%9A%E7%BA%BF%E5%BD%B1%E8%A7%86.py",
-    "https://files.yingxia.invalid/Twitter%E7%B2%BE%E9%80%89.py",
-    "https://files.yingxia.invalid/cmcc%202.m3u",
-    "https://files.yingxia.invalid/config.json",
-    "https://files.yingxia.invalid/heitao.js",
-    "https://files.yingxia.invalid/index.js",
-    "https://files.yingxia.invalid/live%20stable%20fix4.py",
-    "https://files.yingxia.invalid/official.json",
-    "https://files.yingxia.invalid/one%E4%B8%80%E4%B8%AA.yingxia.t3.js",
-    "https://files.yingxia.invalid/one.js",
-    "https://files.yingxia.invalid/one.py",
-    "https://files.yingxia.invalid/test1.json",
-    "https://files.yingxia.invalid/tvbox-standalone.json",
-    "https://files.yingxia.invalid/tvbox.json",
-    "https://files.yingxia.invalid/tvbox_%E4%B8%89%E5%B9%B3%E5%8F%B0%E7%9B%B4%E6%92%AD%E6%BA%90.json",
-    "https://files.yingxia.invalid/xxx%E8%B5%84%E6%BA%90.py",
-    "https://files.yingxia.invalid/youtube-sabr1023.py",
-    "https://fycr.pages.dev/index.json",
-    "https://g.33445500.xyz/https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/jsm.json",
-    "https://g.blfrp.cn/https://raw.githubusercontent.com/cyh92/live/refs/heads/main/source/migu.m3u",
-    "https://gcore.jsdelivr.net/gh/gaotianliuyun/gao@​master/js.json",
-    "https://gh-proxy.com/https://github.com/ge6bu6/1/blob/main/1.txt",
-    "https://gh-proxy.com/https://raw.githubusercontent.com/1771245847/TvBox/master/tvbox.json",
-    "https://gh-proxy.com/https://raw.githubusercontent.com/YiMing918/ym-tvbox/main/peter_tvbox_pro.json",
-    "https://gh-proxy.com/https://raw.githubusercontent.com/niubihu1/tvbox/main/1.json",
-    "https://gh-proxy.com/https://raw.githubusercontent.com/xmbjm/svip/refs/heads/main/svip.json",
-    "https://gh-proxy.com/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
-    "https://gh-proxy.com/raw.githubusercontent.com//gaotianliuyun/gao/master/0827.json",
-    "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
-    "https://gh-proxy.com/raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
-    "https://gh-proxy.com/raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
-    "https://gh-proxy.net/https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/XC.json",
-    "https://gh-proxy.org/https://raw.githubusercontent.com/AudiHub/WanXiang-Release/main/IPTV.m3u",
-    "https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg",
-    "https://gh-proxy.org/https://raw.githubusercontent.com/Lightconer/tvbox-ysc-config/main/output/feimao.json",
-    "https://gh-proxy.org/https://raw.githubusercontent.com/Lightconer/tvbox-ysc-config/main/output/laoliubei.json",
-    "https://gh-proxy.org/https://raw.githubusercontent.com/Lightconer/tvbox-ysc-config/main/output/ouge.json",
-    "https://gh-proxy.org/https://raw.githubusercontent.com/Lightconer/tvbox-ysc-config/main/output/wangerxiao.json",
-    "https://gh-proxy.org/https://raw.githubusercontent.com/Lightconer/tvbox-ysc-config/main/output/xiaoma.json",
-    "https://gh-proxy.org/https://raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json",
-    "https://gh-proxy.org/https://raw.githubusercontent.com/hajimi688/hhhhhjjdd/refs/heads/main/hjmdj.json",
-    "https://gh-proxy.org/https://raw.githubusercontent.com/hajimi688/hhhhhjjdd/refs…",
-    "https://gh-proxy.org/https://raw.githubusercontent.com/mhmdxahmd/mafly/refs/heads/main/MAfly1/mafly.m3u",
-    "https://gh-proxy.org/raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json",
-    "https://gh.aptv.app/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-    "https://gh.aptv.app/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
-    "https://gh.dpik.top/https://raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json",
-    "https://ghfast.top/https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/douer/index.js.md5",
-    "https://ghfast.top/https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/lmentor/index.js.md5",
-    "https://ghfast.top/https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/smdl/index.js.md5",
-    "https://ghfast.top/https://raw.githubusercontent.com/androwsc/catvod/refs/heads/main/ad/index.js.md5",
-    "https://ghfast.top/https://raw.githubusercontent.com/cluntop/tvbox/main/fun.json",
-    "https://ghfast.top/https://raw.githubusercontent.com/cluntop/tvbox/refs/heads/main/fun.json",
-    "https://ghfast.top/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/dist/index.js.md5",
-    "https://ghfast.top/https://raw.githubusercontent.com/qist/tvbox/master/fty.json",
-    "https://ghfast.top/https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/9918.json",
-    "https://ghfast.top/https://raw.githubusercontent.com/wangdacui003/hmtv/main/index.js.md5",
-    "https://ghfast.top/https://raw.githubusercontent.com/xiaosag/hmtv/main/index.js.md5",
-    "https://ghfast.top/https://raw.githubusercontent.com/xwyjc/yuanwango/main/18caiji.json",
-    "https://ghproxy.cn/https://raw.githubusercontent.com/leevi0709/one/main/jsm.json",
-    "https://ghproxy.net/https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/douer/index.js.md5",
-    "https://ghproxy.net/https://raw.githubusercontent.com/hebijunge/tvbox-config/main/exports/healthy.json",
-    "https://gist.githubusercontent.com/zhaobin1222zz-code/b79ff16fd9619318c491459a75077758/raw/a140cc96f8399dd902c42a0fc0f3db833db161ef/gistfile1.txt",
-    "https://gitee.com/lwr851/live/raw/master/iptv.m3u",
-    "https://gitee.com/wgq11/main/raw/tv/dan.json",
-    "https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/tvbox.json",
-    "https://github.com/Dapan9/CatPawOpen",
-    "https://github.com/FongMi/TV",
-    "https://github.com/FongMi/TV/commit/086a4a2b18b5397f0cc1355a1eb48efe1df6fb63",
-    "https://github.com/Lakr233/ColorfulX",
-    "https://github.com/Lincb522/Noctra",
-    "https://github.com/LucasLu-97",
-    "https://github.com/XIaodou0416/Beans-Music.git",
-    "https://github.com/Yumega",
-    "https://github.com/beeware/Python-apple-support",
-    "https://github.com/cxapython",
-    "https://github.com/digitalgust/miniJVM",
-    "https://github.com/fengqiao57/abts.git",
-    "https://github.com/guihuayufeiguohai",
-    "https://github.com/huangxd-/danmu_api",
-    "https://github.com/jo32",
-    "https://github.com/jo32/tvbox-silicon/actions/runs/39265621697",
-    "https://github.com/jo32/tvbox-silicon/commit/47b0017335ba29e5f5bb0c87e2c3189903cdc714",
-    "https://github.com/jo32/tvbox-silicon/commit/891ac03",
-    "https://github.com/jo32/tvbox-silicon/commit/e1c6945",
-    "https://github.com/jo32/tvbox-silicon/compare/main...claude/issue-23-20261019-1404?quick_pull=1&title=Center%20system-image%20site%20icons%20on%20older%20macOS&body=Fixes%20%2323.%20Sizes%20the%20SF%20Symbol%20in%20MonogramIcon%20by%20frame%20instead%20of%20font%20so%20it%20is%20centered%20on%20macOS%20before%2026.%0A%0AGenerated%20with%20%5BClaude%20Code%5D(https%3A%2F%2Fclaude.ai%2Fcode)",
-    "https://github.com/jo32/tvbox-silicon/issues/16",
-    "https://github.com/jo32/tvbox-silicon/issues/319",
-    "https://github.com/jo32/tvbox-silicon/issues/407",
-    "https://github.com/jo32/tvbox-silicon/issues/414",
-    "https://github.com/jo32/tvbox-silicon/issues/429",
-    "https://github.com/jo32/tvbox-silicon/issues/496",
-    "https://github.com/jo32/tvbox-silicon/issues/547",
-    "https://github.com/jo32/tvbox-silicon/issues/888",
-    "https://github.com/jo32/tvbox-silicon/pull/425:",
-    "https://github.com/jo32/tvbox-silicon/tree/autofix/2026-10-27-issue-159",
-    "https://github.com/jo32/tvbox-silicon/tree/autofix/2026-10-31-issue-273-mkv-compat",
-    "https://github.com/jo32/tvbox-silicon/tree/claude/issue-23-20261019-1404",
-    "https://github.com/jyotiprakash101/nuvio-badge-kit这个",
-    "https://github.com/kankejiang/CatClawVideo",
-    "https://github.com/libass/libass/blob/master/configure.ac",
-    "https://github.com/libass/libass/blob/master/libass/ass.h",
-    "https://github.com/mir-xiong",
-    "https://github.com/nitan-tv/CatPawOpen",
-    "https://github.com/pan8664716/HGTV",
-    "https://github.com/pcccccc/AngelLive",
-    "https://github.com/q215613905/TVBoxOS",
-    "https://github.com/q215613905/TVBoxOS/blob/ab11d289e09963a9daf65ca7f6b7a9a8cbe184e1/app/src/main/java/com/github/tvbox/osc/api/ApiConfig.java#L901",
-    "https://github.com/q215613905/TVBoxOS/blob/ab11d289e09963a9daf65ca7f6b7a9a8cbe184e1/app/src/main/java/com/github/tvbox/osc/player/controller/VodController.java#L1962",
-    "https://github.com/q215613905/TVBoxOS/blob/ab11d289e09963a9daf65ca7f6b7a9a8cbe184e1/app/src/main/java/com/github/tvbox/osc/ui/fragment/PlayFragment.java#L962",
-    "https://github.com/q215613905/TVBoxOS/blob/ab11d289e09963a9daf65ca7f6b7a9a8cbe184e1/app/src/main/java/com/github/tvbox/osc/util/AdBlocker.java",
-    "https://github.com/q215613905/TVBoxOS/blob/ab11d289e09963a9daf65ca7f6b7a9a8cbe184e1/app/src/main/java/com/github/tvbox/osc/util/M3u8.java#L55",
-    "https://github.com/shenggaowei",
-    "https://github.com/yaolin-dev/OKVideoMac",
-    "https://github.com/zhiqiangwong/tvbox-silicon/releases/download/untagged-9f95d1fb286882db4134/Yingxia-1.8.6-iOS16-beta.1.ipa",
-    "https://guovin.github.io/iptv-api/result.m3u",
-    "https://hellogithub.com/en/repository/yichengchen/ATV-Bilibili-demo",
-    "https://host/emby",
-    "https://image.tmdb.org/t/p/",
-    "https://images.tmdb.org/t/p/",
-    "https://iptv.445569.xyz/live.m3u",
-    "https://iptv.local/api/live/http/rtp2httpd",
-    "https://iptv.local/tvbox.json",
-    "https://iptv.yang-1989.xyz/myTV/playlist.m3u",
-    "https://iptv.yang-1989.xyz/playlist.m3u",
-    "https://ithome.com/0/761/195.htm",
-    "https://jihulab.com/ymz1231/xymz/-/raw/main/ymshaoer",
-    "https://jijietvbox.lol/jieluntan-fty.json",
-    "https://jsnzkpg.de5.net/all.m3u",
-    "https://live.catvod.com/playlist.m3u?tk=55a84481a45adf6c658c5840c7617618",
-    "https://live.my996.de5.net/all.m3u",
-    "https://live.zbds.top/tv/iptv4.m3u",
-    "https://live.zbds.top/tv/iptv4.txt",
-    "https://live.zhi35.com/iptv.m3u",
-    "https://m.douban.com/movie/",
-    "https://m.douban.com/rexxar/api/v2/subject_collection/",
-    "https://madou.club/blx0072-%e9%87%8d%e7%b2%be%e6%83%a9%e7%bd%9a%e6%8b%9c%e9%87%91%e5%a5%b3-%e6%83%85%e6%ac%b2%e6%b8%b8%e6%88%8f%e4%b8%80%e8%af%95%e4%b8%8a%e6%b7%ab.html",
-    "https://madou.club/md0180-4-%e5%a4%9c%e5%8b%a4%e7%97%85%e6%a0%8bep4-%e7%bb%88%e6%9e%81%e7%a7%81%e5%88%91%e6%80%a7%e5%a5%b4%e5%a4%a7%e5%a4%b1%e7%a6%81.html",
-    "https://madou.club/mdwp0034-%e6%b7%ab%e8%a1%8c%e8%b6%85%e5%95%86-%e4%b8%8a%e7%8f%ad%e5%81%b7%e6%ac%a2%e5%a5%b3%e5%ba%97%e5%91%98.html",
-    "https://media.heshouyi.com/api/tvbox/subscription?token=***",
-    "https://movie.66608880.xyz/tvbox/config.json",
-    "https://mursor.ottiptv.cc/iptv.m3u?userid=***&sign=***&auth_token=***",
-    "https://mwm.ai/apps/miraplay/6749287494",
-    "https://mwm.ai/apps/rex-all-your-media/6801583759",
-    "https://ob.lb376.vip/api/subscription/2035872536473899008/tvbox2?token=***",
-    "https://pan.baidu.com/s/1FilFpYSCvcADIZpgeshk-Q?pwd=6666",
-    "https://pan.quark.cn/s/cbbb8c3f0bbb",
-    "https://paste.c-net.org/MinersExhibits",
-    "https://php.946985.filegear-sg.me/jackTV.m3u",
-    "https://plugins.carsonn.works/",
-    "https://qist.wyfc.qzz.io/fty.json",
-    "https://qist.wyfc.qzz.io/jsm.json",
-    "https://qist.wyfc.qzz.io/xiaosa/api.json",
-    "https://raw.giteeusercontent.com/ph7368/ok/raw/master/%E5%8D%8A%E7%B3%96%E4%BB%99%E4%BA%BA.json",
-    "https://raw.githubusercontent.com/4TVBox/Cat/refs/heads/main/index.js.md5",
-    "https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/douer/index.js.md5",
-    "https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/lmentor/index.js.md5",
-    "https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/xuenai/index.js.md5",
-    "https://raw.githubusercontent.com/Dong-learn9/TVBox-zyjk/main/18.json",
-    "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u",
-    "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-    "https://raw.githubusercontent.com/Lightconer/tvbox-ysc-config/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json",
-    "https://raw.githubusercontent.com/TVboxorg/TVbox/main/dist/official.json",
-    "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
-    "https://raw.githubusercontent.com/YanG-1989/m3u/refs/heads/main/Migu.m3u",
-    "https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/jstv/index.js.md5",
-    "https://raw.githubusercontent.com/chenyuzuoyou/dxtv/refs/heads/main/allfm.js",
-    "https://raw.githubusercontent.com/cluntop/tvbox/refs/heads/main/fun.json",
-    "https://raw.githubusercontent.com/d1y/kitty/refs/heads/gh-pages/vod.json",
-    "https://raw.githubusercontent.com/dhasap/dhanytv/main/dhanytv-ott.m3u",
-    "https://raw.githubusercontent.com/dhicoc/miraplay-mega/main/dist/index.js.md5",
-    "https://raw.githubusercontent.com/dxawi/0/main/0.json",
-    "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/dist/index.js.md5",
-    "https://raw.githubusercontent.com/felixiao/TVBoxSource/main/%E6%BA%90/%E6%8A%80%E5%B7%A7.json",
-    "https://raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json",
-    "https://raw.githubusercontent.com/hebijunge/tvbox-config/main/adult.json",
-    "https://raw.githubusercontent.com/huangxd-/ForwardWidgets/refs/heads/main/widgets/danmu_auto.js",
-    "https://raw.githubusercontent.com/lugu123/MIraPlay/refs/heads/main/index.js.md5",
-    "https://raw.githubusercontent.com/qirenzhidao/tvbox18/main/adult.json",
-    "https://raw.githubusercontent.com/qist/tvbox/master/0821.json",
-    "https://raw.githubusercontent.com/qist/tvbox/master/fty.json",
-    "https://raw.githubusercontent.com/qist/tvbox/master/jsm.json",
-    "https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json",
-    "https://raw.githubusercontent.com/suxuang/myIPTV/refs/heads/main/ipv4.m3u",
-    "https://raw.githubusercontent.com/tkdwbiao/iptv-api/master/output/result.txt",
-    "https://raw.githubusercontent.com/wliqi495-create/jaychou123/refs/heads/main/yingshi/test1.json",
-    "https://raw.githubusercontent.com/xiaobaitulele/xptv/refs/heads/main/jstv/index.js.md5",
-    "https://raw.githubusercontent.com/xiaosag/hmtv/main/index.js.md5",
-    "https://raw.githubusercontent.com/xymn2023/catbox/refs/heads/main/index.js.md5",
-    "https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
-    "https://raw.liucn.cc/box/m.json",
-    "https://rex.20110827.xyz/api/collections/catpaw.rex",
-    "https://s1.vika.cn/space/2026/10/19/5023fea8b2334417956ad38646af495d",
-    "https://s1.vika.cn/space/2026/10/19/88e73c9654c547dba76b220d65f8cb36",
-    "https://s1.vika.cn/space/2026/10/19/add53a99432149bc9eebd97deebf8575",
-    "https://status.vyxh.top/tv.json",
-    "https://su.ayang.nyc.mn/raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/jstv/index.js.md5",
-    "https://sub.lytvs.top/get?token=***",
-    "https://sub.lytvs.top/get?token=***&client=ios",
-    "https://szyyds.cn/tv/x.json",
-    "https://tv.203511.xyz/0821.json",
-    "https://tv.jlbk.de5.net/https://9280.kstore.vip/newwex.json",
-    "https://tv.seekvpn.online",
-    "https://tv.sxi.qzz.io/jsm.json",
-    "https://tv.xn--yhqu5zs87a.top",
-    "https://tvbox-public.gaoops.top/",
-    "https://tvbox.do-u.de5.net/",
-    "https://tvbox.shenzjd.com",
-    "https://v6.gh-proxy.org/https://raw.githubusercontent.com/apaodh/apaodh/refs/heads/main/backups/Jsnzkpg.json",
-    "https://v6.gh-proxy.org/https://raw.githubusercontent.com/apaodh/apaodh/refs/heads/main/backups/aowu.json",
-    "https://v6.gh-proxy.org/https://raw.githubusercontent.com/apaodh/apaodh/refs/heads/main/backups/fm.json",
-    "https://v6.gh-proxy.org/https://raw.githubusercontent.com/apaodh/apaodh/refs/heads/main/backups/fty.json",
-    "https://v6.gh-proxy.org/https://raw.githubusercontent.com/apaodh/apaodh/refs/heads/main/backups/my.json",
-    "https://ve60f9lepyonq.space.mcode.cn",
-    "https://wget.la/https://github.com/Kimentanm/aptv/raw/master/m3u/iptv.m3u",
-    "https://woyou.pro/p18",
-    "https://www.252035.xyz/xs/tvbox/api.json",
-    "https://www.apple.com/newsroom/2025/06/apple-tv-brings-a-beautiful-redesign-and-enhanced-home-entertainment-experience",
-    "https://www.baijing.cn/article/52370",
-    "https://www.iyouhun.com/tv/fm",
-    "https://www.iyouhun.com/tv/fty",
-    "https://www.python.org/downloads/ios/",
-    "https://www.themoviedb.org/tv/246348",
-    "https://www.themoviedb.org/tv/284360",
-    "https://www.themoviedb.org/tv/286363",
-    "https://www.themoviedb.org/tv/301366",
-    "https://www.thetvdb.com/companies/reelshort",
-    "https://www.tomsguide.com/phones/iphones/video-playback-carplay-ios-26",
-    "https://www.yingm.cc/dm/dm.json",
-    "https://xiaosage.361123.xyz/index.js.md5",
-    "https://xn--8owq8u.com/tv",
-    "https://xy.lucky-boy.cn:9889/tvbox/my_ext_jar.json",
-    "https://yang-1989.eu.org/Gather.json",
-    "https://yc.wya6.cn/wykj.php",
-    "https://yingxia.getmegaportal.com/altstore.json",
-    "https://ysp.lucky-boy.cn:9888/all.m3u",
-    "https://zhongyuan689.github.io/0816iptv/pz.json",
-    "https://ztha.top/TVBox/lib/interface.txt",
-    "https://ztha.top/TVBox/lib/iptv.m3u",
-    "https://ztha.top/TVBox/thdjk.json",
-    "https://你的域名/TOKEN"
+    {
+      "url": "http://10.0.0.139:5678/tvbox/my_ext_jar.json",
+      "name": "my_ext_jar.json"
+    },
+    {
+      "url": "http://124.223.214.31:16/8888",
+      "name": "124.223.214.31"
+    },
+    {
+      "url": "http://124.223.214.31:55316/9981",
+      "name": "124.223.214.31"
+    },
+    {
+      "url": "http://124.71.19.220/c/1",
+      "name": "124.71.19.220"
+    },
+    {
+      "url": "http://124.71.19.220/c/vip",
+      "name": "124.71.19.220"
+    },
+    {
+      "url": "http://127.0.0.1",
+      "name": "127.0.0.1"
+    },
+    {
+      "url": "http://127.0.0.1:19981/chunk?",
+      "name": "127.0.0.1"
+    },
+    {
+      "url": "http://140.210.14.201:666/0309.json",
+      "name": "0309.json"
+    },
+    {
+      "url": "http://176868.cloud/4fb8f96c8b3cc31bd0dc0ae23512a75c/bfbfc9a8ae67c6d0617ec5d120c6d2cc/4a310d51536fea1afd0fb5eb377eb630/playlist.m3u",
+      "name": "playlist.m3u"
+    },
+    {
+      "url": "http://192.168.1.10:5005",
+      "name": "192.168.1.10"
+    },
+    {
+      "url": "http://192.168.1.10:5666",
+      "name": "192.168.1.10"
+    },
+    {
+      "url": "http://192.168.10.1:5432/playlist.m3u",
+      "name": "playlist.m3u"
+    },
+    {
+      "url": "http://192.168.31.71:8899/live.m3u",
+      "name": "live.m3u"
+    },
+    {
+      "url": "http://192.168.31.71:8899/yingxia.json",
+      "name": "yingxia.json"
+    },
+    {
+      "url": "http://192.168.5.55:8081/jxydiptv.txt",
+      "name": "jxydiptv.txt"
+    },
+    {
+      "url": "http://192.168.50.125:8767/all.m3u",
+      "name": "all.m3u"
+    },
+    {
+      "url": "http://192.168.8.155",
+      "name": "192.168.8.155"
+    },
+    {
+      "url": "http://192.168.8.155/data",
+      "name": "192.168.8.155"
+    },
+    {
+      "url": "http://192.168.8.1:",
+      "name": "192.168.8.1"
+    },
+    {
+      "url": "http://20250508.xyz/link/abc.json",
+      "name": "abc.json"
+    },
+    {
+      "url": "http://38.134.40.167:9100/sub/xzpsOpfumRG6/playlist.m3u",
+      "name": "playlist.m3u"
+    },
+    {
+      "url": "http://47.120.41.246:8025/vip/jar/zb.php",
+      "name": "zb.php"
+    },
+    {
+      "url": "http://47.96.82.41:5188/rose/18/xgg.json",
+      "name": "xgg.json"
+    },
+    {
+      "url": "http://9280.kstore.vip/newwex.json",
+      "name": "newwex.json"
+    },
+    {
+      "url": "http://box.ufuzi.com/tv/qq/%E7%9F%AD%E5%89%A7%E9%A2%91%E9%81%93/api.json",
+      "name": "api.json"
+    },
+    {
+      "url": "http://fish.y456y.com",
+      "name": "fish.y456y.com"
+    },
+    {
+      "url": "http://fty.888484.xyz/tv",
+      "name": "fty.888484.xyz"
+    },
+    {
+      "url": "http://hb.xn--yet24tmq1a.site:25252/%E4%BB%85%E4%BE%9B%E6%B5%8B%E8%AF%95",
+      "name": "hb.xn--yet24tmq1a.site"
+    },
+    {
+      "url": "http://home.jundie.top:81/top98.json",
+      "name": "top98.json"
+    },
+    {
+      "url": "http://ip:5678/tvbox/my_ext.json",
+      "name": "my_ext.json"
+    },
+    {
+      "url": "http://jackyronin.vip:2233/t4/config.json",
+      "name": "config.json"
+    },
+    {
+      "url": "http://nas:8096",
+      "name": "nas"
+    },
+    {
+      "url": "http://new.xn--4kq62z5rby2qupq9ub.top",
+      "name": "new.xn--4kq62z5rby2qupq9ub.top"
+    },
+    {
+      "url": "http://tv.nxog.top/m",
+      "name": "tv.nxog.top"
+    },
+    {
+      "url": "http://tv.xn--yhqu5zs87a.top",
+      "name": "tv.xn--yhqu5zs87a.top"
+    },
+    {
+      "url": "http://tvbox.xn--4kq62z5rby2qupq9ub.top",
+      "name": "tvbox.xn--4kq62z5rby2qupq9ub.top"
+    },
+    {
+      "url": "http://www.cttv.vip/ys/json/ctys.json",
+      "name": "ctys.json"
+    },
+    {
+      "url": "http://www.xn--nsr30bl8nb2kyt7a8vs.top/tv",
+      "name": "www.xn--nsr30bl8nb2kyt7a8vs.top"
+    },
+    {
+      "url": "http://www.xn--sss604efuw.art/tv",
+      "name": "www.xn--sss604efuw.art"
+    },
+    {
+      "url": "http://www.xn--sss604efuw.cc/tv",
+      "name": "www.xn--sss604efuw.cc"
+    },
+    {
+      "url": "http://www.xn--sss604efuw.net/tv",
+      "name": "www.xn--sss604efuw.net"
+    },
+    {
+      "url": "http://www.y456y.com",
+      "name": "www.y456y.com"
+    },
+    {
+      "url": "http://xhztv.top/4k.json",
+      "name": "4k.json"
+    },
+    {
+      "url": "http://xhztv.top/xhz",
+      "name": "xhztv.top"
+    },
+    {
+      "url": "http://xn--5mqx81b535a.com/",
+      "name": "xn--5mqx81b535a.com"
+    },
+    {
+      "url": "http://xn--6orr3pi6g9uu.top",
+      "name": "xn--6orr3pi6g9uu.top"
+    },
+    {
+      "url": "http://xn--ihqu10cn4c.xn--v4q818bf34b.cc",
+      "name": "xn--ihqu10cn4c.xn--v4q818bf34b.cc"
+    },
+    {
+      "url": "http://xn--ihqu10cn4c.xn--v4q818bf34b.top",
+      "name": "xn--ihqu10cn4c.xn--v4q818bf34b.top"
+    },
+    {
+      "url": "http://xn--ihqu10cn4c.xn--z7x900a.live/%E6%8E%A5%E5%8F%A3%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
+      "name": "xn--ihqu10cn4c.xn--z7x900a.live"
+    },
+    {
+      "url": "http://xn--oev29b.top/tv",
+      "name": "xn--oev29b.top"
+    },
+    {
+      "url": "http://xn--z7x900a.net",
+      "name": "xn--z7x900a.net"
+    },
+    {
+      "url": "http://xn--z7x900a.net/tv",
+      "name": "xn--z7x900a.net"
+    },
+    {
+      "url": "http://zhouyu713.gicp.net:53666/api/tvbox/config?format=json",
+      "name": "zhouyu713.gicp.net"
+    },
+    {
+      "url": "https://0.12yue.de5.net/0/666",
+      "name": "0.12yue.de5.net"
+    },
+    {
+      "url": "https://0.12yue.de5.net/5/x4pro.json",
+      "name": "x4pro.json"
+    },
+    {
+      "url": "https://0.wudaozhe.net/5/x4all.json",
+      "name": "x4all.json"
+    },
+    {
+      "url": "https://0.wudaozhe.net/tvbox/%E6%91%B8%E9%B1%BC.json",
+      "name": "摸鱼.json"
+    },
+    {
+      "url": "https://0.wudaozhe.net/tvbox/%E7%8E%8B%E4%BA%8C%E5%B0%8F.json",
+      "name": "王二小.json"
+    },
+    {
+      "url": "https://0.wudaozhe.net/tvbox/%E8%82%A5%E7%8C%AB.json",
+      "name": "肥猫.json"
+    },
+    {
+      "url": "https://1.wudaozhe.net/tvbox/%E9%A5%AD%E5%A4%AA%E7%A1%AC.json",
+      "name": "饭太硬.json"
+    },
+    {
+      "url": "https://115.com/scan/dg-…",
+      "name": "115.com"
+    },
+    {
+      "url": "https://13413.kstore.space/tv/changqing.json",
+      "name": "changqing.json"
+    },
+    {
+      "url": "https://15487.kstore.space/%E9%9F%B3%E4%B9%902.txt",
+      "name": "音乐2.txt"
+    },
+    {
+      "url": "https://15889.kstore.space/yi.json",
+      "name": "yi.json"
+    },
+    {
+      "url": "https://192.168.8.1:6008/disk1_part1/Movies",
+      "name": "192.168.8.1"
+    },
+    {
+      "url": "https://445569.pages.dev/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg",
+      "name": "445569.pages.dev"
+    },
+    {
+      "url": "https://445569.pages.dev/https://raw.githubusercontent.com/apaodh/apaodh/refs/heads/main/dc",
+      "name": "445569.pages.dev"
+    },
+    {
+      "url": "https://445569.pages.dev/https://raw.githubusercontent.com/apaodh/apaodh/refs/h…",
+      "name": "445569.pages.dev"
+    },
+    {
+      "url": "https://6800.kstore.vip/fish.json",
+      "name": "fish.json"
+    },
+    {
+      "url": "https://700sjro44343.vicp.fun/eggp/0211/tv.json",
+      "name": "tv.json"
+    },
+    {
+      "url": "https://700sjro44343.vicp.fun/eggp/0415/tv.php",
+      "name": "tv.php"
+    },
+    {
+      "url": "https://8815.kstore.vip/tvbox/wmz",
+      "name": "8815.kstore.vip"
+    },
+    {
+      "url": "https://9280.kstore.space/aiwex.json",
+      "name": "aiwex.json"
+    },
+    {
+      "url": "https://9280.kstore.space/cat/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://9280.kstore.space/newwex.json",
+      "name": "newwex.json"
+    },
+    {
+      "url": "https://9280.kstore.vip/aiwex.json",
+      "name": "aiwex.json"
+    },
+    {
+      "url": "https://9280.kstore.vip/cat/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://9280.kstore.vip/newwex.json",
+      "name": "newwex.json"
+    },
+    {
+      "url": "https://9280.kstore.vip/wex.json",
+      "name": "wex.json"
+    },
+    {
+      "url": "https://9763.kstore.space/aowu.json",
+      "name": "aowu.json"
+    },
+    {
+      "url": "https://9763.kstore.vip/aowu.json",
+      "name": "aowu.json"
+    },
+    {
+      "url": "https://9877.kstore.space/sun.json",
+      "name": "sun.json"
+    },
+    {
+      "url": "https://9to5mac.com/2026/02/09/carplay-video-ios-26/",
+      "name": "9to5mac.com"
+    },
+    {
+      "url": "https://aka.doubaocdn.com/s/G70GLtSm99",
+      "name": "aka.doubaocdn.com"
+    },
+    {
+      "url": "https://aly2.tuchuangyun.top/autoupload/3wmba/other/tv/tigers/tvbox.json",
+      "name": "tvbox.json"
+    },
+    {
+      "url": "https://api.bgm.tv/calendar",
+      "name": "api.bgm.tv"
+    },
+    {
+      "url": "https://api.bilibili.com/pgc/web/timeline?types=4&before=N&after=N",
+      "name": "api.bilibili.com"
+    },
+    {
+      "url": "https://api.niuniuzy.me/api.php/provide/vod",
+      "name": "api.niuniuzy.me"
+    },
+    {
+      "url": "https://apify.com/abotapi/dramabox-com-scraper",
+      "name": "apify.com"
+    },
+    {
+      "url": "https://apify.com/abotapi/shortmax-scraper",
+      "name": "apify.com"
+    },
+    {
+      "url": "https://apify.com/spider_studio/hongguo-search",
+      "name": "apify.com"
+    },
+    {
+      "url": "https://appleinsider.com/articles/25/07/21/apple-quietly-adding-video-playback-to-carplay-in-ios-26",
+      "name": "appleinsider.com"
+    },
+    {
+      "url": "https://apps.apple.com/app/id6806369955",
+      "name": "apps.apple.com"
+    },
+    {
+      "url": "https://apps.apple.com/cn/app/senplayer-%E6%99%BA%E8%83%BD%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8-8%E5%80%8D%E9%80%9F/id6443975850",
+      "name": "apps.apple.com"
+    },
+    {
+      "url": "https://bit.ly/iptv-aptv",
+      "name": "bit.ly"
+    },
+    {
+      "url": "https://bitbucket.org/xduo/duoapi/raw/master/xpg.json",
+      "name": "xpg.json"
+    },
+    {
+      "url": "https://box.iqinu.com",
+      "name": "box.iqinu.com"
+    },
+    {
+      "url": "https://bright-harbor.pages.dev/v1/tvbox.json",
+      "name": "tvbox.json"
+    },
+    {
+      "url": "https://cat.shayin.cc.cd/vip/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://cat.shayin.cc.cd/wex.json",
+      "name": "wex.json"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/Lightconer/tvbox-ysc-config@​main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json",
+      "name": "单仓聚合.json"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/TVboxorg/TVbox@​main/dist/official.json",
+      "name": "official.json"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/liu673cn/box@​main/m.json",
+      "name": "m.json"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/gh/zxsla/pyjuhe@​main/tvbox.json",
+      "name": "tvbox.json"
+    },
+    {
+      "url": "https://cdn.jsdmirror.com/gh/25175/tvyuan@​master/tvbox_full.json",
+      "name": "tvbox_full.json"
+    },
+    {
+      "url": "https://cdn.qd.je/live.m3u",
+      "name": "live.m3u"
+    },
+    {
+      "url": "https://cf.ghproxy.cc/https://raw.githubusercontent.com/Dong-learn9/TVBox-zyjk/main/tvbox2.json",
+      "name": "tvbox2.json"
+    },
+    {
+      "url": "https://claude.com/claude-code",
+      "name": "claude.com"
+    },
+    {
+      "url": "https://clun.top/box.json",
+      "name": "box.json"
+    },
+    {
+      "url": "https://clun.top/fun.json",
+      "name": "fun.json"
+    },
+    {
+      "url": "https://community.firecore.com/t/does-complete-uhd-blu-ray-isos-playback-work/16951",
+      "name": "community.firecore.com"
+    },
+    {
+      "url": "https://community.firecore.com/t/why-no-iso-menu-support/15812",
+      "name": "community.firecore.com"
+    },
+    {
+      "url": "https://danmu.zxz.ee/",
+      "name": "danmu.zxz.ee"
+    },
+    {
+      "url": "https://datatracker.ietf.org/doc/html/rfc8216#section-3.5",
+      "name": "datatracker.ietf.org"
+    },
+    {
+      "url": "https://developer.apple.com/documentation/carplay/requesting-carplay-entitlements",
+      "name": "developer.apple.com"
+    },
+    {
+      "url": "https://dm.bady.top/d1mx",
+      "name": "dm.bady.top"
+    },
+    {
+      "url": "https://dmku.hls.one/",
+      "name": "dmku.hls.one"
+    },
+    {
+      "url": "https://docker.jlbk.de5.net/tvboox/other.json",
+      "name": "other.json"
+    },
+    {
+      "url": "https://docs.python.org/3.14/using/ios.html",
+      "name": "ios.html"
+    },
+    {
+      "url": "https://douyu.445569.xyz/live.m3u",
+      "name": "live.m3u"
+    },
+    {
+      "url": "https://download.getmegaportal.com/yingxia/1.2.2/Yingxia-1.2.2-ios.ipa",
+      "name": "Yingxia-1.2.2-ios.ipa"
+    },
+    {
+      "url": "https://download.getmegaportal.com/yingxia/test/ios17/Yingxia-1.7.3-ios17-test-b39208e.ipa",
+      "name": "Yingxia-1.7.3-ios17-test-b39208e.ipa"
+    },
+    {
+      "url": "https://eastscreen.tv/iptvlist.php?token=***",
+      "name": "iptvlist.php"
+    },
+    {
+      "url": "https://example.com/iptv.m3u",
+      "name": "iptv.m3u"
+    },
+    {
+      "url": "https://fastlink.cokey.xyz/f/KoMkhW/xm.json",
+      "name": "xm.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net/gh/liu673cn/box@​main/m.json",
+      "name": "m.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%5B%E5%BD%B1%5D%E8%85%BE%E8%AE%AF.py",
+      "name": "[影]腾讯.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%5B%E5%BD%B1%5D%E9%BA%A6%E7%94%B0%E5%BD%B1%E9%99%A2.py",
+      "name": "[影]麦田影院.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%5B%E7%91%9F%5D%E6%80%A6%E7%84%B6%E5%BF%83%E5%8A%A8.py",
+      "name": "[瑟]怦然心动.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%5B%E7%91%9F%5D%E7%A5%9E%E7%A7%98%E7%94%B5%E5%BD%B1.py",
+      "name": "[瑟]神秘电影.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%5B%E7%91%9F%5D%E9%BB%84%E8%B1%86%E7%9F%AD%E5%89%A7.py",
+      "name": "[瑟]黄豆短剧.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%5B4K%5D%E4%BA%91%E6%92%AD.py",
+      "name": "[4K]云播.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%5B4K%5D%E5%BD%B1%E6%8E%A2%EF%BC%884k%E6%8E%A5%E5%8F%A3%E4%BF%AE%E5%A4%8D%E7%89%88%EF%BC%89.py",
+      "name": "[4K]影探（4k接口修复版）.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%5B4K%5D%E6%B2%B3%E8%B1%9A.py",
+      "name": "[4K]河豚.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%5B4K%5D%E7%89%87%E5%B8%9D.py",
+      "name": "[4K]片帝.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E4%B8%89%E7%BD%91%E5%A4%AE%E5%8D%AB%E8%A7%86gslb.m3u",
+      "name": "三网央卫视gslb.m3u"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E4%BA%94%E5%B9%B3%E5%8F%B0%E8%A7%A3%E6%9E%90%E7%89%88.py",
+      "name": "五平台解析版.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E4%BC%98%E8%B4%A8.txt",
+      "name": "优质.txt"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json",
+      "name": "单仓聚合.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E5%90%83%E7%93%9C%E7%BD%91.py",
+      "name": "吃瓜网.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E5%90%AC%E5%8F%8B%E5%90%AC%E4%B9%A6.py",
+      "name": "听友听书.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E5%92%95%E5%99%9C%E5%92%95%E5%99%9C.json",
+      "name": "咕噜咕噜.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E5%92%95%E5%99%9C%E5%92%95%E5%99%9C4K%E4%BF%AE%E5%A4%8D%E7%89%88.py",
+      "name": "咕噜咕噜4K修复版.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E5%AE%8C%E7%BE%8E%E5%BD%B1%E9%99%A2.py",
+      "name": "完美影院.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E5%B0%8F%E9%BB%84%E4%B9%A6-xchina-lat.py",
+      "name": "小黄书-xchina-lat.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E5%B0%A4%E7%89%A9%E7%99%BE%E7%A7%91.py",
+      "name": "尤物百科.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E5%BD%B1%E6%8E%A2%E8%81%9A%E5%90%88%E5%A2%9E%E5%8A%A0%E7%89%87%E5%B8%9D%E6%B2%B3%E8%B1%9A.py",
+      "name": "影探聚合增加片帝河豚.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E5%BD%B1%E6%8E%A2%E8%81%9A%E5%90%88.py",
+      "name": "影探聚合.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E5%BD%B1%E6%8E%A22026.10.31%E5%B7%B2%E4%BF%AE%E5%A4%8D.py",
+      "name": "影探2026.10.31已修复.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E5%BD%B1%E6%8E%A24K.py",
+      "name": "影探4K.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E6%90%9C%E5%89%A7AI.py",
+      "name": "搜剧AI.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E6%90%9C%E5%89%A7Ai.py",
+      "name": "搜剧Ai.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E6%9E%AB%E5%8F%B64k%E5%BD%B1%E9%99%A2.py",
+      "name": "枫叶4k影院.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E6%9F%9A%E5%AD%90%E7%9F%AD%E5%89%A7%20(1).py",
+      "name": "柚子短剧 (1).py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E6%A9%98%E6%B1%81%E8%A7%86%E9%A2%91.py",
+      "name": "橘汁视频.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E6%A9%98%E6%B1%81%E8%A7%86%E9%A2%914K.py",
+      "name": "橘汁视频4K.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E6%A9%99%E5%AD%90%E7%9F%AD%E5%89%A7.py",
+      "name": "橙子短剧.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E6%A9%99%E6%9E%9C%E7%9F%AD%E5%89%A7%F0%9F%94%9E.py",
+      "name": "橙果短剧🔞.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E6%B5%B7%E9%87%8F%E7%9B%B4%E6%92%AD%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.json",
+      "name": "海量直播聚合接口.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E6%B5%B7%E9%87%8F%E9%87%87%E9%9B%86%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.json",
+      "name": "海量采集聚合接口.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E6%B5%B7%E9%87%8Fpy%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.json",
+      "name": "海量py聚合接口.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E6%BC%94%E5%94%B1%E4%BC%9A.js",
+      "name": "演唱会.js"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%89%87%E5%B8%9D4K.py",
+      "name": "片帝4K.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%8C%AB%E6%BA%90%E7%BB%BC%E5%90%88-%E6%98%A0%E5%8C%A3.json",
+      "name": "猫源综合-映匣.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%99%BD%E6%B4%8B%E5%BD%B1%E9%99%A2.py",
+      "name": "白洋影院.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%9B%B4%E6%92%AD%E7%94%B5%E8%A7%86.py",
+      "name": "直播电视.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%9B%B4%E6%92%AD.txt",
+      "name": "直播.txt"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%9C%9F%E6%9E%9C%E9%89%B4%E5%8F%AF%E8%83%BD%E8%A6%81%E9%AD%94%E6%B3%95.py",
+      "name": "真果鉴可能要魔法.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%9C%9F%E6%9E%9C%E9%89%B4.py",
+      "name": "真果鉴.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%A6%81%E6%9E%9C%E7%9F%AD%E5%89%A7.py",
+      "name": "禁果短剧.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%BA%A2%E6%9E%9C%E7%9F%AD%E5%89%A7%E4%BF%AE%E5%A4%8D%E7%89%88.py",
+      "name": "红果短剧修复版.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%BA%A2%E6%9E%9C%E7%9F%AD%E5%89%A7%E8%AE%A2%E9%98%85-%E6%AD%A3%E7%BB%8F%E5%85%A8%E9%87%8F-%E5%B7%B2%E5%A1%AB.json",
+      "name": "红果短剧订阅-正经全量-已填.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%BA%A2%E6%9E%9C%E7%9F%AD%E5%89%A7(%E5%BC%B9%E5%B9%95%E6%98%BE%E5%AD%A3)%E6%96%B0_%E4%BF%AE%E5%A4%8D%E7%89%88.py",
+      "name": "红果短剧(弹幕显季)新_修复版.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%BA%A2%E6%9E%9C%E7%9F%AD%E5%89%A7(%E5%BC%B9%E5%B9%95+%E6%98%BE%E5%AD%A3%E7%89%88).py",
+      "name": "红果短剧(弹幕+显季版).py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%BA%A2%E6%9E%9C%E7%9F%AD%E5%89%A7(%E5%BC%B9%E5%B9%95+%E6%98%BE%E5%AD%A3).py",
+      "name": "红果短剧(弹幕+显季).py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E7%BA%A2%E6%9E%9C.py",
+      "name": "红果.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E8%81%9A%E5%90%88%E7%9F%AD%E5%89%A7%E6%88%90%E4%BA%BA%E7%89%88.py",
+      "name": "聚合短剧成人版.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E8%81%9A%E5%90%88%E7%9F%AD%E5%89%A7%E6%AD%A3%E7%BB%8F%E7%89%88.py",
+      "name": "聚合短剧正经版.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E8%90%9D%E8%8E%89%E5%B2%9B.py",
+      "name": "萝莉岛.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E8%93%9D%E5%85%89%E8%B5%84%E6%BA%90.py",
+      "name": "蓝光资源.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E8%98%91%E8%8F%87%E5%BD%B1%E9%99%A2.py",
+      "name": "蘑菇影院.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E9%87%8E%E6%9E%9C%E7%9F%AD%E5%89%A7.py",
+      "name": "野果短剧.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E9%BA%A6%E7%94%B0%E5%BD%B1%E9%99%A2.py",
+      "name": "麦田影院.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E9%BA%BB%E8%B1%86%E7%A4%BE.py",
+      "name": "麻豆社.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E9%BB%84%E6%9E%9C%E5%89%A7%E5%9C%BA.py",
+      "name": "黄果剧场.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E9%BB%84%E6%9E%9C%E7%9F%AD%E5%89%A7%202.py",
+      "name": "黄果短剧 2.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E9%BB%84%E6%9E%9C.js",
+      "name": "黄果.js"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E9%BB%84%E8%B1%86.py",
+      "name": "黄豆.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/19.json.txt",
+      "name": "19.json.txt"
+    },
+    {
+      "url": "https://files.yingxia.invalid/4k%E8%81%9A%E5%90%88%EF%BC%88%E7%BA%A7%E6%95%B0%E4%BC%98%E5%8C%96%EF%BC%89.py",
+      "name": "4k聚合（级数优化）.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/51%E5%90%83%E7%93%9C%E6%BD%87%E6%B4%92.py",
+      "name": "51吃瓜潇洒.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/56%E4%B8%AA%E5%8F%AF%E7%94%A88%E6%9C%8820%E6%97%A5%E6%BA%90.json",
+      "name": "56个可用8月20日源.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/5x5x.py",
+      "name": "5x5x.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/718%E5%90%83%E7%93%9C.py",
+      "name": "718吃瓜.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/91%20%E7%9F%AD%E5%89%A7.py",
+      "name": "91 短剧.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/91%E5%90%83%E7%93%9C%E4%B8%AD%E5%BF%83%E7%BB%88%E6%9E%81%E5%AE%8C%E7%BE%8E%E7%89%88.py",
+      "name": "91吃瓜中心终极完美版.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/91%E5%90%83%E7%93%9C%E5%BD%B1%E8%A7%86-%E4%B8%89%E7%AB%AF%E7%88%AC%E8%99%AB.py",
+      "name": "91吃瓜影视-三端爬虫.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/Adult.m3u",
+      "name": "Adult.m3u"
+    },
+    {
+      "url": "https://files.yingxia.invalid/CMS%E9%9B%86%E5%90%88%E4%B8%8D%E6%AD%A3%E7%BB%8F.json",
+      "name": "CMS集合不正经.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/GetAV(%E5%BC%80%E6%A2%AF)%5BVPN%5D.py",
+      "name": "GetAV(开梯)[VPN].py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/Hanime1(%E7%A2%8E%E7%89%87%E5%8C%96%E5%AD%98%E5%82%A8v18).py",
+      "name": "Hanime1(碎片化存储v18).py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/Kishuto.py",
+      "name": "Kishuto.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/MissAV.py",
+      "name": "MissAV.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/TMDB%E5%A4%9A%E7%BA%BF%E5%BD%B1%E8%A7%86.py",
+      "name": "TMDB多线影视.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/Twitter%E7%B2%BE%E9%80%89.py",
+      "name": "Twitter精选.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/cmcc%202.m3u",
+      "name": "cmcc 2.m3u"
+    },
+    {
+      "url": "https://files.yingxia.invalid/config.json",
+      "name": "config.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/heitao.js",
+      "name": "heitao.js"
+    },
+    {
+      "url": "https://files.yingxia.invalid/index.js",
+      "name": "index.js"
+    },
+    {
+      "url": "https://files.yingxia.invalid/live%20stable%20fix4.py",
+      "name": "live stable fix4.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/official.json",
+      "name": "official.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/one%E4%B8%80%E4%B8%AA.yingxia.t3.js",
+      "name": "one一个.yingxia.t3.js"
+    },
+    {
+      "url": "https://files.yingxia.invalid/one.js",
+      "name": "one.js"
+    },
+    {
+      "url": "https://files.yingxia.invalid/one.py",
+      "name": "one.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/test1.json",
+      "name": "test1.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/tvbox-standalone.json",
+      "name": "tvbox-standalone.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/tvbox.json",
+      "name": "tvbox.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/tvbox_%E4%B8%89%E5%B9%B3%E5%8F%B0%E7%9B%B4%E6%92%AD%E6%BA%90.json",
+      "name": "tvbox_三平台直播源.json"
+    },
+    {
+      "url": "https://files.yingxia.invalid/xxx%E8%B5%84%E6%BA%90.py",
+      "name": "xxx资源.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/youtube-sabr1023.py",
+      "name": "youtube-sabr1023.py"
+    },
+    {
+      "url": "https://fycr.pages.dev/index.json",
+      "name": "index.json"
+    },
+    {
+      "url": "https://g.33445500.xyz/https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/jsm.json",
+      "name": "jsm.json"
+    },
+    {
+      "url": "https://g.blfrp.cn/https://raw.githubusercontent.com/cyh92/live/refs/heads/main/source/migu.m3u",
+      "name": "migu.m3u"
+    },
+    {
+      "url": "https://gcore.jsdelivr.net/gh/gaotianliuyun/gao@​master/js.json",
+      "name": "js.json"
+    },
+    {
+      "url": "https://gh-proxy.com/https://github.com/ge6bu6/1/blob/main/1.txt",
+      "name": "1.txt"
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/1771245847/TvBox/master/tvbox.json",
+      "name": "tvbox.json"
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/YiMing918/ym-tvbox/main/peter_tvbox_pro.json",
+      "name": "peter_tvbox_pro.json"
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/niubihu1/tvbox/main/1.json",
+      "name": "1.json"
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/xmbjm/svip/refs/heads/main/svip.json",
+      "name": "svip.json"
+    },
+    {
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
+      "name": "XYQTVBox.json"
+    },
+    {
+      "url": "https://gh-proxy.com/raw.githubusercontent.com//gaotianliuyun/gao/master/0827.json",
+      "name": "0827.json"
+    },
+    {
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "name": "js.json"
+    },
+    {
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+      "name": "ipv4.m3u"
+    },
+    {
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+      "name": "yw.json"
+    },
+    {
+      "url": "https://gh-proxy.net/https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/XC.json",
+      "name": "XC.json"
+    },
+    {
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/AudiHub/WanXiang-Release/main/IPTV.m3u",
+      "name": "IPTV.m3u"
+    },
+    {
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg",
+      "name": "gh-proxy.org"
+    },
+    {
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/Lightconer/tvbox-ysc-config/main/output/feimao.json",
+      "name": "feimao.json"
+    },
+    {
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/Lightconer/tvbox-ysc-config/main/output/laoliubei.json",
+      "name": "laoliubei.json"
+    },
+    {
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/Lightconer/tvbox-ysc-config/main/output/ouge.json",
+      "name": "ouge.json"
+    },
+    {
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/Lightconer/tvbox-ysc-config/main/output/wangerxiao.json",
+      "name": "wangerxiao.json"
+    },
+    {
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/Lightconer/tvbox-ysc-config/main/output/xiaoma.json",
+      "name": "xiaoma.json"
+    },
+    {
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json",
+      "name": "demo.json"
+    },
+    {
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/hajimi688/hhhhhjjdd/refs/heads/main/hjmdj.json",
+      "name": "hjmdj.json"
+    },
+    {
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/hajimi688/hhhhhjjdd/refs…",
+      "name": "gh-proxy.org"
+    },
+    {
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/mhmdxahmd/mafly/refs/heads/main/MAfly1/mafly.m3u",
+      "name": "mafly.m3u"
+    },
+    {
+      "url": "https://gh-proxy.org/raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json",
+      "name": "demo.json"
+    },
+    {
+      "url": "https://gh.aptv.app/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "name": "iptv.m3u"
+    },
+    {
+      "url": "https://gh.aptv.app/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+      "name": "ipv4.m3u"
+    },
+    {
+      "url": "https://gh.dpik.top/https://raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json",
+      "name": "demo.json"
+    },
+    {
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/douer/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/lmentor/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/smdl/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/androwsc/catvod/refs/heads/main/ad/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/cluntop/tvbox/main/fun.json",
+      "name": "fun.json"
+    },
+    {
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/cluntop/tvbox/refs/heads/main/fun.json",
+      "name": "fun.json"
+    },
+    {
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/dist/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/qist/tvbox/master/fty.json",
+      "name": "fty.json"
+    },
+    {
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/9918.json",
+      "name": "9918.json"
+    },
+    {
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/wangdacui003/hmtv/main/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/xiaosag/hmtv/main/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/xwyjc/yuanwango/main/18caiji.json",
+      "name": "18caiji.json"
+    },
+    {
+      "url": "https://ghproxy.cn/https://raw.githubusercontent.com/leevi0709/one/main/jsm.json",
+      "name": "jsm.json"
+    },
+    {
+      "url": "https://ghproxy.net/https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/douer/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://ghproxy.net/https://raw.githubusercontent.com/hebijunge/tvbox-config/main/exports/healthy.json",
+      "name": "healthy.json"
+    },
+    {
+      "url": "https://gist.githubusercontent.com/zhaobin1222zz-code/b79ff16fd9619318c491459a75077758/raw/a140cc96f8399dd902c42a0fc0f3db833db161ef/gistfile1.txt",
+      "name": "gistfile1.txt"
+    },
+    {
+      "url": "https://gitee.com/lwr851/live/raw/master/iptv.m3u",
+      "name": "iptv.m3u"
+    },
+    {
+      "url": "https://gitee.com/wgq11/main/raw/tv/dan.json",
+      "name": "dan.json"
+    },
+    {
+      "url": "https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/tvbox.json",
+      "name": "tvbox.json"
+    },
+    {
+      "url": "https://github.com/Dapan9/CatPawOpen",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/FongMi/TV",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/FongMi/TV/commit/086a4a2b18b5397f0cc1355a1eb48efe1df6fb63",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/Lakr233/ColorfulX",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/Lincb522/Noctra",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/LucasLu-97",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/XIaodou0416/Beans-Music.git",
+      "name": "Beans-Music.git"
+    },
+    {
+      "url": "https://github.com/Yumega",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/beeware/Python-apple-support",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/cxapython",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/digitalgust/miniJVM",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/fengqiao57/abts.git",
+      "name": "abts.git"
+    },
+    {
+      "url": "https://github.com/guihuayufeiguohai",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/huangxd-/danmu_api",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/actions/runs/39265621697",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/commit/47b0017335ba29e5f5bb0c87e2c3189903cdc714",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/commit/891ac03",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/commit/e1c6945",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/compare/main...claude/issue-23-20261019-1404?quick_pull=1&title=Center%20system-image%20site%20icons%20on%20older%20macOS&body=Fixes%20%2323.%20Sizes%20the%20SF%20Symbol%20in%20MonogramIcon%20by%20frame%20instead%20of%20font%20so%20it%20is%20centered%20on%20macOS%20before%2026.%0A%0AGenerated%20with%20%5BClaude%20Code%5D(https%3A%2F%2Fclaude.ai%2Fcode)",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/issues/16",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/issues/319",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/issues/407",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/issues/414",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/issues/429",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/issues/496",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/issues/547",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/issues/888",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/pull/425:",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/tree/autofix/2026-10-27-issue-159",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/tree/autofix/2026-10-31-issue-273-mkv-compat",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/tree/claude/issue-23-20261019-1404",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jyotiprakash101/nuvio-badge-kit这个",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/kankejiang/CatClawVideo",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/libass/libass/blob/master/configure.ac",
+      "name": "configure.ac"
+    },
+    {
+      "url": "https://github.com/libass/libass/blob/master/libass/ass.h",
+      "name": "ass.h"
+    },
+    {
+      "url": "https://github.com/mir-xiong",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/nitan-tv/CatPawOpen",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/pan8664716/HGTV",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/pcccccc/AngelLive",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/q215613905/TVBoxOS",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/q215613905/TVBoxOS/blob/ab11d289e09963a9daf65ca7f6b7a9a8cbe184e1/app/src/main/java/com/github/tvbox/osc/api/ApiConfig.java#L901",
+      "name": "ApiConfig.java"
+    },
+    {
+      "url": "https://github.com/q215613905/TVBoxOS/blob/ab11d289e09963a9daf65ca7f6b7a9a8cbe184e1/app/src/main/java/com/github/tvbox/osc/player/controller/VodController.java#L1962",
+      "name": "VodController.java"
+    },
+    {
+      "url": "https://github.com/q215613905/TVBoxOS/blob/ab11d289e09963a9daf65ca7f6b7a9a8cbe184e1/app/src/main/java/com/github/tvbox/osc/ui/fragment/PlayFragment.java#L962",
+      "name": "PlayFragment.java"
+    },
+    {
+      "url": "https://github.com/q215613905/TVBoxOS/blob/ab11d289e09963a9daf65ca7f6b7a9a8cbe184e1/app/src/main/java/com/github/tvbox/osc/util/AdBlocker.java",
+      "name": "AdBlocker.java"
+    },
+    {
+      "url": "https://github.com/q215613905/TVBoxOS/blob/ab11d289e09963a9daf65ca7f6b7a9a8cbe184e1/app/src/main/java/com/github/tvbox/osc/util/M3u8.java#L55",
+      "name": "M3u8.java"
+    },
+    {
+      "url": "https://github.com/shenggaowei",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/yaolin-dev/OKVideoMac",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/zhiqiangwong/tvbox-silicon/releases/download/untagged-9f95d1fb286882db4134/Yingxia-1.8.6-iOS16-beta.1.ipa",
+      "name": "Yingxia-1.8.6-iOS16-beta.1.ipa"
+    },
+    {
+      "url": "https://guovin.github.io/iptv-api/result.m3u",
+      "name": "result.m3u"
+    },
+    {
+      "url": "https://hellogithub.com/en/repository/yichengchen/ATV-Bilibili-demo",
+      "name": "hellogithub.com"
+    },
+    {
+      "url": "https://host/emby",
+      "name": "host"
+    },
+    {
+      "url": "https://image.tmdb.org/t/p/",
+      "name": "image.tmdb.org"
+    },
+    {
+      "url": "https://images.tmdb.org/t/p/",
+      "name": "images.tmdb.org"
+    },
+    {
+      "url": "https://iptv.445569.xyz/live.m3u",
+      "name": "live.m3u"
+    },
+    {
+      "url": "https://iptv.local/api/live/http/rtp2httpd",
+      "name": "iptv.local"
+    },
+    {
+      "url": "https://iptv.local/tvbox.json",
+      "name": "tvbox.json"
+    },
+    {
+      "url": "https://iptv.yang-1989.xyz/myTV/playlist.m3u",
+      "name": "playlist.m3u"
+    },
+    {
+      "url": "https://iptv.yang-1989.xyz/playlist.m3u",
+      "name": "playlist.m3u"
+    },
+    {
+      "url": "https://ithome.com/0/761/195.htm",
+      "name": "195.htm"
+    },
+    {
+      "url": "https://jihulab.com/ymz1231/xymz/-/raw/main/ymshaoer",
+      "name": "jihulab.com"
+    },
+    {
+      "url": "https://jijietvbox.lol/jieluntan-fty.json",
+      "name": "jieluntan-fty.json"
+    },
+    {
+      "url": "https://jsnzkpg.de5.net/all.m3u",
+      "name": "all.m3u"
+    },
+    {
+      "url": "https://live.catvod.com/playlist.m3u?tk=55a84481a45adf6c658c5840c7617618",
+      "name": "playlist.m3u"
+    },
+    {
+      "url": "https://live.my996.de5.net/all.m3u",
+      "name": "all.m3u"
+    },
+    {
+      "url": "https://live.zbds.top/tv/iptv4.m3u",
+      "name": "iptv4.m3u"
+    },
+    {
+      "url": "https://live.zbds.top/tv/iptv4.txt",
+      "name": "iptv4.txt"
+    },
+    {
+      "url": "https://live.zhi35.com/iptv.m3u",
+      "name": "iptv.m3u"
+    },
+    {
+      "url": "https://m.douban.com/movie/",
+      "name": "m.douban.com"
+    },
+    {
+      "url": "https://m.douban.com/rexxar/api/v2/subject_collection/",
+      "name": "m.douban.com"
+    },
+    {
+      "url": "https://madou.club/blx0072-%e9%87%8d%e7%b2%be%e6%83%a9%e7%bd%9a%e6%8b%9c%e9%87%91%e5%a5%b3-%e6%83%85%e6%ac%b2%e6%b8%b8%e6%88%8f%e4%b8%80%e8%af%95%e4%b8%8a%e6%b7%ab.html",
+      "name": "blx0072-重精惩罚拜金女-情欲游戏一试上淫.html"
+    },
+    {
+      "url": "https://madou.club/md0180-4-%e5%a4%9c%e5%8b%a4%e7%97%85%e6%a0%8bep4-%e7%bb%88%e6%9e%81%e7%a7%81%e5%88%91%e6%80%a7%e5%a5%b4%e5%a4%a7%e5%a4%b1%e7%a6%81.html",
+      "name": "md0180-4-夜勤病栋ep4-终极私刑性奴大失禁.html"
+    },
+    {
+      "url": "https://madou.club/mdwp0034-%e6%b7%ab%e8%a1%8c%e8%b6%85%e5%95%86-%e4%b8%8a%e7%8f%ad%e5%81%b7%e6%ac%a2%e5%a5%b3%e5%ba%97%e5%91%98.html",
+      "name": "mdwp0034-淫行超商-上班偷欢女店员.html"
+    },
+    {
+      "url": "https://media.heshouyi.com/api/tvbox/subscription?token=***",
+      "name": "media.heshouyi.com"
+    },
+    {
+      "url": "https://movie.66608880.xyz/tvbox/config.json",
+      "name": "config.json"
+    },
+    {
+      "url": "https://mursor.ottiptv.cc/iptv.m3u?userid=***&sign=***&auth_token=***",
+      "name": "iptv.m3u"
+    },
+    {
+      "url": "https://mwm.ai/apps/miraplay/6749287494",
+      "name": "mwm.ai"
+    },
+    {
+      "url": "https://mwm.ai/apps/rex-all-your-media/6801583759",
+      "name": "mwm.ai"
+    },
+    {
+      "url": "https://ob.lb376.vip/api/subscription/2035872536473899008/tvbox2?token=***",
+      "name": "ob.lb376.vip"
+    },
+    {
+      "url": "https://pan.baidu.com/s/1FilFpYSCvcADIZpgeshk-Q?pwd=6666",
+      "name": "pan.baidu.com"
+    },
+    {
+      "url": "https://pan.quark.cn/s/cbbb8c3f0bbb",
+      "name": "pan.quark.cn"
+    },
+    {
+      "url": "https://paste.c-net.org/MinersExhibits",
+      "name": "paste.c-net.org"
+    },
+    {
+      "url": "https://php.946985.filegear-sg.me/jackTV.m3u",
+      "name": "jackTV.m3u"
+    },
+    {
+      "url": "https://plugins.carsonn.works/",
+      "name": "plugins.carsonn.works"
+    },
+    {
+      "url": "https://qist.wyfc.qzz.io/fty.json",
+      "name": "fty.json"
+    },
+    {
+      "url": "https://qist.wyfc.qzz.io/jsm.json",
+      "name": "jsm.json"
+    },
+    {
+      "url": "https://qist.wyfc.qzz.io/xiaosa/api.json",
+      "name": "api.json"
+    },
+    {
+      "url": "https://raw.giteeusercontent.com/ph7368/ok/raw/master/%E5%8D%8A%E7%B3%96%E4%BB%99%E4%BA%BA.json",
+      "name": "半糖仙人.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/4TVBox/Cat/refs/heads/main/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/douer/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/lmentor/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/xuenai/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Dong-learn9/TVBox-zyjk/main/18.json",
+      "name": "18.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u",
+      "name": "result.m3u"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "name": "iptv.m3u"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Lightconer/tvbox-ysc-config/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json",
+      "name": "单仓聚合.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TVboxorg/TVbox/main/dist/official.json",
+      "name": "official.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+      "name": "Gather.m3u"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/YanG-1989/m3u/refs/heads/main/Migu.m3u",
+      "name": "Migu.m3u"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/jstv/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/chenyuzuoyou/dxtv/refs/heads/main/allfm.js",
+      "name": "allfm.js"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cluntop/tvbox/refs/heads/main/fun.json",
+      "name": "fun.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/d1y/kitty/refs/heads/gh-pages/vod.json",
+      "name": "vod.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dhasap/dhanytv/main/dhanytv-ott.m3u",
+      "name": "dhanytv-ott.m3u"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dhicoc/miraplay-mega/main/dist/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dxawi/0/main/0.json",
+      "name": "0.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fangkuia/XPTV/refs/heads/main/dist/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/felixiao/TVBoxSource/main/%E6%BA%90/%E6%8A%80%E5%B7%A7.json",
+      "name": "技巧.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json",
+      "name": "demo.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hebijunge/tvbox-config/main/adult.json",
+      "name": "adult.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huangxd-/ForwardWidgets/refs/heads/main/widgets/danmu_auto.js",
+      "name": "danmu_auto.js"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lugu123/MIraPlay/refs/heads/main/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qirenzhidao/tvbox18/main/adult.json",
+      "name": "adult.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qist/tvbox/master/0821.json",
+      "name": "0821.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qist/tvbox/master/fty.json",
+      "name": "fty.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qist/tvbox/master/jsm.json",
+      "name": "jsm.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json",
+      "name": "api.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/suxuang/myIPTV/refs/heads/main/ipv4.m3u",
+      "name": "ipv4.m3u"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/tkdwbiao/iptv-api/master/output/result.txt",
+      "name": "result.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wliqi495-create/jaychou123/refs/heads/main/yingshi/test1.json",
+      "name": "test1.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/xiaobaitulele/xptv/refs/heads/main/jstv/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/xiaosag/hmtv/main/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/xymn2023/catbox/refs/heads/main/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
+      "name": "XC.json"
+    },
+    {
+      "url": "https://raw.liucn.cc/box/m.json",
+      "name": "m.json"
+    },
+    {
+      "url": "https://rex.20110827.xyz/api/collections/catpaw.rex",
+      "name": "catpaw.rex"
+    },
+    {
+      "url": "https://s1.vika.cn/space/2026/10/19/5023fea8b2334417956ad38646af495d",
+      "name": "s1.vika.cn"
+    },
+    {
+      "url": "https://s1.vika.cn/space/2026/10/19/88e73c9654c547dba76b220d65f8cb36",
+      "name": "s1.vika.cn"
+    },
+    {
+      "url": "https://s1.vika.cn/space/2026/10/19/add53a99432149bc9eebd97deebf8575",
+      "name": "s1.vika.cn"
+    },
+    {
+      "url": "https://status.vyxh.top/tv.json",
+      "name": "tv.json"
+    },
+    {
+      "url": "https://su.ayang.nyc.mn/raw.githubusercontent.com/Yswag/xptv-extensions/refs/heads/jstv/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://sub.lytvs.top/get?token=***",
+      "name": "sub.lytvs.top"
+    },
+    {
+      "url": "https://sub.lytvs.top/get?token=***&client=ios",
+      "name": "sub.lytvs.top"
+    },
+    {
+      "url": "https://szyyds.cn/tv/x.json",
+      "name": "x.json"
+    },
+    {
+      "url": "https://tv.203511.xyz/0821.json",
+      "name": "0821.json"
+    },
+    {
+      "url": "https://tv.jlbk.de5.net/https://9280.kstore.vip/newwex.json",
+      "name": "newwex.json"
+    },
+    {
+      "url": "https://tv.seekvpn.online",
+      "name": "tv.seekvpn.online"
+    },
+    {
+      "url": "https://tv.sxi.qzz.io/jsm.json",
+      "name": "jsm.json"
+    },
+    {
+      "url": "https://tv.xn--yhqu5zs87a.top",
+      "name": "tv.xn--yhqu5zs87a.top"
+    },
+    {
+      "url": "https://tvbox-public.gaoops.top/",
+      "name": "tvbox-public.gaoops.top"
+    },
+    {
+      "url": "https://tvbox.do-u.de5.net/",
+      "name": "tvbox.do-u.de5.net"
+    },
+    {
+      "url": "https://tvbox.shenzjd.com",
+      "name": "tvbox.shenzjd.com"
+    },
+    {
+      "url": "https://v6.gh-proxy.org/https://raw.githubusercontent.com/apaodh/apaodh/refs/heads/main/backups/Jsnzkpg.json",
+      "name": "Jsnzkpg.json"
+    },
+    {
+      "url": "https://v6.gh-proxy.org/https://raw.githubusercontent.com/apaodh/apaodh/refs/heads/main/backups/aowu.json",
+      "name": "aowu.json"
+    },
+    {
+      "url": "https://v6.gh-proxy.org/https://raw.githubusercontent.com/apaodh/apaodh/refs/heads/main/backups/fm.json",
+      "name": "fm.json"
+    },
+    {
+      "url": "https://v6.gh-proxy.org/https://raw.githubusercontent.com/apaodh/apaodh/refs/heads/main/backups/fty.json",
+      "name": "fty.json"
+    },
+    {
+      "url": "https://v6.gh-proxy.org/https://raw.githubusercontent.com/apaodh/apaodh/refs/heads/main/backups/my.json",
+      "name": "my.json"
+    },
+    {
+      "url": "https://ve60f9lepyonq.space.mcode.cn",
+      "name": "ve60f9lepyonq.space.mcode.cn"
+    },
+    {
+      "url": "https://wget.la/https://github.com/Kimentanm/aptv/raw/master/m3u/iptv.m3u",
+      "name": "iptv.m3u"
+    },
+    {
+      "url": "https://woyou.pro/p18",
+      "name": "woyou.pro"
+    },
+    {
+      "url": "https://www.252035.xyz/xs/tvbox/api.json",
+      "name": "api.json"
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2025/06/apple-tv-brings-a-beautiful-redesign-and-enhanced-home-entertainment-experience",
+      "name": "www.apple.com"
+    },
+    {
+      "url": "https://www.baijing.cn/article/52370",
+      "name": "www.baijing.cn"
+    },
+    {
+      "url": "https://www.iyouhun.com/tv/fm",
+      "name": "www.iyouhun.com"
+    },
+    {
+      "url": "https://www.iyouhun.com/tv/fty",
+      "name": "www.iyouhun.com"
+    },
+    {
+      "url": "https://www.python.org/downloads/ios/",
+      "name": "www.python.org"
+    },
+    {
+      "url": "https://www.themoviedb.org/tv/246348",
+      "name": "www.themoviedb.org"
+    },
+    {
+      "url": "https://www.themoviedb.org/tv/284360",
+      "name": "www.themoviedb.org"
+    },
+    {
+      "url": "https://www.themoviedb.org/tv/286363",
+      "name": "www.themoviedb.org"
+    },
+    {
+      "url": "https://www.themoviedb.org/tv/301366",
+      "name": "www.themoviedb.org"
+    },
+    {
+      "url": "https://www.thetvdb.com/companies/reelshort",
+      "name": "www.thetvdb.com"
+    },
+    {
+      "url": "https://www.tomsguide.com/phones/iphones/video-playback-carplay-ios-26",
+      "name": "www.tomsguide.com"
+    },
+    {
+      "url": "https://www.yingm.cc/dm/dm.json",
+      "name": "dm.json"
+    },
+    {
+      "url": "https://xiaosage.361123.xyz/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://xn--8owq8u.com/tv",
+      "name": "xn--8owq8u.com"
+    },
+    {
+      "url": "https://xy.lucky-boy.cn:9889/tvbox/my_ext_jar.json",
+      "name": "my_ext_jar.json"
+    },
+    {
+      "url": "https://yang-1989.eu.org/Gather.json",
+      "name": "Gather.json"
+    },
+    {
+      "url": "https://yc.wya6.cn/wykj.php",
+      "name": "wykj.php"
+    },
+    {
+      "url": "https://yingxia.getmegaportal.com/altstore.json",
+      "name": "altstore.json"
+    },
+    {
+      "url": "https://ysp.lucky-boy.cn:9888/all.m3u",
+      "name": "all.m3u"
+    },
+    {
+      "url": "https://zhongyuan689.github.io/0816iptv/pz.json",
+      "name": "pz.json"
+    },
+    {
+      "url": "https://ztha.top/TVBox/lib/interface.txt",
+      "name": "interface.txt"
+    },
+    {
+      "url": "https://ztha.top/TVBox/lib/iptv.m3u",
+      "name": "iptv.m3u"
+    },
+    {
+      "url": "https://ztha.top/TVBox/thdjk.json",
+      "name": "thdjk.json"
+    },
+    {
+      "url": "https://你的域名/TOKEN",
+      "name": "xn--6qqv7i2xdt95b"
+    }
   ]
 }
