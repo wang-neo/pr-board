@@ -5,6 +5,14 @@
       "name": "my_ext_jar.json"
     },
     {
+      "url": "http://121.40.174.45:666/smdy?token=***",
+      "name": "121.40.174.45"
+    },
+    {
+      "url": "http://123",
+      "name": "0.0.0.123"
+    },
+    {
       "url": "http://124.223.214.31:16/8888",
       "name": "124.223.214.31"
     },
@@ -49,6 +57,18 @@
       "name": "playlist.m3u"
     },
     {
+      "url": "http://192.168.31.5:1905/interface.m3u",
+      "name": "interface.m3u"
+    },
+    {
+      "url": "http://192.168.31.6:8899/live.m3u",
+      "name": "live.m3u"
+    },
+    {
+      "url": "http://192.168.31.6:8899/yingxia.json",
+      "name": "yingxia.json"
+    },
+    {
       "url": "http://192.168.31.71:8899/live.m3u",
       "name": "live.m3u"
     },
@@ -91,6 +111,10 @@
     {
       "url": "http://47.96.82.41:5188/rose/18/xgg.json",
       "name": "xgg.json"
+    },
+    {
+      "url": "http://678",
+      "name": "0.0.2.166"
     },
     {
       "url": "http://9280.kstore.vip/newwex.json",
@@ -169,6 +193,10 @@
       "name": "www.y456y.com"
     },
     {
+      "url": "http://www.英格里希嗷呜.top/tv:",
+      "name": "www.xn--nsr30bl8nb2kyt7a8vs.top"
+    },
+    {
       "url": "http://xhztv.top/4k.json",
       "name": "4k.json"
     },
@@ -221,6 +249,10 @@
       "name": "x4pro.json"
     },
     {
+      "url": "https://0.wdzb.eu.cc/tvbox/%E6%B5%B7%E9%87%8F%E9%87%87%E9%9B%86%E8%81%9A%E5%90%88%E6%8E%A5%E5%8F%A3.json",
+      "name": "海量采集聚合接口.json"
+    },
+    {
       "url": "https://0.wudaozhe.net/5/x4all.json",
       "name": "x4all.json"
     },
@@ -239,6 +271,10 @@
     {
       "url": "https://1.wudaozhe.net/tvbox/%E9%A5%AD%E5%A4%AA%E7%A1%AC.json",
       "name": "饭太硬.json"
+    },
+    {
+      "url": "https://11405.kstore.space/xiaye/qk4k.json",
+      "name": "qk4k.json"
     },
     {
       "url": "https://115.com/scan/dg-…",
@@ -501,6 +537,10 @@
       "name": "xm.json"
     },
     {
+      "url": "https://fastly.jsdelivr.net/gh/cxelva/xpg@​main/cxelva.json",
+      "name": "cxelva.json"
+    },
+    {
       "url": "https://fastly.jsdelivr.net/gh/liu673cn/box@​main/m.json",
       "name": "m.json"
     },
@@ -607,6 +647,10 @@
     {
       "url": "https://files.yingxia.invalid/%E6%90%9C%E5%89%A7Ai.py",
       "name": "搜剧Ai.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/%E6%9E%AB%E5%8F%B64K(1).py",
+      "name": "枫叶4K(1).py"
     },
     {
       "url": "https://files.yingxia.invalid/%E6%9E%AB%E5%8F%B64k%E5%BD%B1%E9%99%A2.py",
@@ -809,16 +853,32 @@
       "name": "Kishuto.py"
     },
     {
+      "url": "https://files.yingxia.invalid/LIBVIO.js",
+      "name": "LIBVIO.js"
+    },
+    {
       "url": "https://files.yingxia.invalid/MissAV.py",
       "name": "MissAV.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/Pornavhd.py",
+      "name": "Pornavhd.py"
     },
     {
       "url": "https://files.yingxia.invalid/TMDB%E5%A4%9A%E7%BA%BF%E5%BD%B1%E8%A7%86.py",
       "name": "TMDB多线影视.py"
     },
     {
+      "url": "https://files.yingxia.invalid/TVB%E4%BA%91%E6%92%AD%E4%BB%A3%E7%90%86%E7%89%88@​easy.py",
+      "name": "TVB云播代理版@​easy.py"
+    },
+    {
       "url": "https://files.yingxia.invalid/Twitter%E7%B2%BE%E9%80%89.py",
       "name": "Twitter精选.py"
+    },
+    {
+      "url": "https://files.yingxia.invalid/badnews.py",
+      "name": "badnews.py"
     },
     {
       "url": "https://files.yingxia.invalid/cmcc%202.m3u",
@@ -857,6 +917,10 @@
       "name": "one.py"
     },
     {
+      "url": "https://files.yingxia.invalid/ph_only_update.m3u",
+      "name": "ph_only_update.m3u"
+    },
+    {
       "url": "https://files.yingxia.invalid/test1.json",
       "name": "test1.json"
     },
@@ -873,12 +937,24 @@
       "name": "tvbox_三平台直播源.json"
     },
     {
+      "url": "https://files.yingxia.invalid/xhy.py",
+      "name": "xhy.py"
+    },
+    {
       "url": "https://files.yingxia.invalid/xxx%E8%B5%84%E6%BA%90.py",
       "name": "xxx资源.py"
     },
     {
+      "url": "https://files.yingxia.invalid/yingxia_hls.m3u",
+      "name": "yingxia_hls.m3u"
+    },
+    {
       "url": "https://files.yingxia.invalid/youtube-sabr1023.py",
       "name": "youtube-sabr1023.py"
+    },
+    {
+      "url": "https://fty.888484.xyz/tv",
+      "name": "fty.888484.xyz"
     },
     {
       "url": "https://fycr.pages.dev/index.json",
@@ -1010,6 +1086,10 @@
     },
     {
       "url": "https://ghfast.top/https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/smdl/index.js.md5",
+      "name": "index.js.md5"
+    },
+    {
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/xuenai/index.js.md5",
       "name": "index.js.md5"
     },
     {
@@ -1293,6 +1373,10 @@
       "name": "images.tmdb.org"
     },
     {
+      "url": "https://iptv-hub-q7m2.web.zaka.live/playlist.m3u",
+      "name": "playlist.m3u"
+    },
+    {
       "url": "https://iptv.445569.xyz/live.m3u",
       "name": "live.m3u"
     },
@@ -1389,8 +1473,16 @@
       "name": "mwm.ai"
     },
     {
+      "url": "https://nba.3691065.site/sub?token=***",
+      "name": "nba.3691065.site"
+    },
+    {
       "url": "https://ob.lb376.vip/api/subscription/2035872536473899008/tvbox2?token=***",
       "name": "ob.lb376.vip"
+    },
+    {
+      "url": "https://pan.baidu.com/s/165w0gNeMIps5l5QTlp_WNQ?pwd=3hny",
+      "name": "pan.baidu.com"
     },
     {
       "url": "https://pan.baidu.com/s/1FilFpYSCvcADIZpgeshk-Q?pwd=6666",
@@ -1477,12 +1569,20 @@
       "name": "index.js.md5"
     },
     {
+      "url": "https://raw.githubusercontent.com/bizhangjie/CatVodSpider/refs/heads/main/json/index18.json",
+      "name": "index18.json"
+    },
+    {
       "url": "https://raw.githubusercontent.com/chenyuzuoyou/dxtv/refs/heads/main/allfm.js",
       "name": "allfm.js"
     },
     {
       "url": "https://raw.githubusercontent.com/cluntop/tvbox/refs/heads/main/fun.json",
       "name": "fun.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/cs3306/IPTV-Sources/main/data/output/iptv_collection.m3u",
+      "name": "iptv_collection.m3u"
     },
     {
       "url": "https://raw.githubusercontent.com/d1y/kitty/refs/heads/gh-pages/vod.json",
@@ -1509,12 +1609,20 @@
       "name": "技巧.json"
     },
     {
+      "url": "https://raw.githubusercontent.com/franksun1211/TVBOX/main/FZL.json",
+      "name": "FZL.json"
+    },
+    {
       "url": "https://raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json",
       "name": "demo.json"
     },
     {
       "url": "https://raw.githubusercontent.com/hebijunge/tvbox-config/main/adult.json",
       "name": "adult.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/hebijunge/tvbox-config/main/tvbox_recommended.json",
+      "name": "tvbox_recommended.json"
     },
     {
       "url": "https://raw.githubusercontent.com/huangxd-/ForwardWidgets/refs/heads/main/widgets/danmu_auto.js",
@@ -1533,6 +1641,10 @@
       "name": "0821.json"
     },
     {
+      "url": "https://raw.githubusercontent.com/qist/tvbox/master/dianshi.json",
+      "name": "dianshi.json"
+    },
+    {
       "url": "https://raw.githubusercontent.com/qist/tvbox/master/fty.json",
       "name": "fty.json"
     },
@@ -1545,6 +1657,10 @@
       "name": "api.json"
     },
     {
+      "url": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+      "name": "ipv4.m3u"
+    },
+    {
       "url": "https://raw.githubusercontent.com/suxuang/myIPTV/refs/heads/main/ipv4.m3u",
       "name": "ipv4.m3u"
     },
@@ -1555,6 +1671,10 @@
     {
       "url": "https://raw.githubusercontent.com/wliqi495-create/jaychou123/refs/heads/main/yingshi/test1.json",
       "name": "test1.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wzxxcz/wzxxcz/refs/heads/maing/wzxxcz.json",
+      "name": "wzxxcz.json"
     },
     {
       "url": "https://raw.githubusercontent.com/xiaobaitulele/xptv/refs/heads/main/jstv/index.js.md5",
@@ -1611,6 +1731,54 @@
     {
       "url": "https://szyyds.cn/tv/x.json",
       "name": "x.json"
+    },
+    {
+      "url": "https://t.me/CCAVsvip",
+      "name": "t.me"
+    },
+    {
+      "url": "https://t.me/btzhi",
+      "name": "t.me"
+    },
+    {
+      "url": "https://t.me/ccAVcn",
+      "name": "t.me"
+    },
+    {
+      "url": "https://t.me/gchanziyuan",
+      "name": "t.me"
+    },
+    {
+      "url": "https://t.me/lihaibili",
+      "name": "t.me"
+    },
+    {
+      "url": "https://t.me/mgaicrdj",
+      "name": "t.me"
+    },
+    {
+      "url": "https://t.me/txdm1800",
+      "name": "t.me"
+    },
+    {
+      "url": "https://t.me/xadsa691",
+      "name": "t.me"
+    },
+    {
+      "url": "https://t.me/zaihuapd",
+      "name": "t.me"
+    },
+    {
+      "url": "https://tgbot-sub.sharewithyou.dpdns.org/sub?token=***",
+      "name": "tgbot-sub.sharewithyou.dpdns.org"
+    },
+    {
+      "url": "https://tv.111226.xyz/aptv/qqmusic/tg@​tgzby.m3u",
+      "name": "tg@​tgzby.m3u"
+    },
+    {
+      "url": "https://tv.111226.xyz/aptv/ysplive/tg@​tgzby.m3u",
+      "name": "tg@​tgzby.m3u"
     },
     {
       "url": "https://tv.203511.xyz/0821.json",
@@ -1689,6 +1857,10 @@
       "name": "www.baijing.cn"
     },
     {
+      "url": "https://www.icloud.com/shortcuts/53af869151984337a21762dd7a3f8b8d",
+      "name": "www.icloud.com"
+    },
+    {
       "url": "https://www.iyouhun.com/tv/fm",
       "name": "www.iyouhun.com"
     },
@@ -1723,6 +1895,10 @@
     {
       "url": "https://www.tomsguide.com/phones/iphones/video-playback-carplay-ios-26",
       "name": "www.tomsguide.com"
+    },
+    {
+      "url": "https://www.y456y.com/",
+      "name": "www.y456y.com"
     },
     {
       "url": "https://www.yingm.cc/dm/dm.json",
