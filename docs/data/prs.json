@@ -1,8 +1,239 @@
 {
-  "capturedAt": "2026-11-24T00:00:42.050Z",
+  "capturedAt": "2026-11-25T00:00:44.245Z",
   "repo": "bosinc/katana-server",
   "windowDays": 30,
   "prs": [
+    {
+      "number": 10829,
+      "title": "test(user): registry guard for columns that hold a User id (KAT-12546)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10829",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T07:49:31Z",
+      "mergedAt": "2026-11-24T14:14:28Z",
+      "labels": []
+    },
+    {
+      "number": 10830,
+      "title": "feat(scanner): find a vendor's order by its checkout form answer (KAT-12576)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10830",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T08:27:52Z",
+      "mergedAt": "2026-11-24T13:51:01Z",
+      "labels": []
+    },
+    {
+      "number": 10835,
+      "title": "fix(auth): reuse affiliate accounts during consumer signup",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10835",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T09:38:42Z",
+      "mergedAt": "2026-11-24T10:58:18Z",
+      "labels": []
+    },
+    {
+      "number": 10838,
+      "title": "Revert \"feat(sales): add scanner order details (KAT-12590)\"",
+      "author": "liuao-123456",
+      "url": "https://github.com/bosinc/katana-server/pull/10838",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T10:41:20Z",
+      "mergedAt": "2026-11-24T10:53:49Z",
+      "labels": []
+    },
+    {
+      "number": 10831,
+      "title": "fix(venue-unit): reserve seats removed from offline sales",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10831",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T08:45:12Z",
+      "mergedAt": "2026-11-24T10:11:19Z",
+      "labels": []
+    },
+    {
+      "number": 10823,
+      "title": "feat(auth): add OTP-verified consumer name lookup",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10823",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T06:54:59Z",
+      "mergedAt": "2026-11-24T08:40:23Z",
+      "labels": []
+    },
+    {
+      "number": 10827,
+      "title": "feat(user): prefill a rowless guest session from its last order (KAT-12546)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10827",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T07:49:18Z",
+      "mergedAt": "2026-11-24T08:21:08Z",
+      "labels": []
+    },
+    {
+      "number": 10706,
+      "title": "fix(auth): refuse a guest token whose id is now an account (KAT-12546)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10706",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-13T10:41:54Z",
+      "mergedAt": "2026-11-24T07:48:57Z",
+      "labels": []
+    },
+    {
+      "number": 10824,
+      "title": "feat(sales): add scanner order details (KAT-12590)",
+      "author": "liuao-123456",
+      "url": "https://github.com/bosinc/katana-server/pull/10824",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T07:08:53Z",
+      "mergedAt": "2026-11-24T07:33:11Z",
+      "labels": []
+    },
+    {
+      "number": 10825,
+      "title": "feat(purchase-approval): per-approval note for the invoice page (KAT-12631)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10825",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T07:18:29Z",
+      "mergedAt": "2026-11-24T07:29:26Z",
+      "labels": []
+    },
+    {
+      "number": 10705,
+      "title": "fix(auth): refuse expired tokens on public routes too (KAT-12546)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10705",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-13T10:37:00Z",
+      "mergedAt": "2026-11-24T07:26:42Z",
+      "labels": []
+    },
+    {
+      "number": 10818,
+      "title": "feat(email): align ticket email card styles with design",
+      "author": "zhiyong-eng",
+      "url": "https://github.com/bosinc/katana-server/pull/10818",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T03:53:04Z",
+      "mergedAt": "2026-11-24T06:22:43Z",
+      "labels": []
+    },
+    {
+      "number": 10822,
+      "title": "perf(products): merge promoter products without per-product plainToInstance and cloneDeep",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10822",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T05:48:56Z",
+      "mergedAt": "2026-11-24T06:21:47Z",
+      "labels": []
+    },
+    {
+      "number": 10821,
+      "title": "perf(posts): build the post-variant lookup once per post and skip the self original-post read",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10821",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T05:48:50Z",
+      "mergedAt": "2026-11-24T06:21:04Z",
+      "labels": []
+    },
+    {
+      "number": 10804,
+      "title": "feat(venue-unit): slot-grain sold-off-pear groups with authoritative lists and groups echo",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10804",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-23T04:02:34Z",
+      "mergedAt": "2026-11-24T06:17:49Z",
+      "labels": []
+    },
+    {
+      "number": 10817,
+      "title": "chore(axs): stop reading legacy AXS order and event data",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10817",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T03:38:00Z",
+      "mergedAt": "2026-11-24T04:36:43Z",
+      "labels": []
+    },
+    {
+      "number": 10816,
+      "title": "fix(purchase-approval): match guest applications to an account by email only",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10816",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T03:37:54Z",
+      "mergedAt": "2026-11-24T04:11:01Z",
+      "labels": []
+    },
+    {
+      "number": 10815,
+      "title": "fix(sales): use actual section labels for sold ticket seats",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/10815",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T01:26:48Z",
+      "mergedAt": "2026-11-24T02:30:10Z",
+      "labels": []
+    },
+    {
+      "number": 10809,
+      "title": "fix(auth): preserve existing identities and filter signup carts",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10809",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-23T09:29:43Z",
+      "mergedAt": "2026-11-24T01:23:52Z",
+      "labels": []
+    },
+    {
+      "number": 10805,
+      "title": "fix(KAT-12125): clarify venue map publish validation errors",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/10805",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-23T06:50:53Z",
+      "mergedAt": "2026-11-24T01:17:19Z",
+      "labels": []
+    },
+    {
+      "number": 10813,
+      "title": "feat: allow record 0 dispute",
+      "author": "Elin-Li-hub",
+      "url": "https://github.com/bosinc/katana-server/pull/10813",
+      "state": "merged",
+      "baseBranch": "release",
+      "createdAt": "2026-11-23T10:08:19Z",
+      "mergedAt": "2026-11-24T01:10:29Z",
+      "labels": []
+    },
     {
       "number": 10814,
       "title": "docs(agents): configure Matt Pocock engineering skills",
@@ -3656,13 +3887,101 @@
       "labels": []
     },
     {
-      "number": 10813,
-      "title": "feat: allow record 0 dispute",
-      "author": "Elin-Li-hub",
-      "url": "https://github.com/bosinc/katana-server/pull/10813",
+      "number": 10841,
+      "title": "fix(posts): co-seller lists report the co-seller's own finance mode",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10841",
       "state": "open",
       "baseBranch": "release",
-      "createdAt": "2026-11-23T10:08:19Z",
+      "createdAt": "2026-11-24T15:29:24Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10840,
+      "title": "fix(logging): keep scanner search terms out of request and nginx logs",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10840",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T14:43:44Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10837,
+      "title": "feat(KAT-12590): expose attendee form line item IDs",
+      "author": "jaycechenex",
+      "url": "https://github.com/bosinc/katana-server/pull/10837",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T10:07:38Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10834,
+      "title": "feat(scanner): account-level web scanner links and explicit scan outcomes (KAT-12659, KAT-12590)",
+      "author": "junetengext-a11y",
+      "url": "https://github.com/bosinc/katana-server/pull/10834",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T09:07:59Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10833,
+      "title": "feat(app-terminal): add v2 ticket redemption (KAT-12658)",
+      "author": "wang-neo",
+      "url": "https://github.com/bosinc/katana-server/pull/10833",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T09:02:18Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10832,
+      "title": "fix(sales): unify venue unit section labels",
+      "author": "pengfei-wu-1mapp",
+      "url": "https://github.com/bosinc/katana-server/pull/10832",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T08:48:17Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10828,
+      "title": "feat(orders): subscriptions need sign-in; CAPI Purchase sends the order contact (KAT-12546)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10828",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T07:49:25Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10826,
+      "title": "feat(user): person-key columns, flag reader and the account-clears-key invariant (KAT-12546)",
+      "author": "feng-1m",
+      "url": "https://github.com/bosinc/katana-server/pull/10826",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T07:49:11Z",
+      "mergedAt": null,
+      "labels": []
+    },
+    {
+      "number": 10820,
+      "title": "feat(notification): gate custom sender email changes behind user feature flag",
+      "author": "zhiwenzhuext",
+      "url": "https://github.com/bosinc/katana-server/pull/10820",
+      "state": "open",
+      "baseBranch": "release",
+      "createdAt": "2026-11-24T04:30:41Z",
       "mergedAt": null,
       "labels": []
     },
@@ -3678,17 +3997,6 @@
       "labels": []
     },
     {
-      "number": 10809,
-      "title": "fix(auth): preserve existing identities and filter signup carts",
-      "author": "zhiwenzhuext",
-      "url": "https://github.com/bosinc/katana-server/pull/10809",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-23T09:29:43Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 10806,
       "title": "feat(KAT-12513): add event post console APIs",
       "author": "wenbinmaext-create",
@@ -3696,28 +4004,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-11-23T07:05:43Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10805,
-      "title": "fix(KAT-12125): clarify venue map publish validation errors",
-      "author": "pengfei-wu-1mapp",
-      "url": "https://github.com/bosinc/katana-server/pull/10805",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-23T06:50:53Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10804,
-      "title": "feat(venue-unit): slot-grain sold-off-pear groups with authoritative lists and groups echo",
-      "author": "wang-neo",
-      "url": "https://github.com/bosinc/katana-server/pull/10804",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-23T04:02:34Z",
       "mergedAt": null,
       "labels": []
     },
@@ -3788,28 +4074,6 @@
       "labels": []
     },
     {
-      "number": 10706,
-      "title": "fix(auth): refuse a guest token whose id is now an account (KAT-12546)",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10706",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-13T10:41:54Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10705,
-      "title": "fix(auth): refuse expired tokens on public routes too (KAT-12546)",
-      "author": "feng-1m",
-      "url": "https://github.com/bosinc/katana-server/pull/10705",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-13T10:37:00Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
       "number": 10678,
       "title": "feat(purchase-approval): links buy for an account, not for whoever holds the URL",
       "author": "feng-1m",
@@ -3828,17 +4092,6 @@
       "state": "open",
       "baseBranch": "release",
       "createdAt": "2026-11-05T07:53:39Z",
-      "mergedAt": null,
-      "labels": []
-    },
-    {
-      "number": 10521,
-      "title": "feat(sms): require internal API key on /sms/status",
-      "author": "zhiwenzhuext",
-      "url": "https://github.com/bosinc/katana-server/pull/10521",
-      "state": "open",
-      "baseBranch": "release",
-      "createdAt": "2026-11-03T08:35:54Z",
       "mergedAt": null,
       "labels": []
     },
