@@ -17,6 +17,10 @@
       "name": "124.223.214.31"
     },
     {
+      "url": "http://124.223.214.31:55316",
+      "name": "124.223.214.31"
+    },
+    {
       "url": "http://124.223.214.31:55316/9981",
       "name": "124.223.214.31"
     },
@@ -65,8 +69,16 @@
       "name": "playlist.m3u"
     },
     {
+      "url": "http://192.168.31.253:5678",
+      "name": "192.168.31.253"
+    },
+    {
       "url": "http://192.168.31.5:1905/interface.m3u",
       "name": "interface.m3u"
+    },
+    {
+      "url": "http://192.168.31.6:8899",
+      "name": "192.168.31.6"
     },
     {
       "url": "http://192.168.31.6:8899/live.m3u",
@@ -83,6 +95,10 @@
     {
       "url": "http://192.168.31.71:8899/yingxia.json",
       "name": "yingxia.json"
+    },
+    {
+      "url": "http://192.168.5.1:1905",
+      "name": "192.168.5.1"
     },
     {
       "url": "http://192.168.5.55:8081/jxydiptv.txt",
@@ -131,6 +147,14 @@
     {
       "url": "http://9280.kstore.vip/newwex.json",
       "name": "newwex.json"
+    },
+    {
+      "url": "http://IP:5678/tvbox/my_ext_jar.json",
+      "name": "my_ext_jar.json"
+    },
+    {
+      "url": "http://ai.xn--4kq62z5rby2qupq9ub.top",
+      "name": "ai.xn--4kq62z5rby2qupq9ub.top"
     },
     {
       "url": "http://box.ufuzi.com",
@@ -199,6 +223,10 @@
     {
       "url": "http://www.cttv.vip/ys/json/ctys.json",
       "name": "ctys.json"
+    },
+    {
+      "url": "http://www.xn--nsr30b.cc",
+      "name": "www.xn--nsr30b.cc"
     },
     {
       "url": "http://www.xn--nsr30bl8nb2kyt7a8vs.top",
@@ -289,6 +317,10 @@
       "name": "zhouyu713.gicp.net"
     },
     {
+      "url": "https://0.12yue.de5.net",
+      "name": "0.12yue.de5.net"
+    },
+    {
       "url": "https://0.12yue.de5.net/0/666",
       "name": "0.12yue.de5.net"
     },
@@ -321,6 +353,10 @@
       "name": "饭太硬.json"
     },
     {
+      "url": "https://11405.kstore.space",
+      "name": "11405.kstore.space"
+    },
+    {
       "url": "https://11405.kstore.space/xiaye/qk4k.json",
       "name": "qk4k.json"
     },
@@ -331,6 +367,10 @@
     {
       "url": "https://13413.kstore.space/tv/changqing.json",
       "name": "changqing.json"
+    },
+    {
+      "url": "https://15318.kstore.space",
+      "name": "15318.kstore.space"
     },
     {
       "url": "https://15487.kstore.space/%E9%9F%B3%E4%B9%902.txt",
@@ -359,6 +399,10 @@
     {
       "url": "https://445569.pages.dev/https://raw.githubusercontent.com/apaodh/apaodh/refs/h…",
       "name": "445569.pages.dev"
+    },
+    {
+      "url": "https://6800.kstore.vip",
+      "name": "6800.kstore.vip"
     },
     {
       "url": "https://6800.kstore.vip/fish.json",
@@ -617,6 +661,10 @@
       "name": "Yingxia-1.7.3-ios17-test-b39208e.ipa"
     },
     {
+      "url": "https://dy.2025225.xyz",
+      "name": "dy.2025225.xyz"
+    },
+    {
       "url": "https://eastscreen.tv/iptvlist.php?token=***",
       "name": "iptvlist.php"
     },
@@ -627,6 +675,10 @@
     {
       "url": "https://fastlink.cokey.xyz/f/KoMkhW/xm.json",
       "name": "xm.json"
+    },
+    {
+      "url": "https://fastly.jsdelivr.net",
+      "name": "fastly.jsdelivr.net"
     },
     {
       "url": "https://fastly.jsdelivr.net/gh/cxelva/xpg@​main/cxelva.json",
@@ -1509,6 +1561,10 @@
       "name": "live.m3u"
     },
     {
+      "url": "https://iptv.local",
+      "name": "iptv.local"
+    },
+    {
       "url": "https://iptv.local/api/live/http/rtp2httpd",
       "name": "iptv.local"
     },
@@ -1527,6 +1583,10 @@
     {
       "url": "https://ithome.com/0/761/195.htm",
       "name": "195.htm"
+    },
+    {
+      "url": "https://jihulab.com",
+      "name": "jihulab.com"
     },
     {
       "url": "https://jihulab.com/ymz1231/xymz/-/raw/main/ymshaoer",
@@ -1581,6 +1641,10 @@
       "name": "mdwp0034-淫行超商-上班偷欢女店员.html"
     },
     {
+      "url": "https://media.heshouyi.com",
+      "name": "media.heshouyi.com"
+    },
+    {
       "url": "https://media.heshouyi.com/api/tvbox/subscription?token=***",
       "name": "media.heshouyi.com"
     },
@@ -1613,8 +1677,16 @@
       "name": "mwm.ai"
     },
     {
+      "url": "https://nba.3691065.site",
+      "name": "nba.3691065.site"
+    },
+    {
       "url": "https://nba.3691065.site/sub?token=***",
       "name": "nba.3691065.site"
+    },
+    {
+      "url": "https://nxog.tvdog.top",
+      "name": "nxog.tvdog.top"
     },
     {
       "url": "https://ob.lb376.vip/api/subscription/2035872536473899008/tvbox2?token=***",
@@ -1650,6 +1722,14 @@
     },
     {
       "url": "https://pan.quark.cn/s/cbbb8c3f0bbb",
+      "name": "pan.quark.cn"
+    },
+    {
+      "url": "https://pan.quark.cn/s/ee484cad75da",
+      "name": "pan.quark.cn"
+    },
+    {
+      "url": "https://pan.quark.cn/s/fef797ab6687",
       "name": "pan.quark.cn"
     },
     {
@@ -1905,6 +1985,10 @@
       "name": "sub.lytvs.top"
     },
     {
+      "url": "https://szyyds.cn",
+      "name": "szyyds.cn"
+    },
+    {
       "url": "https://szyyds.cn/tv/x.json",
       "name": "x.json"
     },
@@ -1929,11 +2013,23 @@
       "name": "t.me"
     },
     {
+      "url": "https://t.me/guomantg",
+      "name": "t.me"
+    },
+    {
+      "url": "https://t.me/kuaishou132534",
+      "name": "t.me"
+    },
+    {
       "url": "https://t.me/lihaibili",
       "name": "t.me"
     },
     {
       "url": "https://t.me/mgaicrdj",
+      "name": "t.me"
+    },
+    {
+      "url": "https://t.me/mmejo",
       "name": "t.me"
     },
     {
@@ -1995,6 +2091,10 @@
     {
       "url": "https://tvbox.shenzjd.com",
       "name": "tvbox.shenzjd.com"
+    },
+    {
+      "url": "https://v6.gh-proxy.org",
+      "name": "v6.gh-proxy.org"
     },
     {
       "url": "https://v6.gh-proxy.org/https://raw.githubusercontent.com/apaodh/apaodh/refs/heads/main/backups/Jsnzkpg.json",
@@ -2139,6 +2239,10 @@
     {
       "url": "https://zhongyuan689.github.io/0816iptv/pz.json",
       "name": "pz.json"
+    },
+    {
+      "url": "https://ztha.top",
+      "name": "ztha.top"
     },
     {
       "url": "https://ztha.top/TVBox/lib/interface.txt",
