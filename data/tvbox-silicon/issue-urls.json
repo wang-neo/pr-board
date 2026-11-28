@@ -333,6 +333,10 @@
       "name": "海量采集聚合接口.json"
     },
     {
+      "url": "https://0.wudaozhe.net",
+      "name": "0.wudaozhe.net"
+    },
+    {
       "url": "https://0.wudaozhe.net/5/x4all.json",
       "name": "x4all.json"
     },
@@ -375,6 +379,10 @@
     {
       "url": "https://15487.kstore.space/%E9%9F%B3%E4%B9%902.txt",
       "name": "音乐2.txt"
+    },
+    {
+      "url": "https://15889.kstore.space",
+      "name": "15889.kstore.space"
     },
     {
       "url": "https://15889.kstore.space/yi.json",
@@ -453,6 +461,10 @@
       "name": "index.js.md5"
     },
     {
+      "url": "https://9280.kstore.vip/cat/index.js.md5源配置是设备独立的",
+      "name": "9280.kstore.vip"
+    },
+    {
       "url": "https://9280.kstore.vip/newwex.json",
       "name": "newwex.json"
     },
@@ -527,6 +539,10 @@
     {
       "url": "https://apps.apple.com/cn/app/senplayer-%E6%99%BA%E8%83%BD%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8-8%E5%80%8D%E9%80%9F/id6443975850",
       "name": "apps.apple.com"
+    },
+    {
+      "url": "https://bit.ly",
+      "name": "bit.ly"
     },
     {
       "url": "https://bit.ly/iptv-aptv",
@@ -1237,6 +1253,10 @@
       "name": "ipv4.m3u"
     },
     {
+      "url": "https://gh.dpik.top",
+      "name": "gh.dpik.top"
+    },
+    {
       "url": "https://gh.dpik.top/https://raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json",
       "name": "demo.json"
     },
@@ -1301,6 +1321,10 @@
       "name": "jsm.json"
     },
     {
+      "url": "https://ghproxy.net",
+      "name": "ghproxy.net"
+    },
+    {
       "url": "https://ghproxy.net/https://raw.githubusercontent.com/Darklessing/catvod/refs/heads/main/douer/index.js.md5",
       "name": "index.js.md5"
     },
@@ -1311,6 +1335,10 @@
     {
       "url": "https://ghps.cc",
       "name": "ghps.cc"
+    },
+    {
+      "url": "https://gist.githubusercontent.com",
+      "name": "gist.githubusercontent.com"
     },
     {
       "url": "https://gist.githubusercontent.com/zhaobin1222zz-code/b79ff16fd9619318c491459a75077758/raw/a140cc96f8399dd902c42a0fc0f3db833db161ef/gistfile1.txt",
@@ -1338,6 +1366,14 @@
     },
     {
       "url": "https://github.com/FongMi/TV/commit/086a4a2b18b5397f0cc1355a1eb48efe1df6fb63",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/Kamangkw/tvbox-silicon/actions/runs/46127993893",
+      "name": "github.com"
+    },
+    {
+      "url": "https://github.com/Kamangkw/tvbox-silicon/actions/runs/46131516482",
       "name": "github.com"
     },
     {
@@ -1395,6 +1431,14 @@
     {
       "url": "https://github.com/jo32/tvbox-silicon/actions/runs/39265621697",
       "name": "github.com"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/blob/77837438617dcb3c8534e3a4bb3b19a009d648b7/Runtime/JavaHost/src/main/java/tvbox/runtime/SharedPluginRuntime.java#L54-L83",
+      "name": "SharedPluginRuntime.java"
+    },
+    {
+      "url": "https://github.com/jo32/tvbox-silicon/blob/77837438617dcb3c8534e3a4bb3b19a009d648b7/Sources/TVCore/SerializedPluginWorker.swift#L118-L128",
+      "name": "SerializedPluginWorker.swift"
     },
     {
       "url": "https://github.com/jo32/tvbox-silicon/commit/47b0017335ba29e5f5bb0c87e2c3189903cdc714",
@@ -2143,6 +2187,10 @@
     {
       "url": "https://www.baijing.cn/article/52370",
       "name": "www.baijing.cn"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1uEHj6DEDG/?share_source=copy_web&vd_source=aa3d515da23c01e70aed233fd2d2477e",
+      "name": "www.bilibili.com"
     },
     {
       "url": "https://www.icloud.com/shortcuts/53af869151984337a21762dd7a3f8b8d",
